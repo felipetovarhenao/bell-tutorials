@@ -8,7 +8,7 @@ Welcome to your first step in learning bell, a unique programming language desig
 
 The _"Hello, World!"_ program in bell is as simple as this:
 
-```py
+```python
 print("hello world")
 ```
 
