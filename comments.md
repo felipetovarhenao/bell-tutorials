@@ -21,13 +21,13 @@ print("hello world") ## This prints "hello world" to the screen
 
 1. Add single-line comments to this code explaining what each line does:
 
-```py
-## Write a message
-print("Welcome to bell") ## Print the welcome message
+	```py
+	## Write a message
+	print("Welcome to bell") ## Print the welcome message
 
-## Calculate a sum
-print(2 + 3) ## Print the result of 2 + 3
-```
+	## Calculate a sum
+	print(2 + 3) ## Print the result of 2 + 3
+	```
 
 2. Run the program to confirm that the comments do not affect the output.
 
@@ -35,7 +35,7 @@ print(2 + 3) ## Print the result of 2 + 3
 
 For longer explanations, use multi-line comments. These are enclosed with `#(` and `)#`. Everything between `#(` and `)#` is treated as a comment.
 
-```
+```py
 #(
 This program calculates the area of a rectangle
 and displays the result.
@@ -59,71 +59,62 @@ print($length * $width) ## Output: 50
 
 1. Be concise but descriptive:
 	- Instead of:
-
-```py
-## This calculates the sum of two numbers, 5 and 3, which equals 8
-print(5 + 3)
-```
-
+		```py
+		## This calculates the sum of two numbers, 5 and 3, which equals 8
+		print(5 + 3)
+		```
 	- Write:
-
-```py
-## Calculate the sum of 5 and 3
-print(5 + 3)
-```
+		```py
+		## Calculate the sum of 5 and 3
+		print(5 + 3)
+		```
 
 2. Avoid redundant comments:
 	- Bad:
-
-```py
-## This prints "hello world"
-print("hello world")
-```
-
+		```py
+		## This prints "hello world"
+		print("hello world")
+		```
 	- Better:
-
-```py
-## Greet the user
-print("hello world")
-```
+		```py
+		## Greet the user
+		print("hello world")
+		```
 
 3. Use multi-line comments for big-picture explanations:
 	- Before a block of code:
-
-```
-#(
-Generate a sequence of numbers and
-calculate their squares for later use
-)#
-```
+		```
+		#(
+		Generate a sequence of numbers and
+		calculate their squares for later use
+		)#
+		```
 
 ## Common Mistakes to Avoid
 
 1. **Forgetting to close a multi-line comment**:
 	- Incorrect:
-
-```
-#(
-This is an open multi-line comment
-```
+		```
+		#(
+		This is an open multi-line comment
+		```
 	- Correct:
-
-```
-#(
-This is a properly closed multi-line comment
-)#
-```
+		```
+		#(
+		This is a properly closed multi-line comment
+		)#
+		```
 
 2. **Commenting too much or too little**:
 
 	- Comment the why, not the obvious what:
-```py
-## Bad: Adds two numbers
-print(2 + 3)
+		```py
+		## Bad: Adds two numbers
+		print(2 + 3)
 
-## Good: Add two numbers to calculate the total score
-print(2 + 3)
-```
+		## Good: Add two numbers to calculate the total score
+		print(2 + 3)
+		```
 
 ## Exercises
 
