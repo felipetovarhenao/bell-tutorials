@@ -99,17 +99,63 @@ calculate their squares for later use
 
 ## Common Mistakes to Avoid
 
-1. Forgetting to close a multi-line comment:
+1. **Forgetting to close a multi-line comment**:
 	- Incorrect:
+
 ```
 #(
 This is an open multi-line comment
 ```
 	- Correct:
+
 ```
 #(
 This is a properly closed multi-line comment
 )#
 ```
 
+2. **Commenting too much or too little**:
 
+	- Comment the why, not the obvious what:
+```py
+## Bad: Adds two numbers
+print(2 + 3)
+
+## Good: Add two numbers to calculate the total score
+print(2 + 3)
+```
+
+## Exercises
+
+### Exercise 2: Commenting Challenge
+
+Here’s a piece of code without comments. Add appropriate comments to explain its purpose:
+
+```py
+$x = 10 ## Set initial value
+for $i in 1...5 collect (
+    $x += $i;
+    print($x)
+)
+```
+
+### Exercise 3: Multi-Line Comments
+
+Write a program that:
+
+1. Uses a multi-line comment to explain its overall purpose.
+2. Includes at least two single-line comments to clarify specific steps.
+
+## FAQ
+
+### Q: Will comments slow down my program?
+**A**: No, comments are ignored by the bell interpreter and do not affect performance.
+
+### Q: Should I comment every line of code?
+**A**: No, focus on why you're doing something rather than what the code does, especially for straightforward lines.
+
+---
+
+With comments mastered, you're now ready to explore variables, the building blocks of programming logic in bell.
+
+Next up: **Variables – Storing and Organizing Data**

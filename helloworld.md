@@ -14,24 +14,24 @@ print("hello world")
 
 ### Step-by-Step Explanation:
 
-- `print` Function:
+- **The** `print` **function**:
   - The `print` function outputs text or numbers to the screen.
   - In this case, `print` is instructed to display `"hello world"`.
-- The symbol `"hello world"`:
-  - Text inside double quotes (`"`) is called a symbol.
+- **The** `"hello world"` **symbol**:
+  - Text inside double quotes (`"`) is called a symbol. If you have prior programming experience, a symbol would be the _bell_ equivalent of a _string_ datatype.
   - Symbols represent textual data. You’ll use them often in bell for structuring data, specifying file paths, and more.
-- Code structure:
+- **Code structure**:
   - A single line of bell code can execute an entire command. In this example, the `print` function is a command that directly interacts with the system to display the desired output.
-- Semicolon?:
+- **Semicolon?**:
   - Notice that there’s no semicolon (`;`) at the end of this line. In the current version of _bell_, semicolons are used at the end of every statement, except for the very last line. Since our code is only a single line, we don't use semicolons yet.
 
 ## Running the Program
 
 To execute your code:
 
-1. Save your code in a file, for example, hello.bell.
-2. Open your bell environment or interpreter.
-3. Run the file by loading it in `bellplay~`. In the Max console, you should see:
+1. Save your code in a file, for example, `hello.bell`.
+2. Open [_bellplay~_](https://github.com/felipetovarhenao/bellplay/releases/latest).
+3. Run the file by loading it. In the Max console, you should see:
 
 ```
 bach.eval • hello world
@@ -46,7 +46,7 @@ bach.eval • hello world
    - `"music is magic"`
    - `"your name" (e.g., "hello, John")`
    
-   Example:
+   **Example**:
     ```py
     print("music is magic")
     ```
@@ -60,9 +60,10 @@ bach.eval • hello world
 ### Q: Do I have to use double quotes for text?
 **A**: No, you can also use single quotes (`'`) for symbols (more in this topic later). For example:
 
-```bell
+```py
 print('hello world')
 ```
+
 ### Q: What happens if I forget the closing quote?
 **A**: You'll likely get an parsing error because bell expects single- and double-quote symbols to be enclosed properly. Double-check for missing or mismatched quotes.
 
