@@ -149,4 +149,4 @@ Write a program that:
 
 With comments mastered, you're now ready to explore variables, the building blocks of programming logic in bell.
 
-Next up: **Variables – Storing and Organizing Data**
+> Next up: [Variables – Storing and Organizing Data](variables.md)

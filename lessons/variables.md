@@ -154,4 +154,4 @@ print($x) ## Output: 30
 
 With variables under your belt, you're ready to tackle basic expressions and learn how to perform calculations in _bell_.
 
-Next up: **Basic Expressions – Performing Arithmetic and More**
+> Next up: [Basic Expressions – Performing Arithmetic and More](expressions.md)

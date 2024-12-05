@@ -151,4 +151,4 @@ $x = 5 + 3 ## Easier to read
 
 With a solid understanding of basic expressions, you’re now ready to explore lists, which are crucial for handling complex data in _bell_.
 
-Next up: **Lisp-Like Linked Lists (lllls) – Working with Nested Data Structures**
+Next up: [Lisp-Like Linked Lists (lllls) – Working with Nested Data Structures](lists.md)
