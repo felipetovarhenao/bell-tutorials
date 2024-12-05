@@ -70,4 +70,4 @@ print('hello world')
 ## Beyond "Hello, World!"
 Now that you’ve written and run your first program, you're ready to explore the fundamental building blocks of bell, including comments, variables, and expressions. But first, take a moment to reflect—you’ve just written your first program in bell!
 
-Next up: **Comments – How to Document Your Code**
+> Next up: [Comments – How to Document Your Code](comments.md)
