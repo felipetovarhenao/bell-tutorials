@@ -21,31 +21,36 @@ Here, `$x` is the variable name, and `10` is the value stored in it.
 _bell_ distinguishes between **local** and **global** variables:
 
 1. **Local Variables**:
-	- Begin with a dollar sign (`$`), e.g., `$x`, `$note`, `$myvar`.
-	- Used within a specific scope (e.g., inside a function — _more on this later on_).
-	- Automatically discarded/forgotten when the scope ends.
+
+   - Begin with a dollar sign (`$`), e.g., `$x`, `$note`, `$myvar`.
+   - Used within a specific scope (e.g., inside a function — _more on this later on_).
+   - Automatically discarded/forgotten when the scope ends.
 
 2. **Global Variables**:
-	- Do not begin with a dollar sign, e.g., x.
-	- Available throughout the entire program.
+   - Do not begin with a dollar sign, e.g., x.
+   - Available throughout the entire program.
 
 ### Example:
+
 ```py
 $localvar = 5; ## Local variable
 Globalvar = 10 ## Global variable
 ```
+
 > **Tip**: Use local variables whenever possible to avoid unintended conflicts or errors in larger programs.
 
 ## Best Practices for Naming Variables
 
 1. Be Descriptive:
-	- Instead of $a, use $score, $length, or $pitch.
+
+   - Instead of $a, use $score, $length, or $pitch.
 
 2. Avoid Naming Collisions:
-	- Use capitalization to differentiate global variables (e.g., GlobalVar) from local variables (e.g., $globalVar).
+
+   - Use capitalization to differentiate global variables (e.g., GlobalVar) from local variables (e.g., $globalVar).
 
 3. Stick to a Naming Convention:
-	- For readability, use _camelCase_ (`$myVariable`) or _snake_case_ (`$my_variable`) consistently.
+   - For readability, use _camelCase_ (`$myVariable`) or _snake_case_ (`$my_variable`) consistently.
 
 ## Examples of Assigning Variables
 
@@ -85,9 +90,9 @@ print($x) ## Output: 15
 The scope of a variable refers to where it can be accessed or modified. In bell:
 
 1. Local variables:
-	- Only accessible within the block of code where they are defined.
+   - Only accessible within the block of code where they are defined.
 2. Global variables:
-	- Accessible anywhere in the program.
+   - Accessible anywhere in the program.
 
 ### Example:
 
@@ -105,6 +110,7 @@ if $x > 5 then (
 In _bell_, you can combine assignment with arithmetic operations for brevity.
 
 ### Examples:
+
 ```py
 $x += 10; ## Add 10 to $x
 $x -= 5;  ## Subtract 5 from $x
@@ -113,6 +119,7 @@ $x /= 4  ## Divide $x by 4
 ```
 
 ### Full Example:
+
 ```py
 $x = 10;
 $x += 5;  ## $x is now 15
@@ -144,12 +151,15 @@ print($x) ## Output: 30
 ## FAQ
 
 ### Q: Can variable names start with a number?
+
 **A**: No, variable names must begin with a letter or a `$`.
 
 ### Q: Can I use special characters in variable names?
+
 **A**: Avoid special characters (e.g., `@`, `%`, `&`) in variable names, except for `$` in local variables.
 
 ### Q: What happens if I forget the $ for a local variable?
+
 **A**: Without the `$`, bell treats the variable as global.
 
 With variables under your belt, you're ready to tackle basic expressions and learn how to perform calculations in _bell_.

@@ -11,3 +11,6 @@ Table of contents:
 7. [Null](lessons/null.md).
 8. [Operators](lessons/operators.md).
 9. [Addresses](lessons/addresses.md).
+10. [Keys](lessons/keys.md).
+11. [List operators](lessons/listop.md).
+12. [Compound assignment operators](lessons/compassign.md).
