@@ -9,5 +9,5 @@ Table of contents:
 5. [Lists](lessons/list.md).
 6. [Symbols](lessons/symbols.md).
 7. [Null](lessons/null.md).
-8. [Null](lessons/operators.md).
-9. [Null](lessons/addresses.md).
+8. [Operators](lessons/operators.md).
+9. [Addresses](lessons/addresses.md).
