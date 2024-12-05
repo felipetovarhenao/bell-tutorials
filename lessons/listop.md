@@ -63,9 +63,9 @@ To add elements to an existing list, either at the beginning or end of it, we ca
 ```py
 $x = 3 4; ## some list
 ## appending
-$x = $x 5 6; ## $x is now 3 4 5 6
+$x = $x 5 6; ## Output: 3 4 5 6
 ## prepending
-$x = 1 2 $x ## $x is now 1 2 3 4 5 6
+$x = 1 2 $x ## Output: 1 2 3 4 5 6
 ```
 
 However, _bell_ offers a shorthand to achieve the same, via the append (`_=`) and prepend (`!_=`) operators.
