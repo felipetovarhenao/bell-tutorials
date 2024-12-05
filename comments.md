@@ -35,7 +35,7 @@ print("hello world") ## This prints "hello world" to the screen
 
 For longer explanations, use multi-line comments. These are enclosed with `#(` and `)#`. Everything between `#(` and `)#` is treated as a comment.
 
-```py
+```go
 #(
 This program calculates the area of a rectangle
 and displays the result.
