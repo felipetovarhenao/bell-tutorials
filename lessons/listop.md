@@ -73,9 +73,9 @@ However, _bell_ offers a shorthand to achieve the same, via the append (`_=`) an
 ```py
 $x = 3 4; ## some list
 ## appending
-$x _= 5 6; ## $x is now 3 4 5 6
+$x _= 5 6; ## Output: 3 4 5 6
 ## prepending
-$x !_= 1 2 ## $x is now 1 2 3 4 5 6
+$x !_= 1 2 ## Output: 1 2 3 4 5 6
 ```
 
 ## Using List Operators Together
