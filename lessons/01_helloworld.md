@@ -42,22 +42,25 @@ bach.eval • hello world
 ## Exercise 1: Customize Your Output
 
 1. Try changing the symbol inside the print function. Replace `"hello world"` with:
+
    - `"welcome to bell!"`
    - `"music is magic"`
    - `"your name" (e.g., "hello, John")`
-   
+
    **Example**:
-    ```py
-    print("music is magic")
-    ```
+
+   ```py
+   print("music is magic")
+   ```
+
 2. Save your updated bell code to see how the output changes.
 
 > When you load a `.bell` in _bellplay~_, the code is automatically evaluated everytime you save it. As such, it's worth memorizing and using the keyboard shortcut to save a file — `Command+S` on Mac, and `Ctrl+S` on Windows.
 
-
 ## FAQ
 
 ### Q: Do I have to use double quotes for text?
+
 **A**: No, you can also use single quotes (`'`) for symbols (more in this topic later). For example:
 
 ```py
@@ -65,9 +68,11 @@ print('hello world')
 ```
 
 ### Q: What happens if I forget the closing quote?
+
 **A**: You'll likely get an parsing error because bell expects single- and double-quote symbols to be enclosed properly. Double-check for missing or mismatched quotes.
 
 ## Beyond "Hello, World!"
+
 Now that you’ve written and run your first program, you're ready to explore the fundamental building blocks of bell, including comments, variables, and expressions. But first, take a moment to reflect—you’ve just written your first program in bell!
 
-> Next up: [Comments – How to Document Your Code](comments.md)
+> Next up: [Comments – How to Document Your Code](02_comments.md)
