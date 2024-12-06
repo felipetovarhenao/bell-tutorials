@@ -15,15 +15,16 @@ print("hello world")
 ### Step-by-Step Explanation:
 
 - **The** `print` **function**:
-  - The `print` function outputs text or numbers to the screen.
+  - The `print` function displays data we want to see in the Max console window.
   - In this case, `print` is instructed to display `"hello world"`.
 - **The** `"hello world"` **symbol**:
-  - Text inside double quotes (`"`) is called a symbol. If you have prior programming experience, a symbol would be the _bell_ equivalent of a _string_ datatype.
+  - Text inside double quotes (`"`) is called a symbol. 
   - Symbols represent textual data. You’ll use them often in bell for structuring data, specifying file paths, and more.
+  > If you have prior programming experience, a symbol would be, roughly speaking, the _bell_ equivalent of a _string_ datatype in languages like _C_, _Java_, _Python_, and others.
 - **Code structure**:
-  - A single line of bell code can execute an entire command. In this example, the `print` function is a command that directly interacts with the system to display the desired output.
+  - A single line of _bell_ code can execute an entire command. In this example, the `print` function is a command that directly interacts with the system to display the desired output.
 - **Semicolon?**:
-  - Notice that there’s no semicolon (`;`) at the end of this line. In the current version of _bell_, semicolons are used at the end of every statement, except for the very last line. Since our code is only a single line, we don't use semicolons yet.
+  - Notice that there’s no semicolon (`;`) at the end of this line. In the current version of _bell_, semicolons are used at the end of every statement, except for the very last line. Since our code is only a single line, we don't use semicolons yet. We'll discuss this in more about this later.
 
 ## Running the Program
 

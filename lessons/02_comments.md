@@ -24,7 +24,7 @@ print("hello world") ## This prints "hello world" to the screen
 
    ```py
    ## Write a message
-   print("Welcome to bell") ## Print the welcome message
+   print("Welcome to bell"); ## Print the welcome message
 
    ## Calculate a sum
    print(2 + 3) ## Print the result of 2 + 3
@@ -43,8 +43,8 @@ and displays the result.
 Length and width are hardcoded for simplicity.
 )#
 
-$length = 5
-$width = 10
+$length = 5;
+$width = 10;
 print($length * $width) ## Output: 50
 ```
 
@@ -115,7 +115,7 @@ print($length * $width) ## Output: 50
 
      ```py
      ## Bad: Adds two numbers
-     print(2 + 3)
+     print(2 + 3);
 
      ## Good: Add two numbers to calculate the total score
      print(2 + 3)
