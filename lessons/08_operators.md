@@ -195,7 +195,9 @@ Use parentheses to clarify or override precedence.
 $label = "C" + "maj";
 print($label); ## Outputs: Cmaj
 ```
+
 ---
+
 With a solid grasp of operators, you’re now ready to explore addresses, which allow you to access specific elements in complex lists and nested structures.
 
-> Next up: [Addresses – Accessing Elements in Nested Data Structures](addresses.md)
+> Next up: [Addresses – Accessing Elements in Nested Data Structures](09_addresses.md)

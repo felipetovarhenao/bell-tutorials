@@ -61,6 +61,7 @@ print(thin($scale)); ## Outputs: C4 E4 G4
 You can chain multiple list functions together for more complex operations.
 
 ### Example: Generate and Transform a Scale
+
 1. Create a chromatic scale using arithmser.
 2. Reverse the scale with rev.
 3. Flatten the scale (if it’s nested).
@@ -74,6 +75,7 @@ print($chromatic.rev().flat()) ## Outputs: 71 70 69 ... 60
 ## Real-World Music Examples
 
 ### Generating and Cleaning a Random Melody
+
 1. Use `random` to generate a list of random notes.
 2. Remove duplicates with `thin`.
 3. Reverse the melody for variety.
@@ -85,6 +87,7 @@ print($cleanedMelody)
 ```
 
 ### Converting Frequencies to Notes
+
 Use `f2mc` to map a list of frequencies back to musical notes.
 
 ```py
@@ -97,41 +100,43 @@ print($frequencies.f2mc()) ## Outputs: A4 G4 C5
 ### Exercise 1: Analyze a Melody
 
 1. Create a melody as a `llll`:
-	```py
-	$melody = C4 D4 E4 F4 G4;
-	```
+   ```py
+   $melody = C4 D4 E4 F4 G4;
+   ```
 2. Print the length of the melody.
 3. Reverse the melody and print it.
 
 ### Exercise 2: Flatten a Progression
 
 1. Create a nested chord progression:
-	```py
-	$progression = [C4 E4 G4] [F4 A4 C5] [G4 B4 D5];
-	```
+   ```py
+   $progression = [C4 E4 G4] [F4 A4 C5] [G4 B4 D5];
+   ```
 2. Flatten the progression into a single list of notes using `flat`.
 3. Print the flattened progression.
 
 ### Exercise 3: Clean Up a Scale
+
 1. Create a scale with duplicate notes:
-	```py
-	$scale = C4 D4 E4 C4 G4 D4;
-	```
+   ```py
+   $scale = C4 D4 E4 C4 G4 D4;
+   ```
 2. Remove the duplicates using thin.
 3. Print the cleaned scale.
 
 ### Exercise 4: Frequency to Note Conversion
 
 1. Create a list of frequencies corresponding to musical pitches:
-	```py
-	$frequencies = 261.63 329.63 392.00;
-	```
+   ```py
+   $frequencies = 261.63 329.63 392.00;
+   ```
 2. Convert the frequencies to MIDI notes using `f2mc`.
 3. Print the resulting notes.
 
 ## FAQ
 
 ### Q: Can I combine list functions?
+
 **A**: Yes, functions like flat, rev, and thin can be chained together. For example:
 
 ```py
@@ -140,9 +145,11 @@ print($data.flat().rev())
 ```
 
 ### Q: How deep can a nested list go?
+
 **A**: There’s no practical limit to nesting depth, but overly deep structures can make your code harder to read and maintain.
 
 ### Q: What happens if I flatten a non-nested list?
+
 **A**: Flattening a non-nested list does nothing. For example:
 
 ```py
@@ -152,4 +159,4 @@ print(flat($notes)) ## Outputs: C4 D4 E4
 
 Now that you’ve explored list functions, you’re ready to dive into symbols, which are crucial for representing textual data like note names and other musical labels.
 
-> Next up: [Symbols – Working with Text in Musical Contexts](symbols.md)
+> Next up: [Symbols – Working with Text in Musical Contexts](06_symbols.md)

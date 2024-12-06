@@ -166,4 +166,4 @@ print($chord:4); ## Error: Index out of range
 
 By mastering addresses, you can effectively navigate and manipulate complex musical structures in bell. Next, we’ll explore keys, which provide another way to structure and access data using symbolic labels.
 
-> Next up: [Keys – Organizing and Accessing Data with Key-Value Pairs](keys.md)
+> Next up: [Keys – Organizing and Accessing Data with Key-Value Pairs](10_keys.md)
