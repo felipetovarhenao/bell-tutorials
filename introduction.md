@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of programming in _bell_. Whether or not you have experience with text-based programming—or even programming within **Max**—these tutorials aim to guide you step-by-step through the essentials.
+This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of computer programming in _bell_. Whether or not you have experience with text-based programming—or even programming within **Max**—these tutorials aim to guide you step-by-step through the fundamentals.
 
 ## What is _bell_?
 
