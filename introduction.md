@@ -1,50 +1,63 @@
-# A friendly introduction to programming with bell, for musicians
+# A Friendly Introduction to Programming with bell, for Musicians
 
 ## Introduction
 
-The following is a series of introductory tutorials to learn programming in bell. The target audience for these tutorials are musicians with little to no prior experience in programming, particularly text-based programming.
+This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of programming in _bell_. Whether or not you have experience with text-based programming—or even programming within **Max**—these tutorials aim to guide you step-by-step through the essentials.
 
 ## What is _bell_?
 
-_bell_ is a programming language developed by composer and researcher Andrea Agostini, as part of the _bach_ package for computer-assisted composition (CAC) within Max. Even though _bach_ continues to gain popularity among Max users, it is fair to say that _bach_ users still represent a small fraction within the Max user community, and among _bach_ users, the fraction of _bell_ users is likely even smaller. For this reason, _bell_ is a fairly esoteric and unknown programming language, and only those well deep into CAC will come across it. This is why I decided to write these tutorials.
+_bell_ is a programming language created by composer and researcher Andrea Agostini as part of the [bach](https://www.bachproject.net/) package for computer-assisted composition (CAC) within _Max_. While bach has grown increasingly popular among Max users, it’s still a niche tool, and _bell_—as a subset of bach—is even less widely known. For those immersed in CAC workflows, however, _bell_ offers a unique and valuable toolset, which is why these tutorials exist: to demystify _bell_ and make it accessible to a wider audience.
 
-## Why learn _bell_?
+## Why Learn _bell_?
 
-While _bell_ is a rather niche programming language, it is an extremely powerful and versatile language relative to how simple and easy to learn it is. Since _bell_ was specifically created as part of a CAC ecosystem (i.e., the _bach_, _cage_, _dada_, and _ears_ packages in _Max_), it doesn't include features that other programming languages would, that aren't interesting or useful to the average CAC-oriented composer, making everything about the language materially useful and worth exploring.
+Although _bell_ is a niche programming language, it is exceptionally powerful, versatile, and approachable for musicians. It was specifically designed as part of a CAC ecosystem (the _[bach](https://www.bachproject.net/)_, _[cage](https://www.bachproject.net/cage)_, _[dada](https://www.bachproject.net/dada)_, and _[ears](https://www.bachproject.net/ears)_ packages in _Max_), focusing only on features relevant to CAC-oriented composers. This makes _bell_ streamlined and intuitive, eliminating extraneous features common in general-purpose programming languages. Every part of _bell_ is purpose-built and worth exploring for those interested in algorithmic music creation.
 
-## How these tutorials work
+## How These Tutorials Work
 
-These tutorials were specifically written as a learning material for the course _Special Topics in Composition: Introduction to Computer-assisted Algorithmic Composition_, which I designed as part of my postdoctoral residency at the _University of Cincinnati College-Conservatory of Music_. As such, there were a few but important assumptions and goals in mind:
+These tutorials were initially created for the course Special Topics in Composition: Introduction to Computer-Assisted Algorithmic Composition, which I developed during my postdoctoral residency at the University of Cincinnati College-Conservatory of Music. As such, they are tailored to musicians with specific assumptions and goals in mind:
 
-1. **Programing experience**: No prior programming experience is assumed, <ins>including experience with _Max_ programming</ins>.
-2. **bell vs. CAC**: These tutorials are **NOT** about _CAC_, but rather about the most relevant aspects of the bell programming language. That's why, even though some of the examples and exercises are music-oriented, this is only to keep the tutorials relatable and hint at some of the ways in which _bell_ is useful for _CAC_.
-3. **bellplay~**: Last but not least, these tutorials are meant to prepare readers to want to use [bellplay~](https://github.com/felipetovarhenao/bellplay), but aren't already _Max_ or **bach** users. As such, the tutorials will rarely touch on any Max-specific functionalities within _bell_, such as externals inputs/outputs, and variables. That being said, the scope of these tutorials remains the _bell_ programming language, and any **bellplay~** specific features and functionalities are left out.
+### 1. Programming Experience:
 
-> If you're already proficient in bell and only want to learn bellplay~, please refer to the built-in tutorials in _bellplay~_
+No prior programming experience is required, including experience with _Max_ programming.
 
-## System requirements
+### 2. Focus on bell, Not CAC:
 
-To follow these tutorials you will need:
+These tutorials primarily focus on _bell_, **not** computer-assisted composition itself. While some examples and exercises are music-flavored to keep them relatable, the primary goal is to teach relevant programming concepts in _bell_, which are essential to understand _before_ delving into CAC.
 
-### Text editor
+### 3. Preparation for _bellplay~_:
 
-A dedicated text-editor, preferrably [Visual Studio Code](https://code.visualstudio.com/), for which I developed an extension that provides helpful features for bell programming, such as syntax highlighting, autocomplete, code auto-formatting, and more. To setup Visual Studio Code for these tutorials, follow these steps:
+These tutorials are designed to familiarize users with _bell_, particularly those who wish to transition to [bellplay~](https://github.com/felipetovarhenao/bellplay), but they are not intended to teach _Max_ or bach functionalities. While Max-related features in _bell_, such as external inputs/outputs, are occasionally touched upon, the emphasis remains on core _bell_ programming concepts.
+
+> If you’re already proficient in bell and want to focus specifically on _bellplay~_, please refer to the built-in tutorials within the _bellplay~_ application. Similarly, if you're already a bach user and are primarily interested in learning _bell_ vis-a-vis _bach_, the official _bell_ documentation within _bach_ is perhaps the best route to take.
+
+## System Requirements
+
+To follow these tutorials, you’ll need the following tools:
+
+### 1. Text Editor
+
+A dedicated text editor is essential, and I recommend [Visual Studio Code](https://code.visualstudio.com/), for which I’ve developed an extension with features like syntax highlighting, autocomplete, and code auto-formatting for bell. Here’s how to set it up:
 
 1. Download and install [Visual Studio Code](https://code.visualstudio.com/).
 2. Install the [bell syntax](https://marketplace.visualstudio.com/items?itemName=tovarhenao.bell-syntax) extension for _VSCode_.
 
-### bellplay~
+### 2. _bellplay~_
 
-1. Download the latest version of [bellplay](https://github.com/felipetovarhenao/bellplay/releases/latest).
+1. Download the latest version of _bellplay~_ [here](https://github.com/felipetovarhenao/bellplay/releases/latest).
 
-   - **MacOS**: Download the `.zip` file for `MacOS`, uncompress it and put the standalone (`.app`) in your `Applications` folder.
-   - **Windows**: Since at the moment of this writing there is no executable of bellplay, you will need to use the source code version of _bellplay~_:
-     1. Download and install Cycling 74's Max 8 (Max 9 has not been tested yet). The free-trial version should work fine.
-     2. To lauch bellplay, open the `bellplay.maxproj` inside the source code folder.
+   - **MacOS**: Download the `.zip` file, uncompress it, and place the standalone (`.app`) in your _Applications_ folder.
+   - **Windows**: Since there’s no standalone executable for Windows at the time of this writing, you’ll need to run _bellplay~_ via its source code:
+
+     1. Download and install [Cycling 74’s Max 8](https://cycling74.com/downloads/older) (_Max 9_ is untested). The free trial version should work fine.
+
+     2. Open the `bellplay.maxproj` file inside the source code folder to launch _bellplay~_.
 
 2. In _bellplay~_:
-   1. Click on _open documentation_ at the top right
-   2. Go to the _TUTORIALS_ tab and click on _default editor_ at the top right.
-   3. Search for the VSCode application in your computer. The typical location for each operating system is:
-      - **MacOS:** `/Applications/Visual Studio Code.app`
-      - **Windows**: `C:\Users\<YourUsername>\AppData\Local\Programs\Microsoft VS Code\Code.exe`
+   - Click on **Open Documentation** in the top right corner.
+   - Navigate to the **TUTORIALS** tab and set your **default editor** to Visual Studio Code:
+     - On **MacOS**, the VSCode application is typically located at `/Applications/Visual Studio Code.app`
+     - On **Windows**, it’s usually found at `C:\Users\<YourUsername>\AppData\Local\Programs\Microsoft VS Code\Code.exe`
+
+## Final Notes
+
+These tutorials are designed to provide a clear and structured introduction to bell, helping you build a foundation for programming within the context of computer-assisted composition. Whether your interest lies in algorithmic music or simply gaining a deeper understanding of tools like _bellplay~_, the aim is to make the material accessible and relevant. Take your time, and feel free to revisit sections as needed—programming is a skill that grows with practice and experimentation.
