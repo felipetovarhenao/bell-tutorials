@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In programming, comments are essential for explaining _what your code does_ and _why it does it_. While the computer ignores comments, they serve as notes for humans—whether it's your future self or someone else reading your code.
+In programming, comments are essential for explaining _what your code does_ and _why it does it_. While the computer ignores comments, they serve as notes for humans — whether it's your future self or someone else (i.e., your instructor) reading your code.
 
 In _bell_, comments come in two flavors: **single-line** and **multi-line**.
 
@@ -23,11 +23,9 @@ print("hello world") ## This prints "hello world" to the screen
 1. Add single-line comments to this code explaining what each line does:
 
    ```py
-   ## Write a message
-   print("Welcome to bell"); ## Print the welcome message
+   print("Welcome to bell");
 
-   ## Calculate a sum
-   print(2 + 3) ## Print the result of 2 + 3
+   print(2 + 3)
    ```
 
 2. Run the program to confirm that the comments do not affect the output.
