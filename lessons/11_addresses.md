@@ -4,7 +4,7 @@
 
 When working with _lllls_ (lists and nested lists), you'll often need to access specific elements within it. In _bell_, addresses allow you to pinpoint and retrieve elements from both simple and complex structures. This is particularly useful for handling musical data, such as retrieving individual notes from chords, specific measures from a score, or rhythm patterns from a sequence.
 
-## Access Operator (:)
+## Access Operator (`:`)
 
 The colon (`:`) is the access operator in bell. It retrieves elements from a list based on their position (1-based indexing).
 
@@ -166,4 +166,4 @@ print($chord:4); ## Error: Index out of range
 
 By mastering addresses, you can effectively navigate and manipulate complex musical structures in bell. Next, we’ll explore keys, which provide another way to structure and access data using symbolic labels.
 
-> Next up: [Keys – Organizing and Accessing Data with Key-Value Pairs](10_keys.md)
+> Next up: [Keys – Organizing and Accessing Data with Key-Value Pairs](12_keys.md)

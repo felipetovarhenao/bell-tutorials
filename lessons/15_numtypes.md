@@ -214,4 +214,4 @@ $rhythm = 0.25; ## Equivalent to 1/4
 
 Numeric types are crucial for both mathematical and musical operations in bell. With a solid understanding of these types, you can now tackle more complex tasks like conditionals, which allow you to introduce decision-making into your musical algorithms.
 
-> Next up: [Conditionals – Making Decisions in Your Code](14_conditionals.md)
+> Next up: [Conditionals – Making Decisions in Your Code](16_conditionals.md)

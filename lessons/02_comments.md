@@ -34,16 +34,17 @@ print("hello world") ## This prints "hello world" to the screen
 
 For longer explanations, use multi-line comments. These are enclosed with `#(` and `)#`. Everything between `#(` and `)#` is treated as a comment.
 
-```go
+```bell
 #(
 This program calculates the area of a rectangle
 and displays the result.
 Length and width are hardcoded for simplicity.
 )#
 
-$length = 5;
+$height = 5;
 $width = 10;
-print($length * $width) ## Output: 50
+$area = $height * $width; ## calculate area
+print($area) ## Output: 50
 ```
 
 **Explanation**: The multi-line comment provides an overview of the program's purpose, while the single-line comment explains the specific calculation.
@@ -52,7 +53,7 @@ print($length * $width) ## Output: 50
 
 1. **Clarity**: Help others (and your future self) understand the purpose of your code.
 2. **Debugging**: Temporarily "disable" parts of your code by turning them into comments to isolate issues.
-3. **Collaboration**: Make your intentions clear when working in teams.
+3. **Collaboration**: Make your intentions clear when working on code with others.
 
 ## Best Practices for Writing Comments
 
@@ -84,7 +85,7 @@ print($length * $width) ## Output: 50
 
 3. Use multi-line comments for big-picture explanations:
    - Before a block of code:
-     ```
+     ```bell
      #(
      Generate a sequence of numbers and
      calculate their squares for later use
@@ -98,24 +99,26 @@ print($length * $width) ## Output: 50
    - Incorrect:
      ```
      #(
-     This is an open multi-line comment
+     This is an open
+     multi-line comment
      ```
    - Correct:
      ```
      #(
-     This is a properly closed multi-line comment
+     This is a properly closed
+     multi-line comment
      )#
      ```
 
 2. **Commenting too much or too little**:
 
-   - Comment the why, not the obvious what:
+   - Comment the _why_, not the obvious _what_:
 
      ```py
      ## Bad: Adds two numbers
      print(2 + 3);
 
-     ## Good: Add two numbers to calculate the total score
+     ## Good: Calculate total
      print(2 + 3)
      ```
 
@@ -126,11 +129,10 @@ print($length * $width) ## Output: 50
 Here’s a piece of code without comments. Add appropriate comments to explain its purpose:
 
 ```py
-$x = 10 ## Set initial value
-for $i in 1...5 collect (
-    $x += $i;
-    print($x)
-)
+$pitch1 = 60;
+$pitch2 = 65;
+$interval = $pitch2 - $pitch1;
+print($pitch1 "and" $pitch2 "are" $interval "semitones apart");
 ```
 
 ### Exercise 3: Multi-Line Comments
@@ -148,10 +150,10 @@ Write a program that:
 
 ### Q: Should I comment every line of code?
 
-**A**: No, focus on why you're doing something rather than what the code does, especially for straightforward lines.
+**A**: No, focus on _why_ you're doing something rather than _what_ the code does. You want comments to help you and others understand how each different blocks of code contribute to the overall function of your scripts.
 
 ---
 
-With comments mastered, you're now ready to explore variables, the building blocks of programming logic in bell.
+With comments mastered, you're now ready to explore variables, the building blocks of programming logic in _bell_.
 
 > Next up: [Variables – Storing and Organizing Data](03_variables.md)
