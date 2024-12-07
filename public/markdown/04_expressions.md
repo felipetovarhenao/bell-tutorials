@@ -19,7 +19,7 @@ _bell_ provides several basic arithmetic operators, including but not limited to
 | Modulo (remainder) | `%`      | `9 % 4`  | `1`    |
 | Power              | `**`     | `2 ** 3` | `8`    |
 
-We will dedicate a more time later on to explore other _bell_ operators, but these are a good starting point.
+We will dedicate a bit more time later on to explore other _bell_ operators, but these are a good starting point.
 
 ### Examples
 
