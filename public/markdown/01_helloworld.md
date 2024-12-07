@@ -69,7 +69,7 @@ bach.eval • hello world
 
 ### Q: Do I have to use double quotes for text?
 
-**A**: No, you can also use single quotes (`'`) for symbols (more in this topic later). For example:
+**A**: No, you can also use single quotes (`'`) for symbols (more on this later). For example:
 
 ```py
 print('hello world')
