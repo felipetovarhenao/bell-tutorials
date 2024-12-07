@@ -104,6 +104,13 @@ print($area) ## Output: 50
      This is an open
      multi-line comment
      ```
+   - Also incorrect (wrong closer):
+     ```
+     #(
+     This is also an open
+     multi-line comment
+     #(
+     ```
    - Correct:
      ```
      #(

@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Variables are the backbone of any programming language. In _bell_, variables are used to store and manipulate data such as numbers, text, lists, and even musical elements. Think of variables as labeled containers that hold values you can use or modify later.
+Variables are the backbone of any programming language. In _bell_, variables are used to store and manipulate data such as numbers, text, lists, and even pitches. Think of variables as labeled containers that hold values you can use or modify later.
 
 ## Declaring Variables
 
