@@ -114,7 +114,7 @@ print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 
 ### Q: Can I combine list functions?
 
-**A**: Yes, any function can be chained to another, in either syntax. For example:
+**A**: Yes, any function can be chained to another, in either syntax style. For example:
 
 ```py
 $data = [C4 [E4 G4]] [F4 A4 C5];
@@ -137,4 +137,4 @@ print(flat($notes)) ## Outputs: C4 D4 E4
 
 ---
 
-Now that you’ve explored list functions, you’re ready to dive into symbols, which are crucial for representing textual data like note names and other musical labels.
+Now that you’ve explored list functions, you’re ready to dive into symbols, which are helpful for structuring _lllls_.
