@@ -66,6 +66,8 @@ print("hello world"); ## Outputs: hello world
    print(round($num)); ## Outputs: 2
    ```
 
+---
+
 ## Arguments in Functions
 
 Arguments are values you pass to a function. They can be **positional** or **named**:
