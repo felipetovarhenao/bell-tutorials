@@ -12,7 +12,7 @@ Functions are one of the most powerful tools in programming. In _bell_, function
 
 A function in _bell_:
 
-1. Has a name (e.g., print, pow, random).
+1. Has a name (e.g., `print`, `pow`, `random`).
 2. Takes arguments (optional inputs that modify its behavior).
 3. Returns a result.
 
