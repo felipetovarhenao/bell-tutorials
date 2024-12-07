@@ -1,4 +1,6 @@
-# Basic Expressions: Performing Arithmetic and More
+# Basic Expressions
+
+> _Performing Arithmetic and More_
 
 ## Introduction
 
@@ -10,14 +12,14 @@ Expressions are the building blocks of any program. In bell, expressions can inv
 
 _bell_ provides several basic arithmetic operations:
 
-| Operation | Symbol | Example | Result |
-| --- | --- | --- | --- |
-| Addition | `+` | `5 + 3` | `8` |
-| Subtraction |	`-` | `10 - 4` | `6` |
-| Multiplication | `*` | `7 * 2` | `14` |
-| Division | `/` | `8 / 2` | `4` |
-| Modulo (remainder) | `%` | `9 % 4` | `1` |
-| Power | `**` | `2 ** 3` | `8` |
+| Operation          | Symbol | Example  | Result |
+| ------------------ | ------ | -------- | ------ |
+| Addition           | `+`    | `5 + 3`  | `8`    |
+| Subtraction        | `-`    | `10 - 4` | `6`    |
+| Multiplication     | `*`    | `7 * 2`  | `14`   |
+| Division           | `/`    | `8 / 2`  | `4`    |
+| Modulo (remainder) | `%`    | `9 % 4`  | `1`    |
+| Power              | `**`   | `2 ** 3` | `8`    |
 
 ### Examples
 
@@ -46,6 +48,7 @@ print(10 % 3) ## Output: 1 (10 divided by 3 leaves a remainder of 1)
 ```
 
 #### Power (Exponents)
+
 ```py
 print(2 ** 3) ## Output: 8 (2 raised to the power of 3)
 ```
@@ -73,6 +76,7 @@ print($x) ## Output: 11
 Variables can be used just like numbers or other values in expressions.
 
 ### Example:
+
 ```py
 $base = 10;
 $height = 5;
@@ -83,10 +87,12 @@ print($area) ## Output: 25
 ## Expressions vs. Statements
 
 In _bell_, there’s a subtle distinction between expressions and statements:
+
 - **Expression**: Produces a value. Examples: `5 + 3`, `$x * 2`.
 - **Statement**: Performs an action, like assigning a value or printing. Examples: `$x = 5 + 3`, `print($x)`.
 
 ### Nullify Operator (`;`)
+
 - Use a semicolon (`;`) to **nullify** an expression, meaning its result is discarded.
 
 ### Example:
@@ -128,20 +134,25 @@ $total = ($item1 + $item2) * (1 + $taxrate)
 
 1. Declare variables for length and width.
 2. Write a formula to calculate the perimeter of a rectangle:
+
 ```py
 $perimeter = 2 * ($length + $width)
 ```
+
 3. Print the perimeter.
 
 ## FAQ
 
 ### Q: What happens if I divide by zero?
+
 **A**: Dividing by zero in bell will result in an error. Always ensure the divisor is not zero.
 
 ### Q: Can I mix numbers and variables in expressions?
+
 **A**: Yes, you can freely combine numbers and variables in any valid expression.
 
 ### Q: Do I need spaces between operators?
+
 **A**: Spaces are optional but recommended for readability. For example:
 
 ```py

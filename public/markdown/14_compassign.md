@@ -1,4 +1,6 @@
-# Compound Assignment Operators: Shortcuts for Modifying Variables
+# Compound Assignment Operators
+
+> _Shortcuts for Modifying Variables_
 
 ## Introduction
 
@@ -21,7 +23,7 @@ $x += 5;
 ## List of Compound Assignment Operators
 
 | Operator | Description             | Example    | Equivalent To  |
-| --- | --- | --- | --- |
+| -------- | ----------------------- | ---------- | -------------- |
 | `+=`     | Add and assign          | `$x += 3`  | `$x = $x + 3`  |
 | `-=`     | Subtract and assign     | `$x -= 2`  | `$x = $x - 2`  |
 | `*=`     | Multiply and assign     | `$x *= 4`  | `$x = $x * 4`  |

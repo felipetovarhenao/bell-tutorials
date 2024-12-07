@@ -1,4 +1,6 @@
-# Lisp-Like Linked Lists (lllls): Working with Nested Data Structures
+# Lisp-Like Linked Lists (lllls)
+
+> _Working with Nested Data Structures_
 
 ## Introduction
 

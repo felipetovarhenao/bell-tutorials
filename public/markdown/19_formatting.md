@@ -1,4 +1,6 @@
-# Indentation and Code Etiquette: Writing Clean and Readable Code
+# Indentation and Code Etiquette
+
+> _Writing Clean and Readable Code_
 
 ## Introduction
 

@@ -1,4 +1,6 @@
-# Null Keyword: Understanding Nothingness in Code
+# The null keyword
+
+> _Understanding Nothingness in Code_
 
 ## Introduction
 

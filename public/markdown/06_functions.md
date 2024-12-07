@@ -1,4 +1,6 @@
-# Functions: Performing Operations on Musical Data
+# Functions
+
+> _Performing Operations on Musical Data_
 
 ## Introduction
 

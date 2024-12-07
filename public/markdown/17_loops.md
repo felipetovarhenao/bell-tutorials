@@ -1,4 +1,6 @@
-# Loops: Repeating and Collecting Data in Your Programs
+# Loops
+
+> _Repeating and Collecting Data in Your Programs_
 
 ### Introduction
 
@@ -12,9 +14,7 @@ A for loop iterates through each element in a list. It is perfect for processing
 
 Syntax:
 
-```
-for $<var> in <list> <do|collect> <statement>;
-```
+`for $<var> in <list> <do|collect> <statement>;`
 
 - `do`: Executes the statement but discards all intermediate results except the last one.
 - `collect`: Executes the statement and gathers the results into a new list.
@@ -28,7 +28,7 @@ for $note in $melody do print($note);
 
 ##### Output:
 
-```py
+```
 C4
 D4
 E4

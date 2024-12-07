@@ -1,4 +1,6 @@
-# Keys: Organizing and Accessing Data with Key-Value Pairs
+# Keys
+
+> _Organizing and Accessing Data with Key-Value Pairs_
 
 ## Introduction
 
@@ -10,7 +12,7 @@ A key-value pair in bell is a data structure that associates a key (symbol) with
 
 ### Syntax:
 
-```
+```c
 [ <key1> <value1> ] [ <key2> <value2> ] ... [ <keyN> <valueN> ]
 ```
 

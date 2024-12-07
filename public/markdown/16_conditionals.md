@@ -1,4 +1,6 @@
-# Conditionals: Making Decisions in Your Code
+# Conditionals
+
+> _Making Decisions in Your Code_
 
 ## Introduction
 
@@ -24,7 +26,7 @@ if $note > 64 then print("The note is above E4");
 ## Conditional Keywords
 
 | Keyword   | Purpose                                         | Example                            |
-| --- | --- | --- |
+| --------- | ----------------------------------------------- | ---------------------------------- |
 | `if`      | Evaluates a condition and executes code if true | `if $x > 5 then print($x);`        |
 | `else`    | Executes code if the `if` condition is false    | `else print("Condition false");`   |
 | `else if` | Chains multiple conditions                      | `else if $x == 10 then print($x);` |
@@ -85,7 +87,7 @@ else print("False detected"); ## Outputs: False detected
 You can combine conditions using logical operators:
 
 | Operator | Description                    | Example                     |
-| --- | --- | --- |
+| -------- | ------------------------------ | --------------------------- |
 | `and`    | Both conditions must be true   | `$note > 60 and $note < 72` |
 | `or`     | At least one condition is true | `$note < 60 or $note > 72`  |
 | `not`    | Negates a condition            | `not $note > 60`            |

@@ -1,4 +1,6 @@
-# Comments: Documenting Your Code
+# Comments
+
+> _Documenting Your Code_
 
 ## Introduction
 

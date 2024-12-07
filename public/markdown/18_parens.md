@@ -1,4 +1,6 @@
-# Parentheses: Grouping and Organizing Complex Statements
+# Parentheses
+
+> _Grouping and Organizing Complex Statements_
 
 ## Introduction
 

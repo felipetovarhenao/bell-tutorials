@@ -8,8 +8,9 @@ interface TOCProps {
 const TOC = ({ lessons }: TOCProps) => {
   return (
     <div>
-      <MarkdownRenderer markdownFile="introduction.md" />
-      <div>
+      <MarkdownRenderer markdownFile="markdown/00_introduction.md" />
+      <hr />
+      <div className="toc">
         <h2>Table of Contents</h2>
         <nav>
           <ul>

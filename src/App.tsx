@@ -8,8 +8,6 @@ function formatPaths(x: string, i: number): string {
   return "markdown/" + `0${i + 1}`.match(/\d{2}$/)![0] + "_" + x;
 }
 const App: React.FC = () => {
-  // List of chapters with their titles, paths, and file locations
-
   const [lessons, setLessons] = useState<MarkdownFileInfo[]>([]);
   useEffect(() => {
     const markdownPaths: string[] = [
@@ -43,10 +41,21 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<TOC lessons={lessons} />} />
-        {lessons.map((lesson) => (
-          <Route key={lesson.route} path={lesson.route} element={<MarkdownRenderer markdownFile={lesson.path} />} />
-        ))}
+        {lessons.map((lesson, i) => {
+          const prev = i > 0 ? lessons[i - 1] : undefined;
+          const next = i < lessons.length - 1 ? lessons[i + 1] : undefined;
+          return (
+            <Route
+              key={lesson.route}
+              path={lesson.route}
+              element={<MarkdownRenderer previousRoute={prev} nextRoute={next} markdownFile={lesson.path} />}
+            />
+          );
+        })}
       </Routes>
+      <footer style={{ width: "100%", paddingBottom: "25px", textAlign: "center" }}>
+        <i>{new Date().getFullYear()} @ Felipe Tovar-Henao</i>
+      </footer>
     </Router>
   );
 };

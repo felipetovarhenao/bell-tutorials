@@ -73,6 +73,9 @@ button:focus-visible {
   padding-right: 25px;
   min-width: min(100vw, 200px);
 }
+.markdown-container {
+  padding-bottom: 50px;
+}
 body {
   align-items: center;
   justify-content: center;
@@ -82,4 +85,19 @@ body {
 }
 table {
   border-spacing: 20px;
+}
+.toc {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.banner {
+  display: flex;
+  padding-top: 30px;
+  justify-content: space-between;
+  div {
+    flex: 1; /* All items will be equally sized */
+    text-align: center; /* Optional: Center text inside the items */
+    justify-content: center;
+    align-items: center;
+  }
 }

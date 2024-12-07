@@ -1,4 +1,6 @@
-# List Operators: Building and Modifying Musical Sequences
+# List Operators
+
+> _Building and Modifying Musical Sequences_
 
 ## Introduction
 

@@ -1,4 +1,6 @@
-# Symbols: Working with Text in Musical Contexts
+# Symbols
+
+> _Working with Text in Musical Contexts_
 
 ## Introduction
 

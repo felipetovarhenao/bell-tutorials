@@ -1,10 +1,10 @@
-# A Friendly Introduction to Programming with bell, for Musicians
+# Programming with _bell_
 
-_2024 © Felipe Tovar-Henao_
+> _a musician-friendly introduction to programming with the bell programming language_
 
 ## Introduction
 
-This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of computer programming in _bell_. Whether or not you have experience with text-based programming—or even programming within **Max**—these tutorials aim to guide you step-by-step through the fundamentals.
+This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of computer programming in _bell_. Whether or not you have experience with text-based programming — or even programming within [Max](https://cycling74.com/) — these tutorials aim to guide you step-by-step through the fundamentals.
 
 ## What is _bell_?
 

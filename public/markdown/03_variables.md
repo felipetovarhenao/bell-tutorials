@@ -1,4 +1,6 @@
-# Variables: Storing and Organizing Data
+# Variables
+
+> _Storing and Organizing Data_
 
 ## Introduction
 

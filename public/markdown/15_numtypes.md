@@ -1,4 +1,6 @@
-# Numeric Types: Understanding and Using Numbers in bell
+# Numeric Types
+
+> _Understanding and Using Numbers in bell_
 
 ## Introduction
 
