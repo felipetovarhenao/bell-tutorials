@@ -81,6 +81,11 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownFile, nextR
     blockquote({ children, ...props }: any) {
       return <blockquote {...props}>{children}</blockquote>;
     },
+    table: ({ node, ...props }: any) => (
+      <div className="table-container">
+        <table {...props} />
+      </div>
+    ),
   };
 
   // Render Markdown with syntax highlighting for code blocks

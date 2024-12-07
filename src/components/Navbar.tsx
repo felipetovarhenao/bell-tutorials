@@ -1,36 +1,44 @@
 import { MarkdownFileInfo } from "../utils/getMarkdownInfo";
 import { Link } from "react-router";
+import { Icon } from "@iconify/react"; // Import Iconify for icons
 
 interface NavbarProps {
   prev?: MarkdownFileInfo;
   next?: MarkdownFileInfo;
 }
+
 const Navbar = ({ prev, next }: NavbarProps) => {
   return (
     <div className="banner">
       {prev ? (
-        <div>
-          <span>Previous: </span>
-          <Link to={"/" + prev.route}>{prev.title}</Link>
+        <div className="nav-item">
+          <Link to={"/" + prev.route} className="nav-link">
+            <Icon icon="material-symbols:arrow-back-ios-rounded" className="nav-icon" />
+            <span>{prev.title}</span>
+          </Link>
         </div>
       ) : (
-        <div />
+        <div className="nav-item" />
       )}
       {(next || prev) && (
-        <div>
-          <span></span>
-          <Link to="/">Index</Link>
+        <div className="nav-item">
+          <Link to="/" className="nav-link">
+            Index
+          </Link>
         </div>
       )}
       {next ? (
-        <div>
-          <span>Next: </span>
-          <Link to={"/" + next.route}>{next.title}</Link>
+        <div className="nav-item">
+          <Link to={"/" + next.route} className="nav-link">
+            <span>{next.title}</span>
+            <Icon icon="material-symbols:arrow-forward-ios-rounded" className="nav-icon" />
+          </Link>
         </div>
       ) : (
-        <div />
+        <div className="nav-item" />
       )}
     </div>
   );
 };
+
 export default Navbar;

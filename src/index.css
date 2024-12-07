@@ -28,6 +28,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -52,13 +54,16 @@ button:hover {
 .header {
   font-family: "Lobster", sans-serif;
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
   // font-weight: bolder;
 }
 .main-logo {
   display: block;
   margin-left: auto;
+  margin-top: 25px;
   margin-right: auto;
-  max-width: 150px;
+  max-width: 20%;
 }
 button:focus,
 button:focus-visible {
@@ -82,15 +87,12 @@ button:focus-visible {
   width: 50vw;
   padding-left: 25px;
   padding-right: 25px;
-  min-width: min(100vw, 200px);
+  min-width: min(100vw, 300px);
 }
 .markdown-container {
   padding-bottom: 50px;
 }
-body {
-  align-items: center;
-  justify-content: center;
-}
+
 .inline-code {
   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 }
@@ -98,8 +100,8 @@ table {
   border-spacing: 20px;
 }
 .toc {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .banner {
   display: flex;
@@ -163,4 +165,16 @@ blockquote {
   100% {
     opacity: 0;
   }
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; /* Adds space between the text and icon */
+}
+
+.table-container {
+  overflow-x: auto; /* Enables horizontal scrolling if the table overflows */
+  display: block; /* Ensures proper block-level layout */
+  width: 100%; /* Matches the width of the parent container */
 }
