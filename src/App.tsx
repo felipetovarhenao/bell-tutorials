@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router";
 import MarkdownRenderer from "./components/MarkdownRenderer";
 import getMarkdownInfo, { MarkdownFileInfo } from "./utils/getMarkdownInfo";
-import TOC from "./components/TOC";
+
+import Index from "./components/Index";
 
 function formatPaths(x: string, i: number): string {
-  return "markdown/" + `0${i + 1}`.match(/\d{2}$/)![0] + "_" + x;
+  return "markdown/" + `0${i}`.match(/\d{2}$/)![0] + "_" + x;
 }
 const App: React.FC = () => {
   const [lessons, setLessons] = useState<MarkdownFileInfo[]>([]);
   useEffect(() => {
     const markdownPaths: string[] = [
+      "introduction.md",
       "helloworld.md",
       "comments.md",
       "variables.md",
@@ -40,7 +42,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<TOC lessons={lessons} />} />
+        <Route path="/" element={<Index lessons={lessons} />} />
         {lessons.map((lesson, i) => {
           const prev = i > 0 ? lessons[i - 1] : undefined;
           const next = i < lessons.length - 1 ? lessons[i + 1] : undefined;

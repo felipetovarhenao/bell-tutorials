@@ -2,8 +2,6 @@
 
 > _Performing Operations on Musical Data_
 
-## Introduction
-
 Functions are one of the most powerful tools in programming. In _bell_, functions allow you to perform operations on musical data, automate repetitive tasks, and compose algorithmic structures. Think of a function as a reusable block of code that takes input, performs an operation, and gives output.
 
 ## Understanding Functions

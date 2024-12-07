@@ -19,7 +19,7 @@ const Navbar = ({ prev, next }: NavbarProps) => {
       {(next || prev) && (
         <div>
           <span></span>
-          <Link to="/">Home</Link>
+          <Link to="/">Index</Link>
         </div>
       )}
       {next ? (

@@ -2,8 +2,6 @@
 
 > _Understanding Nothingness in Code_
 
-## Introduction
-
 In _bell_, the `null` keyword represents _nothingness_. It’s a placeholder for the absence of a value or an explicit way to indicate that something is intentionally empty. Understanding `null` is essential for dealing with situations where no meaningful value exists, or the result of an expression isn't a value, or where you want to discard results.
 
 ## What Is `null`?
@@ -141,4 +139,4 @@ if $x == null then print("No value assigned");
 
 ## Summary
 
-The `null` keyword and the nullify operator (;) are essential for structuring and managing code in _bell, particularly when working with discarded or missing values. By understanding and leveraging null, you can create cleaner, more intentional code.
+The `null` keyword and the nullify operator (;) are essential for structuring and managing code in \_bell, particularly when working with discarded or missing values. By understanding and leveraging null, you can create cleaner, more intentional code.

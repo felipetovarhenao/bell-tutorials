@@ -2,8 +2,6 @@
 
 > _Working with Text in Musical Contexts_
 
-## Introduction
-
 In _bell_, symbols are a data type used to represent textual information. Symbols are the equivalent of strings in other programming languages, and they’re particularly useful for labeling or naming elements in your code, such as note names, chord names, or rhythmic patterns, etc.
 
 ## Symbol Syntax

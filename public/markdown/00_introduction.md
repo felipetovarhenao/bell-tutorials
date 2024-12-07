@@ -1,14 +1,10 @@
-# Programming with _bell_
+# Getting started
 
-> _a musician-friendly introduction to programming with the_ bell _programming language_
-
-## Introduction
-
-This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of computer programming in _bell_. Whether or not you have experience with text-based programming — or even programming within [Max](https://cycling74.com/) — these tutorials aim to guide you step-by-step through the fundamentals.
+This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of computer programming in _bell_. Whether or not you have experience with text-based programming — or even visual programming environments such as _Cycling 74's_ [Max](https://cycling74.com/) — these tutorials aim to guide you step-by-step through the fundamentals.
 
 ## What is _bell_?
 
-_bell_ is a programming language created by composer and researcher [Andrea Agostini](https://www.andreaagostini.eu/) as part of the [bach](https://www.bachproject.net/) package for computer-assisted composition (CAC) within _Max_. While _bach_ has grown increasingly popular among _Max_ users, it’s still a fairly niche tool, and _bell_ — as a subset of _bach_ — is even less widely known. For those interested in CAC, however, _bell_ offers a unique and valuable toolset, which is why these tutorials exist: to demystify _bell_ and make it accessible to a wider audience.
+_bell_ is a programming language created by composer and researcher [Andrea Agostini](https://www.andreaagostini.eu/) as part of the [bach](https://www.bachproject.net/) package for [computer-assisted composition](https://en.wikipedia.org/wiki/Computer_music#Computer-aided_algorithmic_composition) (CAC) within _Max_. While _bach_ has grown increasingly popular among _Max_ users, it’s still a fairly niche tool, and _bell_ — as a subset of _bach_ — is even less widely known. For those interested in CAC, however, _bell_ offers a unique and valuable toolset, which is why these tutorials exist: to demystify _bell_ and make it accessible to a wider audience.
 
 ## Why learn _bell_?
 
@@ -60,6 +56,6 @@ A dedicated text editor is essential, preferrably [Visual Studio Code](https://c
      - On **MacOS**, the VSCode application is typically located at `/Applications/Visual Studio Code.app`
      - On **Windows**, it’s usually found at `C:\Users\<YourUsername>\AppData\Local\Programs\Microsoft VS Code\Code.exe`
 
-## Final notes
+---
 
 These tutorials are designed to provide a clear and structured introduction to _bell_, helping you build a foundation for programming within the context of computer-assisted composition. Whether your interest lies in algorithmic music or simply gaining a deeper understanding of tools like _bellplay~_, the aim is to make the material accessible and relevant. Take your time, and feel free to revisit sections as needed—programming is a skill that grows with practice and experimentation.

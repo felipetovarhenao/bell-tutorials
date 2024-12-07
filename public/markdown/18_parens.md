@@ -2,8 +2,6 @@
 
 > _Grouping and Organizing Complex Statements_
 
-## Introduction
-
 In _bell_, parentheses `()` are used to group and organize expressions, allowing you to control the order of operations, create compound statements, and write more readable code. Parentheses are essential when working with complex musical data or chaining multiple operations together.
 
 ## Why Use Parentheses?

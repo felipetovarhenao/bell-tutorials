@@ -2,8 +2,6 @@
 
 > _Advanced Operations on Musical Data_
 
-## Introduction
-
 In _bell_, lists (or _lllls_) are central to representing and organizing musical data, whether it's a melody, a chord progression, or rhythmic patterns. To manipulate these lists efficiently, _bell_ provides a wide range of list functions. This section will teach you how to use these functions to transform and analyze musical data.
 
 ## Common List Functions

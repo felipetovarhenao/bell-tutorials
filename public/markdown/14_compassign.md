@@ -2,8 +2,6 @@
 
 > _Shortcuts for Modifying Variables_
 
-## Introduction
-
 In _bell_, compound assignment operators are shortcuts that simplify common operations when modifying variables. Instead of writing out the full expression, you can use a compound operator to make your code shorter and more readable. This is particularly useful when working with musical data like incrementing beats, adjusting velocities, or transposing notes.
 
 ## What Are Compound Assignment Operators?

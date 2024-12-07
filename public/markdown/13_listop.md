@@ -2,8 +2,6 @@
 
 > _Building and Modifying Musical Sequences_
 
-## Introduction
-
 In _bell_, list operators allow you to construct, modify, and transform lists (or lllls) efficiently. These operators are particularly useful for creating and manipulating musical sequences such as scales, chord progressions, and rhythmic patterns. This section introduces key list operators and demonstrates their use in musical contexts.
 
 ## Range Operator (`...`)

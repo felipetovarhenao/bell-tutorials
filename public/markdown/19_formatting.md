@@ -2,8 +2,6 @@
 
 > _Writing Clean and Readable Code_
 
-## Introduction
-
 In _bell_, proper indentation and code structure aren't strictly required by the language, but they are essential for readability and maintainability, especially when your programs become more complex. Clean code helps you and others understand your musical logic, debug errors, and extend functionality efficiently.
 
 ## Why Indentation Matters

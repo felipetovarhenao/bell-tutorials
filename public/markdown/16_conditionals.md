@@ -2,8 +2,6 @@
 
 > _Making Decisions in Your Code_
 
-## Introduction
-
 In _bell_, conditionals allow your code to make decisions based on specific conditions. They are essential for creating dynamic and interactive programs, such as modifying a melody based on user input or changing rhythmic patterns depending on the section of a composition. Conditionals enable you to control the flow of your program, making it responsive and adaptive.
 
 ## What Are Conditionals?

@@ -2,8 +2,6 @@
 
 > _Understanding and Using Numbers in bell_
 
-## Introduction
-
 Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical applications. This section covers the different numeric types in _bell_, how they’re used, and how they relate to musical data like pitches, durations, and intervals.
 
 ## Numeric Types in _bell_
@@ -214,4 +212,4 @@ $rhythm = 0.25; ## Equivalent to 1/4
 
 ---
 
-Numeric types are crucial for both mathematical and musical operations in _bell. With a solid understanding of these types, you can now tackle more complex tasks like conditionals, which allow you to introduce decision-making into your musical algorithms.
+Numeric types are crucial for both mathematical and musical operations in \_bell. With a solid understanding of these types, you can now tackle more complex tasks like conditionals, which allow you to introduce decision-making into your musical algorithms.

@@ -2,8 +2,6 @@
 
 > _Storing and Organizing Data_
 
-## Introduction
-
 Variables are the backbone of any programming language. In _bell_, variables are used to store and manipulate data such as numbers, text, lists, and even pitches. Think of variables as labeled containers that hold values you can use or modify later.
 
 ## Declaring Variables
@@ -147,6 +145,6 @@ $var1 = 2
 
 **A**: Without the `$`, _bell_ treats the variable as global.
 
---- 
+---
 
 With variables under your belt, you're ready to tackle basic expressions and learn how to perform calculations in _bell_.

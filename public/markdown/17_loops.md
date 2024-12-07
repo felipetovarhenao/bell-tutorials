@@ -2,8 +2,6 @@
 
 > _Repeating and Collecting Data in Your Programs_
 
-### Introduction
-
 In _bell_, loops allow you to repeat actions or iterate through lists, making them essential for generating patterns, modifying melodies, and applying transformations to musical data. With loops, you can automate repetitive tasks, collect results, or create dynamic musical sequences.
 
 ## Types of Loops in _bell_
