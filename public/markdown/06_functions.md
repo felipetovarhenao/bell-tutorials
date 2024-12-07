@@ -2,7 +2,9 @@
 
 > _Performing Operations on Musical Data_
 
-Functions are one of the most powerful tools in programming. In _bell_, functions allow you to perform operations on musical data, automate repetitive tasks, and compose algorithmic structures. Think of a function as a reusable block of code that takes input, performs an operation, and gives output.
+Functions are one of the most powerful tools in programming. In _bell_, functions allow you to perform operations on data, automate repetitive tasks, and design complex algorithms. Think of a function as a reusable block of code that takes input, performs an operation, and gives output.
+
+---
 
 ## Understanding Functions
 
@@ -26,7 +28,9 @@ A function in _bell_:
 print("hello world"); ## Outputs: hello world
 ```
 
-## Commonly Used Functions in Music Programming
+---
+
+## Commonly Used Functions
 
 1. `print`: Displays data we want on the _Max_ console. Useful for debugging and inspecting our code.
 
@@ -68,7 +72,7 @@ Arguments are values you pass to a function. They can be **positional** or **nam
 
 ### Positional Arguments
 
-Arguments are provided in the order the function expects:
+Arguments are provided in the order the function expects. This requires knowing the order of arguments of the function:
 
 #### Example:
 
@@ -78,7 +82,7 @@ random(1, 10); ## Generates a random number between 1 and 10
 
 ### Named Arguments
 
-Arguments are specified by name, allowing flexibility in their order.
+Arguments are specified by name, allowing flexibility in their order. This requires knowing the name of the function's arguments:
 
 #### Syntax:
 
@@ -99,9 +103,13 @@ random(@min 1, @max 10); ## Same as above
 random(@max 10 @min 1); ## Also works (different order, no commas)
 ```
 
-However, this requires knowing the name of the function's arguments.
+When we use an incorrect argument name, _bell_ simply ignores the value assigned to that non-existent argument. To prevent bugs, make sure you spell the argument names correctly.
 
-> When we use an incorrect argument name, _bell_ simply ignores the value assigned to that non-existent argument. To prevent bugs, make sure you spell the argument names correctly.
+```py
+random(@minimum 1 @maximum 10) ## Output: null
+```
+
+---
 
 ## Example: Musical Scales
 
@@ -118,6 +126,8 @@ print("whole tone:" $wholetone); ## Outputs: 60 62 64 66 68 70 72
 print("chromatic:" $chromatic); ## Outputs: 60 through 72
 ```
 
+---
+
 ## Dataflow-Style Function Calls
 
 _bell_ supports a dataflow syntax, which provides an alternative way of calling functions.
@@ -128,7 +138,7 @@ _bell_ supports a dataflow syntax, which provides an alternative way of calling 
 <arg1>.<function>(<arg2>, ..., <argN>);
 ```
 
-### Example
+### Example:
 
 ```py
 $x = 2;
@@ -139,13 +149,15 @@ print($x.pow(3)); ## Outputs: 8
 
 Functions can be concatenated, where the result of one function becomes the input of another, from left to right.
 
-### Example: Randomize and Reverse
+### Example:
 
 ```py
 $base = 2;
 $exp = 3.5;
 $base.pow($exp).round().print(); ## Output: 11.
 ```
+
+---
 
 ## Exercises
 
@@ -169,6 +181,8 @@ print($chord);
 3. Print both arpeggios.
 4. In a separate `.bell` file, repeat the same steps using _dataflow-style_ syntax.
 
+---
+
 ## FAQ
 
 ### Q: Can a function have no arguments?
@@ -190,4 +204,4 @@ $x.print() ## $x is still an argument of print
 
 ---
 
-Now that you’ve mastered functions, you’re ready to learn about list-specific functions. These are specialized tools for manipulating complex data in _bell_.
+Now that you’ve mastered functions, you’re ready to learn about list-oriented functions. These are specialized tools for manipulating complex data in _bell_.

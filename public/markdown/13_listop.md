@@ -4,6 +4,8 @@
 
 In _bell_, list operators allow you to construct, modify, and transform lists (or lllls) efficiently. These operators are particularly useful for creating and manipulating musical sequences such as scales, chord progressions, and rhythmic patterns. This section introduces key list operators and demonstrates their use in musical contexts.
 
+---
+
 ## Range Operator (`...`)
 
 The range operator (`...`) is a quick way to create sequential lists, such as scales or rhythmic groupings. It generates a list of numbers from a starting value to an ending value.
@@ -29,6 +31,8 @@ The range operator (`...`) is a quick way to create sequential lists, such as sc
    $notes = 60...72; ## MIDI notes for C4 to B4
    print($notes); ## Outputs: 60 61 62 ... 72
    ```
+
+---
 
 ## Repeat Operator (:\*)
 
@@ -56,6 +60,8 @@ $rhythm = 1/4 1/8 :* 2;
 print($rhythm); ## Outputs: 1/4 1/8 1/4 1/8
 ```
 
+---
+
 ## Append (`_=`) and prepend (`!_=`) compound operators
 
 To add elements to an existing list, either at the beginning or end of it, we can do the following:
@@ -77,6 +83,8 @@ $x _= 5 6; ## Output: 3 4 5 6
 ## prepending
 $x !_= 1 2 ## Output: 1 2 3 4 5 6
 ```
+
+---
 
 ## Using List Operators Together
 
@@ -103,6 +111,8 @@ $rhythm = 1/4 :* 36; ## Repeats a quarter note rhythm for 36 notes
 $pattern = $repeatedScale + $rhythm;
 print($pattern);
 ```
+
+---
 
 ## Exercises
 
@@ -160,6 +170,8 @@ $progression = $Cmajor + $Fmajor + $Gmajor;
 ```
 
 3. Print the full progression.
+
+---
 
 ## FAQ
 

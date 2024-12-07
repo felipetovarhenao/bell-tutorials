@@ -2,13 +2,19 @@
 
 This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of computer programming in _bell_. Whether or not you have experience with text-based programming — or even visual programming environments such as _Cycling 74's_ [Max](https://cycling74.com/) — these tutorials aim to guide you step-by-step through the fundamentals.
 
+---
+
 ## What is _bell_?
 
 _bell_ is a programming language created by composer and researcher [Andrea Agostini](https://www.andreaagostini.eu/) as part of the [bach](https://www.bachproject.net/) package for [computer-assisted composition](https://en.wikipedia.org/wiki/Computer_music#Computer-aided_algorithmic_composition) (CAC) within _Max_. While _bach_ has grown increasingly popular among _Max_ users, it’s still a fairly niche tool, and _bell_ — as a subset of _bach_ — is even less widely known. For those interested in CAC, however, _bell_ offers a unique and valuable toolset, which is why these tutorials exist: to demystify _bell_ and make it accessible to a wider audience.
 
+---
+
 ## Why learn _bell_?
 
 Although _bell_ is a niche programming language, it is exceptionally powerful, versatile, and approachable for musicians. It was specifically designed as part of an ecosystem of CAC tools — namely, the _[bach](https://www.bachproject.net/)_, _[cage](https://www.bachproject.net/cage)_, _[dada](https://www.bachproject.net/dada)_, and _[ears](https://www.bachproject.net/ears)_ packages in _Max_ —, focusing only on features relevant to CAC-oriented composers. This makes _bell_ streamlined and intuitive, eliminating extraneous features common in general-purpose programming languages. Every part of _bell_ is purpose-built and worth exploring for those interested in algorithmic music composition.
+
+---
 
 ## How these tutorials work
 
@@ -27,6 +33,8 @@ These tutorials primarily focus on _bell_, **not** computer-assisted composition
 These tutorials are designed to familiarize users with _bell_, and are meant to be followed using [bellplay~](https://github.com/felipetovarhenao/bellplay) to run all code examples and exercises. As such, they do **not** require prior knowledge in _bach_ or _Max_, and instead serve as preparation for those interested in learning and using [bellplay~](https://github.com/felipetovarhenao/bellplay), as an algorithmic audio framework. Similarly, any _bach_- or _Max_-specific features in _bell_, such as external inputs/outputs, are intentionally left out to ensure the emphasis remains on core _bell_ programming concepts. By the same token, any _bellplay~_-specific features and functionalities are omitted as much as possible to limit the scope of these tutorials to the _bell_ programming language, such that users understand where _bell_ ends and _bellplay~_ begins.
 
 > If you’re already familiar with _bell_ and want to focus specifically on _bellplay~_, please refer to the built-in tutorials within the _bellplay~_ application. Similarly, if you're already a _bach_ user and are primarily interested in learning _bell_ vis-a-vis _bach_, the official _bell_ documentation within _bach_ is perhaps the best route to take.
+
+---
 
 ## System requirements
 

@@ -4,6 +4,8 @@
 
 In _bell_, loops allow you to repeat actions or iterate through lists, making them essential for generating patterns, modifying melodies, and applying transformations to musical data. With loops, you can automate repetitive tasks, collect results, or create dynamic musical sequences.
 
+---
+
 ## Types of Loops in _bell_
 
 ### 1. `for` Loops
@@ -64,6 +66,8 @@ while $note < 72 collect (
 70
 ```
 
+---
+
 ## `for` Loops in Musical Contexts
 
 ### Example 1: Transposing Notes
@@ -90,6 +94,8 @@ for $value in $rhythm collect $value * 2; ## Double each rhythm duration
 
 `1/2 1/4 1/4`
 
+---
+
 ## `while` Loops in Musical Contexts
 
 ### Example: Building a Scale Dynamically
@@ -103,6 +109,8 @@ $scale = while $note <= 72 collect (
 );
 print($scale); ## Outputs: 60 62 64 66 68 70 72
 ```
+
+---
 
 ## Combining do and collect
 
@@ -154,6 +162,8 @@ $roots = C4 F4 G4;
 2. Use a for loop to generate triads for each root note:
 3. Add a major third and a perfect fifth to each root.
 4. Collect the chords into a progression.
+
+---
 
 ## FAQ
 

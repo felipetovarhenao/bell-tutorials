@@ -4,6 +4,8 @@
 
 In _bell_, **keys** are a way to associate labels (_keys_) with values, creating so-called key-value pairs. Keys are particularly useful for organizing data in a structured and readable way. In musical contexts, keys can label chords, instruments, dynamics, or even entire sections of a composition, making your code more intuitive and easier to manage.
 
+---
+
 ## What Are Keys?
 
 A key-value pair in _bell_ is a data structure that associates a key (symbol) with a value. This is similar to dictionaries or associative arrays in other programming languages.
@@ -25,6 +27,8 @@ Here:
 - `'tonic'` is the key.
 - `C4 E4 G4` is the value.
 
+---
+
 ## Accessing Keys
 
 You can retrieve a value associated with a key using the dot operator (.).
@@ -36,6 +40,8 @@ $chords = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5];
 print($chords.'tonic'); ## Outputs: C4 E4 G4
 print($chords.'dominant'); ## Outputs: G4 B4 D5
 ```
+
+---
 
 ## Adding and Modifying Key-Value Pairs
 
@@ -58,6 +64,8 @@ $chords += ['tonic' C3 E3 G3]; ## Updates the value for 'tonic'
 print($chords.'tonic'); ## Outputs: C3 E3 G3
 ```
 
+---
+
 ## Examples in Musical Contexts
 
 ### Labeling Chords in a Progression
@@ -75,6 +83,8 @@ $dynamics = ['phrase1' mf] ['phrase2' p];
 print($dynamics.'phrase1'); ## Outputs: mf
 ```
 
+---
+
 ## Keys with Nested Structures
 
 You can combine keys with nested lists for more complex data structures.
@@ -90,6 +100,8 @@ print($score.'section1'); ## Outputs: [[C4 E4 G4] [F4 A4 C5]]
 print($score.'section2':2:1); ## Outputs: A4
 ```
 
+---
+
 ## Iterating Over Keys
 
 You can use a loop to iterate through the keys in a list of key-value pairs.
@@ -103,6 +115,8 @@ for $key in $chords::keys do (
     print($chords.$key);
 );
 ```
+
+---
 
 ## Exercises
 
@@ -165,6 +179,8 @@ Example Output:
 chorus: [[C4 D4 E4] [F4 G4 A4]]
 bridge: [[A4 B4 C5] [D5 E5 F5]]
 ```
+
+---
 
 ## FAQ
 

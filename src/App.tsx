@@ -31,7 +31,9 @@ const App: React.FC = () => {
       "conditionals.md",
       "loops.md",
       "parens.md",
+      "userfunctions.md",
       "formatting.md",
+      "nextsteps.md",
     ];
 
     getMarkdownInfo(markdownPaths.map(formatPaths)).then((lessons) => {

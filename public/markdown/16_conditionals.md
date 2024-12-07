@@ -4,6 +4,8 @@
 
 In _bell_, conditionals allow your code to make decisions based on specific conditions. They are essential for creating dynamic and interactive programs, such as modifying a melody based on user input or changing rhythmic patterns depending on the section of a composition. Conditionals enable you to control the flow of your program, making it responsive and adaptive.
 
+---
+
 ## What Are Conditionals?
 
 A conditional checks whether a given statement is true (non-zero) or false (0) and executes different blocks of code accordingly.
@@ -21,6 +23,8 @@ $note = 60; ## MIDI for C4
 if $note > 64 then print("The note is above E4");
 ```
 
+---
+
 ## Conditional Keywords
 
 | Keyword   | Purpose                                         | Example                            |
@@ -28,6 +32,8 @@ if $note > 64 then print("The note is above E4");
 | `if`      | Evaluates a condition and executes code if true | `if $x > 5 then print($x);`        |
 | `else`    | Executes code if the `if` condition is false    | `else print("Condition false");`   |
 | `else if` | Chains multiple conditions                      | `else if $x == 10 then print($x);` |
+
+---
 
 ## Examples in Musical Contexts
 
@@ -65,6 +71,8 @@ if $note > 64 then (
 );
 ```
 
+---
+
 ## Boolean Logic in Conditions
 
 _bell_ does not have a separate boolean type. Instead:
@@ -89,6 +97,8 @@ You can combine conditions using logical operators:
 | `and`    | Both conditions must be true   | `$note > 60 and $note < 72` |
 | `or`     | At least one condition is true | `$note < 60 or $note > 72`  |
 | `not`    | Negates a condition            | `not $note > 60`            |
+
+---
 
 ## Examples of Logical Conditions in Music
 
@@ -118,6 +128,8 @@ if $note < 60 then print("pp");
 else if $note <= 64 then print("mf");
 else print("ff");
 ```
+
+---
 
 ## Exercises
 
@@ -165,6 +177,8 @@ $melody = C4 D4 E4 F4 G4;
    - Transpose notes below E4 (MIDI 64) up by an octave.
    - Leave higher notes unchanged.
 3. Print the transformed melody.
+
+---
 
 ## FAQ
 

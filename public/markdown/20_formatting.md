@@ -4,11 +4,15 @@
 
 In _bell_, proper indentation and code structure aren't strictly required by the language, but they are essential for readability and maintainability, especially when your programs become more complex. Clean code helps you and others understand your musical logic, debug errors, and extend functionality efficiently.
 
+---
+
 ## Why Indentation Matters
 
 1. **Improved Readability**: Organized code is easier to follow, especially when using loops, conditionals, or nested structures.
 2. **Error Prevention**: Proper indentation helps visualize blocks of code, reducing the risk of misplaced logic.
 3. **Team Collaboration**: Clean, consistent formatting makes it easier for others to understand your work.
+
+---
 
 ## Guidelines for Indentation in _bell_
 
@@ -58,6 +62,8 @@ for $note in C4 D4 E4 collect (
 );
 ```
 
+---
+
 ## Code Etiquette Tips
 
 ### 1. Use Descriptive Variable Names:
@@ -88,6 +94,8 @@ $scaled = $transposed * 2;
 print($scaled::1);
 ```
 
+---
+
 ## Exercises
 
 ### Exercise 1: Refactor for Readability
@@ -105,6 +113,8 @@ Write a program that:
 1. Creates a major scale.
 2. Transposes it up an octave.
 3. Labels each step with a comment explaining what it does.
+
+---
 
 ## FAQ
 

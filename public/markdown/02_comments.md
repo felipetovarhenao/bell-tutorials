@@ -6,6 +6,8 @@ In programming, comments are essential for explaining _what your code does_ and 
 
 In _bell_, comments come in two flavors: **single-line** and **multi-line**.
 
+---
+
 ## Single-Line Comments
 
 Single-line comments begin with a double hash (`##`). Anything written after `##` on the same line is treated as a comment and ignored by the _bell_ interpreter.
@@ -31,6 +33,8 @@ print("hello world") ## This prints "hello world" to the screen
 
 2. Run the program to confirm that the comments do not affect the output.
 
+---
+
 ## Multi-Line Comments
 
 For longer explanations, use multi-line comments. These are enclosed with `#(` and `)#`. Everything between `#(` and `)#` is treated as a comment.
@@ -50,11 +54,15 @@ print($area) ## Output: 50
 
 **Explanation**: The multi-line comment provides an overview of the program's purpose, while the single-line comment explains the specific calculation.
 
+---
+
 ## Why Use Comments?
 
 1. **Clarity**: Help others (and your future self) understand the purpose of your code.
 2. **Debugging**: Temporarily "disable" parts of your code by turning them into comments to isolate issues.
 3. **Collaboration**: Make your intentions clear when working on code with others.
+
+---
 
 ## Best Practices for Writing Comments
 
@@ -93,6 +101,8 @@ print($area) ## Output: 50
      )#
      ```
 
+---
+
 ## Common Mistakes to Avoid
 
 1. **Forgetting to close a multi-line comment**:
@@ -130,9 +140,11 @@ print($area) ## Output: 50
      print(2 + 3)
      ```
 
+---
+
 ## Exercises
 
-### Exercise 2: Commenting Challenge
+### Exercise: Commenting Challenge
 
 Here’s a piece of code without comments. Add appropriate comments to explain its purpose:
 
@@ -142,6 +154,8 @@ $pitch2 = 65;
 $interval = $pitch2 - $pitch1;
 print($pitch1 "and" $pitch2 "are" $interval "semitones apart");
 ```
+
+---
 
 ## FAQ
 
@@ -154,6 +168,7 @@ print($pitch1 "and" $pitch2 "are" $interval "semitones apart");
 **A**: No, focus on _why_ you're doing something rather than _what_ the code does. You want comments to help you and others understand how each different blocks of code contribute to the overall function of your scripts.
 
 ### Q: Do I need to use semicolons after comments?
+
 **A**: No, since comments are ignored during the execution of the code, comments do not require semicolons. The role of the semicolons in _bell_ will be explored in further detail later.
 
 ---

@@ -4,6 +4,8 @@
 
 Operators are the foundation of performing calculations, comparisons, and logical operations in _bell_. They allow you to work with numbers, lists, symbols, and other types of data. In this section, you’ll learn how to use basic operators and see how they can be applied to musical contexts.
 
+---
+
 ## Arithmetic Operators
 
 Arithmetic operators perform mathematical calculations.
@@ -16,6 +18,8 @@ Arithmetic operators perform mathematical calculations.
 | `/`      | Division               | `8 / 2`  | `4`    |
 | `%`      | Modulo (remainder)     | `9 % 4`  | `1`    |
 | `**`     | Exponentiation (power) | `2 ** 3` | `8`    |
+
+---
 
 ## Examples in Musical Contexts
 
@@ -48,6 +52,8 @@ $beat = 7;
 print($beat % 4) ## Outputs: 3 (remainder when dividing beats by 4)
 ```
 
+---
+
 ## Comparison Operators
 
 Comparison operators evaluate the relationship between two values and return either true (non-zero) or false (0).
@@ -60,6 +66,8 @@ Comparison operators evaluate the relationship between two values and return eit
 | `<=`     | Less than or equal to    | `5 <= 5` | `1` (_true_)  |
 | `>`      | Greater than             | `7 > 4`  | `1` (_true_)  |
 | `>=`     | Greater than or equal to | `8 >= 9` | `0` (_false_) |
+
+---
 
 ## Examples in Musical Contexts
 
@@ -79,6 +87,8 @@ $long = 1/4;
 print($short < $long); ## Outputs: true
 ```
 
+---
+
 ## Logical Operators
 
 Logical operators are used to combine or negate conditions.
@@ -91,6 +101,8 @@ Logical operators are used to combine or negate conditions.
 | `\|\|`   | Logical _OR_  | `0 \|\| 1` | `1` (_true_)  |
 | `!`      | Logical _NOT_ | `!0`       | `1` (_true_)  |
 | `!`      | Logical _NOT_ | `!1`       | `0` (_false_) |
+
+---
 
 ## Examples in Musical Contexts
 
@@ -112,6 +124,8 @@ $note = "G4";
 print($note == "C4" or $note == "G4" or $note == "E4"); ## Outputs: true
 ```
 
+---
+
 ## Combining Operators
 
 You can combine multiple operators to form complex expressions.
@@ -128,6 +142,8 @@ $octaveUp = $freq * 2; ## 440 (A4)
 $withFifth = $octaveUp + (440 * (3/2)); ## Adds a fifth (E5)
 print($withFifth > 500); ## Outputs: true
 ```
+
+---
 
 ## Exercises
 
@@ -149,6 +165,8 @@ print($withFifth > 500); ## Outputs: true
 2. Check if $note is in the range of 60 (C4) to 72 (C5).
 3. Print the result.
 
+---
+
 ## Exercise 4: Combining Operators for Chord Validation
 
 1. Create a llll for the notes of a C major chord:
@@ -165,6 +183,8 @@ print($note == $chord:1 or $note == $chord:2 or $note == $chord:3);
 ```
 
 3. Print the result.
+
+---
 
 ## FAQ
 

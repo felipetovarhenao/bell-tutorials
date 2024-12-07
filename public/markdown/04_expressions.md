@@ -4,6 +4,8 @@
 
 Expressions are the building blocks of any program. In _bell_, expressions can involve numbers, symbols, lists, and other data types, and they are evaluated to produce a result. This section introduces basic arithmetic operations, how to combine expressions, and how to use them effectively.
 
+---
+
 ## Arithmetic Operations
 
 ### Common Operations
@@ -53,6 +55,8 @@ print(10 % 3) ## Output: 1 (10 divided by 3 leaves a remainder of 1)
 print(2 ** 3) ## Output: 8 (2 raised to the power of 3)
 ```
 
+---
+
 ## Combining Expressions
 
 You can combine multiple operations in a single expression. _bell_ follows standard operator precedence rules (e.g., multiplication and division are performed before addition and subtraction). Use parentheses to make the order explicit or override precedence.
@@ -71,6 +75,8 @@ $x = 5 + 3 * 2; ## Multiplication happens before addition
 print($x) ## Output: 11
 ```
 
+---
+
 ## Using Variables in Expressions
 
 Variables can be used just like numbers or other values in expressions.
@@ -84,6 +90,8 @@ $area = ($base * $height) / 2; ## Formula for the area of a triangle
 print($area) ## Output: 25
 ```
 
+---
+
 ## Expressions vs. Statements
 
 In these tutorials, the terms _expression_ and _statement_ are use interchangeably, to refer to segments of code separated by semicolons.
@@ -94,6 +102,8 @@ In these tutorials, the terms _expression_ and _statement_ are use interchangeab
 $x = (1 + 3) * 4; ## expression 1
 $x = $x * 4 ## expression 2
 ```
+
+---
 
 ## Exercises
 
@@ -112,9 +122,9 @@ $x = $x * 4 ## expression 2
 
 ### Exercise 2: Pitch transposition
 
-1. Assign the MIDI note number of a pitch to a variable:
-2. Assign the interval (in semitones) you want to transpose the pitch by to another variable:
-3. Use addition to calculate the transposed pitch and assign the result to a new variable:
+1. Assign the MIDI note number of a pitch to a variable.
+2. Assign the interval (in semitones) you want to transpose the pitch by to another variable.
+3. Use addition to calculate the transposed pitch and assign the result to a new variable.
 4. Print the original pitch, the interval, and the transposed pitch.
 
 ### Exercise 3: Computing Intervals in a Triad
@@ -138,6 +148,8 @@ $note3 = 67; ## G5
    Interval between note2 and note3: 3
    Interval between note1 and note3: 7
    ```
+
+---
 
 ## FAQ
 

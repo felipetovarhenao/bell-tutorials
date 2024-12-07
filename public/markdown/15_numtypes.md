@@ -4,6 +4,8 @@
 
 Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical applications. This section covers the different numeric types in _bell_, how they’re used, and how they relate to musical data like pitches, durations, and intervals.
 
+---
+
 ## Numeric Types in _bell_
 
 | Numeric Types | Description                                       | Examples       |
@@ -12,6 +14,8 @@ Numbers are central to programming, and _bell_ provides a variety of numeric typ
 | Float         | Numbers with decimal points, ideal for precision  | 3.14159, 440.0 |
 | Rational      | Fractions, useful for rhythms or ratios           | 1/4, 3/2       |
 | Pitch         | Specialized type for representing musical pitches | C4, A4, G#3    |
+
+---
 
 ## 1. Integer
 
@@ -28,6 +32,8 @@ $interval = 7; ## Perfect fifth
 print($note + $interval); ## Outputs: 67 (G4)
 ```
 
+---
+
 ## 2. Float
 
 Floats are numbers with decimal points, allowing greater precision. They’re often used for:
@@ -41,6 +47,8 @@ Floats are numbers with decimal points, allowing greater precision. They’re of
 $freq = 440.0; ## Frequency of A4
 print($freq * 2); ## Outputs: 880.0 (A5)
 ```
+
+---
 
 ## 3. Rational
 
@@ -69,6 +77,8 @@ $baseFreq = 440; ## A4
 print($baseFreq * $ratio); ## Outputs: 660
 ```
 
+---
+
 ## 4. Pitch
 
 Pitch is a specialized numeric type that maps musical note names to their equivalent MIDI or frequency values. _bell_ simplifies working with pitches by letting you use intuitive note names.
@@ -95,6 +105,8 @@ print($note + 12); ## Outputs: C5 (one octave up)
 $pitch = A4 + 50; ## Microtonal adjustment in cents
 ```
 
+---
+
 ## Conversions Between Numeric Types
 
 You can convert between types when needed. For example:
@@ -115,6 +127,8 @@ print(mc2f($note)); ## Outputs: 261.63 Hz
 $freq = 440.0; ## A4
 print(f2mc($freq)); ## Outputs: A4
 ```
+
+---
 
 ## Numeric Operations in Musical Contexts
 
@@ -141,6 +155,8 @@ $baseFreq = 440.0; ## A4
 $perfectFifth = 3/2;
 print($baseFreq \* $perfectFifth); ## Outputs: 660.0 (E5)
 ```
+
+---
 
 ## Exercises
 
@@ -177,6 +193,8 @@ $freq = 440.0;
 2. Use a ratio of `3/2` to calculate the frequency of the perfect fifth above `A4`.
 3. Print the frequency.
 
+---
+
 ## Exercise 4: Melody Transformation
 
 1. Create a melody using pitch names:
@@ -187,6 +205,8 @@ $melody = C4 E4 G4 B4;
 
 2. Transpose the melody down by an octave using subtraction.
 3. Convert the transposed melody to frequencies using mc2f.
+
+---
 
 ## FAQ
 

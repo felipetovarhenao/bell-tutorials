@@ -10,6 +10,8 @@ In _bell_, parentheses `()` are used to group and organize expressions, allowing
 2. Group Statements: Combine multiple actions into a single block.
 3. Create Nested Structures: Manage complex musical transformations or calculations.
 
+---
+
 ## Using Parentheses to Control Order of Operations
 
 ### Example: Transposing and Adding Rhythms
@@ -38,6 +40,8 @@ $transformed = ($melody + 12) * 2; ## Transpose up an octave, then double each v
 print($transformed); ## Outputs: 144 148 152
 ```
 
+---
+
 ## Grouping Compound Statements
 
 Parentheses allow you to group multiple statements into a single block. The result of the last statement in the block is returned.
@@ -52,6 +56,8 @@ $result = (
 );
 print($result); ## Outputs: C5 D5 E5
 ```
+
+---
 
 ## Using Parentheses with the Nullify Operator (;)
 
@@ -69,6 +75,8 @@ $result = (
 print($result); ## Outputs: 77
 ```
 
+---
+
 ## Nesting Parentheses for Complex Logic
 
 You can nest parentheses to structure your code logically, especially when combining multiple transformations.
@@ -84,6 +92,8 @@ $result = (
 );
 print($result); ## Outputs: 144 148 152
 ```
+
+---
 
 ## Examples in Musical Contexts
 
@@ -101,6 +111,8 @@ $transformed = (
 print($transformed); ## Outputs: 1/2 1/4 1/8
 ```
 
+---
+
 ## Example 2: Conditional Melody Transformation
 
 Apply different transformations based on conditions:
@@ -115,6 +127,8 @@ $result = if 1 > 0 then (
 );
 print($result); ## Outputs: C5 D5 E5
 ```
+
+---
 
 ## Exercises
 
@@ -166,6 +180,8 @@ print($result); ## Outputs: C5 D5 E5
    - Transpose the melody down by a minor third otherwise.
 3. Print the final result.
 
+---
+
 ## FAQ
 
 ### Q: Can I use parentheses for readability only?
@@ -193,4 +209,4 @@ print($result); ## Outputs: C5 D5 E5
 
 ---
 
-Parentheses provide a powerful way to group and organize your code, making it more readable and efficient. They’re especially useful when working with complex musical transformations or chaining multiple operations. Next, we’ll explore functions, the cornerstone of modular and reusable code in _bell_.
+Parentheses provide a powerful way to group and organize your code, making it more readable and efficient. They’re especially useful when working with complex musical transformations or chaining multiple operations. Next, we’ll explore user-defined functions, the cornerstone of modular and reusable code in _bell_.

@@ -1,8 +1,10 @@
-# List functions
+# List-oriented functions
 
-> _Advanced Operations on Musical Data_
+> _Advanced operations on lllls_
 
 In _bell_, lists (or _lllls_) are central to representing and organizing data, including musical data such as melodies, chord progression, rhythmic patterns, etc. To manipulate these lists efficiently, _bell_ provides a wide range of list functions. This section will teach you how to use some of these functions to transform your _lllls_.
+
+---
 
 ## Common List Functions
 
@@ -18,7 +20,9 @@ Below is a table of commonly used list functions in _bell_. Each function is pai
 | `mc2f`   | Converts MIDIcent values to frequencies | `mc2f(6000 6700)`               | `261.63 392.00`     |
 | `f2mc`   | Converts frequencies to MIDIcent values | `f2mc(440 523.25)`              | `A4 C5`             |
 
-## Examples of Musical Data Manipulation
+---
+
+## Examples of Data Manipulation
 
 ### Reversing a Melody
 
@@ -47,6 +51,8 @@ $progression = [C4 E4 G4] [F4 A4 C5];
 print(flat($progression)); ## Outputs: C4 E4 G4 F4 A4 C5
 ```
 
+---
+
 ## Combining List Functions
 
 You can chain multiple list functions together for more complex operations.
@@ -69,6 +75,8 @@ Use `f2mc` to convert a list of frequencies to MIDIcent values.
 $spectrum = 55 110 220 440 880;
 print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 ```
+
+---
 
 ## Exercises
 
@@ -100,6 +108,8 @@ print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 2. Convert the pitches to frequencies using `mc2f`.
 3. Print the resulting frequencies.
 
+---
+
 ## FAQ
 
 ### Q: Can I combine list functions?
@@ -124,5 +134,7 @@ print(rev(sort(flat($data)))) ## Same as above
 $notes = C4 D4 E4;
 print(flat($notes)) ## Outputs: C4 D4 E4
 ```
+
+---
 
 Now that you’ve explored list functions, you’re ready to dive into symbols, which are crucial for representing textual data like note names and other musical labels.

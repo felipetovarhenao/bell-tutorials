@@ -6,6 +6,8 @@ A _Lisp-like linked list_, or _llll_ for short, is one of the most fundamental d
 
 In this section, you’ll learn the basics of _lllls_, their syntax, and how to use them to represent complex musical data.
 
+---
+
 ## What can _lllls_ do?
 
 A _llll_ is a list that can:
@@ -14,6 +16,8 @@ A _llll_ is a list that can:
 - Be nested, meaning a list that can include other lists as elements.
 
 This makes _lllls_ ideal for representing hierarchical musical structures, such as chords, measures, rhythms, and more.
+
+---
 
 ## _llll_ Syntax
 
@@ -47,11 +51,15 @@ $progression = [C4 E4 G4] [F4 A4 C5]; ## Length: 2, Depth: 2
 $passage = [[C4] [E4 G4]] [[F4 A4] [C5]] ## Length: 2, Depth: 3
 ```
 
+---
+
 ## Why Use _lllls_?
 
 1. **Simple Syntax**: Easily represent sequences or nested structures.
 2. **Hierarchical Organization**: Perfect for handling multi-level musical data.
 3. **Flexibility**: Perform operations on individual elements, entire lists, or nested structures — i.e., _one-to-one_, _one-to-many_, _many-to-many_.
+
+---
 
 ## Examples: Representing Musical Data
 
@@ -74,6 +82,8 @@ $melody = [C4 1/4] [D4 1/8] [E4 1/8] [F4 1/2]
 ```
 
 Here, each sublist represents a pitch and rhythmic value pair.
+
+---
 
 ## Exercises
 
@@ -99,6 +109,8 @@ Here, each sublist represents a pitch and rhythmic value pair.
    [ <root1> <third1> <fifth1> ] ... [ <root4> <third4> <fifth4> ]
    ```
 2. Print the progression.
+
+---
 
 ## FAQ
 

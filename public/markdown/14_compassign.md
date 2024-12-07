@@ -4,6 +4,8 @@
 
 In _bell_, compound assignment operators are shortcuts that simplify common operations when modifying variables. Instead of writing out the full expression, you can use a compound operator to make your code shorter and more readable. This is particularly useful when working with musical data like incrementing beats, adjusting velocities, or transposing notes.
 
+---
+
 ## What Are Compound Assignment Operators?
 
 A compound assignment operator combines an arithmetic operation with assignment (=). For example, instead of writing:
@@ -18,6 +20,8 @@ You can write:
 $x += 5;
 ```
 
+---
+
 ## List of Compound Assignment Operators
 
 | Operator | Description             | Example    | Equivalent To  |
@@ -28,6 +32,8 @@ $x += 5;
 | `/=`     | Divide and assign       | `$x /= 2`  | `$x = $x / 2`  |
 | `**=`    | Exponentiate and assign | `$x **= 3` | `$x = $x ** 3` |
 | `%=`     | Modulo and assign       | `$x %= 4`  | `$x = $x % 4`  |
+
+---
 
 ## Examples in Musical Contexts
 
@@ -51,6 +57,8 @@ $rhythm /= 2; ## Halve each rhythmic value
 print($rhythm); ## Outputs: 1/4 1/8 1/16
 ```
 
+---
+
 ## Doubling Note Frequencies
 
 Use `*=` to double the frequency of a note (octave up):
@@ -61,6 +69,8 @@ $freq *= 2; ## Double the frequency
 print($freq); ## Outputs: 880 (A5)
 ```
 
+---
+
 ## Creating Repeating Patterns with Modulo
 
 Use `%=` to cycle through a set of beats:
@@ -70,6 +80,8 @@ $beat = 9;
 $beat %= 4; ## Find the remainder when dividing by 4
 print($beat); ## Outputs: 1
 ```
+
+---
 
 ## Combining Compound Operators
 
@@ -84,6 +96,8 @@ $melody *= 2; ## Double each note's value (for an effect like harmonics)
 print($melody); ## Outputs: 124 128 132 134
 ```
 
+---
+
 ## Exercises
 
 ### Exercise 1: Transposing a Melody
@@ -95,6 +109,8 @@ print($melody); ## Outputs: 124 128 132 134
 2. Transpose the melody up by a perfect fifth (7 semitones) using `+=`.
 3. Print the transposed melody.
 
+---
+
 ## Exercise 2: Scaling Rhythms
 
 1. Create a list of rhythmic durations:
@@ -104,6 +120,8 @@ print($melody); ## Outputs: 124 128 132 134
 2. Double the durations using \*=.
 3. Print the scaled rhythm.
 
+---
+
 ## Exercise 3: Modifying Frequencies
 
 1. Create a variable for a note frequency:
@@ -112,6 +130,8 @@ print($melody); ## Outputs: 124 128 132 134
    ```
 2. Octave up the frequency using `*=` twice.
 3. Print the final frequency.
+
+---
 
 ## Exercise 4: Beat Cycling
 
@@ -123,6 +143,8 @@ print($melody); ## Outputs: 124 128 132 134
 
 2. Use `%=` to cycle the beat within a 4-beat measure.
 3. Print the resulting beat position.
+
+---
 
 ## FAQ
 

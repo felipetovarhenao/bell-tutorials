@@ -4,6 +4,8 @@
 
 In _bell_, the `null` keyword represents the _absence_ of a value. It’s an explicit way to indicate that something is intentionally empty. Understanding `null` is essential for dealing with situations where the result of an expression isn't a value, or where you want to discard results.
 
+---
+
 ## What Is `null`?
 
 `null` in _bell_ signifies:
@@ -12,6 +14,8 @@ In _bell_, the `null` keyword represents the _absence_ of a value. It’s an exp
 - **Discarded results**: Statements or expressions can result in `null` if explicitly nullified, or there’s no return value, or an operation didn't evaluate as expected.
 
 Think of `null` as silence: it's the absence of sound but still plays an important role in music.
+
+---
 
 ## Using the Nullify Operator (`;`)
 
@@ -26,6 +30,8 @@ print($x + $y) ## Output: 3 (not discarded)
 ```
 
 > Note that the nullify operator doesn't invalidate the expressions it nullifies. That is, `$x = 1` and `$y = 1` are nullified, but the variable assignments still takes place and thus `$x` and `$y` still holds the assigned values, which is why `$x + $y` in the third line evaluates to 3
+
+---
 
 ## Last line rule
 
@@ -53,6 +59,8 @@ Since _nullify_ is a binary operator, _bell_ doesn't allow the last line of a bl
 
 1. To write code as a chain of multiple expressions instead of writing complex expressions as a single line of code.
 2. To explicitly indicate that an expression's result is not needed.
+
+---
 
 ## Exercises
 
@@ -84,6 +92,8 @@ if $x > 5 then (
 
 2. Test with `$x = 10` and `$x = 3`.
 
+---
+
 ## FAQ
 
 ### Q: Can I use null as a value in lists?
@@ -106,6 +116,8 @@ if $x == null then print("No value assigned");
 ### Q: Is null the same as zero?
 
 **A**: No. `null` represents "nothing," while 0 is a valid numeric value.
+
+---
 
 ## Summary
 

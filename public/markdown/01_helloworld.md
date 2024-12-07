@@ -4,6 +4,8 @@
 
 Welcome to the starting point of learning _bell_, a programming language specifically created for algorithmic music composition. As with many programming languages, we’ll begin with a simple _"Hello, world!"_ program. This exercise is designed to introduce you to the fundamentals of writing and executing your first piece of _bell_ code.
 
+---
+
 ## Writing Your First Program
 
 The _"Hello, world!"_ program in _bell_ is as simple as this:
@@ -31,6 +33,8 @@ print("hello world")
 
   > The _no-semicolon-at-the-end_ rule is likely to go away in the next version release of _bell_, making it much more similar to other programming languages. As you start writing _bell_ code, you'll realize that forgetting this rule is a common mistake to make, so always check your code.
 
+---
+
 ## Running the Program
 
 To execute your code:
@@ -45,7 +49,9 @@ bach.eval • hello world
 
 > Everything we print will be preceded by `bach.eval •` since, under the hood, this is the name of the _Max_ object that runs our _bell_ code.
 
-## Exercise 1: Customize Your Output
+---
+
+## Exercise: Customize Your Output
 
 1. Try changing the symbol inside the `print` function. Replace `"hello world"` with:
 
@@ -62,6 +68,8 @@ bach.eval • hello world
 2. Save your updated _bell_ code to see how the output changes.
 
 > When you load a `.bell` file in _bellplay~_, the code is automatically evaluated everytime you save it. As such, it's worth memorizing and using the keyboard shortcut to save a file — `Command+S` on Mac, and `Ctrl+S` on Windows.
+
+---
 
 ## FAQ
 

@@ -4,6 +4,8 @@
 
 In _bell_, symbols are a data type used to represent textual information. Symbols are the equivalent of strings in other programming languages, and they’re particularly useful for labeling or naming elements in your code, such as note names, chord names, or rhythmic patterns, etc.
 
+---
+
 ## Symbol Syntax
 
 Symbols can be created in three ways:
@@ -44,6 +46,8 @@ print($chord); ## Outputs: C4, assumes E4 and G4 are global variables
 
 For multi-word symbols, stick to double or single quotes.
 
+---
+
 ## Using Symbols in Musical Contexts
 
 Symbols are often used to label or annotate musical data. Here are some common scenarios:
@@ -62,6 +66,8 @@ $rhythms = ['pattern1' 1/4 1/8 1/8 1/2] ['pattern2' 1/4 1/4 1/4 1/4];
 print($rhythms.'pattern1'); ## Outputs: 1/4 1/8 1/8 1/2
 ```
 
+---
+
 ## Advantages of Using Symbols
 
 1. **Human Readability**: Symbols make your code more intuitive, as they allow for meaningful labels like "verse", "chorus", or "C major".
@@ -69,6 +75,8 @@ print($rhythms.'pattern1'); ## Outputs: 1/4 1/8 1/8 1/2
 2. **Flexible Data Handling**: Symbols are versatile and can be used in lists, keys, or standalone annotations.
 
 3. **Avoiding Errors**: Using symbols prevents accidental reinterpretation of text as a numeric or functional element.
+
+---
 
 ## Operations with Symbols
 
@@ -93,6 +101,8 @@ Symbols can be included in lllls, just like notes or numbers.
 $info = ["C4" "quarter" "mezzo-piano"];
 print($info); ## Outputs: C4 quarter mezzo-piano
 ```
+
+---
 
 ## Exercises
 
@@ -134,6 +144,8 @@ $patterns = ['pattern1' 1/4 1/8 1/8 1/2] ['pattern2' 1/4 1/4 1/4 1/4];
    ```
 2. Print the chord name.
 3. Try adding a second chord in the same backtick line and note what happens.
+
+---
 
 ## FAQ
 

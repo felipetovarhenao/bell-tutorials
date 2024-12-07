@@ -4,11 +4,15 @@
 
 When working with _lllls_ (lists and nested lists), you'll often need to access specific elements within it. In _bell_, addresses allow you to pinpoint and retrieve elements from both simple and complex structures. This is particularly useful for handling musical data, such as retrieving individual notes from chords, specific measures from a score, or rhythm patterns from a sequence.
 
+---
+
 ## Access Operator (`:`)
 
 The colon (`:`) is the access operator in _bell_. It retrieves elements from a list based on their position (1-based indexing).
 
 The basic syntax is `<list>:<address>`.
+
+---
 
 ## Simple Addresses
 
@@ -22,6 +26,8 @@ print($chord:1); ## Outputs: C4
 print($chord:2); ## Outputs: E4
 print($chord:3); ## Outputs: G4
 ```
+
+---
 
 ## Nested Addresses
 
@@ -39,6 +45,8 @@ print($progression:(2 1)); ## Outputs: F4
 
 - `:1` retrieves the first chord `[C4 E4 G4]`.
 - `:(2 1)` drills into the second chord (`[F4 A4 C5]`) and retrieves its first note (`F4`).
+
+---
 
 ## Picking Elements: Double Colon (`::`)
 
@@ -89,6 +97,8 @@ $melody = [C4 [D4 E4]] [F4 G4];
 print($melody::1); ## Outputs: C4 D4 E4
 print(flat($melody)); ## Outputs: C4 D4 E4 F4 G4
 ```
+
+---
 
 ## Exercises
 
@@ -142,6 +152,8 @@ $score = [[[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]]];
    - The first measure.
    - The first chord in the second measure.
    - The second note of the second chord in the first measure.
+
+---
 
 ## FAQ
 
