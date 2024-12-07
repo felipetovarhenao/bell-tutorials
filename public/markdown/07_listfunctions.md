@@ -9,7 +9,7 @@ In _bell_, lists (or _lllls_) are central to representing and organizing musical
 Below is a table of commonly used list functions in bell. Each function is paired with examples in a musical context.
 
 | Function | Purpose                            | Example                         | Result              |
-| -------- | ---------------------------------- | ------------------------------- | ------------------- |
+| --- | --- | --- | --- |
 | `rev`    | Reverses the elements of a list    | `rev(C4 D4 E4 F4)`              | `F4 E4 D4 C4`       |
 | `length` | Returns the number of elements     | `length(C4 E4 G4)`              | `3`                 |
 | `depth`  | Returns the depth of a list        | `depth([C4 E4 G4] [F4 A4 C5])`  | `2`                 |

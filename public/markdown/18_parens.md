@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In _bell_, parentheses (( and )) are used to group and organize expressions, allowing you to control the order of operations, create compound statements, and write more readable code. Parentheses are essential when working with complex musical data or chaining multiple operations together.
+In _bell_, parentheses `()` are used to group and organize expressions, allowing you to control the order of operations, create compound statements, and write more readable code. Parentheses are essential when working with complex musical data or chaining multiple operations together.
 
 ## Why Use Parentheses?
 
@@ -173,12 +173,12 @@ print($result); ## Outputs: C5 D5 E5
 **A**: Yes, you can use parentheses to make your code more readable even when they aren’t strictly required:
 
 ```py
-$result = (60 + 12) * 2; ## Easier to understand at a glance
+$result = 60 + (12 * 2); ## Easier to understand at a glance
 ```
 
 ### Q: What happens if I forget the closing parenthesis?
 
-**A**: bell will throw a syntax error. Always ensure that every opening parenthesis has a corresponding closing parenthesis.
+**A**: The _bell_ will throw a syntax error. Always ensure that every opening parenthesis has a corresponding closing parenthesis.
 
 ### Q: Can parentheses contain nested loops or conditionals?
 

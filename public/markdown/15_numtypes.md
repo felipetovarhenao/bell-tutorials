@@ -7,7 +7,7 @@ Numbers are central to programming, and bell provides a variety of numeric types
 ## Numeric Types in bell
 
 | Numeric Types | Description                                       | Examples       |
-| ------------- | ------------------------------------------------- | -------------- |
+| --- | --- | --- |
 | Integer       | Whole numbers, useful for counting or MIDI values | 60, 4, 100     |
 | Float         | Numbers with decimal points, ideal for precision  | 3.14159, 440.0 |
 | Rational      | Fractions, useful for rhythms or ratios           | 1/4, 3/2       |

@@ -79,17 +79,17 @@ print('hello world')
 
 - Wrong:
 
-```py
-print('hello world");
-print("hello world');
-```
+  ```py
+  print('hello world");
+  print("hello world')
+  ```
 
 - Correct:
 
-```py
-print('hello world');
-print("hello world");
-```
+  ```py
+  print('hello world');
+  print("hello world")
+  ```
 
 ---
 

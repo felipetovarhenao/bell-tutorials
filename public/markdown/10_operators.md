@@ -9,7 +9,7 @@ Operators are the foundation of performing calculations, comparisons, and logica
 Arithmetic operators perform mathematical calculations.
 
 | Operator | Description            | Example  | Result |
-| -------- | ---------------------- | -------- | ------ |
+| --- | --- | --- | --- |
 | `+`      | Addition               | `5 + 3`  | `8`    |
 | `-`      | Subtraction            | `10 - 4` | `6`    |
 | `*`      | Multiplication         | `7 * 2`  | `14`   |
@@ -53,7 +53,7 @@ print($beat % 4) ## Outputs: 3 (remainder when dividing beats by 4)
 Comparison operators evaluate the relationship between two values and return either true (non-zero) or false (0).
 
 | Operator | Description              | Example  | Result        |
-| -------- | ------------------------ | -------- | ------------- |
+| --- | --- | --- | --- |
 | `==`     | Equal to                 | `5 == 5` | `1` (_true_)  |
 | `!=`     | Not equal to             | `5 != 3` | `1` (_true_)  |
 | `<`      | Less than                | `3 < 5`  | `1` (_true_)  |
@@ -84,7 +84,7 @@ print($short < $long); ## Outputs: true
 Logical operators are used to combine or negate conditions.
 
 | Operator | Description   | Example    | Result        |
-| -------- | ------------- | ---------- | ------------- |
+| --- | --- | --- | --- |
 | `&&`     | Logical _AND_ | `1 && 0`   | `0` (_false_) |
 | `&&`     | Logical _AND_ | `0 && 1`   | `0` (_false_) |
 | `\|\|`   | Logical _OR_  | `1 \|\| 0` | `1` (_true_)  |

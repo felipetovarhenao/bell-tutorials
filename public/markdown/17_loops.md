@@ -12,11 +12,11 @@ A for loop iterates through each element in a list. It is perfect for processing
 
 Syntax:
 
-```py
+```
 for $<var> in <list> <do|collect> <statement>;
 ```
 
-- `do`: Executes the statement but discards all intermediate results except the last.
+- `do`: Executes the statement but discards all intermediate results except the last one.
 - `collect`: Executes the statement and gathers the results into a new list.
 
 #### Example: Iterating Through a Melody
