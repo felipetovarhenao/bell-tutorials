@@ -25,12 +25,12 @@ _bell_ distinguishes between **local** and **global** variables:
 1. **Local Variables**:
 
    - Begin with a dollar sign (`$`), e.g., `$x`, `$note`, `$myvar`.
-   - Used within a specific scope (e.g., inside a function — _more on this later on_).
+   - Used within a specific scope (e.g., inside a function — _more on this later_).
    - Automatically discarded/forgotten when the scope ends.
 
 2. **Global Variables**:
-   - Do not begin with a dollar sign, e.g., x.
-   - Available throughout the entire program.
+   - Do not begin with a dollar sign, e.g., `x`, `note`, `myvar`.
+   - Available throughout the entire program, including other scripts.
 
 ### Example:
 
