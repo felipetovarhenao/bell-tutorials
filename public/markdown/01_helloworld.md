@@ -1,5 +1,7 @@
 # Hello, World!
 
+> _Writing your first_ bell _script_
+
 ## Introduction
 
 Welcome to the starting point of learning _bell_, a programming language specifically created for algorithmic music composition. As with many programming languages, we’ll begin with a simple _"Hello, World!"_ program. This exercise is designed to introduce you to the fundamentals of writing and executing your first piece of _bell_ code.

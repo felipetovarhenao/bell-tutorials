@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router";
+import { HashRouter as Router, Route, Routes } from "react-router";
 import MarkdownRenderer from "./components/MarkdownRenderer";
 import getMarkdownInfo, { MarkdownFileInfo } from "./utils/getMarkdownInfo";
 import TOC from "./components/TOC";

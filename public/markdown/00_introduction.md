@@ -1,6 +1,6 @@
 # Programming with _bell_
 
-> _a musician-friendly introduction to programming with the bell programming language_
+> _a musician-friendly introduction to programming with the_ bell _programming language_
 
 ## Introduction
 
