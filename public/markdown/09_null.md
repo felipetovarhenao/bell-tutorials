@@ -1,95 +1,65 @@
-# The null keywords
+# The null keyword
 
-> _Understanding Nothingness in Code_
+> _Understanding nihilistic code_
 
-In _bell_, the `null` keyword represents _nothingness_. It’s a placeholder for the absence of a value or an explicit way to indicate that something is intentionally empty. Understanding `null` is essential for dealing with situations where no meaningful value exists, or the result of an expression isn't a value, or where you want to discard results.
+In _bell_, the `null` keyword represents the _absence_ of a value. It’s an explicit way to indicate that something is intentionally empty. Understanding `null` is essential for dealing with situations where the result of an expression isn't a value, or where you want to discard results.
 
 ## What Is `null`?
 
 `null` in _bell_ signifies:
 
-- **No value**: It’s not a number, symbol, or list — it’s simply _nothing_.
-- **Discarded results**: Statements or expressions can result in `null` if explicitly nullified or if there’s no return value.
+- **No value**: It’s not a number, symbol, or list — it’s simply _absence_.
+- **Discarded results**: Statements or expressions can result in `null` if explicitly nullified, or there’s no return value, or an operation didn't evaluate as expected.
 
-Think of `null` as silence in music: it's the absence of sound but still plays an important role in music.
+Think of `null` as silence: it's the absence of sound but still plays an important role in music.
 
 ## Using the Nullify Operator (`;`)
 
-The semicolon (`;`) in _bell_ is called the _nullify_ operator. It discards the result of an expression or statement, leaving a null in its place.
+So far we've used semicolons (`;`) to separate statements. In _bell_, we call refer to the semicolon as the **nullify** operator: a **binary** operator where the expressions _before_ and _after_ it are evaluated, but the one preceding it is discarded (i.e., becomes `null`).
 
 ### Example:
 
 ```py
-print("hello world"); ## Outputs: hello world
-1 + 2; ## This is calculated but the result is discarded
+$x = 1; ## Assigns value to $x, and evaluates to null
+$y = 2; ## Prints and outputs "hello world", but also returns null
+print($x + $y) ## Output: 3 (not discarded)
 ```
 
-If you check the result of the last line:
+> Note that the nullify operator doesn't invalidate the expressions it nullifies. That is, `$x = 1` and `$y = 1` are nullified, but the variable assignments still takes place and thus `$x` and `$y` still holds the assigned values, which is why `$x + $y` in the third line evaluates to 3
 
-```py
-print(null); ## Outputs: null
-```
+## Last line rule
+
+Since _nullify_ is a binary operator, _bell_ doesn't allow the last line of a block of code to end with a semicolon. This would be equivalent to trying to multiply with a missing operand: `2 * ` or `* 2`:
+
+### Example:
+
+- Incorrect:
+  ```py
+  ## right operand missing
+  $x = 1 ;
+  ```
+- Also incorrect:
+  ```py
+  ## left operand missing
+  ; $y = 2
+  ```
+- Correct:
+  ```py
+  ## both operands present
+  $x = 1 ; $y = 2
+  ```
 
 ### Why Use Nullify?
 
 1. To write code as a chain of multiple expressions instead of writing complex expressions as a single line of code.
 2. To explicitly indicate that an expression's result is not needed.
 
-## Examples of null in Action
-
-### Example 1: Discarding a Value
-
-```py
-$x = 10;
-$y = $x + 5; ## Result of this line is discarded
-print($y); ## Outputs: 15
-```
-
-### Example 2: Ending a Block
-
-In _bell_, the last statement in a block of code cannot end with a nullify operator.
-
-Correct:
-
-```py
-if 1 > 0 then (
-    print("Condition is true")
-)
-```
-
-Incorrect:
-
-```py
-if 1 > 0 then (
-    print("Condition is true");
-)
-## Error: Block ends with a null statement
-```
-
-## Musical Contexts for null
-
-### Example: Muting Notes
-
-Use `null` to represent muted notes in a melody:
-
-```py
-$melody = [C4 null E4 F4];
-print($melody); ## Outputs: C4 null E4 F4
-```
-
-You can handle the null note later, for instance, by skipping or replacing it:
-
-```py
-$cleanedMelody = $melody.thin(); ## Removes nulls
-print($cleanedMelody); ## Outputs: C4 E4 F4
-```
-
 ## Exercises
 
 ### Exercise 1: Exploring Nullify
 
-1. Write a statement that calculates the sum of two numbers but discards the result using ;.
-2. Print the value of the discarded statement (it should return null).
+1. Write a statement that calculates the sum of two numbers but discards the result using `;`.
+2. Print the value of the discarded statement (it should return `null`).
 
 ### Exercise 2: Null in a Melody
 

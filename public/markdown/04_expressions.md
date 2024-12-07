@@ -6,18 +6,20 @@ Expressions are the building blocks of any program. In _bell_, expressions can i
 
 ## Arithmetic Operations
 
-### Supported Operations
+### Common Operations
 
-_bell_ provides several basic arithmetic operations:
+_bell_ provides several basic arithmetic operators, including but not limited to:
 
-| Operation          | Symbol | Example  | Result |
-| ------------------ | ------ | -------- | ------ |
-| Addition           | `+`    | `5 + 3`  | `8`    |
-| Subtraction        | `-`    | `10 - 4` | `6`    |
-| Multiplication     | `*`    | `7 * 2`  | `14`   |
-| Division           | `/`    | `8 / 2`  | `4`    |
-| Modulo (remainder) | `%`    | `9 % 4`  | `1`    |
-| Power              | `**`   | `2 ** 3` | `8`    |
+| Operation          | Operator | Example  | Result |
+| ------------------ | -------- | -------- | ------ |
+| Addition           | `+`      | `5 + 3`  | `8`    |
+| Subtraction        | `-`      | `10 - 4` | `6`    |
+| Multiplication     | `*`      | `7 * 2`  | `14`   |
+| Division           | `/`      | `8 / 2`  | `4`    |
+| Modulo (remainder) | `%`      | `9 % 4`  | `1`    |
+| Power              | `**`     | `2 ** 3` | `8`    |
+
+We will dedicate a more time later on to explore other _bell_ operators, but these are a good starting point.
 
 ### Examples
 
@@ -84,20 +86,13 @@ print($area) ## Output: 25
 
 ## Expressions vs. Statements
 
-In _bell_, there’s a subtle distinction between expressions and statements:
-
-- **Expression**: Produces a value. Examples: `5 + 3`, `$x * 2`.
-- **Statement**: Performs an action, like assigning a value or printing. Examples: `$x = 5 + 3`, `print($x)`.
-
-### Nullify Operator (`;`)
-
-- Use a semicolon (`;`) to **nullify** an expression, meaning its result is discarded.
+In these tutorials, the terms _expression_ and _statement_ are use interchangeably, to refer to segments of code separated by semicolons.
 
 ### Example:
 
 ```py
-print("hello world"); ## Outputs "hello world"
-5 + 3; ## Discards the result
+$x = (1 + 3) * 4; ## expression 1
+$x = $x * 4 ## expression 2
 ```
 
 ## Exercises
@@ -115,35 +110,53 @@ print("hello world"); ## Outputs "hello world"
 
 2. Print the results of each calculation.
 
-### Exercise 2: Combining Expressions
+### Exercise 2: Pitch transposition
 
-1. Write a program to calculate the total cost of items in a shopping cart:
+1. Assign the MIDI note number of a pitch to a variable:
+2. Assign the interval (in semitones) you want to transpose the pitch by to another variable:
+3. Use addition to calculate the transposed pitch and assign the result to a new variable:
+4. Print the original pitch, the interval, and the transposed pitch.
 
-```py
-$item1 = 5;
-$item2 = 10;
-$taxrate = 0.08; ## 8% tax
-$total = ($item1 + $item2) * (1 + $taxrate)
-```
+### Exercise 3: Computing Intervals in a Triad
 
-2. Print the total cost.
-
-### Exercise 3: Using Variables
-
-1. Declare variables for length and width.
-2. Write a formula to calculate the perimeter of a rectangle:
+1. Assign the MIDI note numbers of a C major triad to three separate variables:
 
 ```py
-$perimeter = 2 * ($length + $width)
+$note1 = 60; ## C5
+$note2 = 64; ## E5
+$note3 = 67; ## G5
 ```
 
-3. Print the perimeter.
+2. Compute the interval (in semitones) between:
+   - The first and second notes (`$note1` and `$note2`)
+   - The second and third notes (`$note2` and `$note3`)
+   - The first and third notes (`$note1` and `$note3`)
+3. Print the results for each interval, to display the following messages.
+
+   ```
+   Interval between note1 and note2: 4
+   Interval between note2 and note3: 3
+   Interval between note1 and note3: 7
+   ```
 
 ## FAQ
 
 ### Q: What happens if I divide by zero?
 
-**A**: Dividing by zero in _bell_ will result in an error. Always ensure the divisor is not zero.
+**A**: Dividing by zero in _bell_ does not result in error, and the result depends on the type of the operands. If both operands are integers (whole numbers) it's treated like a fraction:
+
+```py
+$x = 3/0 ### Output: 3/0
+```
+
+If either operand is a decimal, it evaluates to infinity (`inf` or `-inf`):
+
+```py
+$x = 3./0; ## Output: inf
+$x = -3/0.; ## Output: -inf
+```
+
+Either way, you probably want to always make sure you're not diving by zero, which might lead to undesired results.
 
 ### Q: Can I mix numbers and variables in expressions?
 

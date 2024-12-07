@@ -2,7 +2,7 @@
 
 > _Working with Nested Data Structures_
 
-A _Lisp-like linked list_, or _llll_ for short, is one of the most fundamental data structures in _bell_. _lllls_ (pronounced _"ell-ell-ell-ells"_) are an advanced type of list data type that allow for nesting values, including lists, enabling you to structure and manipulate data hierarchically — as such as they are very effective way of representing musical data, such as chords, progressions, melodies, scores, etc.
+A _Lisp-like linked list_, or _llll_ for short, is one of the most fundamental data structures in _bell_. _lllls_ (pronounced _"ell-ell-ell-ells"_) are an advanced type of list data type that allow for nesting values, including lists, enabling you to structure and manipulate data hierarchically — as such, they are very effective way of representing musical data, such as chords, progressions, melodies, scores, etc.
 
 In this section, you’ll learn the basics of _lllls_, their syntax, and how to use them to represent complex musical data.
 
@@ -15,25 +15,25 @@ A _llll_ is a list that can:
 
 This makes _lllls_ ideal for representing hierarchical musical structures, such as chords, measures, rhythms, and more.
 
-## llll Syntax
+## _llll_ Syntax
 
-### Implicit llll Construction
+### Implicit _llll_ Construction
 
-You can create a simple llll by writing elements next to each other, separated by spaces:
+You can create a simple _llll_ by writing elements next to each other, separated by spaces:
 
 ```py
 $tempi = 60 80 120
 ```
 
-### Nested lllls
+### Nested _lllls_
 
-Use square brackets [ ] to group elements into nested lists:
+Use square brackets `[ ]` to group elements into nested lists:
 
 ```py
 $progression = [C4 E4 G4] [F4 A4 C5]
 ```
 
-### llll Terminology
+### _llll_ Terminology
 
 - **Length**: The number of elements in a list.
 - **Depth**: The number of levels of nesting in a list.
@@ -41,9 +41,9 @@ $progression = [C4 E4 G4] [F4 A4 C5]
 #### Examples:
 
 ```py
-$note = C4 ## Length: 1, Depth: 1
-$chord = C4 E4 G4 ## Length: 3, Depth: 1
-$progression = [C4 E4 G4] [F4 A4 C5] ## Length: 2, Depth: 2
+$note = C4; ## Length: 1, Depth: 1
+$chord = C4 E4 G4; ## Length: 3, Depth: 1
+$progression = [C4 E4 G4] [F4 A4 C5]; ## Length: 2, Depth: 2
 $passage = [[C4] [E4 G4]] [[F4 A4] [C5]] ## Length: 2, Depth: 3
 ```
 
@@ -73,7 +73,7 @@ $progression = [C4 E4 G4] [F4 A4 C5] [G4 B4 D5]
 $melody = [C4 1/4] [D4 1/8] [E4 1/8] [F4 1/2]
 ```
 
-Here, each sublist represents a note and its rhythmic value.
+Here, each sublist represents a pitch and rhythmic value pair.
 
 ## Exercises
 
@@ -84,32 +84,27 @@ Here, each sublist represents a note and its rhythmic value.
 
 ### Exercise 2: Melody with Rhythms
 
-1. Represent a melody with its corresponding rhythmic values as a llll:
+1. Write a melody of your choosing as an _llll_, where each element is a sublist containing pitch (MIDI) and duration (milliseconds) values:
 
-```
-$melody = [C4 1/4] [D4 1/8] [E4 1/8] [F4 1/2]
-```
+   ```
+   $melody = [ <pitch1> <dur1> ] [ <pitch2> <dur2> ] ... [ <pitchN> <durN> ]
+   ```
 
-2. Print the rhythmic value of the second note.
-3. Flatten the melody into a single list and print it.
+2. Print the melody
 
 ### Exercise 3: Complex Nested Structures
 
-1. Create a llll to represent a four-bar melody, where each bar contains a nested list of notes:
-
-```py
-$fourBarMelody = [[C4 E4 G4] [D4 F4 A4]] [[E4 G4 B4] [F4 A4 C5]]
-```
-
-2. Access and print the second bar.
-3. Access the second note in the first chord of the second bar.
-4. Flatten the entire melody and print it.
+1. Create a _llll_ to represent a `I-IV-V-I` progression in G major:
+   ```
+   [ <root1> <third1> <fifth1> ] ... [ <root4> <third4> <fifth4> ]
+   ```
+2. Print the progression.
 
 ## FAQ
 
 ### Q: Can I mix data types in a _llll_?
 
-**A**: Yes, _lllls_ can hold any combination of data types (e.g., numbers, strings, notes, or even other _lllls_). Data types will be covered later on.
+**A**: Yes, _lllls_ can hold any combination of data types (e.g., numbers, symbols, pitches, or even other _lllls_). Data types will be covered later.
 
 ### Q: Is there a size limit on _lllls_?
 

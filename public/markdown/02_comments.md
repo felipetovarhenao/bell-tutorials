@@ -23,8 +23,9 @@ print("hello world") ## This prints "hello world" to the screen
 1. Add single-line comments to this code explaining what each line does:
 
    ```py
+   ## <your comment>
    print("Welcome to bell");
-
+   ## <your comment>
    print(2 + 3)
    ```
 
@@ -36,7 +37,7 @@ For longer explanations, use multi-line comments. These are enclosed with `#(` a
 
 ```bell
 #(
-This program calculates the area of a rectangle
+This code calculates the area of a rectangle
 and displays the result.
 Length and width are hardcoded for simplicity.
 )#
@@ -142,13 +143,6 @@ $interval = $pitch2 - $pitch1;
 print($pitch1 "and" $pitch2 "are" $interval "semitones apart");
 ```
 
-### Exercise 3: Multi-Line Comments
-
-Write a program that:
-
-1. Uses a multi-line comment to explain its overall purpose.
-2. Includes at least two single-line comments to clarify specific steps.
-
 ## FAQ
 
 ### Q: Will comments slow down my program?
@@ -158,6 +152,9 @@ Write a program that:
 ### Q: Should I comment every line of code?
 
 **A**: No, focus on _why_ you're doing something rather than _what_ the code does. You want comments to help you and others understand how each different blocks of code contribute to the overall function of your scripts.
+
+### Q: Do I need to use semicolons after comments?
+**A**: No, since comments are ignored during the execution of the code, comments do not require semicolons. The role of the semicolons in _bell_ will be explored in further detail later.
 
 ---
 
