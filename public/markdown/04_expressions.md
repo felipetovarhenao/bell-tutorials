@@ -1,4 +1,4 @@
-# Basic Expressions
+# Basic expressions
 
 > _Performing Arithmetic and More_
 

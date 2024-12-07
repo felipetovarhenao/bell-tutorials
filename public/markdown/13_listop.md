@@ -1,4 +1,4 @@
-# List Operators
+# List operators
 
 > _Building and Modifying Musical Sequences_
 

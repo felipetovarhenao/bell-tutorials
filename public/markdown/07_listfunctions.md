@@ -1,4 +1,4 @@
-# List Functions
+# List functions
 
 > _Advanced Operations on Musical Data_
 

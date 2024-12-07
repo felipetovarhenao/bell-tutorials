@@ -1,4 +1,4 @@
-# Numeric Types
+# Numeric types
 
 > _Understanding and Using Numbers in bell_
 

@@ -1,4 +1,4 @@
-# Compound Assignment Operators
+# Compound assignment operators
 
 > _Shortcuts for Modifying Variables_
 
