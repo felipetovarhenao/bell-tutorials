@@ -2,7 +2,7 @@
 
 > _Working with Nested Data Structures_
 
-A _Lisp-like linked list_, or _llll_ for short, is one of the most fundamental data structures in _bell_. _lllls_ (pronounced _"ell-ell-ell-ells"_) are an advanced type of list data type that allow for nesting values, including lists, enabling you to structure and manipulate data hierarchically — as such, they are very effective way of representing musical data, such as chords, progressions, melodies, scores, etc.
+A _Lisp-like linked list_, or _llll_ for short, is one of the most fundamental data structures in _bell_. _lllls_ (pronounced _"ell-ell-ell-ells"_) are an advanced type of lists that allow for nesting values, including lists, enabling you to structure and manipulate data hierarchically — as such, they are very effective way of representing musical data, such as chords, progressions, melodies, scores, etc.
 
 In this section, you’ll learn the basics of _lllls_, their syntax, and how to use them to represent complex musical data.
 
