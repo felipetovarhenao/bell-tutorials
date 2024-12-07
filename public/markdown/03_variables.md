@@ -45,14 +45,14 @@ Globalvar = 10 ## Global variable
 
 1. Be Descriptive:
 
-   - Instead of $a, use $score, $length, or $pitch.
+   - Instead of `$a`, use `$score`, `$length`, or `$pitch`.
 
 2. Avoid Naming Collisions:
 
-   - Use capitalization to differentiate global variables (e.g., GlobalVar) from local variables (e.g., $globalVar).
+   - Use local variables (e.g., `$print`) or capitalized global variables (e.g., `Print`) to differentiate them from _bell_'s built-in functions (e.g., `print`).
 
 3. Stick to a Naming Convention:
-   - For readability, use _camelCase_ (`$myVariable`) or _snake_case_ (`$my_variable`) consistently.
+   - For readability, use _camelCase_ (`$myVariable`), _snake_case_ (`$my_variable`), or _flatcase_ (`$myvariable`), consistently.
 
 ## Examples of Assigning Variables
 
@@ -63,7 +63,7 @@ $x = 42; ## Assign an integer
 $pi = 3.14159 ## Assign a floating-point number
 ```
 
-### Strings:
+### Symbols:
 
 ```py
 $name = "bell programming" ## Assign a text symbol
@@ -107,28 +107,6 @@ if $x > 5 then (
 ## Trying to access $y here will cause an error
 ```
 
-## Compound Assignment Operators
-
-In _bell_, you can combine assignment with arithmetic operations for brevity.
-
-### Examples:
-
-```py
-$x += 10; ## Add 10 to $x
-$x -= 5;  ## Subtract 5 from $x
-$x *= 2;  ## Multiply $x by 2
-$x /= 4  ## Divide $x by 4
-```
-
-### Full Example:
-
-```py
-$x = 10;
-$x += 5;  ## $x is now 15
-$x *= 2;  ## $x is now 30
-print($x) ## Output: 30
-```
-
 ## Exercises
 
 ### Exercise 1: Storing Data
@@ -140,28 +118,35 @@ print($x) ## Output: 30
 ### Exercise 2: Reassigning Variables
 
 1. Assign `$x = 10`.
-2. Increment `$x` by `5` using `+=`.
-3. Multiply `$x` by `2` using `*=`.
-4. Print the final value of `$x`.
+2. Change the value of `$x` to a different value.
+3. Print the new value of `$x`.
 
 ### Exercise 3: Local vs Global Variables
 
-1. Create a global variable `Counter = 0`.
-2. Inside a loop, create a local variable `$counter` that counts iterations.
-3. Print both `Counter` and `$counter` to see the difference.
+1. Create a global variable `Counter = 0` and a local variable `$counter = 1`.
+2. In a separate `.bell` file, print both variables to confirm that only `Counter` has a value. What value does `$counter` have?
 
 ## FAQ
 
 ### Q: Can variable names start with a number?
 
-**A**: No, variable names must begin with a letter or a `$`.
+**A**: No, variable names must begin with a letter or a `$`. Numbers in variable names must be preceded by an alphabetic character.
+
+```py
+## Incorrect
+$1var = 1;
+## Correct:
+$var1 = 2
+```
 
 ### Q: Can I use special characters in variable names?
 
 **A**: Avoid special characters (e.g., `@`, `%`, `&`) in variable names, except for `$` in local variables.
 
-### Q: What happens if I forget the $ for a local variable?
+### Q: What happens if I forget the `$` for a local variable?
 
 **A**: Without the `$`, _bell_ treats the variable as global.
+
+--- 
 
 With variables under your belt, you're ready to tackle basic expressions and learn how to perform calculations in _bell_.
