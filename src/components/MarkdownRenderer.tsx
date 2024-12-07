@@ -62,6 +62,9 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownFile, nextR
         </a>
       );
     },
+    blockquote({ children, ...props }: any) {
+      return <blockquote {...props}>{children}</blockquote>;
+    },
   };
 
   // Render Markdown with syntax highlighting for code blocks

@@ -101,3 +101,9 @@ table {
     align-items: center;
   }
 }
+blockquote {
+  border-left: 4px solid #ccc; /* The vertical bar on the left */
+  padding-left: 1em; /* Spacing between the bar and text */
+  margin-left: 0; /* Optional: remove default indentation */
+  color: #575757; /* Optional: a subtle text color */
+}

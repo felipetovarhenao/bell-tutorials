@@ -40,7 +40,7 @@ print($progression:(2 1)); ## Outputs: F4
 #### Explanation:
 
 - `:1` retrieves the first chord `[C4 E4 G4]`.
-- `:(2 1)` drills into the second chord ()`[F4 A4 C5]`) and retrieves its first note (`F4`).
+- `:(2 1)` drills into the second chord (`[F4 A4 C5]`) and retrieves its first note (`F4`).
 
 ## Picking Elements: Double Colon (`::`)
 
