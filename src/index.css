@@ -118,3 +118,49 @@ blockquote {
   margin-left: 0; /* Optional: remove default indentation */
   color: #575757; /* Optional: a subtle text color */
 }
+
+.code-snippet-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.copy-button {
+  position: absolute;
+  padding: 4px;
+  top: 13px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.copy-button .copy-icon {
+  font-size: 1.2rem;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.copy-button:hover .copy-icon {
+  color: #fff;
+}
+
+.copied-text {
+  margin-left: 8px;
+  font-size: 0.8rem;
+  color: #4caf50; /* Green text for copied confirmation */
+  font-weight: bold;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
