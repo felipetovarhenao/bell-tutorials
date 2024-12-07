@@ -12,11 +12,11 @@ Although _bell_ is a niche programming language, it is exceptionally powerful, v
 
 ## How these tutorials work
 
-These tutorials were initially created for the course _Special Topics in Composition: Introduction to Computer-Assisted Algorithmic Composition_, which I developed during my postdoctoral residency at the [University of Cincinnati College-Conservatory of Music](https://ccm.uc.edu/). As such, they are tailored to musicians with specific assumptions and goals in mind:
+These tutorials were initially created for the course _Special Topics in Composition: Introduction to Computer-Assisted Algorithmic Composition_, which I designed and taught during my postdoctoral residency at the [University of Cincinnati College-Conservatory of Music](https://ccm.uc.edu/). As such, they are tailored to musicians with specific assumptions and goals in mind:
 
 ### 1. Programming experience:
 
-No prior programming experience is required, including experience with _Max_ programming.
+No prior programming experience is required, including experience with visual programming environments such as _Max_, _Pure Data_, or _OpenMusic_.
 
 ### 2. Focus on _bell_, not CAC:
 
@@ -24,7 +24,7 @@ These tutorials primarily focus on _bell_, **not** computer-assisted composition
 
 ### 3. Preparation for _bellplay~_:
 
-These tutorials are designed to familiarize users with _bell_, particularly those who wish to learn and use [bellplay~](https://github.com/felipetovarhenao/bellplay), and they are not intended to teach _Max_- or _bach_-specific functionalities. As such, _Max_-related features in _bell_, such as external inputs/outputs are intentionally left out to ensure the emphasis remains on core _bell_ programming concepts. By the same token, any _bellplay~_-specific features and functionalities are omitted as much as possible to limit the scope of these tutorials to the _bell_ programming language, such that users understand where _bell_ ends and _bellplay~_ begins.
+These tutorials are designed to familiarize users with _bell_, and are meant to be followed using [bellplay~](https://github.com/felipetovarhenao/bellplay) to run all code examples and exercises. As such, they do **not** require prior knowledge in _bach_ or _Max_, and instead serve as preparation for those interested in learning and using [bellplay~](https://github.com/felipetovarhenao/bellplay), as an algorithmic audio framework. Similarly, any _bach_- or _Max_-specific features in _bell_, such as external inputs/outputs, are intentionally left out to ensure the emphasis remains on core _bell_ programming concepts. By the same token, any _bellplay~_-specific features and functionalities are omitted as much as possible to limit the scope of these tutorials to the _bell_ programming language, such that users understand where _bell_ ends and _bellplay~_ begins.
 
 > If you’re already familiar with _bell_ and want to focus specifically on _bellplay~_, please refer to the built-in tutorials within the _bellplay~_ application. Similarly, if you're already a _bach_ user and are primarily interested in learning _bell_ vis-a-vis _bach_, the official _bell_ documentation within _bach_ is perhaps the best route to take.
 
@@ -34,14 +34,14 @@ To follow these tutorials, you’ll need the following tools:
 
 ### 1. Text editor
 
-A dedicated text editor is essential, preferrably [Visual Studio Code](https://code.visualstudio.com/), for which I’ve already developed an extension with features like syntax highlighting, autocomplete, and code auto-formatting for _bell_. Here’s how to set it up:
+A dedicated text editor is essential, preferrably [Visual Studio Code](https://code.visualstudio.com/), for which I’ve already developed an extension with features like syntax highlighting, autocomplete, and code auto-formatting for _bell_. This is what we will use to _write_ our _bell_ code. Here’s how to set it up:
 
 1. Download and install [Visual Studio Code](https://code.visualstudio.com/).
 2. Install the [bell syntax](https://marketplace.visualstudio.com/items?itemName=tovarhenao.bell-syntax) extension for _VSCode_.
 
 ### 2. _bellplay~_
 
-1. Download the latest version of _bellplay~_ [here](https://github.com/felipetovarhenao/bellplay/releases/latest).
+1. Download the latest version of _bellplay~_ [here](https://github.com/felipetovarhenao/bellplay/releases/latest). This is what we will use to _run_ our _bell_ code.
 
 - **MacOS**: Download the `.zip` file, uncompress it, and place the standalone (`.app`) in your _Applications_ folder.
 - **Windows**: Since there’s no standalone executable for Windows at the time of this writing, you’ll need to run _bellplay~_ via its source code:
