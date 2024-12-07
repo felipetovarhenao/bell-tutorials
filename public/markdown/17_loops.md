@@ -192,5 +192,3 @@ for $chord in $progression do (
 ---
 
 Loops are incredibly powerful for creating and manipulating musical data, whether you’re iterating through melodies, generating scales, or building chord progressions. Next, we’ll explore parentheses in compound statements, which allow you to group and organize your code effectively.
-
-> Next up: [Parentheses – Grouping and Organizing Complex Statements](18_parens.md)

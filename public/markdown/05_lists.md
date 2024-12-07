@@ -120,5 +120,3 @@ $fourBarMelody = [[C4 E4 G4] [D4 F4 A4]] [[E4 G4 B4] [F4 A4 C5]]
 ---
 
 Now that you’ve mastered _lllls_, you’re ready to explore functions, which will allow you to manipulate musical data in powerful ways.
-
-> Next up: [Functions – Performing Operations on Musical Data](06_functions.md)

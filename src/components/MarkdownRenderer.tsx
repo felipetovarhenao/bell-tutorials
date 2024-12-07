@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
 import { MarkdownFileInfo } from "../utils/getMarkdownInfo";
+import Navbar from "./Navbar";
 
 interface MarkdownRendererProps {
   nextRoute?: MarkdownFileInfo;
@@ -70,31 +71,9 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownFile, nextR
   // Render Markdown with syntax highlighting for code blocks
   return (
     <div className="markdown-container">
-      <div className="banner">
-        {previousRoute ? (
-          <div>
-            <span>Previous: </span>
-            <Link to={"/" + previousRoute.route}>{previousRoute.title}</Link>
-          </div>
-        ) : (
-          <div />
-        )}
-        {(nextRoute || previousRoute) && (
-          <div>
-            <span></span>
-            <Link to="/">Home</Link>
-          </div>
-        )}
-        {nextRoute ? (
-          <div>
-            <span>Next: </span>
-            <Link to={"/" + nextRoute.route}>{nextRoute.title}</Link>
-          </div>
-        ) : (
-          <div />
-        )}
-      </div>
+      <Navbar prev={previousRoute} next={nextRoute} />
       <ReactMarkdown remarkPlugins={[remarkGfm]} className="chapter" children={content} components={components as any} />
+      <Navbar prev={previousRoute} next={nextRoute} />
     </div>
   );
 };

@@ -158,5 +158,3 @@ $data = [ "C4" 1/4 'mezzo-piano' ];
 ---
 
 Symbols are a simple yet powerful tool for organizing and annotating your musical data. Next, you’ll learn about the null keyword, which represents “nothingness” and plays an essential role in structuring your programs.
-
-> Next up: [Null Keyword – Understanding Nothingness in Code](09_null.md)

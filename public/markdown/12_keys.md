@@ -199,5 +199,3 @@ print($data.'missing'); ## Outputs: null
 ---
 
 By mastering keys, you can create clean and efficient data structures that are both easy to read and manipulate. Next, we’ll dive into list operators, which provide powerful tools for working with sequences and repetitions in bell.
-
-> Next up: [List Operators – Building and Modifying Musical Sequences](13_listop.md)

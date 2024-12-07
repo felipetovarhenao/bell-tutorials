@@ -156,5 +156,3 @@ print($x); ## Outputs: 30
 ---
 
 Compound assignment operators provide efficient shortcuts for modifying variables, making them ideal for tasks like transposing melodies, scaling rhythms, or cycling through patterns. With this foundation, you’re ready to explore numeric types and how they can be applied to both musical and mathematical contexts.
-
-> Next up: [Numeric Types – Understanding and Using Numbers in bell](15_numtypes.md)

@@ -157,5 +157,3 @@ Write a program that:
 ---
 
 With comments mastered, you're now ready to explore variables, the building blocks of programming logic in _bell_.
-
-> Next up: [Variables – Storing and Organizing Data](03_variables.md)

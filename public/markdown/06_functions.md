@@ -205,5 +205,3 @@ print(length($notes)); ## Outputs: 4
 ---
 
 Now that you’ve mastered functions, you’re ready to learn about list functions in depth. These are specialized tools for manipulating musical data in _bell_.
-
-> Next up: [List Functions – Advanced Operations on Musical Data](07_listfunctions.md)

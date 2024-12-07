@@ -142,5 +142,3 @@ if $x == null then print("No value assigned");
 ## Summary
 
 The `null` keyword and the nullify operator (;) are essential for structuring and managing code in bell, particularly when working with discarded or missing values. By understanding and leveraging null, you can create cleaner, more intentional code.
-
-> Next up: [Basic Operators – Arithmetic, Logical, and Beyond](10_operators.md)

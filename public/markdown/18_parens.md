@@ -196,5 +196,3 @@ print($result); ## Outputs: C5 D5 E5
 ---
 
 Parentheses provide a powerful way to group and organize your code, making it more readable and efficient. They’re especially useful when working with complex musical transformations or chaining multiple operations. Next, we’ll explore functions, the cornerstone of modular and reusable code in bell.
-
-> Next up: [Functions – Building Reusable Code for Musical Operations](19_formatting.md)

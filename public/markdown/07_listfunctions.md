@@ -160,5 +160,3 @@ print(flat($notes)) ## Outputs: C4 D4 E4
 ```
 
 Now that you’ve explored list functions, you’re ready to dive into symbols, which are crucial for representing textual data like note names and other musical labels.
-
-> Next up: [Symbols – Working with Text in Musical Contexts](08_symbols.md)

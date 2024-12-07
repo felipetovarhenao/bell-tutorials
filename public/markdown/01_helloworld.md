@@ -19,7 +19,7 @@ print("hello world")
 - **The** `print` **function**:
   - The `print` function displays data we want to see in the _Max_ console window. In this case, `print` is instructed to display `"hello world"`.
 - **Parentheses**:
-  - Parentheses ` (``) ` are used to enclose the arguments (i.e., _inputs_ or _parameters_) that you pass to a function. In this case, the print function is being passed one argument: the symbol `"hello world"`.
+  - Parentheses `( )` are used to enclose the arguments (i.e., _inputs_ or _parameters_) that you pass to a function. In this case, the `print` function is being passed one argument: the symbol `"hello world"`.
   - The parentheses indicate that you are calling the function and providing the data it needs to perform its task. If you omit the parentheses or leave a space after the function name (i.e., `print`), the function won’t execute.
 - **The** `"hello world"` **symbol**:
   - Text inside double quotes (`"`) is called a symbol.
@@ -27,11 +27,11 @@ print("hello world")
     > If you have prior programming experience, a symbol would be, roughly speaking, the _bell_ equivalent of a _string_ datatype in languages like _C_, _Java_, _Python_, and others.
 - **Code structure**:
   - A single line of _bell_ code can execute an entire command. In this example, the `print` function is a command that directly interacts with the _Max_ console to display the desired output.
-- **Semicolon?**:
+- **Semicolons?**:
 
-  - If you've done some programming in the past, you probably noticed that there’s no semicolon (`;`) at the end of this line. In the current version of _bell_, semicolons are used at the end of every statement, except for the very last line. Since our code is only a single line, we don't use semicolons yet. We'll discuss this in more detail later on.
+  - If you've done some programming in the past, you probably noticed that there’s no semicolon (`;`) at the end of this line. In the current version of _bell_, semicolons are used at the end of every statement, **except for the very last line**. Since our code is only a single line, we don't use semicolons yet. We'll discuss this in more detail later on.
 
-  > The _no-semicolon-at-the-end_ rule is likely to go away in the next version release of _bell_, making it much more similar to common programming languages. As you'll notice, this will be a common mistake in your code, so always check your code.
+  > The _no-semicolon-at-the-end_ rule is likely to go away in the next version release of _bell_, making it much more similar to other programming languages. As you'll notice, forgetting this rule will be a common mistake in your code, so always check your code.
 
 ## Running the Program
 
@@ -45,11 +45,11 @@ To execute your code:
 bach.eval • hello world
 ```
 
-> NOTE: everything we print will be preceded by `bach.eval •` since, under the hood, this is the name of the Max object that runs bell code.
+> Everything we print will be preceded by `bach.eval •` since, under the hood, this is the name of the _Max_ object that runs our _bell_ code.
 
 ## Exercise 1: Customize Your Output
 
-1. Try changing the symbol inside the print function. Replace `"hello world"` with:
+1. Try changing the symbol inside the `print` function. Replace `"hello world"` with:
 
    - _welcome to bell!_
    - _music is magic_
@@ -58,7 +58,7 @@ bach.eval • hello world
    **Example**:
 
    ```py
-   print("music is magic")
+   print("I love bell")
    ```
 
 2. Save your updated bell code to see how the output changes.
@@ -98,5 +98,3 @@ print('hello world')
 ## Beyond "Hello, World!"
 
 Now that you’ve written and run your first _bell_ script, you're ready to explore the fundamental building blocks of _bell_, including comments, variables, expressions, and more.
-
-> Next up: [Comments – How to Document Your Code](02_comments.md)

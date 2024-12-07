@@ -196,5 +196,3 @@ if $note > 64 then print("Above E4"); else print("Below or at E4");
 ---
 
 Conditionals allow you to add dynamic behavior to your musical programs, whether it's transposing notes, assigning dynamics, or adjusting rhythms. With these tools, you can create responsive and adaptive compositions. Next, we’ll dive into loops, which let you repeat operations for iteration and pattern creation.
-
-> Next up: [Loops – Repeating and Collecting Data in Your Programs](17_loops.md)
