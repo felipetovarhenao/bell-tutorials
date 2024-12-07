@@ -8,13 +8,13 @@ When working with _lllls_ (lists and nested lists), you'll often need to access 
 
 ## Access Operator (`:`)
 
-The colon (`:`) is the access operator in bell. It retrieves elements from a list based on their position (1-based indexing).
+The colon (`:`) is the access operator in _bell_. It retrieves elements from a list based on their position (1-based indexing).
 
 The basic syntax is `<list>:<address>`.
 
 ## Simple Addresses
 
-In flat lists, use a single number to access an element. Remember, bell uses 1-based indexing (the first element is at position 1).
+In flat lists, use a single number to access an element. Remember, _bell_ uses 1-based indexing (the first element is at position 1).
 
 ### Example: Accessing Notes
 
@@ -166,4 +166,4 @@ print($chord:4); ## Error: Index out of range
 
 ---
 
-By mastering addresses, you can effectively navigate and manipulate complex musical structures in bell. Next, we’ll explore keys, which provide another way to structure and access data using symbolic labels.
+By mastering addresses, you can effectively navigate and manipulate complex musical structures in _bell_. Next, we’ll explore keys, which provide another way to structure and access data using symbolic labels.

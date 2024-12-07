@@ -180,7 +180,7 @@ print((5 + 3) > 7 and (2 * 4) == 8); ## Outputs: true
 
 ### Q: Is there a priority order for operators?
 
-**A**: Yes, bell follows standard precedence rules:
+**A**: Yes, _bell_ follows standard precedence rules:
 
 1. Parentheses `()`
 2. Arithmetic operators (+, -, \*, /, %, \*\*)

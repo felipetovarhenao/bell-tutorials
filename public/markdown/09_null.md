@@ -8,7 +8,7 @@ In _bell_, the `null` keyword represents _nothingness_. It’s a placeholder for
 
 ## What Is `null`?
 
-`null` in bell signifies:
+`null` in _bell_ signifies:
 
 - **No value**: It’s not a number, symbol, or list — it’s simply _nothing_.
 - **Discarded results**: Statements or expressions can result in `null` if explicitly nullified or if there’s no return value.
@@ -141,4 +141,4 @@ if $x == null then print("No value assigned");
 
 ## Summary
 
-The `null` keyword and the nullify operator (;) are essential for structuring and managing code in bell, particularly when working with discarded or missing values. By understanding and leveraging null, you can create cleaner, more intentional code.
+The `null` keyword and the nullify operator (;) are essential for structuring and managing code in _bell, particularly when working with discarded or missing values. By understanding and leveraging null, you can create cleaner, more intentional code.

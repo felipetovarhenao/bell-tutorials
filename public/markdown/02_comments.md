@@ -10,7 +10,7 @@ In _bell_, comments come in two flavors: **single-line** and **multi-line**.
 
 ## Single-Line Comments
 
-Single-line comments begin with a double hash (`##`). Anything written after `##` on the same line is treated as a comment and ignored by the bell interpreter.
+Single-line comments begin with a double hash (`##`). Anything written after `##` on the same line is treated as a comment and ignored by the _bell_ interpreter.
 
 ### Example:
 
@@ -148,7 +148,7 @@ Write a program that:
 
 ### Q: Will comments slow down my program?
 
-**A**: No, comments are ignored by the bell interpreter and do not affect performance.
+**A**: No, comments are ignored by the _bell_ interpreter and do not affect performance.
 
 ### Q: Should I comment every line of code?
 

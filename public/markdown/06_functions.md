@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Functions are one of the most powerful tools in programming. In bell, functions allow you to perform operations on musical data, automate repetitive tasks, and compose algorithmic structures. Think of a function as a reusable block of code that takes input, performs an operation, and gives output.
+Functions are one of the most powerful tools in programming. In _bell_, functions allow you to perform operations on musical data, automate repetitive tasks, and compose algorithmic structures. Think of a function as a reusable block of code that takes input, performs an operation, and gives output.
 
 ## Understanding Functions
 
@@ -196,11 +196,11 @@ print(length($notes)); ## Outputs: 4
 
 ### Q: Can I define my own functions?
 
-**A**: While this primer focuses on built-in functions, bell supports defining custom functions. This will be covered in advanced topics.
+**A**: While this primer focuses on built-in functions, _bell_ supports defining custom functions. This will be covered in advanced topics.
 
 ### Q: What happens if I pass the wrong type of argument?
 
-**A**: bell will throw an error. For example, passing a string to pow (which expects numbers) will cause an error.
+**A**: _bell_ will throw an error. For example, passing a string to pow (which expects numbers) will cause an error.
 
 ---
 

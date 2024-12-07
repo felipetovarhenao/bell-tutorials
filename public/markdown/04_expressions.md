@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Expressions are the building blocks of any program. In bell, expressions can involve numbers, strings, lists, and other data types, and they are evaluated to produce a result. This section introduces basic arithmetic operations, how to combine expressions, and how to use them effectively.
+Expressions are the building blocks of any program. In _bell_, expressions can involve numbers, strings, lists, and other data types, and they are evaluated to produce a result. This section introduces basic arithmetic operations, how to combine expressions, and how to use them effectively.
 
 ## Arithmetic Operations
 
@@ -55,7 +55,7 @@ print(2 ** 3) ## Output: 8 (2 raised to the power of 3)
 
 ## Combining Expressions
 
-You can combine multiple operations in a single expression. bell follows standard operator precedence rules (e.g., multiplication and division are performed before addition and subtraction). Use parentheses to make the order explicit or override precedence.
+You can combine multiple operations in a single expression. _bell_ follows standard operator precedence rules (e.g., multiplication and division are performed before addition and subtraction). Use parentheses to make the order explicit or override precedence.
 
 ### Example:
 
@@ -145,7 +145,7 @@ $perimeter = 2 * ($length + $width)
 
 ### Q: What happens if I divide by zero?
 
-**A**: Dividing by zero in bell will result in an error. Always ensure the divisor is not zero.
+**A**: Dividing by zero in _bell_ will result in an error. Always ensure the divisor is not zero.
 
 ### Q: Can I mix numbers and variables in expressions?
 

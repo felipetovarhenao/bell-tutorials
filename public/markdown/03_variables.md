@@ -89,7 +89,7 @@ print($x) ## Output: 15
 
 ## Scope of Variables
 
-The scope of a variable refers to where it can be accessed or modified. In bell:
+The scope of a variable refers to where it can be accessed or modified. In _bell_:
 
 1. Local variables:
    - Only accessible within the block of code where they are defined.
@@ -162,6 +162,6 @@ print($x) ## Output: 30
 
 ### Q: What happens if I forget the $ for a local variable?
 
-**A**: Without the `$`, bell treats the variable as global.
+**A**: Without the `$`, _bell_ treats the variable as global.
 
 With variables under your belt, you're ready to tackle basic expressions and learn how to perform calculations in _bell_.

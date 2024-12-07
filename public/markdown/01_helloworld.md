@@ -23,7 +23,7 @@ print("hello world")
   - The parentheses indicate that you are calling the function and providing the data it needs to perform its task. If you omit the parentheses or leave a space after the function name (i.e., `print`), the function won’t execute.
 - **The** `"hello world"` **symbol**:
   - Text inside double quotes (`"`) is called a symbol.
-  - Symbols represent textual data. You’ll use them often in bell for structuring data, specifying file paths, and more.
+  - Symbols represent textual data. You’ll use them often in _bell_ for structuring data, specifying file paths, and more.
     > If you have prior programming experience, a symbol would be, roughly speaking, the _bell_ equivalent of a _string_ datatype in languages like _C_, _Java_, _Python_, and others.
 - **Code structure**:
   - A single line of _bell_ code can execute an entire command. In this example, the `print` function is a command that directly interacts with the _Max_ console to display the desired output.
@@ -61,7 +61,7 @@ bach.eval • hello world
    print("I love bell")
    ```
 
-2. Save your updated bell code to see how the output changes.
+2. Save your updated _bell_ code to see how the output changes.
 
 > When you load a `.bell` file in _bellplay~_, the code is automatically evaluated everytime you save it. As such, it's worth memorizing and using the keyboard shortcut to save a file — `Command+S` on Mac, and `Ctrl+S` on Windows.
 

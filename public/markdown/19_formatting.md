@@ -12,7 +12,7 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 2. **Error Prevention**: Proper indentation helps visualize blocks of code, reducing the risk of misplaced logic.
 3. **Team Collaboration**: Clean, consistent formatting makes it easier for others to understand your work.
 
-## Guidelines for Indentation in bell
+## Guidelines for Indentation in _bell_
 
 ### General Rules
 
@@ -110,9 +110,9 @@ Write a program that:
 
 ## FAQ
 
-### Q: Does bell enforce indentation?
+### Q: Does _bell_ enforce indentation?
 
-**A**: No, bell does not enforce indentation, but using it consistently makes your code easier to read and debug.
+**A**: No, _bell_ does not enforce indentation, but using it consistently makes your code easier to read and debug.
 
 ### Q: Should I use tabs or spaces?
 

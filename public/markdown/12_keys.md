@@ -8,7 +8,7 @@ In _bell_, **keys** are a way to associate labels (_keys_) with values, creating
 
 ## What Are Keys?
 
-A key-value pair in bell is a data structure that associates a key (symbol) with a value. This is similar to dictionaries or associative arrays in other programming languages.
+A key-value pair in _bell_ is a data structure that associates a key (symbol) with a value. This is similar to dictionaries or associative arrays in other programming languages.
 
 ### Syntax:
 
@@ -198,4 +198,4 @@ print($data.'missing'); ## Outputs: null
 
 ---
 
-By mastering keys, you can create clean and efficient data structures that are both easy to read and manipulate. Next, we’ll dive into list operators, which provide powerful tools for working with sequences and repetitions in bell.
+By mastering keys, you can create clean and efficient data structures that are both easy to read and manipulate. Next, we’ll dive into list operators, which provide powerful tools for working with sequences and repetitions in _bell_.

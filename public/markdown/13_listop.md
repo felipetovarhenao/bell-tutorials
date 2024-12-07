@@ -194,4 +194,4 @@ print($nested); ## Outputs: [C4 [E4 G4]] [C4 [E4 G4]]
 
 ---
 
-List operators provide powerful tools for generating and manipulating musical sequences in bell. Next, we’ll explore compound assignment operators, which simplify operations like modifying and updating variables.
+List operators provide powerful tools for generating and manipulating musical sequences in _bell_. Next, we’ll explore compound assignment operators, which simplify operations like modifying and updating variables.

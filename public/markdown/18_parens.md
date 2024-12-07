@@ -16,7 +16,7 @@ In _bell_, parentheses `()` are used to group and organize expressions, allowing
 
 ### Example: Transposing and Adding Rhythms
 
-Without parentheses, bell follows standard operator precedence. Use parentheses to override this when needed.
+Without parentheses, _bell_ follows standard operator precedence. Use parentheses to override this when needed.
 
 #### Without Parentheses:
 
@@ -195,4 +195,4 @@ print($result); ## Outputs: C5 D5 E5
 
 ---
 
-Parentheses provide a powerful way to group and organize your code, making it more readable and efficient. They’re especially useful when working with complex musical transformations or chaining multiple operations. Next, we’ll explore functions, the cornerstone of modular and reusable code in bell.
+Parentheses provide a powerful way to group and organize your code, making it more readable and efficient. They’re especially useful when working with complex musical transformations or chaining multiple operations. Next, we’ll explore functions, the cornerstone of modular and reusable code in _bell_.

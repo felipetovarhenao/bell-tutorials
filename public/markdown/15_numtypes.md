@@ -4,9 +4,9 @@
 
 ## Introduction
 
-Numbers are central to programming, and bell provides a variety of numeric types tailored for both mathematical operations and musical applications. This section covers the different numeric types in bell, how they’re used, and how they relate to musical data like pitches, durations, and intervals.
+Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical applications. This section covers the different numeric types in _bell_, how they’re used, and how they relate to musical data like pitches, durations, and intervals.
 
-## Numeric Types in bell
+## Numeric Types in _bell_
 
 | Numeric Types | Description                                       | Examples       |
 | ------------- | ------------------------------------------------- | -------------- |
@@ -73,7 +73,7 @@ print($baseFreq * $ratio); ## Outputs: 660
 
 ## 4. Pitch
 
-Pitch is a specialized numeric type that maps musical note names to their equivalent MIDI or frequency values. bell simplifies working with pitches by letting you use intuitive note names.
+Pitch is a specialized numeric type that maps musical note names to their equivalent MIDI or frequency values. _bell_ simplifies working with pitches by letting you use intuitive note names.
 
 ### Basic Syntax:
 
@@ -91,7 +91,7 @@ $sharpNote = F#3; ## F-sharp in the 3rd octave
 print($note + 12); ## Outputs: C5 (one octave up)
 ```
 
-2. Microtonal and Just Intonation (Advanced): bell supports advanced pitch representations, such as:
+2. Microtonal and Just Intonation (Advanced): _bell_ supports advanced pitch representations, such as:
 
 ```py
 $pitch = A4 + 50; ## Microtonal adjustment in cents
@@ -194,7 +194,7 @@ $melody = C4 E4 G4 B4;
 
 ### Q: Can I mix numeric types in a calculation?
 
-**A**: Yes, bell handles mixed types gracefully:
+**A**: Yes, _bell_ handles mixed types gracefully:
 
 ```py
 print(440 * 3/2); ## Outputs: 660.0
@@ -214,4 +214,4 @@ $rhythm = 0.25; ## Equivalent to 1/4
 
 ---
 
-Numeric types are crucial for both mathematical and musical operations in bell. With a solid understanding of these types, you can now tackle more complex tasks like conditionals, which allow you to introduce decision-making into your musical algorithms.
+Numeric types are crucial for both mathematical and musical operations in _bell. With a solid understanding of these types, you can now tackle more complex tasks like conditionals, which allow you to introduce decision-making into your musical algorithms.
