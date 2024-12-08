@@ -28,28 +28,29 @@ Arithmetic operators perform mathematical calculations.
 Use arithmetic operators to calculate the interval between two notes in MIDI values:
 
 ```py
-$C4 = 60;
-$E4 = 64;
-$interval = $E4 - $C4;
+$note1 = 60;
+$note2 = 64;
+$interval = $note2 - $note1;
 print($interval) ## Outputs: 4 (major third)
 ```
 
-### Doubling Note Frequencies
+### Transposing Frequencies
 
-Doubling a note's frequency raises it by one octave:
+Multiplying a frequency value is equivalent to transposing it:
 
 ```py
 $freq = 440; ## Frequency of A4
-print($freq * 2) ## Outputs: 880 (A5)
+print($freq * 2) ## Outputs: 880 (A5 — an octave higher)
 ```
 
-### Using Modulo for Rhythms
+### Pitch classes
 
-The modulo operator can determine rhythmic groupings:
+The modulo operator is useful for finding pitch classes:
 
 ```py
-$beat = 7;
-print($beat % 4) ## Outputs: 3 (remainder when dividing beats by 4)
+$chord = 60 64 67;
+$pitchclass = $chord % 12;
+print($pitchclass) ## Outputs: 0 4 7 (remainders when dividing 60, 64, and 67 by 12)
 ```
 
 ---
@@ -76,15 +77,15 @@ Comparison operators evaluate the relationship between two values and return eit
 ```py
 $C4 = 60;
 $G4 = 67;
-print($C4 < $G4); ## Outputs: true
+print($C4 < $G4); ## Outputs: 1 (true)
 ```
 
-#### Checking Rhythm Durations
+#### Comparing Rhythm Durations
 
 ```py
 $short = 1/8;
 $long = 1/4;
-print($short < $long); ## Outputs: true
+print($short < $long); ## Outputs: 1 (true)
 ```
 
 ---
@@ -112,7 +113,7 @@ Determine if a note is in a specific range:
 
 ```py
 $note = 65; ## MIDI value
-print($note > 60 and $note < 70); ## Outputs: true
+print($note > 60 && $note < 70); ## Outputs: 1 (true)
 ```
 
 ### Applying OR for Key Matching
@@ -120,8 +121,8 @@ print($note > 60 and $note < 70); ## Outputs: true
 Check if a note is part of either a C major or G major chord:
 
 ```py
-$note = "G4";
-print($note == "C4" or $note == "G4" or $note == "E4"); ## Outputs: true
+$note = G4;
+print($note == C4 || $note == G4 || $note == E4); ## Outputs: 1 (true)
 ```
 
 ---
@@ -130,17 +131,17 @@ print($note == "C4" or $note == "G4" or $note == "E4"); ## Outputs: true
 
 You can combine multiple operators to form complex expressions.
 
-### Example: Musical Transformation
+### Example: Pitch class equivalence
 
-1. Double the frequency of a note (octave up).
-2. Add a second interval (perfect fifth).
-3. Check if the resulting pitch is higher than a threshold.
+Checking if two pitches in MIDIcents are pitch class equivalent.
 
 ```py
-$freq = 220; ## A3
-$octaveUp = $freq * 2; ## 440 (A4)
-$withFifth = $octaveUp + (440 * (3/2)); ## Adds a fifth (E5)
-print($withFifth > 500); ## Outputs: true
+
+$pitch1 = 5700 ## A3 in MIDIcents
+$pitch2 = 6900 ## A4 in MIDIcents
+$interval = $pitch2 - $pitch1; ## 1200 or an octave
+$equivalence = ($interval % 1200) == 0; ## check divides perfectly by 1200
+print($equivalence); ## Outputs: 1 (true)
 ```
 
 ---
@@ -165,9 +166,7 @@ print($withFifth > 500); ## Outputs: true
 2. Check if $note is in the range of 60 (C4) to 72 (C5).
 3. Print the result.
 
----
-
-## Exercise 4: Combining Operators for Chord Validation
+### Exercise 4: Combining Operators for Chord Validation
 
 1. Create a llll for the notes of a C major chord:
 
@@ -179,7 +178,7 @@ $chord = C4 E4 G4;
 
 ```py
 $note = "E4";
-print($note == $chord:1 or $note == $chord:2 or $note == $chord:3);
+print($note == $chord:1 || $note == $chord:2 || $note == $chord:3);
 ```
 
 3. Print the result.

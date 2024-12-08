@@ -10,10 +10,40 @@ In _bell_, the `null` keyword represents the _absence_ of a value. It’s an exp
 
 `null` in _bell_ signifies:
 
-- **No value**: It’s not a number, symbol, or list — it’s simply _absence_.
+- **No value**: It’s not a number, symbol, or list — it’s simply _absence_ of a values.
 - **Discarded results**: Statements or expressions can result in `null` if explicitly nullified, or there’s no return value, or an operation didn't evaluate as expected.
 
 Think of `null` as silence: it's the absence of sound but still plays an important role in music.
+
+## Printing `null`
+
+To demonstrate how `null` represents the absence of a value, we can consider different scenarios:
+
+### 1. Empty list
+
+```py
+$x = null;
+print($x); ## Output: null
+print(length($x)) ## Output: 0
+```
+
+### 2. A list of `null` elements
+
+```py
+$x = null null null;
+print($x); ## Output: null
+print(length($x)) ## Output: 0
+```
+
+### 3. Another list with `null` elements
+
+```py
+$x = 1 null null 2;
+print($x); ## Output: 1 2
+print(length($x)) ## Output: 2
+```
+
+As you can see, `null` is just a placeholder to represent the absence of something, which _bell_ doesn't treat it as a true value or element within a list.
 
 ---
 
@@ -29,7 +59,7 @@ $y = 2; ## Prints and outputs "hello world", but also returns null
 print($x + $y) ## Output: 3 (not discarded)
 ```
 
-> Note that the nullify operator doesn't invalidate the expressions it nullifies. That is, `$x = 1` and `$y = 1` are nullified, but the variable assignments still takes place and thus `$x` and `$y` still holds the assigned values, which is why `$x + $y` in the third line evaluates to 3
+> Note that the nullify operator doesn't invalidate the expressions it nullifies. That is, `$x = 1` and `$y = 1` are nullified, but the variable assignments still takes place and thus `$x` and `$y` still holds the assigned values, which is why `$x + $y` in the third line evaluates to `3`
 
 ---
 
@@ -64,61 +94,63 @@ Since _nullify_ is a binary operator, _bell_ doesn't allow the last line of a bl
 
 ## Exercises
 
-### Exercise 1: Exploring Nullify
+### Exercise 1: Checking your intuition
 
-1. Write a statement that calculates the sum of two numbers but discards the result using `;`.
-2. Print the value of the discarded statement (it should return `null`).
-
-### Exercise 2: Null in a Melody
-
-1. Create a melody that includes a null to represent a "rest":
+1. What is the _length_ (i.e., number of elements) of the following list:
 
 ```py
-$melody = [C4 null E4 G4];
+$x = 1 "two" null "four" null 5 null;
+print(length($x)) ## Output: ?
 ```
 
-2. Print the melody.
-3. Use the `thin` function to remove the null and print the cleaned melody.
-
-### Exercise 3: Null in a Conditional
-
-1. Write an if statement that performs an operation only if a condition is true. Ensure the block doesn’t end with a nullify operator:
+2. What would be the output of this code?
 
 ```py
-if $x > 5 then (
-    print("Value is greater than 5");
-)
+$x = 10;
+print($x * $y) ## Output: ?
 ```
 
-2. Test with `$x = 10` and `$x = 3`.
+### Exercise 1: Code debugging
+
+1. What's wrong with the following code snippets? How would you fix them?
+
+```py
+$x = 1;
+$y = 2
+$z = $x * 2
+```
+
+```py
+$x = 1;
+$y = 2;
+$z = $x * $y;
+```
 
 ---
 
 ## FAQ
 
-### Q: Can I use null as a value in lists?
+### Q: Can I use `null` as a value in lists?
 
-**A**: Yes, null can be part of a list, and it will be treated as an empty element:
+**A**: Yes and no. While you can include `null` in a list definition, it will still be treated as a non-element:
 
 ```py
-$notes = [C4 null E4];
-print($notes); ## Outputs: C4 null E4
+$notes = C4 null E4;
+print($notes); ## Outputs: C4 E4
 ```
 
-### Q: Can I compare null to other values?
+### Q: Can I compare `null` to other values?
 
-**A**: Yes, you can compare null to check for the absence of a value:
+**A**: Yes, you can compare `null` to check for the absence of a value. Here's a preview of [conditionals](16_conditionals.md), which we'll cover later.
 
 ```py
 if $x == null then print("No value assigned");
 ```
 
-### Q: Is null the same as zero?
+### Q: Is `null` the same as zero?
 
-**A**: No. `null` represents "nothing," while 0 is a valid numeric value.
+**A**: No. `null` represents absence, while `0` is a valid numeric value.
 
 ---
 
-## Summary
-
-The `null` keyword and the nullify operator (;) are essential for structuring and managing code in \_bell, particularly when working with discarded or missing values. By understanding and leveraging null, you can create cleaner, more intentional code.
+The `null` keyword and the _nullify_ operator (`;`) are essential for understanding what happens in our _bell_ code. Now it's time to take a look at _bell_ operators more closely.
