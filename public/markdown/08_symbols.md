@@ -15,7 +15,7 @@ Symbols can be created in three ways:
 This is the most common way to define symbols.
 
 ```py
-$note = "C4"
+$name = "Iannis"
 ```
 
 ### 2. Single Quotes (')
@@ -23,7 +23,7 @@ $note = "C4"
 Single quotes work the same as double quotes.
 
 ```py
-$note = 'C4'
+$name = 'Anton'
 ```
 
 ### 3. Backtick (`` ` ``)
@@ -33,8 +33,8 @@ Symbols created with backticks terminate when they encounter a space. This makes
 #### Example:
 
 ```py
-$note = `C4
-print($note); ## Outputs: C4
+$name = `Nadia
+print($name); ## Outputs: Nadia
 ```
 
 #### Caution:
@@ -42,8 +42,8 @@ print($note); ## Outputs: C4
 For symbols with spaces, stick to double or single quotes:
 
 ```py
-$chord = `C4 E4 G4
-print($chord); ## Outputs: C4, assumes E4 and G4 are global variables
+$name = `Wolfgang Amadeus Mozart
+print($name); ## Outputs: Wolfgang, assumes Wolfgang and Mozart are global variables
 ```
 
 Similarly, make sure that you don't accidentally cause syntax errors:
@@ -112,6 +112,18 @@ You can concatenate symbols to build more complex strings.
 $name = "C" + "maj";
 print($name) ## Outputs: Cmaj
 ```
+
+However, you **cannot** concatenate symbols with other data types, such as numbers:
+
+- Incorrect:
+  ```py
+  $name = "Cmaj" + 7 ## Outputs: null
+  ```
+- Correct:
+
+  ```py
+  $name = "Cmaj" + "7" ## Outputs: Cmaj7
+  ```
 
 ### Symbols in Lists
 

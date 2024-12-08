@@ -6,18 +6,59 @@ Operators are the foundation of performing calculations, comparisons, and logica
 
 ---
 
-## Arithmetic Operators
+## Operators and lists
 
-Arithmetic operators perform mathematical calculations.
+In _bell_, operators can handle a variety of combinations, including operations between single values, lists (multiple values), or a combination of both. **This flexibility is one of the main strenghts of _bell_ as a programming language, making it very easy to manipulate complex data with simple expressions**. However, certain rules apply depending on the types involved in the operation.
 
-| Operator | Description            | Example  | Result |
-| -------- | ---------------------- | -------- | ------ |
-| `+`      | Addition               | `5 + 3`  | `8`    |
-| `-`      | Subtraction            | `10 - 4` | `6`    |
-| `*`      | Multiplication         | `7 * 2`  | `14`   |
-| `/`      | Division               | `8 / 2`  | `4`    |
-| `%`      | Modulo (remainder)     | `9 % 4`  | `1`    |
-| `**`     | Exponentiation (power) | `2 ** 3` | `8`    |
+### 1. One-to-one
+
+When performing operations between two individual values (e.g., two numbers), the result is straightforward: the operation is applied directly.
+
+```py
+$x = 60; ## MIDI note for C4
+$y = 7;  ## Interval of a perfect fifth
+print($x + $y); ## Outputs: 67 (G4)
+```
+
+### 2. One-to-many
+
+When one of the operands is a single value and the other one a list, the operation is applied to each element of the list individually.
+
+```py
+$scale = 60 62 64 65 67; ## MIDI pitch values: C4, D4, E4, F4, G4
+print($scale + 12); ## Outputs: 72 74 76 77 79 (transposed up an octave)
+```
+
+### 3. Many-to-many
+
+When two lists are used together in an operation, the operation is applied element-wise, meaning the first element of one list is combined with the first element of the other, the second with the second, and so on.
+
+```py
+$notes = 60 64 67;
+$intervals = 12 -12 0; ## Transpose up an octave, down an octave, unchanged
+$transposed = $notes + $intervals;
+print($transposed); ## Outputs: 72 52 67
+```
+
+#### Caveat: List-List Operations with Unequal Lengths or Structures
+
+If the two lists do not have the same length or structure, _bell_ automatically discards the extra elements from the longer list to match the shorter one. This can result in unexpected outputs if not accounted for.
+
+```py
+$pitches = 60 62;    ## Two notes
+$intervals = 2 4 5;    ## Three intervals
+print($pitches + $intervals); ## Outputs: 62 66 (extra interval is discarded)
+```
+
+##### Nested Lists:
+
+The same principle applies to nested lists. If their structures do not align, _bell_ may discard mismatched elements.
+
+```py
+$list1 = [C4 E4] [G4];
+$list2 = [2 4] [5 7];
+print($list1 + $list2); ## Outputs: [C4+2 E4+4] [G4+5] (matching elements only)
+```
 
 ---
 
@@ -57,7 +98,7 @@ print($pitchclass) ## Outputs: 0 4 7 (remainders when dividing 60, 64, and 67 by
 
 ## Comparison Operators
 
-Comparison operators evaluate the relationship between two values and return either true (non-zero) or false (0).
+Comparison operators evaluate the relationship between two values and return either `1` if true, or 0 if false.
 
 | Operator | Description              | Example  | Result        |
 | -------- | ------------------------ | -------- | ------------- |
@@ -72,12 +113,12 @@ Comparison operators evaluate the relationship between two values and return eit
 
 ## Examples in Musical Contexts
 
-#### Comparing Note Heights
+#### Comparing Pitch Heights
 
 ```py
-$C4 = 60;
-$G4 = 67;
-print($C4 < $G4); ## Outputs: 1 (true)
+$pitch1 = 60;
+$pitch2 = 67;
+print($pitch1 < $pitch2); ## Outputs: 1 (true)
 ```
 
 #### Comparing Rhythm Durations
@@ -87,6 +128,8 @@ $short = 1/8;
 $long = 1/4;
 print($short < $long); ## Outputs: 1 (true)
 ```
+
+#### Comparing lists
 
 ---
 

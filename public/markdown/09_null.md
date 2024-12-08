@@ -10,10 +10,8 @@ In _bell_, the `null` keyword represents the _absence_ of a value. It’s an exp
 
 `null` in _bell_ signifies:
 
-- **No value**: It’s not a number, symbol, or list — it’s simply _absence_ of a values.
-- **Discarded results**: Statements or expressions can result in `null` if explicitly nullified, or there’s no return value, or an operation didn't evaluate as expected.
-
-Think of `null` as silence: it's the absence of sound but still plays an important role in music.
+- **No value**: It’s not a number, symbol, or list — it’s simply _absence_ of a value.
+- **Discarded results**: Statements or expressions can result in `null` if explicitly nullified, or there’s no return value, or an operation didn't evaluate as expected. This wil shortly be explained in more detail.
 
 ## Printing `null`
 
@@ -27,6 +25,8 @@ print($x); ## Output: null
 print(length($x)) ## Output: 0
 ```
 
+`null` is not recognized as an element, as shown by `$x` having a length value of `0`.
+
 ### 2. A list of `null` elements
 
 ```py
@@ -34,6 +34,8 @@ $x = null null null;
 print($x); ## Output: null
 print(length($x)) ## Output: 0
 ```
+
+For the same reason, it's pointless to attempt creating _lllls_ with `null` elements. The length of `$x` is still `0`.
 
 ### 3. Another list with `null` elements
 
@@ -43,15 +45,15 @@ print($x); ## Output: 1 2
 print(length($x)) ## Output: 2
 ```
 
-As you can see, `null` is just a placeholder to represent the absence of something, which _bell_ doesn't treat it as a true value or element within a list.
+Similarly, this shows how `null` is just a placeholder to represent the absence of something, because it still has no impact even when other elements aren't `null`.
 
 ---
 
 ## Using the Nullify Operator (`;`)
 
-So far we've used semicolons (`;`) to separate statements. In _bell_, we call refer to the semicolon as the **nullify** operator: a **binary** operator where the expressions _before_ and _after_ it are evaluated, but the one preceding it is discarded (i.e., becomes `null`).
+So far we've used and thought of semicolons (`;`) simply as a way to separate statements — this is still accurate, but doesn't paint the full picture. In _bell_, we refer to the semicolon as the **nullify** operator: a **binary** operator where the expressions _before_ and _after_ it are evaluated, but the one preceding it is discarded (i.e., becomes `null`).
 
-### Example:
+#### Example:
 
 ```py
 $x = 1; ## Assigns value to $x, and evaluates to null
@@ -61,13 +63,14 @@ print($x + $y) ## Output: 3 (not discarded)
 
 > Note that the nullify operator doesn't invalidate the expressions it nullifies. That is, `$x = 1` and `$y = 1` are nullified, but the variable assignments still takes place and thus `$x` and `$y` still holds the assigned values, which is why `$x + $y` in the third line evaluates to `3`
 
----
+### Last line rule
 
-## Last line rule
+Since _nullify_ is a binary operator — meaning it requires two operands —, _bell_ doesn't allow the last line of a block of code to end with a semicolon. This would be equivalent to trying to multiply with a missing operand:
 
-Since _nullify_ is a binary operator, _bell_ doesn't allow the last line of a block of code to end with a semicolon. This would be equivalent to trying to multiply with a missing operand: `2 * ` or `* 2`:
+- `2 * ` _?_
+- _?_ `* 2`
 
-### Example:
+#### Example:
 
 - Incorrect:
   ```py
@@ -88,7 +91,9 @@ Since _nullify_ is a binary operator, _bell_ doesn't allow the last line of a bl
 ### Why Use Nullify?
 
 1. To write code as a chain of multiple expressions instead of writing complex expressions as a single line of code.
-2. To explicitly indicate that an expression's result is not needed.
+2. To explicitly indicate that an expression's result can be discarded.
+
+> In the next version release of _bell_, the _nullify_ operator will be allowed to have `null` as an operand, which means the _last line rule_ stated above won't apply anymore.
 
 ---
 
