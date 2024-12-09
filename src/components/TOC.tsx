@@ -17,7 +17,7 @@ const TOC = ({ lessons }: TOCProps) => {
           ))}
           <li>
             <Link to={"/reference"}>
-              Appendix 1: <i>bell</i> functions
+              Appendix I: <i>bell</i> functions
             </Link>
           </li>
         </ul>

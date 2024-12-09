@@ -29,7 +29,7 @@ const FunctionReference: React.FC = () => {
         <div />
       </div>
       <h1>
-        Appendix 1: <i>bell</i> functions
+        Appendix I: <i>bell</i> functions
       </h1>
       <div>
         <input
