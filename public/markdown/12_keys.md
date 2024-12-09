@@ -8,7 +8,7 @@ In _bell_, **keys** are a way to associate labels (_keys_) with values, creating
 
 ## What Are Keys?
 
-A key-value pair in _bell_ is a data structure that associates a key (symbol) with a value. This is similar to dictionaries or associative arrays in other programming languages.
+A key-value pair in _bell_ is a data structure that associates a key with a value. This is similar to dictionaries or associative arrays in other programming languages.
 
 ### Syntax:
 
@@ -19,19 +19,32 @@ A key-value pair in _bell_ is a data structure that associates a key (symbol) wi
 ### Example:
 
 ```py
-$chord = ['tonic' C4 E4 G4];
+$chord = ['tonic' C4 E4 G4]
 ```
 
-Here:
+**Here**:
 
 - `'tonic'` is the key.
 - `C4 E4 G4` is the value.
+
+Note that, even though keys are usually symbols, they can be any data type (excluding lists).
+
+```py
+$chord [1 C4 E4 G4]
+```
+
+**Here**:
+
+- `1` is the key.
+- `C4 E4 G4` is the value.
+
+In other words, the first value within any bracketed list can serve or be thought of as that list's key.
 
 ---
 
 ## Accessing Keys
 
-You can retrieve a value associated with a key using the dot operator (.).
+You can retrieve a value associated with a key using the dot operator (`.`).
 
 ### Example: Accessing Chords by Key
 

@@ -2,7 +2,7 @@
 
 > _Arithmetic, Logical, and Beyond_
 
-Operators are the foundation of performing calculations, comparisons, and logical operations in _bell_. They allow you to work with numbers, lists, symbols, and other types of data. In this section, you’ll learn how to use basic operators and see how they can be applied to musical contexts.
+Operators are the foundation of performing calculations, comparisons, and logical operations in _bell_. They allow you to work with numbers, lists, and symbols. In this section, you’ll learn how to use basic operators and see how they can be applied to musical contexts.
 
 ---
 
@@ -163,7 +163,7 @@ print($equivalence) ## Outputs: 1 (true)
 
 ### Exercise 1: Calculating Intervals
 
-1. Create variables for the MIDI values of `C4` and `E4`.
+1. Create variables for the MIDI values of `60` (C4) and `64` (E4).
 2. Use subtraction to calculate the interval between them.
 3. Print the result.
 
@@ -207,4 +207,4 @@ print($label) ## Outputs: Cmaj
 
 ---
 
-With a solid grasp of operators, you’re now ready to explore addresses, which allow you to access specific elements in complex lists and nested structures.
+With a general grasp of operators, you’re now ready to explore addresses, which allow you to access specific elements in complex lists and nested structures.

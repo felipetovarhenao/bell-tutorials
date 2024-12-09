@@ -10,7 +10,7 @@ When working with _lllls_ (lists and nested lists), you'll often need to access 
 
 The colon (`:`) is the access operator in _bell_. It retrieves elements from a list based on their position (1-based indexing).
 
-The basic syntax is `<list>:<address>`.
+The basic syntax is `<llll>:<address>`.
 
 ---
 
@@ -26,21 +26,21 @@ In flat lists, use a single number to access an element. Remember, _bell_ uses 1
 $chord = C4 E4 G4;
 print($chord:1); ## Outputs: C4
 print($chord:2); ## Outputs: E4
-print($chord:3); ## Outputs: G4
+print($chord:3) ## Outputs: G4
 ```
 
 ---
 
 ## Nested Addresses
 
-For nested lists, use a list of indices to specify the path to the desired element.
+For nested lists, use a list of indices wrapped in parentheses to specify the path to the desired element.
 
 ### Example: Accessing Nested Elements
 
 ```py
 $progression = [C4 E4 G4] [F4 A4 C5];
 print($progression:1); ## Outputs: [C4 E4 G4]
-print($progression:(2 1)); ## Outputs: F4
+print($progression:(2 1)) ## Outputs: F4
 ```
 
 #### Explanation:
@@ -52,20 +52,20 @@ print($progression:(2 1)); ## Outputs: F4
 
 ## Picking Elements: Double Colon (`::`)
 
-The double colon (`::`) is the pick operator. It retrieves elements from a list and removes their enclosing brackets, effectively "flattening" that layer.
+The double colon (`::`) is the pick operator. It retrieves elements from a list and removes their enclosing brackets, effectively "flattening" the top level of the sublist.
 
 ### Example: Picking Notes from Nested Chords
 
 ```py
 $chord = [C4 E4 G4];
-print($chord::1); ## Outputs: C4 E4 G4
+print($chord::1) ## Outputs: C4 E4 G4
 ```
 
 #### Nested Example:
 
 ```py
 $progression = [C4 [E4 G4]] [[F4 A4] C5];
-print($progression::(1 2)); ## Outputs: E4 G4
+print($progression::(1 2)) ## Outputs: E4 G4
 ```
 
 ### Examples
@@ -77,83 +77,59 @@ Retrieve specific notes from a chord:
 ```py
 $chord = C4 E4 G4;
 print($chord:1); ## Outputs: C4
-print($chord:3); ## Outputs: G4
+print($chord:3) ## Outputs: G4
 ```
 
 ### Accessing Measures in a Score
 
-Access measures from a multi-bar score:
+Access a bar from a two-bar progression:
 
 ```py
 $score = [[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]];
-print($score:1); ## Outputs: [[C4 E4 G4] [F4 A4 C5]] (first measure)
-print($score:(2 2)); ## Outputs: [A4 C5 E5] (second chord in the second measure)
-```
-
-### Flattening a Melody
-
-Flatten a nested melody structure:
-
-```py
-$melody = [C4 [D4 E4]] [F4 G4];
-print($melody::1); ## Outputs: C4 D4 E4
-print(flat($melody)); ## Outputs: C4 D4 E4 F4 G4
+print($score::1); ## Outputs: [C4 E4 G4] [F4 A4 C5] (first bar)
+print($score:L(2 2)) ## Outputs: A4 C5 E5 (second chord from second bar)
 ```
 
 ---
 
 ## Exercises
 
-### Exercise 1: Extracting Notes
+### Exercise 1
 
 1. Create a chord progression:
 
-```
-$progression = [C4 E4 G4] [F4 A4 C5];
+```py
+$progression = [C4 E4 G4] [F4 A4 C5]
 ```
 
-2. Access and print:
+2. Use the operator `:` to access and print:
    - The second chord.
    - The first note of the second chord.
 
-### Exercise 2: Nested Melody
+### Exercise 2
 
-1. Create a melody with nested rhythmic values:
+1. Create a passage of diads with nested pitch and rhythmic value pairs:
 
 ```py
-$melody = [C4 1/4] [[D4 1/8] [E4 1/8]] [F4 1/2];
+$melody = [[C4 1/4] [D4 1/8]] [[E4 1/8] [F4 1/2]]
 ```
 
-2. Access and print:
-   - The first note and its rhythm.
-   - The second note and its rhythm
-   - Flatten the entire melody and print it.
+2. Use the operator `:` to access and print:
+   - The first diad.
+   - The second note of the second diad.
 
-### Exercise 3: Picking Elements
+### Exercise 3
 
-1. Create a nested list of chords and pick elements using :::
+1. Create a nested list of chords and pick elements using `::`:
 
 ```py
-$chords = [[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]];
+$chords = [[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]]
 ```
 
 2. Use `::` to:
 
-   - Retrieve and flatten the first chord.
+   - Retrieve the first chord.
    - Access the last chord's second note directly.
-
-### Exercise 4: Complete Access Chain
-
-1. Create a multi-bar progression:
-
-```py
-$score = [[[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]]];
-```
-
-2. Access and print:
-   - The first measure.
-   - The first chord in the second measure.
-   - The second note of the second chord in the first measure.
 
 ---
 
@@ -161,21 +137,41 @@ $score = [[[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]]];
 
 ### Q: What happens if I access an invalid address?
 
-**A**: You’ll get an error. Always ensure the address exists in your list. For example:
+**A**: You’ll get a `null` value. Always ensure the address exists in your list. For example:
 
 ```py
 $chord = C4 E4 G4;
-print($chord:4); ## Error: Index out of range
+print($chord:4) ## null
 ```
 
-### Q: Can I use null in an address?
+However, if you pass a `null` value as an address, **you will get an error**.
 
-**A**: No, addresses must reference valid indices. However, a null result can appear if the value being accessed doesn’t exist.
+```py
+$a = null;
+$x = 1 2 3;
+print($x:$a) ## "Address can't be null" error
+```
+
+### Q: Can I use `null` in an address?
+
+**A**: No, if you pass a `null` value as an address, **you will get an error**.
+
+```py
+$a = null;
+$x = 1 2 3;
+print($x:$a) ## "Address can't be null" error
+```
 
 ### Q: How is the double colon (`::`) different from `:`?
 
-**A**: retrieves elements while keeping their original structure. `::` retrieves elements and flattens their brackets.
+**A**: retrieves elements while keeping their original structure. `::` retrieves elements and flattens the top level of that sublist.
+
+```py
+$x = [[1 2] [3 4]];
+print($x:1); ## Outputs: [[1 2] [3 4]]
+print($x::1) ## Outputs: [1 2] [3 4]
+```
 
 ---
 
-By mastering addresses, you can effectively navigate and manipulate complex musical structures in _bell_. Next, we’ll explore keys, which provide another way to structure and access data using symbolic labels.
+Having some familiarity with addresses, you can effectively navigate and manipulate complex musical structures in _bell_. Next, we’ll explore keys, which provide another way to structure and access data.
