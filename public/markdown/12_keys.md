@@ -66,7 +66,7 @@ print($chords.'tonic'); ## Outputs: C3 E3 G3
 
 ---
 
-## Examples in Musical Contexts
+## Examples
 
 ### Labeling Chords in a Progression
 
@@ -91,13 +91,13 @@ You can combine keys with nested lists for more complex data structures.
 
 ### Example: Organizing a Score
 
-```
+```py
 $score = [
     'section1' [[C4 E4 G4] [F4 A4 C5]],
     'section2' [[G4 B4 D5] [A4 C5 E5]]
 ];
 print($score.'section1'); ## Outputs: [[C4 E4 G4] [F4 A4 C5]]
-print($score.'section2':2:1); ## Outputs: A4
+print($score.'section2':(1 2 1)); ## Outputs: A4
 ```
 
 ---

@@ -2,7 +2,7 @@
 
 > _Storing and Organizing Data_
 
-Variables are the backbone of any programming language. In _bell_, variables are used to store and manipulate data such as numbers, text, lists, and even pitches. Think of variables as labeled containers that hold values you can use or modify later.
+Variables are the backbone of any programming language. In _bell_, variables are used to store reusable data such as numbers, text, lists, and even pitches. Think of variables as labeled containers that hold values you can use or modify later.
 
 ---
 
@@ -22,7 +22,7 @@ Here, `$x` is the variable name, and `10` is the value stored in it.
 
 ## Variables and Default Values
 
-In _bell_, variables are assumed to have a value before they are used. However, unlike many other programming languages, _bell_ does not raise an error if a variable is used without having been assigned a value. Instead, the variable is automatically treated as having a default value of `null`.
+In _bell_, variables are assumed to have a value before they are used. However, unlike many other programming languages, _bell_ does not raise an error if a variable is used without having been assigned a value. Instead, the variable is automatically treated as having a default value of `null` (stay tuned to learn what `null` means).
 
 ### Example:
 
@@ -37,13 +37,11 @@ $note = 60; ## Assign a value
 print($note); ## Outputs: 60
 ```
 
-If you’re unsure whether a variable has been assigned, you can check for `null`:
+If you’re unsure whether a variable has been assigned, you can check for `null` using [conditional statements](16_conditionals.md), which will be covered much later. Here's a preview:
 
 ```py
 if $note == null then print("$note variable is null");
 ```
-
-> This is a preview of [conditional statements](16_conditionals.md), which will be covered later.
 
 ---
 
@@ -54,7 +52,7 @@ _bell_ distinguishes between **local** and **global** variables:
 1. **Local Variables**:
 
    - Begin with a dollar sign (`$`), e.g., `$x`, `$note`, `$myvar`.
-   - Used within a specific scope (e.g., inside a function — _more on this later_).
+   - Used within a specific scope — more on this later.
    - Automatically discarded/forgotten when the scope ends.
 
 2. **Global Variables**:
@@ -66,62 +64,6 @@ _bell_ distinguishes between **local** and **global** variables:
 ```py
 $localvar = 5; ## Local variable
 Globalvar = 10 ## Global variable
-```
-
----
-
-## Best Practices for Naming Variables
-
-### 1. Be Descriptive:
-
-- Instead of `$a`, use `$score`, `$length`, or `$pitch`.
-
-### 2. Avoid Naming Collisions:
-
-- To avoid unintended conflicts or errors in larger programs, use local variables whenever possible. However, if you need to use global variables, it's recommended to use capitalization (i.e., `Globalvar` instead of `globalvar` ).
-- This helps differentiate your variables from _bell_'s built-in functions — for instance, `Pitch` and `$pitch` won't collide with _bell_'s `pitch` function.
-- This also applies to so-called _pseudovariables variables_, which will be explored in more detail later. Some of these include `$x1`, `$p1`, `$l1`, `$do1`, `$dx1`, and other similarly named variables. For now, simply avoid naming variables with two or less letters followed by digits.
-
-### 3. Stick to a Naming Convention:
-
-- For readability, use _camelCase_ (`$myVariable`), _snake_case_ (`$my_variable`), or _flatcase_ (`$myvariable`), consistently. I personally prefer using _flatcase_ when writing _bell_ code.
-
----
-
-## Examples of Assigning Variables
-
-### Numbers:
-
-```py
-$x = 42; ## Assign an integer
-$pi = 3.14159 ## Assign a floating-point number
-```
-
-### Symbols:
-
-```py
-$name = "bell programming" ## Assign a text symbol
-```
-
-### Lists:
-
-```py
-$notes = C4 E4 G4 ## Assign a list of musical notes
-```
-
----
-
-## Reassigning Variables
-
-You can change the value of a variable at any time by assigning it a new value.
-
-### Example:
-
-```py
-$x = 10; ## Assign initial value
-print($x); ## Output: 10
-$x = 15; ## Change the value
-print($x) ## Output: 15
 ```
 
 ---
@@ -151,12 +93,68 @@ The scope of a variable refers to where it can be accessed or modified. In _bell
   print(Var); ## Output: "I'm a global variable!"
   print($var) ## Output: "I'm a local variable!"
   ```
-- In some other script, title `second.bell`:
+- In some other script, titled `second.bell`:
   ```py
   print(Var); ## Output: "I'm a global variable!"
   print($var) ## Output: null
   ```
   Both local and global variables are available in `first.bell`, but only the global variable is recognized in `second.bell`.
+
+---
+
+## Best Practices for Naming Variables
+
+### 1. Be Descriptive:
+
+- Instead of `$a`, use `$score`, `$length`, or `$pitch`.
+
+### 2. Avoid Naming Collisions:
+
+- To avoid unintended conflicts or errors in larger programs, use local variables whenever possible. However, if you need to use global variables, it's recommended to use capitalization (i.e., `Globalvar` instead of `globalvar` ).
+- This helps differentiate your variables from _bell_'s built-in functions — for instance, `Pitch` and `$pitch` won't collide with _bell_'s `pitch` function.
+- This also applies to so-called _pseudovariables variables_, which will be explored in more detail later. Some of these include `$x1`, `$p1`, `$l1`, `$do1`, `$dx1`, and other similarly named variables. For now, simply avoid naming variables with two or less letters followed by digits.
+
+### 3. Stick to a Naming Convention:
+
+- For readability, use a single naming style, such as _camelCase_ (`$myVariable`), _snake_case_ (`$my_variable`), or _flatcase_ (`$myvariable`), consistently. For _bell_ code, I personally prefer using _flatcase_, but you can use whichever convention is more readable to you.
+
+---
+
+## Examples of Assigning Variables
+
+### Numbers:
+
+```py
+$x = 42; ## Assign an integer
+$pi = 3.14159 ## Assign a floating-point number
+```
+
+### Symbols:
+
+```py
+$name = "bell programming" ## Assign a text symbol
+```
+
+### Lists:
+
+```py
+$notes = C4 E4 G4 ## Assign a list of pitches
+```
+
+---
+
+## Reassigning Variables
+
+You can change the value of a variable at any time by assigning it a new value.
+
+### Example:
+
+```py
+$x = 10; ## Assign initial value
+print($x); ## Output: 10
+$x = 15; ## Change the value
+print($x) ## Output: 15
+```
 
 ---
 
@@ -207,4 +205,4 @@ $var1 = 2
 
 ---
 
-With variables under your belt, you're ready to tackle basic expressions and learn how to perform calculations in _bell_.
+With variables under your belt, you're ready to tackle basic lists, which are crucial for representing complex data in _bell_

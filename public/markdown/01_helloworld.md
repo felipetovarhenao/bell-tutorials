@@ -14,6 +14,8 @@ The _"Hello, world!"_ program in _bell_ is as simple as this:
 print("hello world")
 ```
 
+> All code snippets in these tutorials can be easily copied by clicking the _copy_ icon at the top right of each, making it easy for you to run and edit the examples in your text editor.
+
 ### Step-by-Step Explanation:
 
 - **The** `print` **function**:
@@ -39,9 +41,9 @@ print("hello world")
 
 To execute your code:
 
-1. Save your code in a file, for example, `hello.bell`.
+1. In your text-editor (e.g., _VSCode_), save your code as a `.bell` file — for example, `hello.bell`.
 2. Open [_bellplay~_](https://github.com/felipetovarhenao/bellplay/releases/latest).
-3. Run the file by loading it. In the _Max_ console, you should see:
+3. In _bellplay~_, click on _load script_ to load and run your code. In the _Max_ console, you should see:
 
 ```
 bach.eval • hello world
@@ -51,7 +53,7 @@ bach.eval • hello world
 
 ---
 
-## Exercise: Customize Your Output
+## Exercise
 
 1. Try changing the symbol inside the `print` function. Replace `"hello world"` with:
 
@@ -83,7 +85,7 @@ print('hello world')
 
 ### Q: What happens if I forget the closing quote?
 
-**A**: You'll likely get an parsing error because _bell_ expects single- and double-quote symbols to be enclosed properly. Double-check for missing or mismatched quotes. Similarly, you need to use the same type of quote to open and close a symbol.
+**A**: You'll likely get an parsing error because _bell_ expects things like single- and double-quote symbols to be enclosed properly. Double-check for missing or mismatched quotes. Similarly, you need to use the same type of quote to open and close a symbol.
 
 - Wrong:
 

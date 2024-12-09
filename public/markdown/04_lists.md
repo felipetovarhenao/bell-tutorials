@@ -2,7 +2,7 @@
 
 > _Working with Nested Data Structures_
 
-A _Lisp-like linked list_, or _llll_ for short, is one of the most fundamental data structures in _bell_. _lllls_ (pronounced _"ell-ell-ell-ells"_) are an advanced type of lists that allow for nesting values, including lists, enabling you to structure and manipulate data hierarchically — as such, they are very effective way of representing musical data, such as chords, progressions, melodies, scores, etc.
+A _Lisp-like linked list_, or _llll_ for short, is one of the most unique and fundamental data structures in _bell_. A _lllls_ (pronounced _"ell-ell-ell-ells"_) is an advanced type of list that allows for nesting values, including lists, enabling you to structure and manipulate data hierarchically — as such, they are very effective way of representing musical data, such as chords, progressions, melodies, scores, etc. In a way, everything in _bell_ is a list, as we'll see later.
 
 In this section, you’ll learn the basics of _lllls_, their syntax, and how to use them to represent complex musical data.
 
@@ -12,7 +12,7 @@ In this section, you’ll learn the basics of _lllls_, their syntax, and how to 
 
 A _llll_ is a list that can:
 
-- Contain multiple elements (e.g., numbers, symbols, pitches).
+- Contain multiple elements (e.g., numbers, symbols, pitches), including a single element or no elements at all.
 - Be nested, meaning a list that can include other lists as elements.
 
 This makes _lllls_ ideal for representing hierarchical musical structures, such as chords, measures, rhythms, and more.
@@ -27,6 +27,14 @@ You can create a simple _llll_ by writing elements next to each other, separated
 
 ```py
 $tempi = 60 80 120
+```
+
+### One-element Lists
+
+By the same token, the following can be thought of as a list with a single element:
+
+```py
+$x = 10
 ```
 
 ### Nested _lllls_
@@ -89,7 +97,7 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ### Exercise 1: Chord Progressions
 
-1. Create a _llll_ representing a chord progression of your choice. Each chord should include three notes.
+1. Create a _llll_ representing a chord progression of your choice, using MIDI values as pitch. Each chord should include three pitches.
 2. Print the progression.
 
 ### Exercise 2: Melody with Rhythms
@@ -124,4 +132,4 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ---
 
-Now that you’ve mastered _lllls_, you’re ready to explore functions, which will allow you to manipulate musical data in powerful ways.
+Now that we've covered _lllls_, you're ready to tackle basic expressions and learn how to perform calculations in _bell_

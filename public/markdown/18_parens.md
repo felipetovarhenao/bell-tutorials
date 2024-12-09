@@ -95,7 +95,7 @@ print($result); ## Outputs: 144 148 152
 
 ---
 
-## Examples in Musical Contexts
+## Examples
 
 ### Example 1: Adjusting Rhythms in Steps
 

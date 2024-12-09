@@ -21,7 +21,7 @@ _bell_ provides several basic arithmetic operators, including but not limited to
 | Modulo (remainder) | `%`      | `9 % 4`  | `1`    |
 | Power              | `**`     | `2 ** 3` | `8`    |
 
-We will dedicate a bit more time later on to explore other _bell_ operators, but these are a good starting point.
+Later on, we will spend a bit more time exploring other _bell_ operators, but these are a good starting point.
 
 ### Examples
 
@@ -94,13 +94,71 @@ print($area) ## Output: 25
 
 ## Expressions vs. Statements
 
-In these tutorials, the terms _expression_ and _statement_ are use interchangeably, to refer to segments of code separated by semicolons.
+In these tutorials, the terms _expression_ and _statement_ are use interchangeably, usually to refer to segments of code separated by semicolons.
 
 ### Example:
 
 ```py
 $x = (1 + 3) * 4; ## expression 1
 $x = $x * 4 ## expression 2
+```
+
+The proper use of semicolons will be touched upon later on.
+
+---
+
+## List operations
+
+One of the most powerful aspects of _bell_ is the ability to operate on entire lists, including operations between single values, multiple values, or a combination of both. This makes it remarkably easy to manipulate complex data with simple _bell_ expressions. However, certain rules apply depending on the types involved in the operation.
+
+### 1. One-to-one
+
+When performing operations between two individual values (e.g., two numbers), the result is straightforward: the operation is applied directly.
+
+```py
+$x = 60; ## MIDI note for C4
+$y = 7;  ## Interval of a perfect fifth
+print($x + $y) ## Outputs: 67 (G4)
+```
+
+### 2. One-to-many
+
+When one of the operands is a single value and the other one a list, the same operation is applied to each element of the list individually.
+
+```py
+$scale = 60 62 64 65 67; ## MIDI pitch values: C4, D4, E4, F4, G4
+print($scale + 12) ## Outputs: 72 74 76 77 79 (transposed up an octave)
+```
+
+### 3. Many-to-many
+
+When two lists are used together in an operation, the operation is applied _element-wise_, meaning the first element of one list is combined with the first element of the other, the second with the second, and so on.
+
+```py
+$notes = 60 64 67;
+$intervals = 12 -12 0; ## Transpose up an octave, down an octave, unchanged
+$transposed = $notes + $intervals;
+print($transposed) ## Outputs: 72 52 67
+```
+
+#### Caveat: Many-to-many Operations with Unequal Lengths or Structures
+
+If the two lists do not have the same length or structure, _bell_ tries to match each element in one list to elements in the other list, to the degree that it's possible — if not, extra elements are discarded. This can result in unexpected outputs if not accounted for.
+
+```py
+$pitches = 60 62; ## Two notes
+$intervals = 2 4 5; ## Three intervals
+print($pitches + $intervals) ## Outputs: 62 66 (extra interval is discarded)
+```
+
+##### Nested Lists:
+
+The same principle applies to nested lists. If their structures do not align, you might get unexpected results.
+
+```py
+$pitches = [60 64] [67]; ## Lengths of 2 and 1
+$intervals = [2 4] [5 7]; ## Lengths of 2 and 2
+print($pitches + $intervals) ## Outputs: [60+2 64+4] [67+5 67+7] (many-to-many and one-to-many matching)
 ```
 
 ---
@@ -183,4 +241,4 @@ $x = 5+3; ## Works but hard to read
 $x = 5 + 3 ## Easier to read
 ```
 
-With a solid understanding of basic expressions, you’re now ready to explore lists, which are crucial for handling complex data in _bell_.
+With a solid understanding of basic expressions, you’re ready to explore functions, which will allow you to manipulate data in powerful ways.

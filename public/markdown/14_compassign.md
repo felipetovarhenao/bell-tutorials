@@ -35,7 +35,7 @@ $x += 5;
 
 ---
 
-## Examples in Musical Contexts
+## Examples
 
 ### Transposing Notes
 

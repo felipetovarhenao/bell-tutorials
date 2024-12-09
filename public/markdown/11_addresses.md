@@ -18,6 +18,8 @@ The basic syntax is `<list>:<address>`.
 
 In flat lists, use a single number to access an element. Remember, _bell_ uses 1-based indexing (the first element is at position 1).
 
+> This is different from many programming languages, where elements within a list are numbered starting from 0 (i.e., 0-based indexing).
+
 ### Example: Accessing Notes
 
 ```py
@@ -66,7 +68,7 @@ $progression = [C4 [E4 G4]] [[F4 A4] C5];
 print($progression::(1 2)); ## Outputs: E4 G4
 ```
 
-### Examples in Musical Contexts
+### Examples
 
 #### Accessing Notes from a Chord
 

@@ -20,19 +20,6 @@ print("hello world") ## This prints "hello world" to the screen
 
 **Explanation**: The computer will execute the `print` function but ignore the text after `##`.
 
-### Exercise 1: Practice Writing Comments
-
-1. Add single-line comments to this code explaining what each line does:
-
-   ```py
-   ## <your comment>
-   print("Welcome to bell");
-   ## <your comment>
-   print(2 + 3)
-   ```
-
-2. Run the program to confirm that the comments do not affect the output.
-
 ---
 
 ## Multi-Line Comments
@@ -142,18 +129,18 @@ print($area) ## Output: 50
 
 ---
 
-## Exercises
+## Exercise
 
-### Exercise: Commenting Challenge
+1. Add single-line comments to this code following best practices:
 
-Here’s a piece of code without comments. Add appropriate comments to explain its purpose:
+   ```py
+   ## <your comment>
+   print("Welcome to bell");
+   ## <your comment>
+   print(2 + 3)
+   ```
 
-```py
-$pitch1 = 60;
-$pitch2 = 65;
-$interval = $pitch2 - $pitch1;
-print($pitch1 "and" $pitch2 "are" $interval "semitones apart");
-```
+2. Run the program to confirm that the comments do not affect the output.
 
 ---
 
@@ -163,7 +150,7 @@ print($pitch1 "and" $pitch2 "are" $interval "semitones apart");
 
 **A**: No, comments are ignored by the _bell_ interpreter and do not affect performance.
 
-### Q: Should I comment every line of code?
+### Q: Should I comment _every_ line of code?
 
 **A**: No, focus on _why_ you're doing something rather than _what_ the code does. You want comments to help you and others understand how each different blocks of code contribute to the overall function of your scripts.
 

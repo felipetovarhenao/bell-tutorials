@@ -35,7 +35,7 @@ if $note > 64 then print("The note is above E4");
 
 ---
 
-## Examples in Musical Contexts
+## Examples
 
 ### Transposing a Melody Based on a Condition
 
@@ -92,11 +92,11 @@ else print("False detected"); ## Outputs: False detected
 
 You can combine conditions using logical operators:
 
-| Operator | Description                    | Example                     |
-| -------- | ------------------------------ | --------------------------- |
-| `and`    | Both conditions must be true   | `$note > 60 and $note < 72` |
-| `or`     | At least one condition is true | `$note < 60 or $note > 72`  |
-| `not`    | Negates a condition            | `not $note > 60`            |
+| Operator | Description                    | Example                      |
+| -------- | ------------------------------ | ---------------------------- |
+| `&&`     | Both conditions must be true   | `$note > 60 && $note < 72`   |
+| `\|\|`   | At least one condition is true | `$note < 60 \|\| $note > 72` |
+| `!`      | Negates a condition            | `!$note > 60`                |
 
 ---
 
@@ -118,7 +118,7 @@ if $note < 60 or $note > 72 then print("Out of range");
 
 ## Combining `else if` for Multiple Conditions
 
-You can chain conditions using else if to create decision trees.
+You can chain conditions using `else if` to create decision trees.
 
 ### Example: Assigning Dynamics Based on Pitch Range
 
@@ -128,6 +128,65 @@ if $note < 60 then print("pp");
 else if $note <= 64 then print("mf");
 else print("ff");
 ```
+
+---
+
+## Conditional Boolean Operators: `&&&` and `|||`
+
+The `&&&` and `|||` operators are conditional boolean operators, also binary, that extend the behavior of traditional logical operators `&&` and `||`. Unlike their standard counterparts, these operators operate with a focus on `null` values for conditional evaluation.
+
+### Syntax
+
+- `<leftval> &&& <rightval>`
+- `<leftval> ||| <rightval>`
+
+### The `&&&` Operator
+
+The `&&&` operator evaluates its left (i.e., first) operand and checks if it is `null`. If the left operand is `null`, the operator immediately returns `null`, skipping the second argument entirely. If the left operand is non-`null`, the right operand is evaluated. The result depends on the right (i.e., second) operand:
+
+- If the second operand is `null`, the operator returns `null`.
+- If the second operand is non-`null`, the operator returns its value.
+
+**Key behavior**: The left operand’s value is not returned, even if it is non-`null`.
+
+#### Example:
+
+```py
+$result = $value1 &&& $value2;
+```
+
+- If `$value1` is `null`, result is `null`.
+- If `$value1` is non-`null` and `$value2` is `null`, result is `null`.
+- If both `$value1` and `$value2` are non-`null`, result is the value of `$value2`.
+
+### The `|||` Operator
+
+The `|||` operator evaluates its left operand and checks if it is non-`null`. If the left operand is non-`null`, the operator immediately returns it, skipping the right operand's evaluation entirely. If the left operand is `null`, the right-side operand is evaluated. The result depends on the second operand:
+
+- If the second operand is non-`null`, the operator returns its value.
+- If the second operand is also `null`, the operator returns `null`.
+  **Key behavior**: The first operand is returned only if it is non-`null`.
+
+#### Example:
+
+```py
+$result = $value1 ||| $value2;
+```
+
+- If `$value1` is non-`null`, result is `$value1`.
+- If `$value1` is `null` and `$value2` is non-`null`, result is `$value2`.
+- If both `$value1` and `$value2` are `null`, result is `null`.
+
+  ### Summary Table
+
+  | Left operand | Right operand | `&&&` Result | `\|\|\|` Result        |
+  | ------------ | ------------- | ------------ | ---------------------- |
+  | _value1_     | _value2_      | _value2_     | _value1_               |
+  | _value1_     | `null`        | `null`       | _value1_               |
+  | `null`       | _value2_      | `null`       | _value2_               |
+  | `null`       | `null`        | `null`       | `null` (right operand) |
+
+These operators are particularly useful for substituting `if` statements involving `null` values, though it's common for beginners to find them a bit unintuitive or confussing to use. If that's the case, simply stick to `if-else` syntax and you'll be fine.
 
 ---
 
