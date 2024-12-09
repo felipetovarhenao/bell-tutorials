@@ -15,6 +15,11 @@ const TOC = ({ lessons }: TOCProps) => {
               <Link to={lesson.route}>{lesson.title}</Link>
             </li>
           ))}
+          <li>
+            <Link to={"/reference"}>
+              Appendix 1: <i>bell</i> functions
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

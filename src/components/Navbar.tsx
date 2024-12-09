@@ -2,7 +2,7 @@ import { MarkdownFileInfo } from "../utils/getMarkdownInfo";
 import { Link } from "react-router";
 import { Icon } from "@iconify/react"; // Import Iconify for icons
 
-interface NavbarProps {
+export interface NavbarProps {
   prev?: MarkdownFileInfo;
   next?: MarkdownFileInfo;
 }

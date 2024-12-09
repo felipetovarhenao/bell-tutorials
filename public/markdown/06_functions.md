@@ -37,19 +37,19 @@ print("hello world"); ## Outputs: hello world
 1. `print`: Displays data we want on the _Max_ console. Useful for debugging and inspecting our code.
 
    ```py
-   print(C4 E4 G4); ## Outputs: C4 E4 G4
+   print(C4 E4 G4) ## Outputs: C4 E4 G4
    ```
 
 2. `random`: Generates a random number in a given range.
 
    ```py
-   print(random(1, 10)); ## Outputs a random number between 1 and 10
+   print(random(1, 10)) ## Outputs a random number between 1 and 10
    ```
 
 3. `pow`: Raises a number to a power (or list thereof).
 
    ```py
-   print(pow(2, 0 1 2 8)); ## Outputs: 1 2 4 8
+   print(pow(2, 0 1 2 8)) ## Outputs: 1 2 4 8
    ```
 
    > This is equivalent to using the `**` operator: `2 ** 3`.
@@ -58,14 +58,14 @@ print("hello world"); ## Outputs: hello world
 
    ```py
    $nums = -20 0 10 -3;
-   print(abs($nums)); ## Outputs: 20 0 10 3
+   print(abs($nums)) ## Outputs: 20 0 10 3
    ```
 
 5. `round`: Rounds a number to the nearest integer.
 
    ```py
    $num = 2.034;
-   print(round($num)); ## Outputs: 2
+   print(round($num)) ## Outputs: 2
    ```
 
 ---
@@ -83,7 +83,7 @@ Arguments are provided in the order the function expects. This requires knowing 
 ```py
 random(1, 10); ## Syntax: random(x, y) -> <random number>
 pow(2, 3); ## pow(x, y) -> <power>
-abs(-1); ## abs(x) -> <absolute value>
+abs(-1) ## abs(x) -> <absolute value>
 ```
 
 ### Named Arguments
@@ -122,7 +122,7 @@ Luckily, many built-in functions in _bell_ follow a similar naming pattern for t
 
 ```py
 random(@x 1, @y 10); ## Same as above
-random(@y 10 @x 1); ## Also works (different order, no commas)
+random(@y 10 @x 1) ## Also works (different order, no commas)
 ```
 
 When we use an incorrect argument name, _bell_ simply ignores the value assigned to that non-existent argument. To prevent bugs, make sure you spell the argument names correctly.
@@ -158,7 +158,7 @@ Consider the `arithmser` function, which generates a series of evently spaced nu
 **Syntax**: `arithmser(<start>, <end>, <step> 1, <maxcount> 0)`
 
 ```py
-arithmser(60, @end 72); ## Outputs: 60 61 62 ... 72 (default step: 1)
+arithmser(60, @end 72) ## Outputs: 60 61 62 ... 72 (default step: 1)
 ```
 
 Here, the `@step` and `@maxcount` arguments are optional. Since they are not provided, the function uses their default values: `@step` defaults to `1`, and `@maxcount` defaults to `0`.
@@ -183,7 +183,7 @@ Since the `arithmser` function creates an arithmetic series, it's useful for gen
 $wholetone = arithmser(@start 60, @end 72, @step 2); ## Whole-tone scale (MIDI)
 $chromatic = arithmser(@start 60 @end 72 @step 1); ## Chromatic scale (MIDI)
 print("whole tone:" $wholetone); ## Outputs: 60 62 64 66 68 70 72
-print("chromatic:" $chromatic); ## Outputs: 60 through 72
+print("chromatic:" $chromatic) ## Outputs: 60 through 72
 ```
 
 ---
@@ -247,6 +247,10 @@ print($chord);
 ---
 
 ## FAQ
+
+### Q: Where can I explore all available functions in _bell_?
+
+**A**: Check the [_bell_ functions reference](/#/reference) documentation to learn more about each of the built-in _bell_ functions.
 
 ### Q: Can a function have no arguments?
 

@@ -24,11 +24,13 @@ a:hover {
 
 body {
   margin: 0;
+  margin-top: 30px;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -93,11 +95,24 @@ button:focus-visible {
   padding-bottom: 50px;
 }
 
+.search-bar {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: medium;
+  padding-left: 20px;
+  color: black;
+  background-color: white;
+  border-style: solid;
+  border-color: rgb(218, 214, 214);
+  box-shadow: 5px;
+}
 .inline-code {
   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 }
 table {
-  border-spacing: 20px;
+  border-spacing: 15px;
 }
 .toc {
   padding-left: 25px;

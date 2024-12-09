@@ -4,6 +4,7 @@ import MarkdownRenderer from "./components/MarkdownRenderer";
 import getMarkdownInfo, { MarkdownFileInfo } from "./utils/getMarkdownInfo";
 
 import Index from "./components/Index";
+import FunctionReference from "./components/FunctionReference";
 
 function formatPaths(x: string, i: number): string {
   return "markdown/" + `0${i}`.match(/\d{2}$/)![0] + "_" + x;
@@ -44,7 +45,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Index lessons={lessons} />} />
+        <Route index path="/" element={<Index lessons={lessons} />} />
         {lessons.map((lesson, i) => {
           const prev = i > 0 ? lessons[i - 1] : undefined;
           const next = i < lessons.length - 1 ? lessons[i + 1] : undefined;
@@ -56,6 +57,7 @@ const App: React.FC = () => {
             />
           );
         })}
+        <Route path="/reference" element={<FunctionReference />} />
       </Routes>
       <footer style={{ width: "100%", paddingBottom: "25px", textAlign: "center" }}>
         <i>{new Date().getFullYear()} @ Felipe Tovar-Henao</i>
