@@ -2,23 +2,24 @@
 
 > _Advanced operations on lllls_
 
-In _bell_, lists (or _lllls_) are central to representing and organizing data, including musical data such as melodies, chord progression, rhythmic patterns, etc. To manipulate these lists efficiently, _bell_ provides a wide range of list functions. This section will teach you how to use some of these functions to transform your _lllls_.
+To manipulate these lists efficiently, _bell_ provides a wide range of functions to manipulate _lllls_. This section will teach you how to use some of these functions to transform your _lllls_.
 
 ---
 
 ## Common List Functions
 
-Below is a table of commonly used list functions in _bell_. Each function is paired with examples in a musical context.
+Below is a table of commonly used list-oriented functions in _bell_.
 
-| Function | Purpose                                 | Example                         | Result              |
-| -------- | --------------------------------------- | ------------------------------- | ------------------- |
-| `rev`    | Reverses the elements of a list         | `rev(C4 D4 E4 F4)`              | `F4 E4 D4 C4`       |
-| `length` | Returns the number of elements          | `length(C4 E4 G4)`              | `3`                 |
-| `depth`  | Returns the depth of a list             | `depth([C4 E4 G4] [F4 A4 C5])`  | `2`                 |
-| `flat`   | Flattens a nested list to depth 1       | `flat([C4 [E4 G4]] [F4 A4 C5])` | `C4 E4 G4 F4 A4 C5` |
-| `thin`   | Removes duplicate elements              | `thin(C4 E4 C4 C4 G4)`          | `C4 E4 G4`          |
-| `mc2f`   | Converts MIDIcent values to frequencies | `mc2f(6000 6700)`               | `261.63 392.00`     |
-| `f2mc`   | Converts frequencies to MIDIcent values | `f2mc(440 523.25)`              | `A4 C5`             |
+| Function | Purpose                                 | Example                         | Output                 |
+| -------- | --------------------------------------- | ------------------------------- | ---------------------- |
+| `rev`    | Reverses the elements of a list         | `rev(C4 D4 E4 F4)`              | `F4 E4 D4 C4`          |
+| `length` | Returns the number of elements          | `length(C4 E4 G4)`              | `3`                    |
+| `depth`  | Returns the depth of a list             | `depth([C4 E4 G4] [F4 A4 C5])`  | `2`                    |
+| `flat`   | Flattens a nested list to depth 1       | `flat([C4 [E4 G4]] [F4 A4 C5])` | `C4 E4 G4 F4 A4 C5`    |
+| `thin`   | Removes duplicate elements              | `thin(C4 E4 C4 C4 G4)`          | `C4 E4 G4`             |
+| `mc2f`   | Converts MIDIcent values to frequencies | `mc2f(6000 6700)`               | `261.63 392.00`        |
+| `f2mc`   | Converts frequencies to MIDIcent values | `f2mc(440 523.25)`              | `A4 C5`                |
+| `trans`  | Transposes a matrix-style list          | `trans([1 2 3] [10 20 30])`     | `[1 10] [2 20] [3 30]` |
 
 > MIDIcent is a pitch specification unit, combining MIDI values and cents (_1 semitone = 100 cents_) to allow for fine microtonal precision. For instance, 6000 is C5, 6100 is C sharp, 6200 is D, 6250 is D quarter flat, and so on. In _bell_, MIDIcents are the most common way of representing pitch information.
 
@@ -50,7 +51,7 @@ Use the `flat` function to reduce a nested chord progression into a single list 
 
 ```py
 $progression = [C4 E4 G4] [F4 A4 C5];
-print(flat($progression)); ## Outputs: C4 E4 G4 F4 A4 C5
+print(flat($progression)) ## Outputs: C4 E4 G4 F4 A4 C5
 ```
 
 ---
@@ -66,7 +67,7 @@ Use the `thin` and `sort` functions to infer the scale from a given melody.
 ```py
 $melody = G4 C4 G4 C4 F4 D4 E4;
 $scale = $melody.thin(); ## Outputs: G4 C4 F4 D4 E4
-$scale = $scale.sort().print(); ## Outputs: C4 D4 E4 F4 G4
+$scale = $scale.sort().print() ## Outputs: C4 D4 E4 F4 G4
 ```
 
 ### Example 2: Converting Frequencies to Notes
@@ -93,7 +94,7 @@ print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 
 1. Create a nested chord progression. For example:
    ```py
-   $progression = [C4 E4 G4] [F4 A4 C5] [G4 B4 D5];
+   $progression = [C4 E4 G4] [F4 A4 C5] [G4 B4 D5]
    ```
 2. Flatten the progression into a single list of notes using `flat`.
 3. Infer the scale of the progression using the `thin` and `sort` functions.
@@ -104,7 +105,7 @@ print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 1. Create a list of pitches, using note names. For instance:
 
    ```py
-   $notes = C4 Eb4 G4;
+   $notes = C4 Eb4 G4
    ```
 
 2. Convert the pitches to frequencies using `mc2f`.
