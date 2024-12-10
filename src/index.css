@@ -105,7 +105,7 @@ button:focus-visible {
   color: black;
   background-color: white;
   border-style: solid;
-  border-color: rgb(218, 214, 214);
+  border-color: #d7d3d3;
   box-shadow: 5px;
 }
 .inline-code {
@@ -171,7 +171,7 @@ blockquote {
 .copied-text {
   margin-left: 8px;
   font-size: 0.8rem;
-  color: #4caf50; /* Green text for copied confirmation */
+  color: #6bc3a1; /* Green text for copied confirmation */
   font-weight: bold;
   animation: fadeOut 2s forwards;
 }
