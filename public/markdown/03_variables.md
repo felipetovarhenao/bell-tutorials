@@ -205,4 +205,4 @@ $var1 = 2
 
 ---
 
-With variables under your belt, you're ready to tackle basic lists, which are crucial for representing complex data in _bell_
+With variables under your belt, it's time to take a closer look at the available numeric data types in _bell_.

@@ -175,4 +175,4 @@ print($x) ## Outputs: 30
 
 ---
 
-Compound assignment operators provide efficient shortcuts for modifying variables, making them ideal for tasks like transposing melodies, scaling rhythms, or cycling through patterns. With this foundation, you’re ready to explore numeric types and how they can be applied to both musical and mathematical contexts.
+Compound assignment operators provide efficient shortcuts for modifying variables, making them ideal for tasks like transposing melodies, scaling rhythms, or cycling through patterns. With this foundation, you can now tackle more complex tasks like conditionals, which allow you to introduce decision-making into your algorithms.

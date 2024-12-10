@@ -2,18 +2,22 @@
 
 > _Understanding and Using Numbers in bell_
 
-Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical applications. This section covers the different numeric types in _bell_ and how they’re used.
+Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical data representation. This section covers the different numeric types in _bell_ and how they’re used.
 
 ---
 
 ## Numeric Types in _bell_
 
-| Numeric Types | Description                                       | Examples           |
-| ------------- | ------------------------------------------------- | ------------------ |
-| integer       | Whole numbers, useful for counting or MIDI values | `60`, `4`, `100`   |
-| float         | Numbers with decimal points, ideal for precision  | `3.14159`, `440.0` |
-| rational      | Fractions, useful for rhythms or ratios           | `1/4`, `3/2`       |
-| pitch         | Specialized type for representing musical pitches | `C4`, `A4`, `G#3`  |
+In _bell_, there are four types of numeric data.
+
+| Numeric Types | Abbreviation | Description                 | Examples           |
+| ------------- | ------------ | --------------------------- | ------------------ |
+| integer       | `int`        | Whole numbers               | `60`, `4`, `100`   |
+| float         | `float`      | Numbers with decimal points | `3.14159`, `440.0` |
+| rational      | `rat`        | Fractional values           | `1/4`, `3/2`       |
+| pitch         | `pitch`      | Musical pitch specification | `C4`, `A4`, `G#3`  |
+
+We can use the `is` function to verify the data type of any value in _bell_, including numeric data types.
 
 ---
 
@@ -21,11 +25,12 @@ Numbers are central to programming, and _bell_ provides a variety of numeric typ
 
 Integers are whole numbers without decimal points.
 
-### Example: MIDI Note Numbers
+### Example
 
 ```py
 $note = 60; ## MIDI value for C4
 $interval = 7; ## Perfect fifth
+print(is($note) is($interval)); ## Outputs: int int
 print($note + $interval) ## Outputs: 67 (G4)
 ```
 
@@ -33,104 +38,150 @@ print($note + $interval) ## Outputs: 67 (G4)
 
 ## 2. Float
 
-Floats are numbers with decimal points, allowing greater numeric precision.
+Floats, also referred to as _real_ numbers, are numbers with decimal points, allowing greater numeric precision.
 
-### Example: Frequencies
+### Example
 
 ```py
 $freq = 440.0; ## Frequency of A4
-print($freq * 1.5) ## Outputs: 660.0 (E5)
+$ratio = 1.5; ## Just fifth ratio
+print(is($freq) is($ratio)); ## real real
+print($freq * $ratio) ## Outputs: 660.0 (E5)
 ```
+
+> In _bell_, _real_ is the same as the `float` data type.
 
 ---
 
 ## 3. Rational
 
-Rationals represent fractions, which are particularly useful for representing relative rhythmic units and frequency ratios.
+Rationals represent fractional values, which are particularly useful for representing relative rhythmic units and frequency ratios in a more readable way.
 
 ### Syntax:
 
-```py
-<num>/<den>
-```
+`<num>/<den>`
 
-### Examples:
-
-1. Rhythmic Durations:
+### Example:
 
 ```py
 $rhythm = 1/4; ## Quarter note
+$mul = 2; ## multiple
+print(is($rhythm) is($mul)) ## rat int
 print($rhythm * 2) ## Outputs: 1/2 (half note)
-```
-
-2. Ratios for Intervals:
-
-```py
-$ratio = 3/2; ## Perfect fifth
-$baseFreq = 440; ## A4
-print($baseFreq * $ratio) ## Outputs: 660
 ```
 
 ---
 
 ## 4. Pitch
 
-Pitch is a specialized numeric type that maps musical note names to their equivalent MIDI or frequency values. _bell_ simplifies working with pitches by letting you use intuitive note names.
+In _bell_, the `pitch` data type is a specialized numeric type that uses musical note name syntax as a placeholder for the equivalent in MIDI cents. This allows for more a intuitive way to specify pitch data over raw numbers.
 
-### Basic Syntax:
+### Basic Syntax
 
-```
-<name><accidental><octave>
-```
+The syntax for pitch specification is fairly straightforward:
 
-### Examples:
+`<whitekey><optional:accidentals><octave>`
 
-1. Chromatic Notes:
+Where the available accidentals are:
 
-```py
-$note = C4; ## Middle C
-$sharpNote = F#3; ## F-sharp in the 3rd octave
-print($note + 12) ## Outputs: C5 (one octave up)
-```
+| Accidental | Name          | Shift     |
+| ---------- | ------------- | --------- |
+| `#`        | sharp         | +1/2 tone |
+| `b`        | flat          | -1/2 tone |
+| `x`        | double-sharp  | +1 tone   |
+| `q`        | quarter-sharp | +1/4 tone |
+| `d`        | quarter-flat  | -1/4 tone |
+| `^`        | eighth-sharp  | +1/8 tone |
+| `v`        | eighth-flat   | -1/8 tone |
 
-2. Microtonal and Just Intonation (Advanced): _bell_ supports advanced pitch representations, such as:
+> Notice that there is no option for the double-flat accidental. To do this, we simply use `b` twice.
 
-```py
-$pitch = A4 + 50 ## Microtonal adjustment in cents
-```
+#### Examples:
+
+| Syntax | Description          | MIDI cents value |
+| ------ | -------------------- | ---------------- |
+| `C5`   | C natural (middle C) | `6000`           |
+| `Ab4`  | A flat               | `5600`           |
+| `Bbb4` | B double flat        | `5700`           |
+| `G#4`  | G sharp              | `5600`           |
+| `Fx6`  | F double-sharp       | `7900`           |
+| `Bq4`  | B quarter-sharp      | `5950`           |
+| `Bd4`  | B quarter-flat       | `5850`           |
+| `D^5`  | D eighth-sharp       | `6225`           |
+| `Dv5`  | D eighth-flat        | `6175`           |
+| `D#q5` | D 3/4 sharp          | `6350`           |
+
+>
+
+### Advanced Syntax
+
+While the syntax above can be sufficient for most cases, it's still limited to eighth-tones as the smallest tone division. For more fine-tuned pitch specifications, the following syntax can be used:
+
+`<whitekey><optional:accidental><octave><+|-><accidental_as_rational>t`
+
+#### Examples:
+
+| Syntax      | Description                          | MIDI cents value |
+| ----------- | ------------------------------------ | ---------------- |
+| `C5+1/2t`   | C natural (middle C) plus a semitone | `6100`           |
+| `Ab4-1/4t`  | A flat minus a quarter tone          | `5550`           |
+| `G4-1/12t`  | G minus a twelfth tone               | `5483.333333`    |
+| `Fq6+1/12t` | F quarter-sharp plus a twelfth tone  | `7766.666667`    |
+
+For these more highly specific cases, however, it can sometimes be easier to use integers or floats as pitch specification instead.
 
 ---
 
-## Conversions Between Numeric Types
+## Conversions Between Numeric Types (Casting)
 
-You can convert between types when needed. For example:
+We can convert between numeric types using the `int`, `float`, `rat`, and `pitch` functions to convert any number to integer, float, rational, or pitch, respectively.
 
-- Pitch to Frequency: Use the mc2f function.
-- Frequency to Pitch: Use the f2mc function.
+> Converting the data type of one value to another is typically referred to as **type casting**.
 
-### Example: Convert C4 to Frequency
+### Examples
+
+#### Casting to `float`
 
 ```py
-$note = C4;
-print(mc2f($note)) ## Outputs: 261.63 Hz
+$x = float(1);
+print($x is($x)) ## Outputs: 1.0 real
 ```
 
-### Example: Convert Frequency to Pitch
+#### Casting to `int`
 
 ```py
-$freq = 440.0; ## A4
-print(f2mc($freq)) ## Outputs: A4
+$x = int(3.6);
+print($x is($x)) ## Outputs: 3 integer
+```
+
+> Note that `int` truncates the decimal part of the input value, so make sure you take that into account.
+
+#### Casting to `pitch`
+
+```py
+$x = pitch(6525);
+print($x is($x)) ## Outputs: F^5 pitch
+```
+
+#### Casting to `rat`
+
+```py
+$x = rat(2.25);
+print($x is($x)) ## Outputs: 9/4 rational
 ```
 
 ---
 
 ## Numeric Operations in Musical Contexts
 
-### Transposing Pitches
+As the following examples illustrate, it's possible to mix numeric data types in expressions.
+
+### Pitch Transposition
 
 ```py
-$melody = C4 D4 E4 F4;
-$transposed = $melody + 12; ## Transpose up an octave
+$pitch = C5; ## Middle C
+$shift = 1200; ## Octave in MIDI cents
+$transposed = $melody + $shift; ## Transpose up an octave
 print($transposed) ## Outputs: C5 D5 E5 F5
 ```
 
@@ -138,16 +189,16 @@ print($transposed) ## Outputs: C5 D5 E5 F5
 
 ```py
 $rhythm = 1/4 1/8 1/8;
-$doubleTime = $rhythm / 2; ## Double the speed
-print($doubleTime) ## Outputs: 1/8 1/16 1/16
+$faster = $rhythm / 2; ## Double the speed
+print($faster) ## Outputs: 1/8 1/16 1/16
 ```
 
 ### Applying Frequency Ratios
 
 ```py
-$baseFreq = 440.0; ## A4
-$perfectFifth = 3/2;
-print($baseFreq * $perfectFifth) ## Outputs: 660.0 (E5)
+$freq = 440.0; ## A4
+$ratio = 3/2;
+print($freq * $ratio) ## Outputs: 660.0 (E5)
 ```
 
 ---
@@ -156,49 +207,32 @@ print($baseFreq * $perfectFifth) ## Outputs: 660.0 (E5)
 
 ### Exercise 1: Pitch Arithmetic
 
-1. Create a variable for a note in MIDI:
+1. Create a variable for a note in MIDI cents:
 
 ```py
-$note = 60 ## C4
+$pitch = 6000 ## C4
 ```
 
 2. Transpose the note up by a major third (4 semitones).
-3. Convert the resulting pitch to its frequency using mc2f.
+3. Cast the resulting MIDI cents value as `pitch` and print it.
 
-### Exercise 2: Rhythmic Manipulation
+### Exercise 2: Duration Value
 
-1. Create a list of rhythmic values:
-
-```py
-$rhythm = 1/2 1/4 1/8
-```
-
-2. Halve the rhythmic values (double the tempo).
-3. Print the result.
-
-### Exercise 3: Frequency Ratios
-
-1. Create a base frequency for A4:
+1. Given the following variables:
 
 ```py
-$freq = 440.0
+$tempo = 60; ## beats per minute
+$value = 3/8 ## dotted quarter note
 ```
 
-2. Use a ratio of `3/2` to calculate the frequency of the perfect fifth above `A4`.
-3. Print the frequency.
+2. Calculate the duration of `$value` in milliseconds.
+3. Cast the result as `float` and print the result.
 
----
+### Exercise 3: Scale Specification
 
-## Exercise 4: Melody Transformation
+1. Using `pitch` syntax, specify the pitch values for a Db major triad, using a different variable for each pitch (e.g., `$root`, `$third`, `$fifth`):
 
-1. Create a melody using pitch names:
-
-```py
-$melody = C4 E4 G4 B4
-```
-
-2. Transpose the melody down by an octave using subtraction.
-3. Convert the transposed melody to frequencies using mc2f.
+2. For each pitch, cast the value as `int` and print it.
 
 ---
 
@@ -209,21 +243,21 @@ $melody = C4 E4 G4 B4
 **A**: Yes, _bell_ handles mixed types gracefully:
 
 ```py
-print(440 * 3/2) ## Outputs: 660.0
+print(440 * 3/2) ## Outputs: 660
 ```
 
 ### Q: How are pitches internally represented?
 
-**A**: Pitches are represented as midicents (MIDI values scaled by 100). For example, C4 is 6000 midicents.
+**A**: Pitches are represented as midicents (MIDI values scaled by 100). For example, `C4` is `6000` MIDI cents.
 
-### Q: Can I use decimals for rhythms?
+### Q: Can I use decimals instead of rationals?
 
-**A**: While rational numbers (fractions) are preferred for rhythms, you can use decimals for less conventional durations:
+**A**: While rational numbers (fractions) are very useful for representing frequency ratios and proportional rhythmic values, you can certainly use decimals to do so - especially for values that are less amenable for rational representation:
 
 ```py
-$rhythm = 0.25 ## Equivalent to 1/4
+$value = rat(1.414) ## Outputs: 707/500
 ```
 
 ---
 
-Numeric types are crucial for both mathematical and musical operations in \_bell. With a solid understanding of these types, you can now tackle more complex tasks like conditionals, which allow you to introduce decision-making into your musical algorithms.
+Numeric types are crucial for both mathematical and musical operations in _bell_. With a solid understanding of these types, you're ready to tackle lists, which are crucial for representing complex data in _bell_.

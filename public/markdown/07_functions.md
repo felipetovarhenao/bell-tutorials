@@ -21,13 +21,13 @@ A function in _bell_:
 ### Syntax:
 
 ```
-<function_name>(<arg1>, <arg2>, ..., <argN>);
+<function_name>(<arg1>, <arg2>, ..., <argN>)
 ```
 
 ### Example:
 
 ```py
-print("hello world"); ## Outputs: hello world
+print("hello world") ## Outputs: hello world
 ```
 
 ---
@@ -93,13 +93,13 @@ Arguments are specified by name, allowing flexibility in their order. This requi
 #### Syntax:
 
 ```
-<function_name>(@<argname> <arg>, ..., @<argname> <arg>);
+<function_name>(@<argname> <arg>, ..., @<argname> <arg>)
 ```
 
 When using named arguments, commas between arguments are optional:
 
 ```
-<function_name>(@<argname> <arg> ... @<argname> <arg>);
+<function_name>(@<argname> <arg> ... @<argname> <arg>)
 ```
 
 Luckily, many built-in functions in _bell_ follow a similar naming pattern for their arguments — in particular, math functions.
