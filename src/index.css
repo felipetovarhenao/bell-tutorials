@@ -111,6 +111,7 @@ button:focus-visible {
 .inline-code {
   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   white-space: pre;
+  overflow-wrap: break-word;
   text-wrap: wrap;
 }
 table {
