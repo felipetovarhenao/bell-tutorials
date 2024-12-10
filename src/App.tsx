@@ -27,14 +27,14 @@ const App: React.FC = () => {
       "addresses.md",
       "keys.md",
       "listop.md",
-      "compassign.md",
-      "numtypes.md",
-      "conditionals.md",
-      "loops.md",
-      "parens.md",
-      "userfunctions.md",
-      "formatting.md",
-      "nextsteps.md",
+      // "compassign.md",
+      // "numtypes.md",
+      // "conditionals.md",
+      // "loops.md",
+      // "parens.md",
+      // "userfunctions.md",
+      // "formatting.md",
+      // "nextsteps.md",
     ];
 
     getMarkdownInfo(markdownPaths.map(formatPaths)).then((lessons) => {
