@@ -141,7 +141,7 @@ $z = $x * $y;
 
 ```py
 $notes = C4 null E4;
-print($notes); ## Outputs: C4 E4
+print($notes) ## Outputs: C4 E4
 ```
 
 ### Q: Can I compare `null` to other values?
@@ -149,7 +149,7 @@ print($notes); ## Outputs: C4 E4
 **A**: Yes, you can compare `null` to check for the absence of a value. Here's a preview of [conditionals](16_conditionals.md), which we'll cover later.
 
 ```py
-if $x == null then print("No value assigned");
+if $x == null then print("No value assigned")
 ```
 
 ### Q: Is `null` the same as zero?

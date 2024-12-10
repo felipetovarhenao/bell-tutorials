@@ -33,8 +33,8 @@ Symbols created with backticks terminate when they encounter a space. This makes
 #### Example:
 
 ```py
-$name = `Nadia
-print($name); ## Outputs: Nadia
+$name = `Nadia ;
+print($name) ## Outputs: Nadia
 ```
 
 #### Caution:
@@ -42,8 +42,8 @@ print($name); ## Outputs: Nadia
 For symbols with spaces, stick to double or single quotes:
 
 ```py
-$name = `Wolfgang Amadeus Mozart
-print($name); ## Outputs: Wolfgang, assumes Wolfgang and Mozart are global variables
+$name = `Wolfgang Amadeus Mozart;
+print($name) ## Outputs: Wolfgang, assumes Wolfgang and Mozart are global variables
 ```
 
 Similarly, make sure that you don't accidentally cause syntax errors:
@@ -70,13 +70,13 @@ Symbols are often used to label or annotate musical data. Here are some basic sc
 ### Naming Chords
 
 ```py
-$chords = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5];
+$chords = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5]
 ```
 
 ### Labeling Rhythmic Patterns
 
 ```py
-$rhythms = ['pattern1' 1/4 1/8 1/8 1/2] ['pattern2' 1/4 1/4 1/4 1/4];
+$rhythms = ['pattern1' 1/4 1/8 1/8 1/2] ['pattern2' 1/4 1/4 1/4 1/4]
 ```
 
 ### Structuring musical data
@@ -133,7 +133,7 @@ Symbols can be included in _lllls_, just like notes or numbers.
 
 ```py
 $info = ["C4" "quarter" "mezzo-piano"];
-print($info); ## Outputs: C4 quarter mezzo-piano
+print($info) ## Outputs: C4 quarter mezzo-piano
 ```
 
 ---
@@ -185,7 +185,7 @@ $patterns = (
 **A**: Yes, symbols can coexist with numbers, pitches, or other symbols in the same llll:
 
 ```py
-$data = [ C4 1/4 'mezzo-piano' [ 0.2 3.4 "hi" ] ];
+$data = [ C4 1/4 'mezzo-piano' [ 0.2 3.4 "hi" ] ]
 ```
 
 ### Q: Can symbols contain special characters?

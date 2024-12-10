@@ -215,7 +215,7 @@ Functions can be concatenated, where the result of one function becomes the inpu
 ```py
 $base = 2;
 $exp = 3.5;
-$base.pow($exp).round().print(); ## Output: 11.
+$base.pow($exp).round().print() ## Output: 11.
 ```
 
 This style of syntax, while completely optional, does provide some degree of readability (or _flow_ )to your code, as it shows how the output of one function becomes the input of the next.
@@ -234,7 +234,7 @@ Example:
 
 ```py
 $chord = random(48, 72) random(48, 72) random(48, 72);
-print($chord);
+print($chord)
 ```
 
 ### Exercise 2: Create a random arpeggio

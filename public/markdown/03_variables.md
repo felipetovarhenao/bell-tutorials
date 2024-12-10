@@ -27,20 +27,20 @@ In _bell_, variables are assumed to have a value before they are used. However, 
 ### Example:
 
 ```py
-print($somevar); ## Outputs: null
+print($somevar) ## Outputs: null
 ```
 
 This behavior can be convenient, but it also requires careful attention to ensure your code behaves as expected.
 
 ```py
 $note = 60; ## Assign a value
-print($note); ## Outputs: 60
+print($note) ## Outputs: 60
 ```
 
 If you’re unsure whether a variable has been assigned, you can check for `null` using [conditional statements](16_conditionals.md), which will be covered much later. Here's a preview:
 
 ```py
-if $note == null then print("$note variable is null");
+if $note == null then print("$note variable is null")
 ```
 
 ---
