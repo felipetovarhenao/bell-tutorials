@@ -112,7 +112,7 @@ print($scale) ## Outputs: 60 62 64 66 68 70 72
 
 ---
 
-## Combining do and collect
+## Combining `do` and `collect`
 
 ### Example: Printing Notes While Collecting Results
 
