@@ -2,70 +2,82 @@
 
 > _Making Decisions in Your Code_
 
-In _bell_, conditionals allow your code to make decisions based on specific conditions. They are essential for creating dynamic and interactive programs, such as modifying a melody based on user input or changing rhythmic patterns depending on the section of a composition. Conditionals enable you to control the flow of your program, making it responsive and adaptive.
+Conditionals are central to decision-making in programming, allowing a program’s flow to change based on whether certain statements are true or false. They enable code to adapt to different scenarios at runtime and make your code more flexible, intelligent, and responsive.
 
 ---
 
 ## What Are Conditionals?
 
-A conditional checks whether a given statement is true (non-zero) or false (0) and executes different blocks of code accordingly.
+A conditional checks whether a given statement is true (non-zero value) or false (`0`) and executes different blocks of code accordingly. To write conditional statements, we have the following keywords available:
 
-### Syntax:
+### Conditional Keywords
+
+| Keyword   | Purpose                                                                            | Example                           |
+| --------- | ---------------------------------------------------------------------------------- | --------------------------------- |
+| `if`      | Evaluates a condition and executes code if the result is a non-zero value (_true_) | `if $x > 5 then print($x)`        |
+| `else`    | Executes code if the `if` condition is `0` (_false_)                               | `else print("Condition false")`   |
+| `else if` | Chains multiple conditions                                                         | `else if $x == 10 then print($x)` |
+
+### `if` Syntax
+
+The most basic form of a conditional statement is the following.
 
 `if <condition> then <statement>`
 
-### Example:
+It checks wheather the `<condition>` statement evaluates to a non-zero value (true) and, if true, executes the `<statement>` block of code. If false, the conditional statement evaluates to `null`.
 
 ```py
 $note = 60; ## MIDI for C4
-if $note > 64 then print("The note is above E4")
+if $note > 64 then print("The note is above E4") ## Outputs: null
 ```
 
----
+### `if-else` Syntax
 
-## Conditional Keywords
+We can also add a statement to be executed when the `if`condition does not evaluate to a true value, using the `else` keyword.
 
-| Keyword   | Purpose                                         | Example                            |
-| --------- | ----------------------------------------------- | ---------------------------------- |
-| `if`      | Evaluates a condition and executes code if true | `if $x > 5 then print($x);`        |
-| `else`    | Executes code if the `if` condition is false    | `else print("Condition false");`   |
-| `else if` | Chains multiple conditions                      | `else if $x == 10 then print($x);` |
+`if <condition> then <statement1> else <statement2>`
 
----
-
-## Examples
-
-### Transposing a Melody Based on a Condition
+This allows use to have more control over the behavior of our code.
 
 ```py
 $note = 62; ## MIDI for D4
 if $note < 60 then (
-    $note += 12; ## Transpose up an octave
-    print($note)
+  $note += 12 ## Transpose up an octave (74)
 ) else (
-    print("No transposition needed")
-)
+  $note -= 12 ## Transpose down an octave (50)
+);
+print($note)
 ```
 
-### Changing Dynamics Based on Pitch
+### Chained `if-else` Syntax
+
+For more complex decision trees, we can chain multiple conditional statements.
+
+`if <condition1> then <statement1> else if <condition2> then <statement2> ... else <statementN>`
+
+The `if-else` chain can be as long as needed.
 
 ```py
 $note = C4;
-if $note < C4 then print("pp");
-else if $note == C4 then print("mf");
+if $note < C4 then print("pp")
+else if $note == C4 then print("mf")
 else print("ff")
 ```
 
-### Conditional Blocks with Multiple Statements
+> Note that we do not use `;` to chain `if-else` statements.
 
-You can group multiple statements using parentheses:
+---
+
+## Conditional Blocks with Multiple Statements
+
+As it's typical in _bell_, we can always create compound statements using parentheses and the `;` operator.
 
 ```py
-$note = 70; ## MIDI for A#4
+$note = 70; ## MIDI for Bb5
 if $note > 64 then (
     print("High pitch detected");
     $note -= 12; ## Transpose down an octave
-    print($note) ## Outputs: 58 (A#3)
+    print(pitch($note * 100)) ## Outputs: Bb4 (5800 in MIDI cents)
 )
 ```
 
@@ -73,17 +85,17 @@ if $note > 64 then (
 
 ## Boolean Logic in Conditions
 
-_bell_ does not have a separate boolean type. Instead:
+As evidenced by all previous examples, _bell_ does not have a separate boolean data type. Instead:
 
-- 0 is treated as false.
-- Any non-zero value is treated as true.
+- `0` is treated as _false_.
+- Any non-zero value is treated as _true_.
 
 #### Example:
 
 ```py
-$note = 0;
-if $note then print("This will not run");
-else print("False detected") ## Outputs: False detected
+$condition = 2;
+if $condition then print("This will not run") ## This gets printed
+else print("False detected") ## This doesn't
 ```
 
 ## Logical Operators in Conditions
@@ -104,14 +116,14 @@ You can combine conditions using logical operators:
 
 ```py
 $note = 65; ## MIDI for F4
-if $note > 60 and $note < 72 then print("Within range")
+if $note > 60 && $note < 72 then print("Within range")
 ```
 
 ### Detecting Out-of-Bounds Notes
 
 ```py
 $note = 75;
-if $note < 60 or $note > 72 then print("Out of range")
+if $note < 60 || $note > 72 then print("Out of range")
 ```
 
 ## Combining `else if` for Multiple Conditions
@@ -184,56 +196,36 @@ $result = $value1 ||| $value2
   | `null`       | _value2_      | `null`       | _value2_               |
   | `null`       | `null`        | `null`       | `null` (right operand) |
 
-These operators are particularly useful for substituting `if` statements involving `null` values, though it's common for beginners to find them a bit unintuitive or confussing to use. If that's the case, simply stick to `if-else` syntax and you'll be fine.
+These operators are particularly useful for substituting `if` statements involving `null` values, though it's common for beginners to find them a bit unintuitive or confusing to use. If that's the case, simply stick to traditional `if-else` syntax and you'll be fine.
 
 ---
 
 ## Exercises
 
-### Exercise 1: Transposing Based on Range
+### Exercise 1: Triad classifier
 
-1. Create a variable for a note in MIDI:
-
-```py
-$note = 67 ## G4
-```
-
-2. Use an `if` condition to check if the note is below 60.
-3. If true, transpose the note up by an octave. Otherwise, print "Note is already in the desired range".
-
-### Exercise 2: Assign Dynamics
-
-1. Create a melody:
-   ```py
-   $melody = 58 60 62 65 ## MIDI notes
-   ```
-2. Loop through the melody and assign dynamics based on note height:
-   - Notes below 60: "pp"
-   - Notes between 60 and 64: "mf"
-   - Notes above 64: "ff"
-
-### Exercise 3: Rhythm Validation
-
-1. Create a variable for a rhythmic duration:
+1. Given the following variable, make use of the `:` operator and conditionals to check if the triad is major or minor, and print the result. You may assume triads are spelled in root position and ascending order.
 
 ```py
-$duration = 1/8
+$triad = C4 E4 G4
 ```
 
-2. Use an if condition to check if the duration is shorter than 1/4. If true, print "Fast rhythm". Otherwise, print "Slow rhythm".
+2. Try other major and minor triads to check your code works properly.
 
-### Exercise 4: Conditional Melody Transformation
+### Exercise 4: Conditional Seventh
 
-1. Create a melody:
+1. Given the following variable:
 
 ```py
-$melody = C4 D4 E4 F4 G4
+$chord = C4 E4 G4
 ```
 
-2. Use a loop and conditionals to:
-   - Transpose notes below E4 (MIDI 64) up by an octave.
-   - Leave higher notes unchanged.
-3. Print the transformed melody.
+2. Use the `:` and `_=` operators and conditionals to do append a seventh, based on whether the third is major or minor.
+
+   - If the third is minor, append the minor seventh (`B4`).
+   - If the third is major, append the major seventh (`Bb4`).
+
+3. Print the updated chord.
 
 ---
 
@@ -246,22 +238,24 @@ $melody = C4 D4 E4 F4 G4
 ```py
 $note = 62;
 if $note > 60 then (
-    if $note < 64 then print("D4 or E4")
+    if $note < 64 then print("C#4, D4, or Eb4")
 )
 ```
 
 ### Q: What happens if none of the conditions are true?
 
-**A**: If none of the conditions in an if-else chain are true and there’s no else block, nothing happens.
+**A**: If none of the conditions in an if-else chain are true and there’s no else block, the statement evaluates to `null`.
 
 ### Q: Can I use a single-line conditional?
 
 **A**: Yes, you can write simple conditionals in one line:
 
 ```py
-if $note > 64 then print("Above E4"); else print("Below or at E4")
+if $note > 64 then print("Above E4") else print("Below or at E4")
 ```
+
+However, it's not a bad idea to split them into multiple lines to keep them more readable.
 
 ---
 
-Conditionals allow you to add dynamic behavior to your musical programs, whether it's transposing notes, assigning dynamics, or adjusting rhythms. With these tools, you can create responsive and adaptive compositions. Next, we’ll dive into loops, which let you repeat operations for iteration and pattern creation.
+Conditionals allow you to add dynamic behavior to your code which can make for more expressive musical algorithms. Next, we’ll dive into loops, which are a powerful way for performing operations iteratively.
