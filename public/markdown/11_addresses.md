@@ -50,7 +50,7 @@ print($progression:(2 1)) ## Outputs: F4
 
 ---
 
-## Picking Elements: Double Colon (`::`)
+## Pick operator (`::`)
 
 The double colon (`::`) is the pick operator. It retrieves elements from a list and removes their enclosing brackets, effectively "flattening" the top level of the sublist.
 
@@ -88,6 +88,35 @@ Access a bar from a two-bar progression:
 $score = [[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]];
 print($score::1); ## Outputs: [C4 E4 G4] [F4 A4 C5] (first bar)
 print($score:L(2 2)) ## Outputs: A4 C5 E5 (second chord from second bar)
+```
+
+---
+
+### Updating Values Via Addresses
+
+We can also use the access operator to update elements within our _lllls_:
+
+```py
+$x = 1 2 3 4;
+$x:1 = 5;
+print($x) ## Outputs: 5 2 3 4
+```
+
+This also applies to nested lists.
+
+```py
+$x = [1 2 3] [4 5 [6]];
+$x:(2 3 1) = 0;
+print($x) ## Outputs: [1 2 3] [4 5 0]
+```
+
+#### Limits to pick operator (`::`)
+
+One common mistake is to use the pick operator to update values within a list. This results in an error.
+
+```py
+$x = [1 2 3] [4 5 6];
+$x::2 = 3 ## "unexpected assignment" error
 ```
 
 ---
@@ -162,14 +191,16 @@ $x = 1 2 3;
 print($x:$a) ## "Address can't be null" error
 ```
 
-### Q: How is the double colon (`::`) different from `:`?
+### Q: How is the pick operator (`::`) different from the access operator (`:`)?
 
-**A**: retrieves elements while keeping their original structure. `::` retrieves elements and flattens the top level of that sublist.
+**A**: `:` retrieves elements in their original structure, while `::` retrieves elements **and** removes the top level of that sublist. Additionally, `:` allows to update values in a _llll_ whereas `::` is limited to retrieving elements.
 
 ```py
 $x = [[1 2] [3 4]];
 print($x:1); ## Outputs: [[1 2] [3 4]]
 print($x::1) ## Outputs: [1 2] [3 4]
+$x:(2) = [5 6];
+print($x) ## Outputs: [[1 2] [5 6]]
 ```
 
 ---

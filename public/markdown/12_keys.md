@@ -2,7 +2,7 @@
 
 > _Organizing and Accessing Data with Key-Value Pairs_
 
-In _bell_, **keys** are a way to associate labels (_keys_) with values, creating so-called key-value pairs. Keys are particularly useful for organizing data in a structured and readable way. In musical contexts, keys can label chords, instruments, dynamics, or even entire sections of a composition, making your code more intuitive and easier to manage.
+In _bell_, **keys** are a way to associate labels (_keys_) with values, creating so-called _key-value_ pairs. Keys are particularly useful for organizing data in a structured and readable way. In musical contexts, keys can label chords, instruments, dynamics, or even entire sections of a composition, making your code more intuitive and easier to manage.
 
 ---
 
@@ -58,140 +58,50 @@ print($chords.'dominant'); ## Outputs: G4 B4 D5
 
 ## Adding and Modifying Key-Value Pairs
 
-You can add or update key-value pairs dynamically.
+You can update key-value pairs through variable assignments.
 
-### Example: Adding Keys
+### Example: Updating Values Via Keys
 
 ```py
-$chords = [];
-$chords += ['tonic' C4 E4 G4];
-$chords += ['dominant' G4 B4 D5];
-print($chords); ## Outputs: ['tonic' C4 E4 G4] ['dominant' G4 B4 D5]
+$chords = ['chord1' C4 E4 G4] ['chord2' D4 F4 A4];
+$chords."chord1" = D4 G4 B4;
+print($chords); ## Outputs: ['chord1' D4 G4 B4] ['chord2' D4 F4 A4]
 ```
 
-### Example: Modifying Values
+To update single values, you can also combine the dot (`.`) and access (`:`) operators.
 
 ```py
-$chords = ['tonic' C4 E4 G4];
-$chords += ['tonic' C3 E3 G3]; ## Updates the value for 'tonic'
-print($chords.'tonic'); ## Outputs: C3 E3 G3
-```
-
----
-
-## Examples
-
-### Labeling Chords in a Progression
-
-```py
-$progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5];
-print($progression.'subdominant'); ## Outputs: F4 A4 C5
-```
-
-### Assigning Dynamics to a Melody
-
-```py
-$melody = ['phrase1' [C4 D4 E4]] ['phrase2' [F4 G4 A4]];
-$dynamics = ['phrase1' mf] ['phrase2' p];
-print($dynamics.'phrase1'); ## Outputs: mf
-```
-
----
-
-## Keys with Nested Structures
-
-You can combine keys with nested lists for more complex data structures.
-
-### Example: Organizing a Score
-
-```py
-$score = [
-    'section1' [[C4 E4 G4] [F4 A4 C5]],
-    'section2' [[G4 B4 D5] [A4 C5 E5]]
-];
-print($score.'section1'); ## Outputs: [[C4 E4 G4] [F4 A4 C5]]
-print($score.'section2':(1 2 1)); ## Outputs: A4
-```
-
----
-
-## Iterating Over Keys
-
-You can use a loop to iterate through the keys in a list of key-value pairs.
-
-### Example: Printing All Keys and Values
-
-```py
-$chords = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5];
-for $key in $chords::keys do (
-    print($key);
-    print($chords.$key);
-);
+$chords = ['chord1' C4 E4 G4] ['chord2' D4 F4 A4];
+$chords."chord2":3 = Ab4;
+print($chords."chord2"); ## Outputs: D4 F4 Ab4
 ```
 
 ---
 
 ## Exercises
 
-### Exercise 1: Chord Dictionary
+### Exercise 1: Access Chord Progression
 
-1. Create a llll of key-value pairs for a chord progression:
+1. Create a _llll_ of _key-value_ pairs for a chord progression:
 
 ```py
-$progression = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5];
+$progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5];
 ```
 
-2. Access and print:
+2. Use `.` and `:` operators to access and print:
    - The tonic chord.
-   - The dominant chord.
+   - The second note of the subdominant chord.
+   - The first note of the dominant chord.
 
-### Exercise 2: Organizing a Melody with Dynamics
+### Exercise 2: Update Chord Progression
 
-1. Create a llll for a melody and its dynamics:
-
-```py
-$melody = ['phrase1' [C4 D4 E4]] ['phrase2' [F4 G4 A4]];
-$dynamics = ['phrase1' mf] ['phrase2' p];
-```
-
-2. Print:
-
-- The notes and dynamics of phrase1.
-- The notes and dynamics of phrase2.
-
-### Exercise 3: Nested Score Structure
-
-1. Create a nested score with sections labeled as keys:
+1. Create a _llll_ of _key-value_ pairs for a chord progression:
 
 ```py
-$score = [
-    'intro' [[C4 E4 G4] [F4 A4 C5]],
-    'verse' [[G4 B4 D5] [A4 C5 E5]]
-];
+$progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5];
 ```
 
-2. Access and print:
-
-- All chords in the intro.
-- The first chord in the verse.
-
-### Exercise 4: Iterating Over Sections
-
-1. Use a loop to print all section labels and their corresponding data in a score:
-
-```py
-$score = [
-    'chorus' [[C4 D4 E4] [F4 G4 A4]],
-    'bridge' [[A4 B4 C5] [D5 E5 F5]]
-];
-```
-
-Example Output:
-
-```lua
-chorus: [[C4 D4 E4] [F4 G4 A4]]
-bridge: [[A4 B4 C5] [D5 E5 F5]]
-```
+2. Use the `.` and `:` operators to change the progression from major to minor. You should only update the third of each chord.
 
 ---
 
@@ -205,23 +115,53 @@ bridge: [[A4 B4 C5] [D5 E5 F5]]
 $example = ['key1' value1] ['key with spaces' value2];
 ```
 
-### Q: How do I check if a key exists?
+### Q: What happens when I try to access a key that doesn't exist?
 
-**A**: Use the ::keys function to list all keys and check for membership:
+**A**: The expression evaluates to `null`.
 
 ```py
-$chords = ['tonic' C4 E4 G4];
-print('tonic' in $chords::keys); ## Outputs: true
+$example = ['Kaija' 'Papillon'] ['Chaya' 'Sahaf'];
+print($example."Salvatore") ## Outputs: null
+```
+
+### What happens when I try to update the value of a non-existent key?
+
+**A**: It ignores the assignment, keeping the _llll_ unchanged.
+
+```py
+$x = ["key1" 1];
+$x."key2" = 2;
+print($x) ## [ "key1" 1 ]
 ```
 
 ### Q: Can I store a null value in a key?
 
-**A**: Yes, you can associate null with a key, which is useful for placeholders:
+**A**: Yes, you can associate `null` with a key, which is useful for placeholders:
 
 ```py
 $data = ['missing' null];
 print($data.'missing'); ## Outputs: null
+$data."missing" = "just kidding!";
+print($data) ## Outputs: [ "missing" "just kidding!" ]
 ```
+
+### Q: How do I check if a key exists?
+
+**A**: One way is to check if the value for that key is `null`:
+
+```py
+$chords = ['tonic' C4 E4 G4];
+print($chord."dominant" == null) ## Outputs: 1
+```
+
+However, this is somewhat limited, since it can also mean that the key exists but currently has no value associated with it:
+
+```py
+$chords = ['tonic' C4 E4 G4] ['dominant'];
+print($chord."dominant" == null) ## Outputs: 1
+```
+
+To truly check if a key doesn't exist, it would likely involve iterating through the _llll_, which will be covered in the [loops](17_loops.md) tutorial.
 
 ---
 
