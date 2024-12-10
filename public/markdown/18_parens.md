@@ -136,7 +136,7 @@ print($result) ## Outputs: C5 D5 E5
 
 1. Create a melody:
    ```py
-   $melody = C4 D4 E4 F4ƒ
+   $melody = C4 D4 E4 F4
    ```
 2. Use parentheses to:
    - Transpose the melody up by a perfect fifth (7 semitones).
