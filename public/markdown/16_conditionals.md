@@ -12,15 +12,13 @@ A conditional checks whether a given statement is true (non-zero) or false (0) a
 
 ### Syntax:
 
-```py
-if <condition> then <statement>;
-```
+`if <condition> then <statement>`
 
 ### Example:
 
 ```py
 $note = 60; ## MIDI for C4
-if $note > 64 then print("The note is above E4");
+if $note > 64 then print("The note is above E4")
 ```
 
 ---
@@ -43,10 +41,10 @@ if $note > 64 then print("The note is above E4");
 $note = 62; ## MIDI for D4
 if $note < 60 then (
     $note += 12; ## Transpose up an octave
-    print($note);
+    print($note)
 ) else (
-    print("No transposition needed");
-);
+    print("No transposition needed")
+)
 ```
 
 ### Changing Dynamics Based on Pitch
@@ -55,7 +53,7 @@ if $note < 60 then (
 $note = C4;
 if $note < C4 then print("pp");
 else if $note == C4 then print("mf");
-else print("ff");
+else print("ff")
 ```
 
 ### Conditional Blocks with Multiple Statements
@@ -67,8 +65,8 @@ $note = 70; ## MIDI for A#4
 if $note > 64 then (
     print("High pitch detected");
     $note -= 12; ## Transpose down an octave
-    print($note); ## Outputs: 58 (A#3)
-);
+    print($note) ## Outputs: 58 (A#3)
+)
 ```
 
 ---
@@ -85,7 +83,7 @@ _bell_ does not have a separate boolean type. Instead:
 ```py
 $note = 0;
 if $note then print("This will not run");
-else print("False detected"); ## Outputs: False detected
+else print("False detected") ## Outputs: False detected
 ```
 
 ## Logical Operators in Conditions
@@ -106,14 +104,14 @@ You can combine conditions using logical operators:
 
 ```py
 $note = 65; ## MIDI for F4
-if $note > 60 and $note < 72 then print("Within range");
+if $note > 60 and $note < 72 then print("Within range")
 ```
 
 ### Detecting Out-of-Bounds Notes
 
 ```py
 $note = 75;
-if $note < 60 or $note > 72 then print("Out of range");
+if $note < 60 or $note > 72 then print("Out of range")
 ```
 
 ## Combining `else if` for Multiple Conditions
@@ -126,7 +124,7 @@ You can chain conditions using `else if` to create decision trees.
 $note = 62; ## D4
 if $note < 60 then print("pp");
 else if $note <= 64 then print("mf");
-else print("ff");
+else print("ff")
 ```
 
 ---
@@ -152,7 +150,7 @@ The `&&&` operator evaluates its left (i.e., first) operand and checks if it is 
 #### Example:
 
 ```py
-$result = $value1 &&& $value2;
+$result = $value1 &&& $value2
 ```
 
 - If `$value1` is `null`, result is `null`.
@@ -170,7 +168,7 @@ The `|||` operator evaluates its left operand and checks if it is non-`null`. If
 #### Example:
 
 ```py
-$result = $value1 ||| $value2;
+$result = $value1 ||| $value2
 ```
 
 - If `$value1` is non-`null`, result is `$value1`.
