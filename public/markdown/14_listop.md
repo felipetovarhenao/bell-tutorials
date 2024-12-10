@@ -1,4 +1,4 @@
-# List operators
+# List-oriented operators
 
 > _Building and Modifying Musical Sequences_
 
@@ -8,12 +8,16 @@ In _bell_, list operators allows us to modify and transform lists (or _lllls_) e
 
 ## Range Operator (`...`)
 
-The range operator (`...`) is a quick way to create sequential lists, such as scales or rhythmic groupings. It generates a list of numbers from a starting value to an ending value.
+The range operator (`...`) is a quick way to create lists of incremental numbers, just like with `artihmser`. It generates a list of numbers from a starting value to an ending value, except the incremental number is always `1`.
 
 ### Syntax:
 
 ```py
 <start>...<end>
+```
+
+```py
+$x = 1...4 ## Outputs: 1 2 3 4
 ```
 
 ### Examples:
@@ -42,7 +46,7 @@ The repeat operator (`:*`) repeats a list or sequence a specified number of time
 
 ### Syntax:
 
-`<list> :* <repetitions>`
+`<llll> :* <repetitions>`
 
 ### Examples:
 
@@ -53,7 +57,7 @@ $pattern = (C4 D4 E4) :* 3;
 print($pattern) ## Outputs: C4 D4 E4 C4 D4 E4 C4 D4 E4
 ```
 
-Note that to repeat the list of pitches, we need to wrap them in parentheses. Otherwise the following happens:
+Note that to repeat a list, we need to wrap it in parentheses. Otherwise the following happens:
 
 ```py
 $pattern = C4 D4 E4 :* 3;
@@ -64,7 +68,7 @@ print($pattern) ## Outputs: C4 D4 E4 E4 E4
 
 ## Append (`_=`) and prepend (`!_=`) compound assignment operators
 
-To add elements to an existing list, either at the beginning or end of it, we can do the following:
+To add new elements to an existing list, either at the beginning or end of it, we would typically have to do it this way:
 
 ```py
 $x = 3 4; ## some list
@@ -74,7 +78,7 @@ $x = $x 5 6; ## Output: 3 4 5 6
 $x = 1 2 $x ## Output: 1 2 3 4 5 6
 ```
 
-However, _bell_ offers a shorthand to achieve the same, via the append (`_=`) and prepend (`!_=`) operators.
+However, _bell_ offers a shortcut to achieve the same, via the append (`_=`) and prepend (`!_=`) operators.
 
 ```py
 $x = 3 4; ## some list

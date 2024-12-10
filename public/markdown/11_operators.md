@@ -1,4 +1,4 @@
-# Basic operators
+# Operators
 
 > _Arithmetic, Logical, and Beyond_
 

@@ -2,27 +2,24 @@
 
 > _Understanding and Using Numbers in bell_
 
-Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical applications. This section covers the different numeric types in _bell_, how they’re used, and how they relate to musical data like pitches, durations, and intervals.
+Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical applications. This section covers the different numeric types in _bell_ and how they’re used.
 
 ---
 
 ## Numeric Types in _bell_
 
-| Numeric Types | Description                                       | Examples       |
-| ------------- | ------------------------------------------------- | -------------- |
-| Integer       | Whole numbers, useful for counting or MIDI values | 60, 4, 100     |
-| Float         | Numbers with decimal points, ideal for precision  | 3.14159, 440.0 |
-| Rational      | Fractions, useful for rhythms or ratios           | 1/4, 3/2       |
-| Pitch         | Specialized type for representing musical pitches | C4, A4, G#3    |
+| Numeric Types | Description                                       | Examples           |
+| ------------- | ------------------------------------------------- | ------------------ |
+| integer       | Whole numbers, useful for counting or MIDI values | `60`, `4`, `100`   |
+| float         | Numbers with decimal points, ideal for precision  | `3.14159`, `440.0` |
+| rational      | Fractions, useful for rhythms or ratios           | `1/4`, `3/2`       |
+| pitch         | Specialized type for representing musical pitches | `C4`, `A4`, `G#3`  |
 
 ---
 
 ## 1. Integer
 
-Integers are whole numbers without decimal points. They are commonly used for:
-
-- MIDI note numbers.
-- Counting beats or repetitions.
+Integers are whole numbers without decimal points.
 
 ### Example: MIDI Note Numbers
 
@@ -36,23 +33,20 @@ print($note + $interval) ## Outputs: 67 (G4)
 
 ## 2. Float
 
-Floats are numbers with decimal points, allowing greater precision. They’re often used for:
-
-- Frequencies (e.g., 440 Hz for A4).
-- Microtonal adjustments.
+Floats are numbers with decimal points, allowing greater numeric precision.
 
 ### Example: Frequencies
 
 ```py
 $freq = 440.0; ## Frequency of A4
-print($freq * 2) ## Outputs: 880.0 (A5)
+print($freq * 1.5) ## Outputs: 660.0 (E5)
 ```
 
 ---
 
 ## 3. Rational
 
-Rationals represent fractions, making them perfect for rhythmic values and ratios.
+Rationals represent fractions, which are particularly useful for representing relative rhythmic units and frequency ratios.
 
 ### Syntax:
 
