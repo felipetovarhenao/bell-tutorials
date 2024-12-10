@@ -9,7 +9,7 @@ const TOC = ({ lessons }: TOCProps) => {
     <div className="toc">
       <h2>Index</h2>
       <nav>
-        <ul>
+        <ul className="toc-list">
           {lessons?.map((lesson) => (
             <li key={lesson.route}>
               <Link to={lesson.route}>{lesson.title}</Link>

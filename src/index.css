@@ -118,6 +118,9 @@ table {
   padding-left: 25px;
   padding-right: 25px;
 }
+.toc-list {
+  list-style-type: none;
+}
 .banner {
   display: flex;
   padding-top: 30px;
