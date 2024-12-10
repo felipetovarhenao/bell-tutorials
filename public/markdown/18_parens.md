@@ -22,14 +22,14 @@ Without parentheses, _bell_ follows standard operator precedence. Use parenthese
 
 ```py
 $result = 60 + 12 * 2; ## Multiplication happens first
-print($result); ## Outputs: 84
+print($result) ## Outputs: 84
 ```
 
 #### With Parentheses:
 
 ```py
 $result = (60 + 12) * 2; ## Addition happens first
-print($result); ## Outputs: 144
+print($result) ## Outputs: 144
 ```
 
 ### Musical Example: Combining Transposition and Scaling
@@ -37,7 +37,7 @@ print($result); ## Outputs: 144
 ```py
 $melody = 60 62 64;
 $transformed = ($melody + 12) * 2; ## Transpose up an octave, then double each value
-print($transformed); ## Outputs: 144 148 152
+print($transformed) ## Outputs: 144 148 152
 ```
 
 ---
@@ -54,7 +54,7 @@ $result = (
     print($melody); ## Prints the melody
     $melody + 12 ## Transposes the melody
 );
-print($result); ## Outputs: C5 D5 E5
+print($result) ## Outputs: C5 D5 E5
 ```
 
 ---
@@ -72,7 +72,7 @@ $result = (
     print($note); ## Prints: 72
     $note + 5 ## Only this result is returned
 );
-print($result); ## Outputs: 77
+print($result) ## Outputs: 77
 ```
 
 ---
@@ -90,7 +90,7 @@ $result = (
     $scaled = ($transposed * 2); ## Double each note
     $scaled ## Return the final result
 );
-print($result); ## Outputs: 144 148 152
+print($result) ## Outputs: 144 148 152
 ```
 
 ---
@@ -108,7 +108,7 @@ $transformed = (
     print($halved); ## Prints: 1/8 1/16 1/32
     $halved * 4 ## Quadruple the resulting durations
 );
-print($transformed); ## Outputs: 1/2 1/4 1/8
+print($transformed) ## Outputs: 1/2 1/4 1/8
 ```
 
 ---
@@ -125,7 +125,7 @@ $result = if 1 > 0 then (
 ) else (
     $melody - 12 ## Transpose down an octave
 );
-print($result); ## Outputs: C5 D5 E5
+print($result) ## Outputs: C5 D5 E5
 ```
 
 ---
@@ -136,7 +136,7 @@ print($result); ## Outputs: C5 D5 E5
 
 1. Create a melody:
    ```py
-   $melody = C4 D4 E4 F4;
+   $melody = C4 D4 E4 F4ƒ
    ```
 2. Use parentheses to:
    - Transpose the melody up by a perfect fifth (7 semitones).
@@ -148,7 +148,7 @@ print($result); ## Outputs: C5 D5 E5
 1. Create a list of rhythmic values:
 
    ```py
-   $rhythms = 1/4 1/8 1/16;
+   $rhythms = 1/4 1/8 1/16
    ```
 
 2. Use parentheses to:
@@ -161,7 +161,7 @@ print($result); ## Outputs: C5 D5 E5
 1. Create a nested list of notes and rhythms:
 
    ```py
-   $data = [[C4 D4 E4] [1/4 1/8 1/16]];
+   $data = [[C4 D4 E4] [1/4 1/8 1/16]]
    ```
 
 2. Use parentheses to:
@@ -173,7 +173,7 @@ print($result); ## Outputs: C5 D5 E5
 
 1. Create a melody:
    ```py
-   $melody = C4 E4 G4;
+   $melody = C4 E4 G4
    ```
 2. Use an `if-else` block with parentheses to:
    - Transpose the melody up by an octave if the first note is below `D4`.
@@ -189,7 +189,7 @@ print($result); ## Outputs: C5 D5 E5
 **A**: Yes, you can use parentheses to make your code more readable even when they aren’t strictly required:
 
 ```py
-$result = 60 + (12 * 2); ## Easier to understand at a glance
+$result = 60 + (12 * 2) ## Easier to understand at a glance
 ```
 
 ### Q: What happens if I forget the closing parenthesis?
@@ -202,9 +202,9 @@ $result = 60 + (12 * 2); ## Easier to understand at a glance
 
 ```py
 $result = (
-    for $note in C4 D4 E4 collect $note + 12;
+    for $note in C4 D4 E4 collect $note + 12
 );
-print($result); ## Outputs: C5 D5 E5
+print($result) ## Outputs: C5 D5 E5
 ```
 
 ---

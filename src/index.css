@@ -124,10 +124,14 @@ table {
 .banner {
   display: flex;
   padding-top: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  align-items: center;
   justify-content: space-between;
   div {
     flex: 1; /* All items will be equally sized */
     text-align: center; /* Optional: Center text inside the items */
+    vertical-align: middle;
     justify-content: center;
     align-items: center;
   }

@@ -11,13 +11,13 @@ In _bell_, compound assignment operators are shortcuts that simplify common oper
 A compound assignment operator combines an arithmetic operation with assignment (=). For example, instead of writing:
 
 ```py
-$x = $x + 5;
+$x = $x + 5
 ```
 
 You can write:
 
 ```py
-$x += 5;
+$x += 5
 ```
 
 ---
@@ -44,7 +44,7 @@ Use `+=` to transpose a melody up by a fixed interval (e.g., a major second):
 ```py
 $melody = 60 62 64 65; ## MIDI notes for C4, D4, E4, F4
 $melody += 2; ## Transpose each note up by 2 semitones
-print($melody); ## Outputs: 62 64 66 67
+print($melody) ## Outputs: 62 64 66 67
 ```
 
 ## Adjusting Rhythmic Durations
@@ -54,7 +54,7 @@ Use `/=` to halve the rhythmic values of a pattern:
 ```py
 $rhythm = 1/2 1/4 1/8;
 $rhythm /= 2; ## Halve each rhythmic value
-print($rhythm); ## Outputs: 1/4 1/8 1/16
+print($rhythm) ## Outputs: 1/4 1/8 1/16
 ```
 
 ---
@@ -66,7 +66,7 @@ Use `*=` to double the frequency of a note (octave up):
 ```py
 $freq = 440; ## Frequency of A4
 $freq *= 2; ## Double the frequency
-print($freq); ## Outputs: 880 (A5)
+print($freq) ## Outputs: 880 (A5)
 ```
 
 ---
@@ -78,7 +78,7 @@ Use `%=` to cycle through a set of beats:
 ```py
 $beat = 9;
 $beat %= 4; ## Find the remainder when dividing by 4
-print($beat); ## Outputs: 1
+print($beat) ## Outputs: 1
 ```
 
 ---
@@ -93,7 +93,7 @@ You can chain compound operators for more complex transformations.
 $melody = 60 62 64 65; ## MIDI notes
 $melody += 2; ## Transpose up by 2 semitones
 $melody *= 2; ## Double each note's value (for an effect like harmonics)
-print($melody); ## Outputs: 124 128 132 134
+print($melody) ## Outputs: 124 128 132 134
 ```
 
 ---
@@ -104,7 +104,7 @@ print($melody); ## Outputs: 124 128 132 134
 
 1. Create a melody:
    ```py
-   $melody = 60 62 64 65 67; ## C4, D4, E4, F4, G4
+   $melody = 60 62 64 65 67 ## C4, D4, E4, F4, G4
    ```
 2. Transpose the melody up by a perfect fifth (7 semitones) using `+=`.
 3. Print the transposed melody.
@@ -115,7 +115,7 @@ print($melody); ## Outputs: 124 128 132 134
 
 1. Create a list of rhythmic durations:
    ```py
-   $rhythm = 1/2 1/4 1/8 1/16;
+   $rhythm = 1/2 1/4 1/8 1/16
    ```
 2. Double the durations using \*=.
 3. Print the scaled rhythm.
@@ -126,7 +126,7 @@ print($melody); ## Outputs: 124 128 132 134
 
 1. Create a variable for a note frequency:
    ```py
-   $freq = 440; ## Frequency of A4
+   $freq = 440 ## Frequency of A4
    ```
 2. Octave up the frequency using `*=` twice.
 3. Print the final frequency.
@@ -138,7 +138,7 @@ print($melody); ## Outputs: 124 128 132 134
 1. Create a variable for a beat position:
 
    ```py
-   $beat = 15;
+   $beat = 15
    ```
 
 2. Use `%=` to cycle the beat within a 4-beat measure.
@@ -155,7 +155,7 @@ print($melody); ## Outputs: 124 128 132 134
 ```py
 $notes = 60 62 64;
 $notes += 2; ## Transposes all notes up by 2
-print($notes); ## Outputs: 62 64 66
+print($notes) ## Outputs: 62 64 66
 ```
 
 ### Q: Can I combine multiple compound operators in a single line?
@@ -166,7 +166,7 @@ print($notes); ## Outputs: 62 64 66
 $x = 10;
 $x += 5;
 $x *= 2;
-print($x); ## Outputs: 30
+print($x) ## Outputs: 30
 ```
 
 ### Q: Do compound operators work with nested lists?

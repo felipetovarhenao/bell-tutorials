@@ -29,7 +29,7 @@ Integers are whole numbers without decimal points. They are commonly used for:
 ```py
 $note = 60; ## MIDI value for C4
 $interval = 7; ## Perfect fifth
-print($note + $interval); ## Outputs: 67 (G4)
+print($note + $interval) ## Outputs: 67 (G4)
 ```
 
 ---
@@ -45,7 +45,7 @@ Floats are numbers with decimal points, allowing greater precision. They’re of
 
 ```py
 $freq = 440.0; ## Frequency of A4
-print($freq * 2); ## Outputs: 880.0 (A5)
+print($freq * 2) ## Outputs: 880.0 (A5)
 ```
 
 ---
@@ -66,7 +66,7 @@ Rationals represent fractions, making them perfect for rhythmic values and ratio
 
 ```py
 $rhythm = 1/4; ## Quarter note
-print($rhythm * 2); ## Outputs: 1/2 (half note)
+print($rhythm * 2) ## Outputs: 1/2 (half note)
 ```
 
 2. Ratios for Intervals:
@@ -74,7 +74,7 @@ print($rhythm * 2); ## Outputs: 1/2 (half note)
 ```py
 $ratio = 3/2; ## Perfect fifth
 $baseFreq = 440; ## A4
-print($baseFreq * $ratio); ## Outputs: 660
+print($baseFreq * $ratio) ## Outputs: 660
 ```
 
 ---
@@ -96,13 +96,13 @@ Pitch is a specialized numeric type that maps musical note names to their equiva
 ```py
 $note = C4; ## Middle C
 $sharpNote = F#3; ## F-sharp in the 3rd octave
-print($note + 12); ## Outputs: C5 (one octave up)
+print($note + 12) ## Outputs: C5 (one octave up)
 ```
 
 2. Microtonal and Just Intonation (Advanced): _bell_ supports advanced pitch representations, such as:
 
 ```py
-$pitch = A4 + 50; ## Microtonal adjustment in cents
+$pitch = A4 + 50 ## Microtonal adjustment in cents
 ```
 
 ---
@@ -118,14 +118,14 @@ You can convert between types when needed. For example:
 
 ```py
 $note = C4;
-print(mc2f($note)); ## Outputs: 261.63 Hz
+print(mc2f($note)) ## Outputs: 261.63 Hz
 ```
 
 ### Example: Convert Frequency to Pitch
 
 ```py
 $freq = 440.0; ## A4
-print(f2mc($freq)); ## Outputs: A4
+print(f2mc($freq)) ## Outputs: A4
 ```
 
 ---
@@ -137,7 +137,7 @@ print(f2mc($freq)); ## Outputs: A4
 ```py
 $melody = C4 D4 E4 F4;
 $transposed = $melody + 12; ## Transpose up an octave
-print($transposed); ## Outputs: C5 D5 E5 F5
+print($transposed) ## Outputs: C5 D5 E5 F5
 ```
 
 ### Scaling Rhythms
@@ -145,7 +145,7 @@ print($transposed); ## Outputs: C5 D5 E5 F5
 ```py
 $rhythm = 1/4 1/8 1/8;
 $doubleTime = $rhythm / 2; ## Double the speed
-print($doubleTime); ## Outputs: 1/8 1/16 1/16
+print($doubleTime) ## Outputs: 1/8 1/16 1/16
 ```
 
 ### Applying Frequency Ratios
@@ -153,7 +153,7 @@ print($doubleTime); ## Outputs: 1/8 1/16 1/16
 ```py
 $baseFreq = 440.0; ## A4
 $perfectFifth = 3/2;
-print($baseFreq \* $perfectFifth); ## Outputs: 660.0 (E5)
+print($baseFreq * $perfectFifth) ## Outputs: 660.0 (E5)
 ```
 
 ---
@@ -164,8 +164,8 @@ print($baseFreq \* $perfectFifth); ## Outputs: 660.0 (E5)
 
 1. Create a variable for a note in MIDI:
 
-```
-$note = 60; ## C4
+```py
+$note = 60 ## C4
 ```
 
 2. Transpose the note up by a major third (4 semitones).
@@ -176,7 +176,7 @@ $note = 60; ## C4
 1. Create a list of rhythmic values:
 
 ```py
-$rhythm = 1/2 1/4 1/8;
+$rhythm = 1/2 1/4 1/8
 ```
 
 2. Halve the rhythmic values (double the tempo).
@@ -187,7 +187,7 @@ $rhythm = 1/2 1/4 1/8;
 1. Create a base frequency for A4:
 
 ```py
-$freq = 440.0;
+$freq = 440.0
 ```
 
 2. Use a ratio of `3/2` to calculate the frequency of the perfect fifth above `A4`.
@@ -200,7 +200,7 @@ $freq = 440.0;
 1. Create a melody using pitch names:
 
 ```py
-$melody = C4 E4 G4 B4;
+$melody = C4 E4 G4 B4
 ```
 
 2. Transpose the melody down by an octave using subtraction.
@@ -215,7 +215,7 @@ $melody = C4 E4 G4 B4;
 **A**: Yes, _bell_ handles mixed types gracefully:
 
 ```py
-print(440 * 3/2); ## Outputs: 660.0
+print(440 * 3/2) ## Outputs: 660.0
 ```
 
 ### Q: How are pitches internally represented?
@@ -227,7 +227,7 @@ print(440 * 3/2); ## Outputs: 660.0
 **A**: While rational numbers (fractions) are preferred for rhythms, you can use decimals for less conventional durations:
 
 ```py
-$rhythm = 0.25; ## Equivalent to 1/4
+$rhythm = 0.25 ## Equivalent to 1/4
 ```
 
 ---

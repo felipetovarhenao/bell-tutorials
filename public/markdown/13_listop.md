@@ -24,14 +24,14 @@ The range operator (`...`) is a quick way to create sequential lists, such as sc
    $ratios = 1...8;
    $fundamental = 55;
    $spectrum = $ratios * $fundamental;
-   print($spectrum); ## Outputs: 55 110 165 220 275 330 385 440
+   print($spectrum) ## Outputs: 55 110 165 220 275 330 385 440
    ```
 
 2. Generating a chromatic scale:
 
    ```py
    $notes = 60...72; ## MIDI notes for C4 to B4
-   print($notes); ## Outputs: 60 61 62 ... 72
+   print($notes) ## Outputs: 60 61 62 ... 72
    ```
 
 ---
@@ -50,14 +50,14 @@ The repeat operator (`:*`) repeats a list or sequence a specified number of time
 
 ```py
 $pattern = (C4 D4 E4) :* 3;
-print($pattern); ## Outputs: C4 D4 E4 C4 D4 E4 C4 D4 E4
+print($pattern) ## Outputs: C4 D4 E4 C4 D4 E4 C4 D4 E4
 ```
 
 Note that to repeat the list of pitches, we need to wrap them in parentheses. Otherwise the following happens:
 
 ```py
 $pattern = C4 D4 E4 :* 3;
-print($pattern); ## Outputs: C4 D4 E4 E4 E4
+print($pattern) ## Outputs: C4 D4 E4 E4 E4
 ```
 
 ---
@@ -108,7 +108,7 @@ $progression = $subdominant;
 1. Create a list of rhythmic values:
 
 ```py
-$rhythm = 1/4 1/8 1/8;
+$rhythm = 1/4 1/8 1/8
 ```
 
 2. Use the `:*` operator to repeat the rhythm four times.
@@ -129,7 +129,7 @@ A: No, the range operator only generates ascending sequences. For descending seq
 
 ```py
 $descending = rev(60...72);
-print($descending); ## Outputs: 72 71 70 ... 60
+print($descending) ## Outputs: 72 71 70 ... 60
 ```
 
 ### Q: What happens if I repeat a list zero times?
@@ -138,7 +138,7 @@ A: Repeating a list zero times returns an empty list (`null`):
 
 ```py
 $empty = C4 E4 G4 :* 0;
-print($empty); ## Outputs: null
+print($empty) ## Outputs: null
 ```
 
 ### Q: Can I combine operators with nested lists?
@@ -147,7 +147,7 @@ A: Yes, list operators work with nested lists as well. For example:
 
 ```py
 $nested = [C4 [E4 G4]] :* 2;
-print($nested); ## Outputs: [C4 [E4 G4]] [C4 [E4 G4]]
+print($nested) ## Outputs: [C4 [E4 G4]] [C4 [E4 G4]]
 ```
 
 ---

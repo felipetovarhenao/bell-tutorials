@@ -197,7 +197,7 @@ These operators are particularly useful for substituting `if` statements involvi
 1. Create a variable for a note in MIDI:
 
 ```py
-$note = 67; ## G4
+$note = 67 ## G4
 ```
 
 2. Use an `if` condition to check if the note is below 60.
@@ -207,7 +207,7 @@ $note = 67; ## G4
 
 1. Create a melody:
    ```py
-   $melody = 58 60 62 65; ## MIDI notes
+   $melody = 58 60 62 65 ## MIDI notes
    ```
 2. Loop through the melody and assign dynamics based on note height:
    - Notes below 60: "pp"
@@ -219,7 +219,7 @@ $note = 67; ## G4
 1. Create a variable for a rhythmic duration:
 
 ```py
-$duration = 1/8;
+$duration = 1/8
 ```
 
 2. Use an if condition to check if the duration is shorter than 1/4. If true, print "Fast rhythm". Otherwise, print "Slow rhythm".
@@ -229,7 +229,7 @@ $duration = 1/8;
 1. Create a melody:
 
 ```py
-$melody = C4 D4 E4 F4 G4;
+$melody = C4 D4 E4 F4 G4
 ```
 
 2. Use a loop and conditionals to:
@@ -248,8 +248,8 @@ $melody = C4 D4 E4 F4 G4;
 ```py
 $note = 62;
 if $note > 60 then (
-    if $note < 64 then print("D4 or E4");
-);
+    if $note < 64 then print("D4 or E4")
+)
 ```
 
 ### Q: What happens if none of the conditions are true?
@@ -261,7 +261,7 @@ if $note > 60 then (
 **A**: Yes, you can write simple conditionals in one line:
 
 ```py
-if $note > 64 then print("Above E4"); else print("Below or at E4");
+if $note > 64 then print("Above E4"); else print("Below or at E4")
 ```
 
 ---

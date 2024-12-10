@@ -12,9 +12,7 @@ A key-value pair in _bell_ is a data structure that associates a key with a valu
 
 ### Syntax:
 
-```c
-[ <key1> <value1> ] [ <key2> <value2> ] ... [ <keyN> <valueN> ]
-```
+`[ <key1> <value1> ] [ <key2> <value2> ] ... [ <keyN> <valueN> ]`
 
 ### Example:
 
@@ -51,7 +49,7 @@ You can retrieve a value associated with a key using the dot operator (`.`).
 ```py
 $chords = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5];
 print($chords.'tonic'); ## Outputs: C4 E4 G4
-print($chords.'dominant'); ## Outputs: G4 B4 D5
+print($chords.'dominant') ## Outputs: G4 B4 D5
 ```
 
 ---
@@ -65,7 +63,7 @@ You can update key-value pairs through variable assignments.
 ```py
 $chords = ['chord1' C4 E4 G4] ['chord2' D4 F4 A4];
 $chords."chord1" = D4 G4 B4;
-print($chords); ## Outputs: ['chord1' D4 G4 B4] ['chord2' D4 F4 A4]
+print($chords) ## Outputs: ['chord1' D4 G4 B4] ['chord2' D4 F4 A4]
 ```
 
 To update single values, you can also combine the dot (`.`) and access (`:`) operators.
@@ -73,7 +71,7 @@ To update single values, you can also combine the dot (`.`) and access (`:`) ope
 ```py
 $chords = ['chord1' C4 E4 G4] ['chord2' D4 F4 A4];
 $chords."chord2":3 = Ab4;
-print($chords."chord2"); ## Outputs: D4 F4 Ab4
+print($chords."chord2") ## Outputs: D4 F4 Ab4
 ```
 
 ---

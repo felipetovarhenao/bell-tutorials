@@ -23,7 +23,7 @@ Syntax:
 
 ```py
 $melody = C4 D4 E4 F4;
-for $note in $melody do print($note);
+for $note in $melody do print($note)
 ```
 
 ##### Output:
@@ -51,8 +51,8 @@ while <condition> <do|collect> <statement>;
 $note = 60; ## C4
 while $note < 72 collect (
     print($note);
-    $note += 2; ## Transpose up by a major second
-);
+    $note += 2 ## Transpose up by a major second
+)
 ```
 
 #### Output:
@@ -74,7 +74,7 @@ while $note < 72 collect (
 
 ```py
 $melody = C4 D4 E4 F4;
-for $note in $melody collect $note + 12; ## Transpose up an octave
+for $note in $melody collect $note + 12 ## Transpose up an octave
 ```
 
 #### Output:
@@ -87,7 +87,7 @@ C5 D5 E5 F5
 
 ```py
 $rhythm = 1/4 1/8 1/8;
-for $value in $rhythm collect $value * 2; ## Double each rhythm duration
+for $value in $rhythm collect $value * 2 ## Double each rhythm duration
 ```
 
 #### Output:
@@ -107,7 +107,7 @@ $scale = while $note <= 72 collect (
     $note += 2; ## Step by a major second
     $current
 );
-print($scale); ## Outputs: 60 62 64 66 68 70 72
+print($scale) ## Outputs: 60 62 64 66 68 70 72
 ```
 
 ---
@@ -120,7 +120,7 @@ print($scale); ## Outputs: 60 62 64 66 68 70 72
 $melody = C4 D4 E4 F4;
 for $note in $melody do (
     print($note);
-) collect $note + 12; ## Collects transposed notes
+) collect $note + 12 ## Collects transposed notes
 ```
 
 ## Exercises
@@ -130,7 +130,7 @@ for $note in $melody do (
 1. Create a melody:
 
 ```py
-$melody = C4 D4 E4 F4 G4;
+$melody = C4 D4 E4 F4 G4
 ```
 
 2. Use a for loop to transpose each note up by a perfect fifth (7 semitones) and collect the result.
@@ -140,7 +140,7 @@ $melody = C4 D4 E4 F4 G4;
 1. Create a list of rhythmic values:
 
 ```py
-$rhythms = 1/4 1/8 1/16;
+$rhythms = 1/4 1/8 1/16
 ```
 
 2. Use a for loop to double the value of each rhythm and collect the results.
@@ -156,7 +156,7 @@ $rhythms = 1/4 1/8 1/16;
 1. Create a list of root notes:
 
 ```py
-$roots = C4 F4 G4;
+$roots = C4 F4 G4
 ```
 
 2. Use a for loop to generate triads for each root note:
@@ -174,7 +174,7 @@ $roots = C4 F4 G4;
 ```py
 $notes = C4 D4 E4;
 for $note in $notes do print($note); ## Outputs each note, but no result is collected
-for $note in $notes collect $note + 12; ## Collects transposed notes
+for $note in $notes collect $note + 12 ## Collects transposed notes
 ```
 
 ### Q: How do I prevent infinite loops?
@@ -183,7 +183,7 @@ for $note in $notes collect $note + 12; ## Collects transposed notes
 
 ```py
 $x = 0;
-while $x < 10 do $x += 1; ## Stops when $x reaches 10
+while $x < 10 do $x += 1 ## Stops when $x reaches 10
 ```
 
 ### Q: Can I loop over nested lists?
@@ -193,8 +193,8 @@ while $x < 10 do $x += 1; ## Stops when $x reaches 10
 ```py
 $progression = [[C4 E4 G4] [F4 A4 C5]];
 for $chord in $progression do (
-    for $note in $chord do print($note);
-);
+    for $note in $chord do print($note)
+)
 ```
 
 ---
