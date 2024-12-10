@@ -223,7 +223,7 @@ If either operand is a decimal, it evaluates to infinity (`inf` or `-inf`):
 
 ```py
 $x = 3./0; ## Output: inf
-$x = -3/0.; ## Output: -inf
+$x = -3/0. ## Output: -inf
 ```
 
 Either way, you probably want to always make sure you're not diving by zero, which might lead to undesired results.

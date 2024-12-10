@@ -83,7 +83,7 @@ print($chords."chord2") ## Outputs: D4 F4 Ab4
 1. Create a _llll_ of _key-value_ pairs for a chord progression:
 
 ```py
-$progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5];
+$progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5]
 ```
 
 2. Use `.` and `:` operators to access and print:
@@ -96,7 +96,7 @@ $progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5]
 1. Create a _llll_ of _key-value_ pairs for a chord progression:
 
 ```py
-$progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5];
+$progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5]
 ```
 
 2. Use the `.` and `:` operators to change the progression from major to minor. You should only update the third of each chord.
@@ -110,7 +110,7 @@ $progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5]
 **A**: Keys can contain special characters but not spaces unless enclosed in quotes:
 
 ```py
-$example = ['key1' value1] ['key with spaces' value2];
+$example = ['key1' value1] ['key with spaces' value2]
 ```
 
 ### Q: What happens when I try to access a key that doesn't exist?
