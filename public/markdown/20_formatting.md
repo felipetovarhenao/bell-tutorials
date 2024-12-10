@@ -29,7 +29,7 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 #### Without Indentation (Hard to Read):
 
 ```py
-if $note > 60 then ($note -= 12;print($note);) else ($note += 12;print($note);)
+if $note > 60 then ($note -= 12;print($note)) else ($note += 12;print($note))
 ```
 
 #### With Indentation (Readable):
@@ -37,10 +37,10 @@ if $note > 60 then ($note -= 12;print($note);) else ($note += 12;print($note);)
 ```py
 if $note > 60 then (
     $note -= 12;
-    print($note);
+    print($note)
 ) else (
     $note += 12;
-    print($note);
+    print($note)
 )
 ```
 
@@ -49,7 +49,7 @@ if $note > 60 then (
 #### Without Indentation:
 
 ```py
-for $note in C4 D4 E4 collect $note + 12; print($note);
+for $note in C4 D4 E4 collect $note + 12; print($note)
 ```
 
 #### With Indentation:
@@ -68,7 +68,7 @@ for $note in C4 D4 E4 collect (
 
 ### 1. Use Descriptive Variable Names:
 
-- Avoid $a, $b, $x. Instead, use $melody, $note, or $scale.
+- Avoid `$a`, `$b`, `$x`. Instead, use `$melody`, `$note`, or `$scale`.
 
 ### 2. Break Long Lines:
 
@@ -77,7 +77,7 @@ for $note in C4 D4 E4 collect (
 ```py
 $pattern = (
 	$melody + $rhythms :* 4
-);
+)
 ```
 
 ### 3. Avoid Excessive Nesting:
@@ -91,7 +91,7 @@ print((($melody + 12) * 2)::1);
 ## Better:
 $transposed = $melody + 12;
 $scaled = $transposed * 2;
-print($scaled::1);
+print($scaled::1)
 ```
 
 ---
@@ -103,7 +103,7 @@ print($scaled::1);
 The following code is hard to read. Reformat it with proper indentation and comments:
 
 ```py
-if $note > 60 then ($note -= 12;print($note);) else ($note += 12;print($note);)
+if $note > 60 then ($note -= 12;print($note)) else ($note += 12;print($note))
 ```
 
 ### Exercise 2: Organizing Code with Comments
