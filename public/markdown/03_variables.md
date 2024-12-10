@@ -141,6 +141,8 @@ $name = "bell programming" ## Assign a text symbol
 $notes = C4 E4 G4 ## Assign a list of pitches
 ```
 
+> Each of these data types — numbers, symbols, and lists — will be covered in more detail soon.
+
 ---
 
 ## Reassigning Variables
