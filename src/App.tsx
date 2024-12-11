@@ -28,7 +28,6 @@ const App: React.FC = () => {
       "addresses.md",
       "keys.md",
       "listop.md",
-      "compassign.md",
       "conditionals.md",
       "loops.md",
       "parens.md",

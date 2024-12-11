@@ -151,8 +151,6 @@ $intervals = 2 4 5; ## Three intervals
 print($pitches + $intervals) ## Outputs: 62 66 (extra interval is discarded)
 ```
 
-##### Nested Lists:
-
 The same principle applies to nested lists. If their structures do not align, you might get unexpected results.
 
 ```py
@@ -160,6 +158,28 @@ $pitches = [60 64] [67]; ## Lengths of 2 and 1
 $intervals = [2 4] [5 7]; ## Lengths of 2 and 2
 print($pitches + $intervals) ## Outputs: [60+2 64+4] [67+5 67+7] (many-to-many and one-to-many matching)
 ```
+
+---
+
+## Compound Assignments
+
+In _bell_, as in many other programming languages, compound assignments are a concise way to update the value of a variable by applying an operation and reassigning the result to the same variable.
+
+The syntax follows this pattern:
+
+`<variable> <operator>= <expression>`
+
+Here are the common compound assignment operators:
+
+| Operator | Meaning             | Example   | Equivalent to |
+| -------- | ------------------- | --------- | ------------- |
+| `+=`     | Add and assign      | `$x += 3` | `$x = $x + 3` |
+| `-=`     | Subtract and assign | `$y -= 5` | `$y = $y - 5` |
+| `*=`     | Multiply and assign | `$z *= 2` | `$z = $z * 2` |
+| `/=`     | Divide and assign   | `$a /= 4` | `$a = $a / 4` |
+| `%=`     | Modulo and assign   | `$b %= 3` | `$b = $b % 3` |
+
+For example, if you want to increase a variable by 5, instead of writing `$x = $x + 5`, you can write `$x += 5`. This makes the code shorter and easier to read.
 
 ---
 
