@@ -33,7 +33,7 @@ const App: React.FC = () => {
       "parens.md",
       "userfunctions.md",
       "formatting.md",
-      "nextsteps.md",
+      // "nextsteps.md",
     ];
 
     getMarkdownInfo(markdownPaths.map(formatPaths)).then((lessons) => {
