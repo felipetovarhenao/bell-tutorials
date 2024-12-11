@@ -14,7 +14,7 @@ const Navbar = ({ prev, next }: NavbarProps) => {
         <div className="nav-item">
           <Link to={"/" + prev.route} className="nav-link">
             <Icon icon="material-symbols:arrow-back-ios-rounded" className="nav-icon" />
-            <span>{prev.title}</span>
+            <span className="nav-link-name">{prev.title}</span>
           </Link>
         </div>
       ) : (
@@ -30,7 +30,7 @@ const Navbar = ({ prev, next }: NavbarProps) => {
       {next ? (
         <div className="nav-item">
           <Link to={"/" + next.route} className="nav-link">
-            <span>{next.title}</span>
+            <span className="nav-link-name">{next.title}</span>
             <Icon icon="material-symbols:arrow-forward-ios-rounded" className="nav-icon" />
           </Link>
         </div>
