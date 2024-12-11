@@ -10,14 +10,14 @@ Numbers are central to programming, and _bell_ provides a variety of numeric typ
 
 In _bell_, there are four types of numeric data.
 
-| Numeric Types | Abbreviation | Description                 | Examples           |
-| ------------- | ------------ | --------------------------- | ------------------ |
-| integer       | `int`        | Whole numbers               | `60`, `4`, `100`   |
-| float         | `float`      | Numbers with decimal points | `3.14159`, `440.0` |
-| rational      | `rat`        | Fractional values           | `1/4`, `3/2`       |
-| pitch         | `pitch`      | Musical pitch specification | `C4`, `A4`, `G#3`  |
+| Numeric Types     | Abbreviation | Description                 | Examples           |
+| ----------------- | ------------ | --------------------------- | ------------------ |
+| integer           | `int`        | Whole numbers               | `60`, `4`, `100`   |
+| float (or _real_) | `float`      | Numbers with decimal points | `3.14159`, `440.0` |
+| rational          | `rat`        | Fractional values           | `1/4`, `3/2`       |
+| pitch             | `pitch`      | Musical pitch specification | `C4`, `A4`, `G#3`  |
 
-We can use the `is` function to verify the data type of any value in _bell_, including numeric data types.
+We can use the `is` function to verify the data type of any value in _bell_, including numeric data types. Given a value, `is` returns the data type of the value as a symbol.
 
 ---
 
@@ -28,10 +28,10 @@ Integers are whole numbers without decimal points.
 ### Example
 
 ```py
-$note = 60; ## MIDI value for C4
-$interval = 7; ## Perfect fifth
-print(is($note) is($interval)); ## Outputs: int int
-print($note + $interval) ## Outputs: 67 (G4)
+$a = 1;
+$b = 20;
+$c = -123;
+print(is($a) is($b) is($c)) ## Outputs: integer integer integer
 ```
 
 ---
@@ -43,10 +43,9 @@ Floats, also referred to as _real_ numbers, are numbers with decimal points, all
 ### Example
 
 ```py
-$freq = 440.0; ## Frequency of A4
-$ratio = 1.5; ## Just fifth ratio
-print(is($freq) is($ratio)); ## real real
-print($freq * $ratio) ## Outputs: 660.0 (E5)
+$freq = 440.0;
+$pi = 3.14169;
+print(is($freq) is($pi)) ## real real
 ```
 
 > In _bell_, _real_ is the same as the `float` data type.
@@ -61,20 +60,19 @@ Rationals represent fractional values, which are particularly useful for represe
 
 `<num>/<den>`
 
-### Example:
+### Example
 
 ```py
-$rhythm = 1/4; ## Quarter note
-$mul = 2; ## multiple
-print(is($rhythm) is($mul)) ## rat int
-print($rhythm * 2) ## Outputs: 1/2 (half note)
+$third = 5/4;
+$fifth = 3/2;
+print(is($third) is($fifth)) ## Outputs: rational integer
 ```
 
 ---
 
 ## 4. Pitch
 
-In _bell_, the `pitch` data type is a specialized numeric type that uses musical note name syntax as a placeholder for the equivalent in MIDI cents. This allows for more a intuitive way to specify pitch data over raw numbers.
+In _bell_, the `pitch` data type is a specialized numeric type that uses scientific pitch notation as a placeholder for the equivalent value in MIDI cents. This allows for more a intuitive way to specify pitch data over raw numbers.
 
 ### Basic Syntax
 
@@ -96,7 +94,7 @@ Where the available accidentals are:
 
 > Notice that there is no option for the double-flat accidental. To do this, we simply use `b` twice.
 
-#### Examples:
+#### Examples
 
 | Syntax | Description          | MIDI cents value |
 | ------ | -------------------- | ---------------- |
@@ -111,7 +109,7 @@ Where the available accidentals are:
 | `Dv5`  | D eighth-flat        | `6175`           |
 | `D#q5` | D 3/4 sharp          | `6350`           |
 
->
+> The careful reader will notice something particular here. In _bell_ (and _bach_ for that matter), middle C is not `C4` as it typically is, but rather `C5`. When using pitch syntax, always make sure to double check the octave you assign to each pitch.
 
 ### Advanced Syntax
 
@@ -172,7 +170,7 @@ print($x is($x)) ## Outputs: 9/4 rational
 
 ---
 
-## Numeric Operations in Musical Contexts
+## Numeric Operations
 
 As the following examples illustrate, it's possible to mix numeric data types in expressions.
 
@@ -188,9 +186,9 @@ print($transposed) ## Outputs: C5 D5 E5 F5
 ### Scaling Rhythms
 
 ```py
-$rhythm = 1/4 1/8 1/8;
-$faster = $rhythm / 2; ## Double the speed
-print($faster) ## Outputs: 1/8 1/16 1/16
+$quarter = 1/4;
+$eighth = $quarter / 2; ## Double the speed
+print($eighth) ## Outputs: 1/8
 ```
 
 ### Applying Frequency Ratios
@@ -210,11 +208,11 @@ print($freq * $ratio) ## Outputs: 660.0 (E5)
 1. Create a variable for a note in MIDI cents:
 
 ```py
-$pitch = 6000 ## C4
+$pitch = 6000 ## C5
 ```
 
-2. Transpose the note up by a major third (4 semitones).
-3. Cast the resulting MIDI cents value as `pitch` and print it.
+2. Transpose the note up by a major third using simple addition (`+`). Remember that MIDI cents work the same as MIDI values, except they're scaled by 100.
+3. Cast the resulting MIDI cents value as `pitch` and print it. You should get `E5` as a result.
 
 ### Exercise 2: Duration Value
 
@@ -225,14 +223,14 @@ $tempo = 60; ## beats per minute
 $value = 3/8 ## dotted quarter note
 ```
 
-2. Calculate the duration of `$value` in milliseconds.
-3. Cast the result as `float` and print the result.
+2. Calculate the duration of `$value` in milliseconds using division (`/`) and multiplication (`*`).
+3. Cast the result as `float` and print the result. You should get `375.` as a result.
 
 ### Exercise 3: Scale Specification
 
 1. Using `pitch` syntax, specify the pitch values for a Db major triad, using a different variable for each pitch (e.g., `$root`, `$third`, `$fifth`):
 
-2. For each pitch, cast the value as `int` and print it.
+2. For each of the variables, cast the value as `int` and print it.
 
 ---
 
@@ -248,7 +246,7 @@ print(440 * 3/2) ## Outputs: 660
 
 ### Q: How are pitches internally represented?
 
-**A**: Pitches are represented as midicents (MIDI values scaled by 100). For example, `C4` is `6000` MIDI cents.
+**A**: Pitches are represented as midicents (MIDI values scaled by 100). For example, `C5` is `6000` (`60 * 100`) MIDI cents.
 
 ### Q: Can I use decimals instead of rationals?
 
