@@ -49,14 +49,12 @@ A dedicated text editor is essential, preferrably [Visual Studio Code](https://c
 
 ### 2. _bellplay~_
 
-1. Download the latest version of _bellplay~_ [here](https://github.com/felipetovarhenao/bellplay/releases/latest). This is what we will use to _run_ our _bell_ code.
+1. Download the latest version of _bellplay~_ [here](https://github.com/felipetovarhenao/bellplay/releases/latest). This is what we will use to _run_ our _bell_ code:
 
-- **MacOS**: Download the `.zip` file, uncompress it, and place the standalone application (`.app`) in your _Applications_ folder.
-- **Windows**: Since there’s no standalone executable for Windows to this date, you’ll need to run _bellplay~_ via its source code:
-
-  1.  Download and install [Cycling 74’s Max 8](https://cycling74.com/downloads/older) (_bellplay~_ has not been tested yet in _Max 9_). The free trial version should work fine.
-
-  2.  Open the `bellplay.maxproj` file inside the source code folder to launch _bellplay~_.
+   - **MacOS**: Download the `.zip` file, uncompress it, and place the standalone application (`.app`) in your _Applications_ folder.
+   - **Windows**: Since there’s no standalone executable for Windows to this date, you’ll need to run _bellplay~_ via its source code:
+     1. Download and install [Cycling 74’s Max 8](https://cycling74.com/downloads/older) (_bellplay~_ has not been tested yet in _Max 9_). The free trial version should work fine.
+     2. Open the `bellplay.maxproj` file inside the source code folder to launch _bellplay~_.
 
 2. In _bellplay~_:
    - Click on **Open Documentation** in the top right corner.
