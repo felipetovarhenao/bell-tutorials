@@ -2,7 +2,7 @@
 
 > Creating Custom Functionality
 
-Functions allow us to write reusable blocks of code, but until now, we've only worked with built-in functions. In this tutorial, we’ll learn how to define our own functions in bell.
+Until now, we've only worked with built-in functions in _bell_. In this tutorial, we’ll learn how to define our own functions.
 
 ---
 
