@@ -29,9 +29,8 @@ Integers are whole numbers without decimal points.
 
 ```py
 $a = 1;
-$b = 20;
-$c = -123;
-print(is($a) is($b) is($c)) ## Outputs: integer integer integer
+$b = -7;
+print(is($a) is($b)) ## Outputs: integer integer integer
 ```
 
 ---
@@ -250,7 +249,7 @@ print(440 * 3/2) ## Outputs: 660
 
 ### Q: Can I use decimals instead of rationals?
 
-**A**: While rational numbers (fractions) are very useful for representing frequency ratios and proportional rhythmic values, you can certainly use decimals to do so - especially for values that are less amenable for rational representation:
+**A**: While rational numbers (fractions) are very useful for representing frequency ratios and proportional rhythmic values, you can certainly use decimals to do so - especially for values that are less amenable to rational representation:
 
 ```py
 $value = rat(1.414) ## Outputs: 707/500
