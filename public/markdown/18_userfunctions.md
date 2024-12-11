@@ -18,7 +18,6 @@ Here’s the general syntax for creating a function:
 
 Let’s break this down:
 
-- $function_name: The variable holding your function.
 - **Arguments**:
   - `$arg1`, `$arg2`, `...`, `$argN`: The inputs your function accepts.
   - You can set default values for arguments using the assignment operator (`=`).
