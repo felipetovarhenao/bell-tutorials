@@ -144,6 +144,12 @@ table {
     vertical-align: middle;
     justify-content: center;
     align-items: center;
+    &.left-item {
+      text-align: left;
+    }
+    &.right-item {
+      text-align: right;
+    }
     .nav-link {
       display: inline-flex;
       align-items: center;

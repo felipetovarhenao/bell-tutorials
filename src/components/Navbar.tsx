@@ -11,7 +11,7 @@ const Navbar = ({ prev, next }: NavbarProps) => {
   return (
     <div className="banner">
       {prev ? (
-        <div className="nav-item">
+        <div className="nav-item left-item">
           <Link to={"/" + prev.route} className="nav-link">
             <Icon icon="material-symbols:arrow-back-ios-rounded" className="nav-icon" />
             <span className="nav-link-name">{prev.title}</span>
@@ -28,7 +28,7 @@ const Navbar = ({ prev, next }: NavbarProps) => {
         </div>
       }
       {next ? (
-        <div className="nav-item">
+        <div className="nav-item right-item">
           <Link to={"/" + next.route} className="nav-link">
             <span className="nav-link-name">{next.title}</span>
             <Icon icon="material-symbols:arrow-forward-ios-rounded" className="nav-icon" />
