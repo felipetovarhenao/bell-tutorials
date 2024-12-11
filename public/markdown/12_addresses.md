@@ -199,7 +199,7 @@ print($x:$a) ## "Address can't be null" error
 $x = [[1 2] [3 4]];
 print($x:1); ## Outputs: [[1 2] [3 4]]
 print($x::1); ## Outputs: [1 2] [3 4]
-$x:(2) = [5 6];
+$x:2 = [5 6];
 print($x) ## Outputs: [[1 2] [5 6]]
 ```
 
