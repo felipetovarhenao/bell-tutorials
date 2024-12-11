@@ -123,6 +123,7 @@ table {
 }
 .toc-list {
   list-style-type: none;
+  font-size: large;
 }
 .banner {
   display: flex;
