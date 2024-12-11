@@ -14,7 +14,7 @@ A user-defined function is a custom block of code that you define and can reuse 
 
 Here’s the general syntax for creating a function:
 
-`$function_name = $arg1 [= <default1>], $arg2 [= <default2>], ... $argN [= <defaultN>] -> <function_body>`
+`$arg1 [= <default1>], $arg2 [= <default2>], ... $argN [= <defaultN>] -> <function_body>`
 
 Let’s break this down:
 
