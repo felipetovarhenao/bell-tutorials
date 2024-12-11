@@ -112,11 +112,14 @@ button:focus-visible {
 }
 .inline-code {
   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-  font-size: medium;
   white-space: pre;
   overflow-wrap: break-word;
   text-wrap: wrap;
 }
+b.inline-code {
+  font-size: medium;
+}
+
 table {
   border-spacing: 15px;
 }
