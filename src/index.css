@@ -1,7 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Lato, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: large;
+  word-spacing: 1px;
 
   color-scheme: light dark;
   color: #1c1c20de;
@@ -54,7 +56,7 @@ button:hover {
   border-color: #646cff;
 }
 .header {
-  font-family: "Lobster", sans-serif;
+  font-family: "Lobster Two", sans-serif;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -110,6 +112,7 @@ button:focus-visible {
 }
 .inline-code {
   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  font-size: medium;
   white-space: pre;
   overflow-wrap: break-word;
   text-wrap: wrap;
