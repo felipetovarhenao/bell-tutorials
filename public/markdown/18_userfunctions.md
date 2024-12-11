@@ -90,7 +90,7 @@ A few things to consider when it comes to scoping in user-defined functions:
 
 - Local variables defined _within_ a function are not accessible outside of it
 - Local variables defined _outside_ of a function are not available within it, unless explicitly referenced.
-- Only global variables can be accessed and modified from within a function definition.
+- Global variables can be accessed and modified from within a function definition.
 
 ```py
 $localvar = "I'm a local variable!";
