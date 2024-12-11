@@ -86,7 +86,11 @@ print($add(5 @y 20)) ## Outputs: 25
 
 ## Scope
 
-The scope of variables in a function is limited to its body. Local variables within a function are not accessible outside of it, and local variables outside of it are not available within it, unless if explicitly referenced. Only global variables can be accessed and modified from within a function definition.
+A few things to consider when it comes to scoping in user-defined functions:
+
+- Local variables defined _within_ a function are not accessible outside of it
+- Local variables defined _outside_ of a function are not available within it, unless explicitly referenced.
+- Only global variables can be accessed and modified from within a function definition.
 
 ```py
 $localvar = "I'm a local variable!";
@@ -115,7 +119,7 @@ $myfunc = $x -^ $outer -> $x + $outer;
 print($myfunc(10)) ## Outputs: 15
 ```
 
-You can lift multiple variables:
+You can also lift multiple variables:
 
 ```py
 $var1 = 2;
@@ -136,7 +140,7 @@ print($multiply(4, 5)) ## Outputs: 23
 $area = $length, $width -> $length * $width
 ```
 
-2. Test it with $area(5, 10).
+2. Test it with `$area(5, 10)`.
 
 ### Exercise 2: Default Argument Values
 
@@ -146,7 +150,7 @@ $area = $length, $width -> $length * $width
 $add = $x, $y = 5 -> $x + $y;
 ```
 
-2. Test it with $add(10) and $add(10, 20).
+2. Test it with `$add(10)` and `$add(10, 20)`.
 
 ### Exercise 3: Using Lifted Variables
 
@@ -160,10 +164,10 @@ $scale = 3;
 2. Create a function that uses these variables:
 
 ```py
-$transform = $x -^ $offset, $scale -> ($x + $offset) * $scale;
+$transform = $x -^ $offset, $scale -> ($x + $offset) * $scale
 ```
 
-3. Test it with $transform(4).
+3. Test it with `$transform(4)`.
 
 ---
 
@@ -171,15 +175,15 @@ $transform = $x -^ $offset, $scale -> ($x + $offset) * $scale;
 
 ### Q: What happens if I omit an argument without a default value?
 
-**A**: The function evaluates to null.
+**A**: That value will default to `null`, likely causing the overall function to evaluate to `null`.
 
 ### Q: Can a function return multiple values?
 
-**A**: Yes, return a llll:
+**A**: Yes, simply return a _llll_:
 
 ```py
-$multi_return = $x -> $x $x ** 2 $x ** 3;
-print($multi_return(2)) ## Outputs: 2 4 8
+$powers = $x -> $x $x ** 2 $x ** 3;
+print($powers(2)) ## Outputs: 2 4 8
 ```
 
 ---
