@@ -30,7 +30,6 @@ const App: React.FC = () => {
       "listop.md",
       "conditionals.md",
       "loops.md",
-      "parens.md",
       "userfunctions.md",
       "formatting.md",
       "nextsteps.md",
@@ -59,8 +58,9 @@ const App: React.FC = () => {
         <Route path="/reference" element={<FunctionReference />} />
         <Route path="/pseudovariables" element={<MarkdownRenderer markdownFile={"markdown/pseudovariables.md"} />} />
       </Routes>
+      <hr style={{ marginTop: "25px", marginBottom: "25px" }} />
       <footer style={{ width: "100%", paddingBottom: "25px", textAlign: "center" }}>
-        <i>{new Date().getFullYear()} @ Felipe Tovar-Henao</i>
+        <i>{new Date().getFullYear()} © Felipe Tovar-Henao</i>
       </footer>
     </Router>
   );

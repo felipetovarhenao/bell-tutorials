@@ -2,7 +2,7 @@
 
 > _Writing Clean and Readable Code_
 
-In _bell_, proper indentation and code structure aren't strictly required by the language, but they are essential for readability and maintainability, especially when your programs become more complex. Clean code helps you and others understand your musical logic, debug errors, and extend functionality efficiently.
+In _bell_, proper indentation and code structure aren't strictly required by the language, but they are essential for readability and maintainability, especially when your programs become more complex. Clean code helps you and others understand your musical, debug errors, and extend functionality efficiently.
 
 ---
 
@@ -29,7 +29,7 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 #### Without Indentation (Hard to Read):
 
 ```py
-if $note > 60 then ($note -= 12;print($note)) else ($note += 12;print($note))
+if $note > 60 then ($note-=12;print($note)) else ($note += 12;print($note))
 ```
 
 #### With Indentation (Readable):
@@ -49,17 +49,16 @@ if $note > 60 then (
 #### Without Indentation:
 
 ```py
-for $note in C4 D4 E4 collect $note + 12; print($note)
+for $note in C4 D4 E4 collect ($note+12;print($note))
 ```
 
 #### With Indentation:
 
 ```py
 for $note in C4 D4 E4 collect (
-    $transposed = $note + 12;
-    print($transposed);
-    $transposed
-);
+    $note + 12;
+    print($note)
+)
 ```
 
 ---
@@ -68,7 +67,7 @@ for $note in C4 D4 E4 collect (
 
 ### 1. Use Descriptive Variable Names:
 
-- Avoid `$a`, `$b`, `$x`. Instead, use `$melody`, `$note`, or `$scale`.
+- Avoid `$a`, `$b`, `$x` for meaningful variables. Instead, use more descriptive language, such as `$melody`, `$note`, or `$scale`.
 
 ### 2. Break Long Lines:
 
@@ -76,7 +75,7 @@ for $note in C4 D4 E4 collect (
 
 ```py
 $pattern = (
-	$melody + $rhythms :* 4
+	$melody + $transposition :* 4
 )
 ```
 
@@ -96,23 +95,13 @@ print($scaled::1)
 
 ---
 
-## Exercises
-
-### Exercise 1: Refactor for Readability
+## Exercise
 
 The following code is hard to read. Reformat it with proper indentation and comments:
 
 ```py
 if $note > 60 then ($note -= 12;print($note)) else ($note += 12;print($note))
 ```
-
-### Exercise 2: Organizing Code with Comments
-
-Write a program that:
-
-1. Creates a major scale.
-2. Transposes it up an octave.
-3. Labels each step with a comment explaining what it does.
 
 ---
 
@@ -132,4 +121,4 @@ Write a program that:
 
 ---
 
-Proper indentation and clean code are the foundation of effective programming. By following these guidelines, you’ll write code that’s easier to read, debug, and share, making your musical programming more efficient and enjoyable.
+Proper indentation and clean code are the foundation of effective programming. By following these guidelines, you’ll write code that’s easier to read, debug, and share, making programming experience more efficient and enjoyable.

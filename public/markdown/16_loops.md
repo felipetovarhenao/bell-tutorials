@@ -199,4 +199,4 @@ for $chord in $progression do (
 
 ---
 
-Loops are incredibly powerful for creating and manipulating musical data, whether you’re iterating through melodies, generating scales, or building chord progressions. Next, we’ll explore parentheses in compound statements, which allow you to group and organize your code effectively.
+Loops are incredibly powerful for creating and manipulating musical data, whether you’re iterating through melodies, generating scales, or building chord progressions. Next, we’ll explore user-defined functions, the cornerstone of modular and reusable code in _bell_.
