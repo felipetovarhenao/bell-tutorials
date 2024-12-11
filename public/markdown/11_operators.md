@@ -1,6 +1,6 @@
 # Operators
 
-> _Arithmetic, Logical, and Beyond_
+> _Performing Logic, Arithmetic, and Transformations_
 
 Operators are the foundation of performing calculations, comparisons, and logical operations in _bell_. They allow you to work with numbers, lists, and symbols. In this section, you’ll learn how to use basic operators and see how they can be applied to musical contexts.
 

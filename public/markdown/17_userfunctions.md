@@ -1,6 +1,6 @@
 # User-Defined Functions
 
-> Creating Custom Functionality
+> Creating Custom Functionalities
 
 Until now, we've only worked with built-in functions in _bell_. In this tutorial, we’ll learn how to define our own functions.
 

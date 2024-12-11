@@ -1,5 +1,7 @@
 # Getting started
 
+> Your First Step into Programming with _bell_
+
 This series of tutorials is designed to introduce musicians, especially those with little to no prior programming experience, to the basics of computer programming in _bell_. Whether or not you have experience with text-based programming — or even visual programming environments such as _Cycling 74's_ [Max](https://cycling74.com/) — these tutorials aim to guide you step-by-step through the fundamentals.
 
 ---

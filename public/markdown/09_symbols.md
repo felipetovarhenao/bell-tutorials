@@ -1,6 +1,6 @@
 # Symbols
 
-> _Working with Text in Musical Contexts_
+> _Making Data More Readable_
 
 In _bell_, symbols are a data type used to represent textual information. Symbols are the equivalent of strings in other programming languages, and they’re particularly useful for, among other things, structuring data in a more human-readable way.
 

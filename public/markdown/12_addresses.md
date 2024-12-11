@@ -1,6 +1,6 @@
 # Addresses
 
-> _: Accessing Elements in Nested Data Structures_
+> _Accessing Data in Nested Data Structures_
 
 When working with _lllls_ (lists and nested lists), you'll often need to access specific elements within it. In _bell_, addresses allow you to pinpoint and retrieve elements from both simple and complex structures. This is particularly useful for handling musical data, such as retrieving individual notes from chords, specific measures from a score, or rhythm patterns from a sequence.
 

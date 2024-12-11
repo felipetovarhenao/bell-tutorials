@@ -1,6 +1,6 @@
 # Basic expressions
 
-> _Performing Arithmetic and More_
+> _The Building Blocks of Logic and Arithmetic_
 
 Expressions are the building blocks of any program. In _bell_, expressions can involve numbers, symbols, lists, and other data types, and they are evaluated to produce a result. This section introduces basic arithmetic operations, how to combine expressions, and how to use them effectively.
 
