@@ -19,7 +19,7 @@ Here’s the general syntax for creating a function:
 Let’s break this down:
 
 - **Arguments**:
-  - `$arg1`, `$arg2`, `...`, `$argN`: The inputs your function accepts.
+  - `$arg1`, `$arg2`, `...`, `$argN`: The inputs your function accepts, if any.
   - You can set default values for arguments using the assignment operator (`=`).
 - **Function body**:
   - The code executed when your function is called.
