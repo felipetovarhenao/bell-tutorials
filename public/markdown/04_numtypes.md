@@ -64,7 +64,7 @@ Rationals represent fractional values, which are particularly useful for represe
 ```py
 $third = 5/4;
 $fifth = 3/2;
-print(is($third) is($fifth)) ## Outputs: rational integer
+print(is($third) is($fifth)) ## Outputs: rational rational
 ```
 
 ---
