@@ -197,6 +197,8 @@ $x1 = 2; ## $x1 is a pseudovariable in bell
 $var1 = 2
 ```
 
+If you're curious, you can learn more about pseudo-variables [here](/#/pseudovariables).
+
 ### Q: Can I use special characters in variable names?
 
 **A**: Avoid special characters (e.g., `@`, `%`, `&`) in variable names, except for `$` in local variables.

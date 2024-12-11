@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { nativeFunctions as functions } from "../utils/nativeFunctions";
-import { Link } from "react-router";
+import Navbar from "./Navbar";
 
 const FunctionReference: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(""); // State to track the search term
@@ -21,13 +21,7 @@ const FunctionReference: React.FC = () => {
 
   return (
     <div className="chapter">
-      <div className="banner">
-        <div />
-        <Link to="/" className="nav-link">
-          Index
-        </Link>
-        <div />
-      </div>
+      <Navbar />
       <h1>
         Appendix I: <i>bell</i> functions
       </h1>

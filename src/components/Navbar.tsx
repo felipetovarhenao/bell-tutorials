@@ -20,13 +20,13 @@ const Navbar = ({ prev, next }: NavbarProps) => {
       ) : (
         <div className="nav-item" />
       )}
-      {(next || prev) && (
+      {
         <div className="nav-item">
           <Link to="/" className="nav-link">
             Index
           </Link>
         </div>
-      )}
+      }
       {next ? (
         <div className="nav-item">
           <Link to={"/" + next.route} className="nav-link">

@@ -33,7 +33,7 @@ const App: React.FC = () => {
       "parens.md",
       "userfunctions.md",
       "formatting.md",
-      // "nextsteps.md",
+      "nextsteps.md",
     ];
 
     getMarkdownInfo(markdownPaths.map(formatPaths)).then((lessons) => {
@@ -57,6 +57,7 @@ const App: React.FC = () => {
           );
         })}
         <Route path="/reference" element={<FunctionReference />} />
+        <Route path="/pseudovariables" element={<MarkdownRenderer markdownFile={"markdown/pseudovariables.md"} />} />
       </Routes>
       <footer style={{ width: "100%", paddingBottom: "25px", textAlign: "center" }}>
         <i>{new Date().getFullYear()} @ Felipe Tovar-Henao</i>

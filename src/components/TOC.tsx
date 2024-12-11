@@ -20,6 +20,9 @@ const TOC = ({ lessons }: TOCProps) => {
               Appendix I: <i>bell</i> functions
             </Link>
           </li>
+          <li>
+            <Link to={"/pseudovariables"}>Appendix II: Pseudo-Variables</Link>
+          </li>
         </ul>
       </nav>
     </div>
