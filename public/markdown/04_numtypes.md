@@ -73,6 +73,8 @@ print(is($third) is($fifth)) ## Outputs: rational rational
 
 In _bell_, the `pitch` data type is a specialized numeric type that uses scientific pitch notation as a placeholder for the equivalent value in MIDI cents. This allows for more a intuitive way to specify pitch data over raw numbers.
 
+> MIDI cents is a pitch specification unit, combining MIDI values and cents (_1 semitone = 100 cents_) to allow for fine microtonal precision. For instance, 6000 is C5, 6100 is C sharp, 6200 is D, 6250 is D quarter flat, and so on. In _bell_, MIDIcents are the most common way of representing pitch information.
+
 ### Basic Syntax
 
 The syntax for pitch specification is fairly straightforward:

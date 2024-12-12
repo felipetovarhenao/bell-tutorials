@@ -21,8 +21,6 @@ Below is a table of commonly used list-oriented functions in _bell_.
 | `f2mc`   | Converts frequencies to MIDIcent values | `f2mc(440 523.25)`              | `A4 C5`                |
 | `trans`  | Transposes a matrix-style list          | `trans([1 2 3] [10 20 30])`     | `[1 10] [2 20] [3 30]` |
 
-> MIDIcent is a pitch specification unit, combining MIDI values and cents (_1 semitone = 100 cents_) to allow for fine microtonal precision. For instance, 6000 is C5, 6100 is C sharp, 6200 is D, 6250 is D quarter flat, and so on. In _bell_, MIDIcents are the most common way of representing pitch information.
-
 ---
 
 ## Examples of Data Manipulation
