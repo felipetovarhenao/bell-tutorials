@@ -30,7 +30,7 @@ Integers are whole numbers without decimal points.
 ```py
 $a = 1;
 $b = -7;
-print(is($a) is($b)) ## Outputs: integer integer integer
+print(is($a) is($b)) ## Outputs: integer integer
 ```
 
 ---
