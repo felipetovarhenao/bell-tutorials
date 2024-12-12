@@ -27,8 +27,8 @@ The most basic form of a conditional statement is the following.
 It checks wheather the `<condition>` statement evaluates to a non-zero value (true) and, if true, executes the `<statement>` block of code. If false, the conditional statement evaluates to `null`.
 
 ```py
-$note = 60; ## MIDI for C4
-if $note > 64 then print("The note is above E4") ## Outputs: null
+$note = 6000; ## C5
+if $note > 6400 then print("The pitch is above E5") ## Outputs: null
 ```
 
 ### `if-else` Syntax
@@ -40,11 +40,11 @@ We can also add a statement to be executed when the `if`condition does not evalu
 This allows use to have more control over the behavior of our code.
 
 ```py
-$note = 62; ## MIDI for D4
-if $note < 60 then (
-  $note += 12 ## Transpose up an octave (74)
+$note = 6200; ## D5
+if $note < 6000 then (
+  $note += 1200 ## Transpose up an octave (7400)
 ) else (
-  $note -= 12 ## Transpose down an octave (50)
+  $note -= 1200 ## Transpose down an octave (5000)
 );
 print($note)
 ```
@@ -73,11 +73,11 @@ else print("ff")
 As it's typical in _bell_, we can always create compound statements using parentheses and the `;` operator.
 
 ```py
-$note = 70; ## MIDI for Bb5
-if $note > 64 then (
+$pitch = 7000; ## Bb5
+if $pitch > 6400 then (
     print("High pitch detected");
-    $note -= 12; ## Transpose down an octave
-    print(pitch($note * 100)) ## Outputs: Bb4 (5800 in MIDI cents)
+    $pitch -= 1200; ## Transpose down an octave
+    print(pitch($pitch)) ## Outputs: Bb4 (5800 in MIDI cents)
 )
 ```
 
@@ -115,8 +115,8 @@ You can combine conditions using logical operators:
 ### Checking a Range of Notes
 
 ```py
-$note = 65; ## MIDI for F4
-if $note > 60 && $note < 72 then print("Within range")
+$note = 6500; ## MIDI cents for F4
+if $note > 6000 && $note < 7200 then print("Within range")
 ```
 
 ### Detecting Out-of-Bounds Notes

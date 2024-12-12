@@ -34,8 +34,8 @@ $x = 1...4 ## Outputs: 1 2 3 4
 2. Generating a chromatic scale:
 
    ```py
-   $notes = 60...72; ## MIDI notes for C4 to B4
-   print($notes) ## Outputs: 60 61 62 ... 72
+   $notes = (60...72) * 100; ## MIDI cents for C5 through B5
+   print($notes) ## Outputs: 6000 6100 6200 ... 7200
    ```
 
 ---

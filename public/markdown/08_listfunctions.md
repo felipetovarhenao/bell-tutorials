@@ -10,16 +10,16 @@ To manipulate these lists efficiently, _bell_ provides a wide range of functions
 
 Below is a table of commonly used list-oriented functions in _bell_.
 
-| Function | Purpose                                 | Example                         | Output                 |
-| -------- | --------------------------------------- | ------------------------------- | ---------------------- |
-| `rev`    | Reverses the elements of a list         | `rev(C4 D4 E4 F4)`              | `F4 E4 D4 C4`          |
-| `length` | Returns the number of elements          | `length(C4 E4 G4)`              | `3`                    |
-| `depth`  | Returns the depth of a list             | `depth([C4 E4 G4] [F4 A4 C5])`  | `2`                    |
-| `flat`   | Flattens a nested list to depth 1       | `flat([C4 [E4 G4]] [F4 A4 C5])` | `C4 E4 G4 F4 A4 C5`    |
-| `thin`   | Removes duplicate elements              | `thin(C4 E4 C4 C4 G4)`          | `C4 E4 G4`             |
-| `mc2f`   | Converts MIDIcent values to frequencies | `mc2f(6000 6700)`               | `261.63 392.00`        |
-| `f2mc`   | Converts frequencies to MIDIcent values | `f2mc(440 523.25)`              | `A4 C5`                |
-| `trans`  | Transposes a matrix-style list          | `trans([1 2 3] [10 20 30])`     | `[1 10] [2 20] [3 30]` |
+| Function | Purpose                            | Example                         | Output                 |
+| -------- | ---------------------------------- | ------------------------------- | ---------------------- |
+| `rev`    | Reverses the elements of a list    | `rev(C4 D4 E4 F4)`              | `F4 E4 D4 C4`          |
+| `length` | Returns the number of elements     | `length(C4 E4 G4)`              | `3`                    |
+| `depth`  | Returns the depth of a list        | `depth([C4 E4 G4] [F4 A4 C5])`  | `2`                    |
+| `flat`   | Flattens a nested list to depth 1  | `flat([C4 [E4 G4]] [F4 A4 C5])` | `C4 E4 G4 F4 A4 C5`    |
+| `thin`   | Removes duplicate elements         | `thin(C4 E4 C4 C4 G4)`          | `C4 E4 G4`             |
+| `mc2f`   | Converts MIDI cents to frequencies | `mc2f(6000 6700)`               | `261.63 392.00`        |
+| `f2mc`   | Converts frequencies to MIDI cents | `f2mc(440 523.25)`              | `A4 C5`                |
+| `trans`  | Transposes a matrix-style list     | `trans([1 2 3] [10 20 30])`     | `[1 10] [2 20] [3 30]` |
 
 ---
 
@@ -70,7 +70,7 @@ $scale = $scale.sort().print() ## Outputs: C4 D4 E4 F4 G4
 
 ### Example 2: Converting Frequencies to Notes
 
-Use `f2mc` to convert a list of frequencies to MIDIcent values.
+Use `f2mc` to convert a list of frequencies to MIDI cents.
 
 ```py
 $spectrum = 55 110 220 440 880;
@@ -83,7 +83,7 @@ print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 
 ### Exercise 1: Analyze a Melody
 
-1. Create a melody as a _llll_, in MIDI or MIDIcent values:
+1. Create a melody as a _llll_, in MIDI cents:
 2. Print the `length` of the melody.
 3. Infer the scale that the melody is based on, using the `thin` and `sort` functions.
 4. Print the scale.

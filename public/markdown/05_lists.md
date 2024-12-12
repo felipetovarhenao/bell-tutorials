@@ -97,12 +97,12 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ### Exercise 1: Chord Progressions
 
-1. Create a _llll_ representing a chord progression of your choice, using MIDI values as pitch. Each chord should include three pitches.
+1. Create a _llll_ representing a chord progression of your choice, using MIDI cents as the pitch unit. Each chord should include three pitches.
 2. Print the progression.
 
 ### Exercise 2: Melody with Rhythms
 
-1. Write a melody of your choosing as an _llll_, where each element is a sublist containing pitch (MIDI) and duration (milliseconds) values:
+1. Write a melody of your choosing as an _llll_, where each element is a sublist containing pitch (in MIDI cents) and duration (milliseconds) values:
 
    ```
    $melody = [ <pitch1> <dur1> ] [ <pitch2> <dur2> ] ... [ <pitchN> <durN> ]

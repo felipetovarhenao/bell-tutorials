@@ -116,9 +116,9 @@ One of the most powerful aspects of _bell_ is the ability to operate on entire l
 When performing operations between two individual values (e.g., two numbers), the result is straightforward: the operation is applied directly.
 
 ```py
-$x = 60; ## MIDI note for C4
-$y = 7;  ## Interval of a perfect fifth
-print($x + $y) ## Outputs: 67 (G4)
+$x = 6000; ## MIDI cents for C5
+$y = 700;  ## Interval of a perfect fifth
+print($x + $y) ## Outputs: 6700 (G5)
 ```
 
 ### 2. One-to-many
@@ -126,8 +126,8 @@ print($x + $y) ## Outputs: 67 (G4)
 When one of the operands is a single value and the other one a list, the same operation is applied to each element of the list individually.
 
 ```py
-$scale = 60 62 64 65 67; ## MIDI pitch values: C4, D4, E4, F4, G4
-print($scale + 12) ## Outputs: 72 74 76 77 79 (transposed up an octave)
+$scale = 6000 6200 6400 6500 6700; ## MIDI cents: C5, D5, E5, F5, G5
+print($scale + 1200) ## Outputs: 7200 7400 7600 7700 7900 (transposed up an octave)
 ```
 
 ### 3. Many-to-many
@@ -200,19 +200,19 @@ For example, if you want to increase a variable by 5, instead of writing `$x = $
 
 ### Exercise 2: Pitch transposition
 
-1. Assign the MIDI note number of a pitch to a variable.
-2. Assign the interval (in semitones) you want to transpose the pitch by to another variable.
+1. Assign a pitch value in MIDI cents to a variable.
+2. Assign the interval (in cents) you want to transpose the pitch by to another variable.
 3. Use addition to calculate the transposed pitch and assign the result to a new variable.
 4. Print the original pitch, the interval, and the transposed pitch.
 
 ### Exercise 3: Computing Intervals in a Triad
 
-1. Assign the MIDI note numbers of a C major triad to three separate variables:
+1. Assign the MIDI cents values of a C major triad to three separate variables:
 
 ```py
-$note1 = 60; ## C5
-$note2 = 64; ## E5
-$note3 = 67; ## G5
+$note1 = 6000; ## C5
+$note2 = 6400; ## E5
+$note3 = 6700; ## G5
 ```
 
 2. Compute the interval (in semitones) between:
@@ -222,9 +222,9 @@ $note3 = 67; ## G5
 3. Print the results for each interval, to display the following messages.
 
    ```
-   Interval between note1 and note2: 4
-   Interval between note2 and note3: 3
-   Interval between note1 and note3: 7
+   Interval between note1 and note2: 4 semitones
+   Interval between note2 and note3: 3 semitones
+   Interval between note1 and note3: 7 semitones
    ```
 
 ---

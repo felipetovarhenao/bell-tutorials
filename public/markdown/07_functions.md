@@ -180,10 +180,10 @@ By understanding the distinction between required and optional arguments, you ca
 Since the `arithmser` function creates an arithmetic series, it's useful for generating sequences of evenly spaced numbers, such as a chromatic or whole-tone scale.
 
 ```py
-$wholetone = arithmser(@start 60, @end 72, @step 2); ## Whole-tone scale (MIDI)
-$chromatic = arithmser(@start 60 @end 72 @step 1); ## Chromatic scale (MIDI)
-print("whole tone:" $wholetone); ## Outputs: 60 62 64 66 68 70 72
-print("chromatic:" $chromatic) ## Outputs: 60 through 72
+$wholetone = arithmser(@start 6000, @end 7200, @step 200); ## Whole-tone scale (MIDI cents)
+$chromatic = arithmser(@start 6000 @end 7200 @step 100); ## Chromatic scale (MIDI cents)
+print("whole tone:" $wholetone); ## Outputs: 6000 6200 6400 6600 6800 7000 7200
+print("chromatic:" $chromatic) ## Outputs: 6000 through 72
 ```
 
 ---
@@ -226,20 +226,13 @@ This style of syntax, while completely optional, does provide some degree of rea
 
 ### Exercise 1: Generating Random Chords
 
-1. Use the `random` function to generate random random MIDI note values between 48 (C4) and 72 (C6).
+1. Use the `random` function to generate random MIDI cents values between `4800` (`C4`) and `7200` (`C6`).
 2. Assign this numbers as a list, to a variable.
 3. Print the result.
 
-Example:
-
-```py
-$chord = random(48, 72) random(48, 72) random(48, 72);
-print($chord)
-```
-
 ### Exercise 2: Create a random arpeggio
 
-1. Use `arithmser` to create a diminished and augmented arpeggi starting at MIDI note 60 (C5). Each arpeggio should be assigned to a different variable.
+1. Use `arithmser` to create a diminished and augmented arpeggi starting at MIDI cents value `6000` (`C5`). Each arpeggio should be assigned to a different variable.
 2. Use the `scramble` function to shuffle both arpeggios.
 3. Print both arpeggios.
 4. In a separate `.bell` file, repeat the same steps using _dataflow-style_ syntax.

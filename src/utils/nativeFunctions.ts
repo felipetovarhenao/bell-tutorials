@@ -375,7 +375,7 @@ export const nativeFunctions = [
   {
     name: "makepitchsc",
     description:
-      "The `makepitchsc()` function generates a pitch, given a number of `@steps` along the C-based diatonic scale, and the desired midicent value.",
+      "The `makepitchsc()` function generates a pitch, given a number of `@steps` along the C-based diatonic scale, and the desired MIDI cents value.",
     args: [{ name: "steps" }, { name: "cents" }],
   },
   {

@@ -12,13 +12,13 @@ In a [previous tutorial](05_expressions.md), we already touched upon some of the
 
 ### Generating scales
 
-Using addition to generate scales in MIDI values:
+Using addition to generate scales in MIDI cents:
 
 ```py
-$scale = 0 2 4 5 7 9 11; ## major scale intervals from root
-$root = 60; ## middle C
+$scale = 0 200 400 500 700 900 1100; ## major scale intervals from root
+$root = 6000; ## middle C
 $cmajor = $scale + $root;
-print($cmajor) ## Outputs: 60 62 64 65 67 69 71 (C major scale)
+print($cmajor) ## Outputs: 6000 6200 6400 6500 6700 6900 7100 (C major scale)
 ```
 
 ### Transposing Frequencies
@@ -101,8 +101,8 @@ Logical operators are used to combine or negate conditions.
 Determine if a pitch is in a specific range:
 
 ```py
-$pitch = 65; ## MIDI value
-print($pitch > 60 && $pitch < 70) ## Outputs: 1 (true)
+$pitch = 6500; ## F5 in MIDI cents
+print($pitch > 6000 && $pitch < 7000) ## Outputs: 1 (true)
 ```
 
 #### Explanation:
@@ -163,14 +163,14 @@ print($equivalence) ## Outputs: 1 (true)
 
 ### Exercise 1: Calculating Intervals
 
-1. Create variables for the MIDI values of `60` (C4) and `64` (E4).
-2. Use subtraction to calculate the interval between them.
+1. Create variables for the MIDI cents values of `6000` (C4) and `6400` (E4).
+2. Use subtraction to calculate the interval between them, in cents.
 3. Print the result.
 
 ### Exercise 2: Logical Comparisons
 
-1. Create a variable `$note = 62` (MIDI value).
-2. Check if $note is in the range of 55 (G4) to 67 (G5).
+1. Create a variable `$note = 6200` (D5 in MIDI cents).
+2. Check if `$note` is in the range of `5500` (G4) to `6700` (G5).
 3. Print the result.
 
 ---
