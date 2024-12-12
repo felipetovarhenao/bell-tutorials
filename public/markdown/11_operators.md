@@ -146,12 +146,12 @@ You can combine multiple operators to form complex expressions.
 
 ### Example: Pitch class equivalence
 
-Checking if two pitches in MIDIcents are pitch class equivalent.
+Checking if two pitches in MIDI cents are pitch class equivalent.
 
 ```py
 
-$pitch1 = 5700; ## A3 in MIDIcents
-$pitch2 = 6900; ## A4 in MIDIcents
+$pitch1 = 5700; ## A3 in MIDI cents
+$pitch2 = 6900; ## A4 in MIDI cents
 $interval = $pitch2 - $pitch1; ## 1200 or an octave
 $equivalence = ($interval % 1200) == 0; ## check divides perfectly by 1200
 print($equivalence) ## Outputs: 1 (true)

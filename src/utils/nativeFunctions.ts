@@ -99,7 +99,7 @@ export const nativeFunctions = [
   },
   {
     name: "cents",
-    description: "The `cents()` function converts the value of `@x` to midicents.",
+    description: "The `cents()` function converts the value of `@x` to MIDI cents.",
     args: [
       {
         name: "x",
@@ -126,7 +126,7 @@ export const nativeFunctions = [
   },
   {
     name: "degree",
-    description: "Midicents to C-based diatonic scale degree conversion.",
+    description: "MIDI cents to C-based diatonic scale degree conversion.",
     args: [
       {
         name: "x",
@@ -541,7 +541,7 @@ export const nativeFunctions = [
   {
     name: "f2mc",
     description:
-      "The `f2mc()` function converts all the numbers in an llll from frequency to midicents, with optional reference frequency and pitch.",
+      "The `f2mc()` function converts all the numbers in an llll from frequency to MIDI cents, with optional reference frequency and pitch.",
     args: [
       {
         name: "llll",
@@ -944,7 +944,7 @@ export const nativeFunctions = [
   {
     name: "mc2f",
     description:
-      "The `mc2f()` function converts all the numbers (considered as midicents) and pitches in an llll to frequency, with optional reference frequency and pitch.",
+      "The `mc2f()` function converts all the numbers (assumed to be MIDI cents) and pitches in an llll to frequency, with optional reference frequency and pitch.",
     args: [
       {
         name: "llll",
