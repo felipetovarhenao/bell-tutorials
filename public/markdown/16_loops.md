@@ -2,7 +2,7 @@
 
 > _Don't repeat yourself_
 
-In _bell_, loops allow repetitive tasks to be automated efficiently through iterative operations. They are a powerful way to manipulate data structures by applying transformations dynamically.
+In _bell_, loops allow repetitive tasks to be automated efficiently through iteration. They are a powerful way to manipulate data structures by applying transformations dynamically.
 
 ## Loop clauses
 
@@ -14,7 +14,7 @@ The `collect` clause specifies that a loop should keep the resulting value of _e
 
 ### `do` clause
 
-The `do` clause specifies that a loop should simply execute each iteration (just like the `collect` clause), except the value of every iteration is discarded, except for the very last one. This is typically useful for cumulative operations, such as adding a list of numbers, where the result of intermediate iterations is not needed.
+The `do` clause specifies that a loop should simply execute each iteration (just like the `collect` clause) and discard the result, except for the very last iteration. This is typically useful for cumulative operations, such as adding a list of numbers, where the result of intermediate iterations is not needed.
 
 Now let's delve into each type of loop to see what these clauses look like in practice.
 
@@ -67,9 +67,17 @@ do|collect <body>
 
 As overwhelming as this may look, `for` loops are as complex as we need them to be. Here are different use-cases showcasing the different ways in which we can customize our `for` loops.
 
+### Index Variables
+
+The simplest kind of `for` loop is one in which we iterate through the top level of a list, each element stored in what we referred to as the _index variable_, which stores the data of each element in the list.
+
+```py
+for $x in 1...10 do print($x)
+```
+
 ### Index and Address Variables
 
-Providing two variable names for a single list lets the first variable hold the data and the second hold the address.
+Providing two variable names for a single list lets the first variable hold the data and the second hold its address within the list.
 
 ```py
 for $x $address in 1...10 do print($x $address)
@@ -87,6 +95,8 @@ for $x in $listx, $y in $listy do print($x $y)
 
 ### Address Variables in Parallel Iterations
 
+We can also use index and address variables in parallel iteration:
+
 ```py
 $result = for $x $xaddr in 1...10, $y $yaddr in 11...20 collect [$x $xaddr] [$y $yaddr];
 print($result)
@@ -97,20 +107,11 @@ print($result)
 The `as` clause allows you to set a condition to be checked before every iteration. The loop stops as soon as the condition becomes false.
 
 ```py
-$sum = 0;
-[for $x in 1...10 as (
-	$sum += print($x)
-) <= 100 collect $x] $sum - $x
-```
-
-Or:
-
-```py
-$sum = 0;
-[for $x in 1...10 as $sum + $x <= 100 collect (
-	$sum += $x;
-	$x)
-] $sum
+## iterate through list, as long as element is not a symbol
+$data = 1 2 3 "four" 5;
+for $x in $data as is($x) != "symbol" do (
+    print($x)
+)
 ```
 
 ### The `with` clause
@@ -128,6 +129,8 @@ or:
 $myvar = 10 20 [30 40] 50 60;
 for $x $addr in $myvar with @maxdepth 1, @unwrap 1 do print($x [$addr])
 ```
+
+> Note that, similar to functions, commas between named attributes are optional.
 
 ### Attributes in `for` loops
 
