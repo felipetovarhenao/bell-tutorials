@@ -2,25 +2,25 @@
 
 > _Don't repeat yourself_
 
-In _bell_, loops allow repetitive tasks to be automated efficiently through iteration. They are a powerful way to manipulate data structures by applying transformations dynamically.
+In _bell_, loops allow performing repetitive tasks efficiently without the need to write redundant code. Whenever you find yourself repeating the same type of logic in you code, that's a sign you should be using loops instead. They are a powerful way to iterate through our data and dynamically perform operations on it.
 
 ## Loop clauses
 
-Before we delve into the two types of loops available in _bell_, let's introduce the concept of a _clause_. A _clause_ is a specific type of keyword in _bell_ that modifies the behavior of a loop. In particular, there are two types of mutually exclusive _clauses_ available in both types of loops: `collect` and `do`.
+Before delving into the two types of loops available in _bell_ –`while` and `for` loops—, let's introduce the concept of _clauses_. A _clause_ is a specific type of keyword in _bell_ that modifies the behavior of a loop. In particular, there are two types of mutually exclusive clauses available in `for` and `while` loops: the `collect` and `do` clauses.
 
-### `collect` clause
+### The `collect` clause
 
 The `collect` clause specifies that a loop should keep the resulting value of _every_ iteration. This is useful for constructing lists.
 
-### `do` clause
+### The `do` clause
 
-The `do` clause specifies that a loop should simply execute each iteration (just like the `collect` clause) and discard the result, except for the very last iteration. This is typically useful for cumulative operations, such as adding a list of numbers, where the result of intermediate iterations is not needed.
+The `do` clause specifies that a loop should simply execute each iteration (just like the `collect` clause) but discard the result, except for the very last iteration. This is typically useful for cumulative operations, such as adding a list of numbers, that don't require preserving values of intermediate operations.
 
 Now let's delve into each type of loop to see what these clauses look like in practice.
 
 ---
 
-## `while` Loops
+## The `while` Loop
 
 A `while` loop repeats a given expression or statement as long as a condition remains true. We use this type of loop for dynamic operations where the number of repetitions isn't known or predetermined.
 
@@ -30,14 +30,23 @@ A `while` loop repeats a given expression or statement as long as a condition re
 while <condition> do|collect <statement>
 ```
 
-#### Example
+#### Example 1: `while` loop with `do` clause
 
 ```py
-$root = 6000; ## C5
-$randscale = while $root < 7200 collect (
-    $note = $root;
-    $root += random(1, 2) * 100; ## Transpose up by either a minor or major second
-    $note
+$i = 1;
+while $i < 100 do (
+    print($i);
+    $i *= 2
+)
+```
+
+#### Example 2: `while` loop with `collect` clause
+
+```py
+$pitch = 6000; ## C5
+$randscale = $pitch;
+$randscale _= while $root < 7200 collect (
+    $pitch += random(1, 2) * 100; ## Transpose up by either a minor or major second
 );
 print($randscale)
 ```
@@ -46,7 +55,7 @@ print($randscale)
 
 ---
 
-## `for` Loops
+## The `for` Loop
 
 `for` loops iterate through elements of an existing list.
 
