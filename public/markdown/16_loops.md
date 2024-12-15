@@ -2,19 +2,19 @@
 
 > _Don't repeat yourself_
 
-Loops allow performing repetitive tasks efficiently without the need to write redundant code. Whenever you find yourself repeating the same type of logic in you code, that's a sign you should be using loops instead. They are a powerful way to iterate through our data and dynamically perform operations on it.
+Loops allow performing repetitive tasks efficiently without the need to write redundant code. Whenever you find yourself repeating the same type of logic in your code, that's a sign you should be using loops instead. They are a powerful way to iterate through our data and dynamically perform operations on it.
 
 ## Loop clauses
 
-Before delving into the two types of loops available in _bell_ –`while` and `for` loops—, let's introduce the concept of _clauses_. A _clause_ is a specific type of keyword in _bell_ that modifies the behavior of a loop. In particular, there are two types of mutually exclusive clauses available in `for` and `while` loops: the `collect` and `do` clauses.
+Before delving into the two types of loops available in _bell_ –`while` and `for` loops—, let's introduce the concept of _clauses_. A _clause_ is a specific type of keyword in _bell_ that modifies the behavior of a loop. In particular, there are two types of mutually exclusive clauses available in both the `for` and `while` loops: the `collect` and `do` clauses.
 
 ### The `collect` clause
 
-The `collect` clause specifies that a loop should keep the resulting value of _every_ iteration. This is useful for constructing lists.
+The `collect` clause specifies that a loop should keep the resulting value of _every_ iteration. This is useful for constructing _lllls_.
 
 ### The `do` clause
 
-The `do` clause specifies that a loop should simply execute each iteration (just like the `collect` clause) but discard the result, except for the very last iteration. This is typically useful for cumulative operations, such as adding a list of numbers, that don't require preserving values of intermediate operations.
+The `do` clause specifies that a loop should simply execute each iteration (just like the `collect` clause) but only keep the result of the very last iteration. This is typically useful for cumulative operations, such as adding a list of numbers, that don't require preserving values of intermediate operations.
 
 Now let's delve into each type of loop to see what these clauses look like in practice.
 
@@ -34,10 +34,24 @@ while <condition> do|collect <statement>
 
 ```py
 $i = 1;
-while $i < 100 do (
+$result = while $i < 100 do (
     print($i);
     $i *= 2
-)
+);
+print('result' $result)
+```
+
+#### Output:
+
+```
+1
+2
+4
+8
+16
+32
+64
+result 128
 ```
 
 #### Example 2: `while` loop with `collect` clause
@@ -45,13 +59,40 @@ while $i < 100 do (
 ```py
 $pitch = 6000; ## C5
 $randscale = $pitch;
-$randscale _= while $root < 7200 collect (
-    $pitch += random(1, 2) * 100; ## Transpose up by either a minor or major second
+$randscale _= while $pitch < 7200 collect (
+    print($pitch);
+    $pitch += random(1, 2) * 100 ## Transpose up by either a minor or major second
 );
 print($randscale)
 ```
 
-> `while` loops, while simple in syntax, require more care since you must ensure the condition will eventually be false. Otherwise, it results in an infinite loop.
+#### Output
+
+```
+6000
+6100
+6200
+6400
+6500
+6700
+6900
+7100
+6000 6100 6200 6400 6500 6700 6900 7100 7200
+```
+
+### Infinite loops
+
+`while` loops, while simple in syntax, require more care since you must ensure the condition will eventually be false. Otherwise, it results in an infinite loop.
+
+```py
+## CAUTION! Running this code will freeze you computer
+$i = 0;
+while $i < 10 do (
+    print($i)
+)
+```
+
+Since the `$i` variable never changes, `$i < 10` will always be true and the loop will run indefinitely.
 
 ---
 
