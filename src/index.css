@@ -5,9 +5,8 @@
   font-size: large;
   word-spacing: 1px;
 
-  color-scheme: light dark;
   color: #1c1c20de;
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,7 +20,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #444df3;
 }
 
 body {
@@ -56,18 +55,21 @@ button:hover {
   border-color: #646cff;
 }
 .header {
-  font-family: "Lobster Two", sans-serif;
+  text-transform: lowercase;
+  font-optical-sizing: auto;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
-  // font-weight: bolder;
 }
 .main-logo {
   display: block;
   margin-left: auto;
   margin-top: 25px;
   margin-right: auto;
-  max-width: 20%;
+  max-width: 17%;
+}
+th {
+  text-align: left;
 }
 button:focus,
 button:focus-visible {
@@ -111,8 +113,9 @@ button:focus-visible {
   box-shadow: 5px;
 }
 .inline-code {
-  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
   white-space: pre;
+  color: #505061de;
   overflow-wrap: break-word;
   text-wrap: wrap;
 }
@@ -124,6 +127,15 @@ p > b.inline-code {
 table {
   border-spacing: 15px;
 }
+.header-subtitle {
+  text-align: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 5px;
+  justify-content: center;
+  border: none;
+}
 .toc {
   padding-left: 25px;
   padding-right: 25px;
@@ -131,6 +143,9 @@ table {
 .toc-list {
   list-style-type: none;
   font-size: large;
+  a {
+    line-height: 1.707em;
+  }
 }
 .banner {
   display: flex;

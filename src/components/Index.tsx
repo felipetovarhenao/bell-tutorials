@@ -8,9 +8,9 @@ const Index = ({ lessons }: IndexProps) => {
   return (
     <div>
       <img className="main-logo" src="logo.png" alt="bell-logo" />
-      <h1 className="header">Programming with bell</h1>
-      <blockquote>
-        <i>a musician-friendly introduction to programming with the</i> bell <i>programming language</i>
+      <h1 className="header">Bell Tutorials</h1>
+      <blockquote className="header-subtitle">
+        <i>a musician-friendly introduction to computer programming with the</i> bell <i>language</i>
       </blockquote>
 
       <TOC lessons={lessons} />
