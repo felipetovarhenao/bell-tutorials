@@ -57,7 +57,7 @@ print($randscale)
 
 ## The `for` Loop
 
-`for` loops iterate through elements of an existing list.
+`for` loops allow to iterate through elements of an existing list. Relative to `while` loops, `for` loops are more flexible and versatile in their behavior. This, however, comes at the expense of more elaborate syntax.
 
 ### Syntax
 
@@ -74,14 +74,29 @@ for <index variable 1> [address variable 1] in <llll 1>
 do|collect <body>
 ```
 
-As overwhelming as this may look, `for` loops are as complex as we need them to be. Here are different use-cases showcasing the different ways in which we can customize our `for` loops.
+As overwhelming as this may look, `for` loops are only as elaborate as we need them to be. Here are different use-cases showcasing the different ways in which we can customize our `for` loops.
 
 ### Index Variables
 
-The simplest kind of `for` loop is one in which we iterate through the top level of a list, each element stored in what we referred to as the _index variable_, which stores the data of each element in the list.
+The simplest kind of `for` loop is one in which we iterate through the top level of a list, each element stored in what will refer to as the _index variable_, which stores the data of each element in the list.
 
 ```py
 for $x in 1...10 do print($x)
+```
+
+#### Output
+
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
 ```
 
 ### Index and Address Variables
@@ -90,6 +105,21 @@ Providing two variable names for a single list lets the first variable hold the 
 
 ```py
 for $x $address in 1...10 do print($x $address)
+```
+
+#### Output
+
+```
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
 ```
 
 ### Parallel Iterations
@@ -102,18 +132,50 @@ $listy = (1...9) * 10;
 for $x in $listx, $y in $listy do print($x $y)
 ```
 
+#### Output
+
+```
+1 10
+2 20
+3 30
+4 40
+5 50
+6 60
+7 70
+8 80
+9 90
+```
+
+> In this example, the loop stops before the last element of `$listx`, since `$listy` has only 9 elements while `$listx` has 10.
+
 ### Address Variables in Parallel Iterations
 
 We can also use index and address variables in parallel iteration:
 
 ```py
-$result = for $x $xaddr in 1...10, $y $yaddr in 11...20 collect [$x $xaddr] [$y $yaddr];
-print($result)
+for $x $xaddr in 1...10, $y $yaddr in 11...20 do (
+    print([$x $xaddr] [$y $yaddr])
+)
+```
+
+#### Output
+
+```
+[ 1 1 ] [ 11 1 ]
+[ 2 2 ] [ 12 2 ]
+[ 3 3 ] [ 13 3 ]
+[ 4 4 ] [ 14 4 ]
+[ 5 5 ] [ 15 5 ]
+[ 6 6 ] [ 16 6 ]
+[ 7 7 ] [ 17 7 ]
+[ 8 8 ] [ 18 8 ]
+[ 9 9 ] [ 19 9 ]
+[ 10 10 ] [ 20 10 ]
 ```
 
 ### The `as` clause
 
-The `as` clause allows you to set a condition to be checked before every iteration. The loop stops as soon as the condition becomes false.
+The `as` clause allows you to set a condition to be checked before every iteration of a `for` loop. The loop stops as soon as the condition becomes false.
 
 ```py
 ## iterate through list, as long as element is not a symbol
@@ -123,31 +185,61 @@ for $x in $data as is($x) != "symbol" do (
 )
 ```
 
+#### Output
+
+```
+1
+2
+3
+```
+
 ### The `with` clause
 
 The `with` clause allows fine-tuning the iteration behavior using attributes like `@maxdepth`, `@unwrap`, and `@recursionmode`.
 
-```py
-$myvar = 10 20 [30 40] 50 60;
-for $x $addr in $myvar with @maxdepth -1 do print($x [$addr])
-```
-
-or:
-
-```py
-$myvar = 10 20 [30 40] 50 60;
-for $x $addr in $myvar with @maxdepth 1, @unwrap 1 do print($x [$addr])
-```
-
-> Note that, similar to functions, commas between named attributes are optional.
-
-### Attributes in `for` loops
+#### Attributes in `for` loops
 
 - `maxdepth` (defaults to 1): Sublists are accessed up to the level of depth defined by the `maxdepth` attribute. Default is `-1` = all levels.
 - `scalarmode` (defaults to 1): With `@scalarmode 1` in parallel iteration, a list composed by a single element is iterated against all the elements of the other lists.
 - `unwrap` (defaults to 0): If the `unwrap` attribute is set to `1`, the outermost level of parentheses is removed from each _llll_.
 - `recursionmode` (defaults to 0): With recursionmode 1, sublists are iterated against single elements, up to `maxdepth`.
-- `spikemode` (defaults to 0): We call a "spike" a sequence of parentheses, two of which are opposite with nothing between them: e.g. `[]` or `[[[]` or `]][[` . The "spikemode" attribute handles the way spikes are output from the right outlet.
+- `spikemode` (defaults to 0): We call a "spike" a sequence of parentheses, two of which are opposite with nothing between them: e.g. `[]` or `[[[]` or `]][[` .
+
+```py
+$myvar = 1 2 [3 4 [5 6]];
+for $x $addr in $myvar with @maxdepth -1 do print($x [$addr])
+```
+
+#### Output
+
+```
+1 [ 1 ]
+2 [ 2 ]
+3 [ 3 1 ]
+4 [ 3 2 ]
+5 [ 3 3 1 ]
+6 [ 3 3 2 ]
+```
+
+or:
+
+```py
+$myvar = 1 2 [3 4 [5 6]];
+for $x $addr in $myvar with @maxdepth 1 @unwrap 1 do print("data" $x) print("address" $addr)
+```
+
+> Note that, similar to functions, commas between named attributes in `for` loops are optional.
+
+#### Output
+
+```
+data 1
+address 1
+data 2
+address 2
+data 3 4 [ 5 6 ]
+address 3
+```
 
 ---
 
@@ -171,7 +263,7 @@ $melody = C4 D4 E4 F4 G4
 $scale = 6000 6200 6400 6500 6700 6900 7100
 ```
 
-2. Use a `for` loop to print intervals (in cents) between adjacent pitches.
+2. Use a `for` loop to calculate and print the intervals (in cents) between adjacent pitches.
 
 ### Exercise 3: Intervals to Scale
 
@@ -183,6 +275,8 @@ $intervals = 200 200 100 200 200 200 100
 ```
 
 2. Use a `for` loop to construct a scale from the intervals.
+
+3. Print the resulting scale.
 
 ---
 
@@ -218,6 +312,15 @@ for $chord in $progression do (
 )
 ```
 
+Or:
+
+```py
+$progression = [C4 E4 G4] [F4 A4 C5];
+for $chord in $progression with @unwrap 1 do (
+    for $note in $chord do print($note)
+)
+```
+
 ---
 
-Loops are incredibly powerful for creating and manipulating data, whether you’re iterating through lists, generating dynamic patterns, or applying transformations. Next, we’ll explore user-defined functions, the cornerstone of modular and reusable code in _bell_.
+Loops are incredibly powerful for creating and manipulating data, while keeping our code concise and efficient. Next, we’ll explore user-defined functions, the cornerstone of modular and reusable code in _bell_.
