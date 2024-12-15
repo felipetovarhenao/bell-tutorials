@@ -6,9 +6,9 @@ Welcome to the starting point of learning _bell_, a programming language specifi
 
 ---
 
-## Writing Your First Program
+## Your First Script
 
-The _"Hello, world!"_ program in _bell_ is as simple as this:
+The _"Hello, world!"_ script in _bell_ is as simple as this:
 
 ```py
 print("hello world")
@@ -35,7 +35,7 @@ print("hello world")
 
 ---
 
-## Running the Program
+## Running the Script
 
 To execute your code:
 
