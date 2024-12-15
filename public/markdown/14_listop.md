@@ -64,6 +64,17 @@ $pattern = C4 D4 E4 :* 3;
 print($pattern) ## Outputs: C4 D4 E4 E4 E4
 ```
 
+### Multi-depth repetition
+
+When a list of numbers is passed as the right operand to the repeat operator, rather than a single number, it generates a list of repeated sublists, each containing repetitions of the original value based on the corresponding number in the list.
+
+In this example, the result is three sublists, each containing two repetitions of the original value. Sometimes, it’s simpler to see it in action than to explain it!
+
+```py
+$x = 1;
+$y = $x :* (3 2) ## Outputs: [ 1 1 ] [ 1 1 ] [ 1 1 ]
+```
+
 ---
 
 ## Append (`_=`) and prepend (`!_=`) compound assignment operators
