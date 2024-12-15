@@ -27,8 +27,6 @@ print("hello world")
   - Text inside double quotes (`"`) is called a symbol.
   - Symbols represent textual data. You’ll use them often in _bell_ for structuring and accessing data, labeling things, specifying file paths, and more.
     > If you have prior programming experience, a symbol would be, roughly speaking, the _bell_ equivalent of a _string_ datatype in languages like _C_, _Java_, _Python_, and others.
-- **Code structure**:
-  - A single line of _bell_ code can execute an entire command. In this example, the `print` function is a command that directly interacts with the _Max_ console to display the desired output.
 - **Semicolons?**:
 
   - If you've done some programming in the past, you probably noticed that there’s no semicolon (`;`) at the end of this line. In the current version of _bell_, semicolons are used at the end of every statement, **except for the very last line**. Since our code is only a single line, we skip the semicolons (don't worry, we'll discuss this in more detail later).
