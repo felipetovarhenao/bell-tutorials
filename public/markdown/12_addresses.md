@@ -8,7 +8,7 @@ When working with _lllls_ (lists and nested lists), you'll often need to access 
 
 ## Access Operator (`:`)
 
-The colon (`:`) is the access operator in _bell_. It retrieves elements from a list based on their position (1-based indexing).
+The colon (`:`) is the access operator in _bell_. It retrieves elements from a list based on their position, starting from 1 as the position of the first element in the list (1-based indexing).
 
 The basic syntax is `<llll>:<address>`.
 
