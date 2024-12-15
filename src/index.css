@@ -120,7 +120,11 @@ button:focus-visible {
   text-wrap: wrap;
 }
 
-p > b.inline-code {
+p > b.inline-code,
+li > b.inline-code,
+td > b.inline-code,
+pre > b.inline-code,
+strong.inline-code {
   font-size: medium;
 }
 

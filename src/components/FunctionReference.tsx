@@ -52,15 +52,16 @@ const FunctionReference: React.FC = () => {
             {func.description}
           </ReactMarkdown>
 
-          <h3>Arguments:</h3>
-          <ul>
+          <h4>Arguments</h4>
+          <ul style={{ listStyleType: "none" }}>
             {func.args.map((arg, index) => (
               <li key={index}>
-                <strong>{arg.name}</strong>
+                <strong className="inline-code">@{arg.name}</strong>
                 {arg.default !== undefined && <span> (default: {JSON.stringify(arg.default)})</span>}
               </li>
             ))}
           </ul>
+          <hr />
         </div>
       ))}
       {filteredFunctions.length === 0 && <p>No functions found matching "{searchTerm}".</p>}
