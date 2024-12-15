@@ -2,7 +2,7 @@
 
 > _Don't repeat yourself_
 
-In _bell_, loops allow performing repetitive tasks efficiently without the need to write redundant code. Whenever you find yourself repeating the same type of logic in you code, that's a sign you should be using loops instead. They are a powerful way to iterate through our data and dynamically perform operations on it.
+Loops allow performing repetitive tasks efficiently without the need to write redundant code. Whenever you find yourself repeating the same type of logic in you code, that's a sign you should be using loops instead. They are a powerful way to iterate through our data and dynamically perform operations on it.
 
 ## Loop clauses
 
