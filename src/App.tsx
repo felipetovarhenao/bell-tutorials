@@ -31,7 +31,7 @@ const App: React.FC = () => {
       "conditionals.md",
       "loops.md",
       "userfunctions.md",
-      "argfunctions.md",
+      "funcvalues.md",
       "formatting.md",
       "nextsteps.md",
     ];
