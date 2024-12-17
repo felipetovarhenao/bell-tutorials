@@ -77,6 +77,36 @@ print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 
 ---
 
+## Depth and Level Arguments
+
+Several _bell_ functions accept the `@mindepth`/`@minlevel` and `@maxdepth`/`@minlevel` arguments, which are generally the two last ones in the function argument list and accept each an integer number.
+
+### Example 1: `rev` Depth
+
+```py
+$x = [[1] [2]] [[3] [4]];
+$a = rev($x @maxdepth 1); ## Reverse up to level 1 from top to bottom
+$b = rev($x @depth 2 3); ## Reverse from levels 2 to 3
+print($a); ## Outputs: [[3] [4]] [[1] [2]]
+print($b) ## Outputs: [[2] [1]] [[4] [3]]
+```
+
+### Example 2: `flat` Level
+
+```py
+$x = [[1] [2]] [[3] [4]];
+$a = flat($x @maxlevel 1); ## Remove brackets up to level 1 from top to bottom
+$b = flat($x @level 2 3); ## Remove brackets from levels 2 to 3
+print($a); ## Outputs: [1] [2] [3] [4]
+print($b) ## Outputs: [1 2] [3 4]
+```
+
+All those _bell_ functions also accept an attribute called `@depth`/`@level`, which controls the same parameters through a slightly different syntax: depth can either be a single integer, in which case it sets the `@maxdepth`/`@level` argument; or a list of two integers, setting respectively the `@mindepth`/`@maxlevel` and `@maxdepth`/`@maxlevel` attribute.
+
+> The reason why some _bell_ functions use `level` and others use `depth` is not clear, but they have the same functionality. Always check the [reference documentation](/#/reference) to make sure you're using the correct named and positional arguments.
+
+---
+
 ## Exercises
 
 ### Exercise 1: Analyze a Melody
