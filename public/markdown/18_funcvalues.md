@@ -17,7 +17,7 @@ $datatype = is(print);
 print($datatype) ## Outputs: function
 ```
 
-Here, `print` is being used twice, each in a different way. In the first line, we pass `print` as an argument to the `is` function—note that we're not calling `print`, but rather passing the function itself. In the second line, we are actually calling `print` and passing it the output of `is` as an argument.
+Here, `print` is being used twice, each time in a different way. The first time, we pass `print` as an argument (or value) to the `is` function—note that we're not calling `print` yet, but rather passing the function itself. In the second line, we are actually calling `print` and passing it the output of `is` as an argument.
 
 To further explore this concept, we need to discuss the concept of _anonymous functions_.
 
@@ -43,11 +43,11 @@ In other words, the `map` function allows us to pass a function that will be app
 
 ```py
 $nums = 1...10;
-$result = map($nums, ($x -> $x * exp2(random(-1, 1))));
+$result = map($nums, ($x -> $x * (-1 1):random(1, 2)));
 print($result)
 ```
 
-In this case, we multiply each value in `$nums` with either `0.5`, `1`, or `2`, randomly.
+In this case, we multiply each value in `$nums` with either `-1` or `1`, randomly changing its sign.
 
 > Remember to always make use of the [reference documentation](/#/reference) to learn about functions you're not familiar with.
 
@@ -118,12 +118,23 @@ print($add(1, 2)) ## Output: 3
 
 ### Example 3: The `reduce` function
 
-Here's an example of the `reduce` function, which cumulatively applies a given function elements in a _llll_. This is useful, for instance, for multiplying numbers together within a _llll_.
+Here's an example of the `reduce` function, which cumulatively applies a given function to elements in a _llll_. This is useful, for instance, for computing [factorials](https://en.wikipedia.org/wiki/Factorial).
 
 ```py
-$nums = 1...4;
-$factorial = reduce($nums, #*);
-$factorial.print() ## Output: 24
+$n = 4;
+$factorial = reduce(1...$n, #*);
+$factorial.print() ## Outputs: 24
+```
+
+The code above is equivalent to this:
+
+```py
+$n = 4;
+$factorial = 1;
+for $x in 2...$n do (
+    $factorial *= $x
+);
+print($factorial) ## Outputs: 24
 ```
 
 ## Exercises
@@ -152,13 +163,13 @@ $people = (
 ### Exercise 3: Cumulative Operations with reduce
 
 1. Create a list of numbers from `1` to `5`.
-2. Use `reduce` to compute the factorial of the numbers (i.e., `1 * 2 * 3 * 4 * 5`).
+2. Use `reduce` to calculate the sum of all numbers (i.e., `1 + 2 + 3 + 4 + 5`).
 3. Print the result.
 
 ### Exercise 4: Creating Custom Operators
 
-1. Write a custom function equivalent to the `#-` functional operator for subtraction.
-2. Use it in conjunction with `reduce` to compute the result of subtracting all numbers in a list (e.g., `10, 5, 2` → `10 - 5 - 2`).
+1. Write a custom function equivalent to the functional form for the subtraction operator (`#-`).
+2. Use it in conjunction with `reduce` to compute the result of subtracting all numbers in a list (e.g., from `10 5 2` to `10 - 5 - 2`).
 3. Test your function with various input lists.
 
 ## FAQ Section
