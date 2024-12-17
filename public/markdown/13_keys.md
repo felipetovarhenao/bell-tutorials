@@ -1,7 +1,5 @@
 # Keys
 
-> _Organizing and Accessing Data with Key-Value Pairs_
-
 In _bell_, **keys** are a way to associate labels (_keys_) with values, creating so-called _key-value_ pairs. Keys are particularly useful for organizing data in a structured and readable way. In musical contexts, keys can label chords, instruments, dynamics, or even entire sections of a composition, making your code more intuitive and easier to manage.
 
 ---

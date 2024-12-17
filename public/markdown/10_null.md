@@ -1,7 +1,5 @@
 # The null keyword
 
-> _A Nihilistic Perspective_
-
 In _bell_, the `null` keyword represents the _absence_ of a value. It’s an explicit way to indicate that something is intentionally empty. Understanding `null` is essential for dealing with situations where the result of an expression isn't a value, or where you want to discard results.
 
 ---

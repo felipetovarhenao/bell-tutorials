@@ -1,7 +1,5 @@
 # Functions
 
-> _Reusable Blocks for Streamlining Your Code_
-
 Functions are one of the most powerful tools in programming. In _bell_, functions allow you to perform operations on data, automate repetitive tasks, and design complex algorithms. Think of a function as a reusable block of code that takes input, performs an operation, and gives output.
 
 > Actually, not all functions need to have both input and output, but we'll deal with these cases later.

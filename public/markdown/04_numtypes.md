@@ -1,7 +1,5 @@
 # Numeric types
 
-> _Understanding Numbers: From Integers to Pitches​_
-
 Numbers are central to programming, and _bell_ provides a variety of numeric types tailored for both mathematical operations and musical data representation. This section covers the different numeric types in _bell_ and how they’re used.
 
 ---

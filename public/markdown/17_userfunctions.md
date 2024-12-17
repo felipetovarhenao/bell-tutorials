@@ -1,28 +1,32 @@
 # User-Defined Functions
 
-> Creating Custom Functionalities
-
-Until now, we've only worked with built-in functions in _bell_. In this tutorial, we’ll learn how to define our own functions.
+Until now, we've only worked with built-in functions in _bell_. In this tutorial, we’ll learn how to define our own functions, allowing us to avoid redundancy and increase readability and efficiency.
 
 ---
 
 ## What Are User-Defined Functions?
 
-A user-defined function is a custom block of code that you define and can reuse in your program. It can take arguments, perform an operation, and return a result.
+A user-defined function is a custom block of code that you define and can reuse in your program. Just like any other function, it can take arguments, perform an operation, and return a result.
 
 ### Syntax
 
-Here’s the general syntax for creating a function:
+Here’s the full syntax for creating a function:
 
-`$arg1 [= <default1>], $arg2 [= <default2>], ... $argN [= <defaultN>] -> <function_body>`
+```
+[$<arg1> [= <default1>], ... $<argN> [= <defaultN>]]
+   [-^ $<lifted_variable1>, ... $<lifted_variableN>]
+      -> <function_body>
+```
 
 Let’s break this down:
 
-- **Arguments**:
-  - `$arg1`, `$arg2`, `...`, `$argN`: The inputs your function accepts, if any.
-  - You can set default values for arguments using the assignment operator (`=`).
+- **Arguments** (_optional_):
+  - `$<arg1>`, `...`, `$<argN>`: The inputs your function accepts, if any. Not that they must be named as local variables (i.e., prefixed with `$`).
+  - You can optionally set default values for arguments using the assignment operator (`=`).
+- **Lifted variables** (_optional_)
+  - This will be explained in more detail shortly, but it's an optional part of the syntax that allows us to bring existing local variables into our function definition. When used, this is preceded by the lifting operator (`-^`).
 - **Function body**:
-  - The code executed when your function is called.
+  - The code executed when your function is called. This is always preceded by the arrow operator (`->`).
   - Enclosed within parentheses if it spans multiple statements.
 
 ---
@@ -53,7 +57,7 @@ $printmessages()
 
 ### 2. Single Argument
 
-A function that takes one input:
+A function that takes one argument:
 
 ```py
 $square = $x -> $x ** 2;
@@ -66,8 +70,9 @@ Functions can take multiple arguments:
 
 ```py
 $sumofsquares = $x, $y -> (
-   $z = $x ** 2 + $y ** 2;
-   $z
+   $a = $x ** 2;
+   $b = $y ** 2;
+   $a + $b
 );
 print($sumofsquares(3, 4)) ## Outputs: 25
 ```
@@ -88,30 +93,34 @@ print($add(5 @y 20)) ## Outputs: 25
 
 A few things to consider when it comes to scoping in user-defined functions:
 
-- Local variables defined _within_ a function are not accessible outside of it
-- Local variables defined _outside_ of a function are not available within it, unless explicitly referenced.
+- Local variables defined _within_ a function are **not** accessible outside of it
+- Local variables defined _outside_ of a function are **not** available within it, unless explicitly referenced via the lifting operator (`-^`) — more on this soon.
 - Global variables can be accessed and modified from within a function definition.
 
 ```py
 $localvar = "I'm a local variable!";
 Globalvar = "I'm a global variable!";
 
-$scopetest = -> (
+$scopefun = -> (
+   $insidevar = "I'm inside the function!";
+   print($insidevar);
    print($localvar);
-   print(Globalvar)
+   print(Globalvar);
 );
-$scopetest();
+$scopefun();
 ## Outputs:
+## I'm inside the function!
 ## null
 ## I'm a global variable!
-print($localvar) ## I'm a local variable!
+print($insidevar); ## Outputs: null
+print($localvar) ## Outputs: I'm a local variable!
 ```
 
 ---
 
 ## Lifted Variables
 
-If you want a function to access local variables defined outside that function's body, use the lifting operator `-^`.
+When we need a function to access local variables defined outside the function's body, we can use the lifting operator (`-^`).
 
 ```py
 $outer = 5;
@@ -144,7 +153,7 @@ $area = $length, $width -> $length * $width
 
 ### Exercise 2: Default Argument Values
 
-1. Create a function that adds two numbers, with a default value of 5 for the second argument:
+1. Create a function that adds two numbers, with a default value of `5` for the second argument:
 
 ```py
 $add = $x, $y = 5 -> $x + $y;
@@ -182,10 +191,10 @@ $transform = $x -^ $offset, $scale -> ($x + $offset) * $scale
 **A**: Yes, simply return a _llll_:
 
 ```py
-$powers = $x -> $x $x ** 2 $x ** 3;
-print($powers(2)) ## Outputs: 2 4 8
+$powers = $x -> $x ** (0...3);
+print($powers(2)) ## Outputs: 1 2 4 8
 ```
 
 ---
 
-User-defined functions unlock powerful possibilities. Experiment with these examples to deepen your understanding!
+User-defined functions unlock powerful possibilities. Experiment with these examples to deepen your understanding! Next we'll learn about passing functions as arguments to other functions.

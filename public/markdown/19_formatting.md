@@ -1,7 +1,5 @@
 # Indentation and code etiquette
 
-> _Writing Clean and Readable Code_
-
 In _bell_, proper indentation and code structure aren't strictly required by the language, but they are essential for readability and maintainability, especially when your programs become more complex. Clean code helps you and others understand your musical, debug errors, and extend functionality efficiently.
 
 ---

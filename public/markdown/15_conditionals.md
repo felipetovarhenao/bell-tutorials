@@ -1,7 +1,5 @@
 # Conditionals
 
-> _Making Decisions in Your Code_
-
 Conditionals are central to decision-making in programming, allowing a program’s flow to change based on whether certain statements are true or false. They enable code to adapt to different scenarios at runtime and make your code more flexible, intelligent, and responsive.
 
 ---

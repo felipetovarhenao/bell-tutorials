@@ -1,7 +1,5 @@
 # Next Steps
 
-> What do I do next?
-
 Congratulations on completing this introduction to _bell_. While this tutorial series has laid a solid foundation, there are still many aspects of _bell_ that we didn't get to take a closer look at. Whether you’re eager to dive into _bellplay~_ or _bach_, here are some suggested next steps to guide your learning process.
 
 ---

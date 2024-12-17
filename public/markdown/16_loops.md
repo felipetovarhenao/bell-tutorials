@@ -1,7 +1,5 @@
 # Loops
 
-> _Don't repeat yourself_
-
 Loops allow performing repetitive tasks efficiently without the need to write redundant code. Whenever you find yourself repeating the same type of logic in your code, that's a sign you should be using loops instead. They are a powerful way to iterate through our data and dynamically perform operations on it.
 
 ## Loop clauses

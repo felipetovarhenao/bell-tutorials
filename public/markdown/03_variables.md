@@ -1,7 +1,5 @@
 # Variables
 
-> _Storing and Organizing Data_
-
 Variables are the backbone of any programming language. In _bell_, variables are used to store reusable data such as numbers, text, lists, and even pitches. Think of variables as labeled containers that hold values you can use or modify later.
 
 ---

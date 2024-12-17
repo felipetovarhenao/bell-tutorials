@@ -1,7 +1,5 @@
 # Comments
 
-> _Documenting Your Code_
-
 In programming, comments are essential for explaining _what your code does_ and _why it does it_. While the computer ignores comments, they serve as notes for humans — whether it's your future self or someone else (i.e., your instructor) reading your code.
 
 In _bell_, comments come in two flavors: **single-line** and **multi-line**.

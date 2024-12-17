@@ -1,7 +1,5 @@
 # List-oriented operators
 
-> _Efficiently Modifying and Extending Lists_
-
 In _bell_, list operators allows us to modify and transform lists (or _lllls_) efficiently. This section introduces common list operators and demonstrates their utility.
 
 ---
