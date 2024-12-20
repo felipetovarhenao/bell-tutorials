@@ -10,15 +10,13 @@ The colon (`:`) is the access operator in _bell_. It retrieves elements from a l
 
 The basic syntax is `<llll>:<address>`.
 
----
-
-## Simple Addresses
+### Simple Addresses
 
 In flat lists, use a single number to access an element. Remember, _bell_ uses 1-based indexing (the first element is at position 1).
 
 > This is different from many programming languages, where elements within a list are numbered starting from 0 (i.e., 0-based indexing).
 
-### Example: Accessing Notes
+#### Example: Accessing Notes
 
 ```py
 $chord = C4 E4 G4;
@@ -27,13 +25,11 @@ print($chord:2); ## Outputs: E4
 print($chord:3) ## Outputs: G4
 ```
 
----
-
-## Nested Addresses
+### Nested Addresses
 
 For nested lists, use a list of indices wrapped in parentheses to specify the path to the desired element.
 
-### Example: Accessing Nested Elements
+#### Example: Accessing Nested Elements
 
 ```py
 $progression = [C4 E4 G4] [F4 A4 C5];
@@ -45,6 +41,28 @@ print($progression:(2 1)) ## Outputs: F4
 
 - `:1` retrieves the first chord `[C4 E4 G4]`.
 - `:(2 1)` drills into the second chord (`[F4 A4 C5]`) and retrieves its first note (`F4`).
+
+### Multiple Addresses
+
+If we want to retrieve multiple at once, we wrap the addresses in a set of brackets:
+
+```
+<llll>:[<addresses>]
+```
+
+For instance:
+
+```py
+$x = 'a' 'b' 'c' 'd';
+print($x:[1 3]) ## Outputs: a c
+```
+
+Similarly, for nested addresses, we use an additional set of brackets:
+
+```py
+$x = ['a' 'b'] ['c' 'd'];
+print($x:[[1 1] [2 1]]) ## Outputs: a c
+```
 
 ---
 
@@ -85,10 +103,8 @@ Access a bar from a two-bar progression:
 ```py
 $score = [[C4 E4 G4] [F4 A4 C5]] [[G4 B4 D5] [A4 C5 E5]];
 print($score::1); ## Outputs: [C4 E4 G4] [F4 A4 C5] (first bar)
-print($score:L(2 2)) ## Outputs: A4 C5 E5 (second chord from second bar)
+print($score:(2 2)) ## Outputs: A4 C5 E5 (second chord from second bar)
 ```
-
----
 
 ### Updating Values Via Addresses
 
@@ -108,13 +124,22 @@ $x:(2 3 1) = 0;
 print($x) ## Outputs: [1 2 3] [4 5 0]
 ```
 
-#### Limits to pick operator (`::`)
+#### Forbidden Assignments
 
-One common mistake is to use the pick operator to update values within a list. This results in an error.
+One common mistake is to use the pick operator (`::`) to update values within a list. This results in an error.
 
 ```py
+## Wrong:
 $x = [1 2 3] [4 5 6];
 $x::2 = 3 ## "unexpected assignment" error
+```
+
+Similarly, multi-address assignment with the access (`:`) operator is not supported in _bell_:
+
+```py
+## Wrong:
+$x = 'a' 'b';
+$x:[1 2] = 'c' 'd' ## "rich variable assignment doesn't support multiple nth syntax" error
 ```
 
 ---
