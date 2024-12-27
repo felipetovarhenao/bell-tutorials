@@ -72,7 +72,7 @@ The scope of a variable refers to where it can be accessed or modified. In _bell
 
 #### 1. Local variables:
 
-- Only accessible within the _bell_ file are defined in.
+- Only accessible within the _bell_ file they are defined in.
 
 > In some cases, certain local variables may be accessible within specific blocks of code in our _bell_ file. However, we won't have to worry about this until we deal with _user-defined functions_ much later.
 
