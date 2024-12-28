@@ -25,6 +25,17 @@ print($chord:2); ## Outputs: E4
 print($chord:3) ## Outputs: G4
 ```
 
+### Negative Addresses
+
+We can also use negative values to access elements from right to left.
+
+```py
+$chord = C4 E4 G4;
+print($chord:-1); ## Outputs: G4
+print($chord:-2); ## Outputs: E4
+print($chord:-3) ## Outputs: C4
+```
+
 ### Nested Addresses
 
 For nested lists, use a list of indices wrapped in parentheses to specify the path to the desired element.
