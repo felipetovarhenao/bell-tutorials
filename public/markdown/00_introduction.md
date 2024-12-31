@@ -12,7 +12,7 @@ _bell_ is a programming language created by composer and researcher [Andrea Agos
 
 ## Why learn _bell_?
 
-Although _bell_ is a niche programming language, it is exceptionally powerful, versatile, and approachable for musicians. It was specifically designed as part of an ecosystem of CAC tools — namely, the _[bach](https://www.bachproject.net/)_, _[cage](https://www.bachproject.net/cage)_, _[dada](https://www.bachproject.net/dada)_, and _[ears](https://www.bachproject.net/ears)_ packages in _Max_ —, focusing only on features relevant to CAC-oriented composers. This makes _bell_ streamlined and intuitive, eliminating extraneous features common in general-purpose programming languages. Every part of _bell_ is purpose-built and worth exploring for those interested in algorithmic music composition.
+Although _bell_ is a niche programming language, it is exceptionally powerful, versatile, and approachable for musicians. It was specifically designed as part of an ecosystem of CAC tools — namely, the _[bach](https://www.bachproject.net/)_, _[cage](https://www.bachproject.net/cage)_, _[dada](https://www.bachproject.net/dada)_, and _[ears](https://www.bachproject.net/ears)_ packages in _Max_ —, focusing primarily on features relevant to CAC-oriented tasks. This makes _bell_ streamlined, intuitive, and expressive, eliminating extraneous features common in general-purpose programming languages. Every part of _bell_ is purpose-built and worth exploring for those interested in algorithmic music composition.
 
 ---
 
@@ -24,13 +24,13 @@ These tutorials were initially created for the course _Special Topics in Composi
 
 No prior programming experience is required, including experience with visual programming environments such as _Max_, _Pure Data_, or _OpenMusic_.
 
-### 2. Focus on _bell_, not CAC:
+### 2. _bell_ first, CAC later:
 
 These tutorials primarily focus on _bell_, **not** computer-assisted composition itself. While some examples and exercises are music-flavored to keep them relatable, the primary goal is to teach relevant programming concepts in _bell_, which are essential to understand _before_ properly delving into CAC.
 
 ### 3. Preparation for _bellplay~_:
 
-These tutorials are designed to familiarize users with _bell_, and are meant to be followed using [bellplay~](https://github.com/felipetovarhenao/bellplay) to run all code examples and exercises. As such, they do **not** require prior knowledge in _bach_ or _Max_, and instead serve as preparation for those interested in learning CAC using [bellplay~](https://github.com/felipetovarhenao/bellplay), an algorithmic audio framework. Similarly, any _bach_- or _Max_-specific features in _bell_, such as external inputs/outputs, are intentionally left out to ensure the emphasis remains on core _bell_ programming concepts. By the same token, any _bellplay~_-specific features and functionalities are omitted as much as possible to limit the scope of these tutorials to the _bell_ programming language, such that readers understand where _bell_ ends and _bellplay~_ begins.
+These tutorials are meant to be followed using [bellplay~](https://github.com/felipetovarhenao/bellplay) to run all _bell_ code examples and exercises. As such, they do **not** require prior knowledge in _bach_ or _Max_, and instead serve as good starting point for those interested in learning CAC using [bellplay~](https://github.com/felipetovarhenao/bellplay), an algorithmic audio framework. Any _bach_- or _Max_-specific features in _bell_, such as external inputs/outputs, are intentionally left out to ensure the emphasis on _bell_-only programming concepts. By the same token, any _bellplay~_-specific features and functionalities are omitted as much as possible to limit the scope of these tutorials to the _bell_ programming language, such that readers understand where _bell_ ends and _bellplay~_ begins.
 
 > If you’re already familiar with _bell_ and want to focus specifically on _bellplay~_, please refer to the built-in tutorials within the _bellplay~_ application. Similarly, if you're already a _bach_ user and are primarily interested in learning _bell_ vis-a-vis _bach_, the official _bell_ documentation within _bach_ is perhaps the best route to take.
 
@@ -64,4 +64,4 @@ A dedicated text editor is essential, preferrably [Visual Studio Code](https://c
 
 ---
 
-These tutorials are designed to provide a clear and structured introduction to _bell_, helping you build a foundation for programming in the context of computer-assisted composition. Furthermore, many of these concepts will be broadly relevant and applicable to other programming languages and environments, should you wish to learn additional tools. Whether your interest lies in algorithmic music or simply gaining a deeper understanding of tools like _bellplay~_, the aim is to make the material accessible and relevant. Take your time and feel free to revisit sections as needed—programming is a skill that grows with practice and experimentation.
+These tutorials are designed to provide a clear and structured introduction to _bell_, helping you build a foundation for programming in the context of computer-assisted composition. Furthermore, many of these concepts will be broadly relevant and applicable to other programming languages and environments, should you wish to learn additional tools. Whether your interest lies in CAC or simply gaining a deeper understanding of audio tools like _bellplay~_, the aim is to make the material accessible and relevant. Take your time and feel free to revisit sections as needed—programming is a skill that grows with practice and experimentation.

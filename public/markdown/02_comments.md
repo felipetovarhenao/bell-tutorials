@@ -26,25 +26,19 @@ For longer explanations, use multi-line comments. These are enclosed with `#(` a
 
 ```bell
 #(
-This code calculates the area of a rectangle
-and displays the result.
+This code displays the area of a rectangle.
 Length and width are hardcoded for simplicity.
 )#
 
-$height = 5;
-$width = 10;
-$area = $height * $width; ## calculate area
-print($area) ## Output: 50
+print("the area of a 12 by 10 rectangle is 120")
 ```
-
-**Explanation**: The multi-line comment provides an overview of the program's purpose, while the single-line comment explains the specific calculation.
 
 ---
 
 ## Why Use Comments?
 
 1. **Clarity**: Help others (and your future self) understand the purpose of your code.
-2. **Debugging**: Temporarily "disable" parts of your code by turning them into comments to isolate issues.
+2. **Debugging**: Temporarily "disable" parts of your code by turning them into comments to isolate issues or skip parts of your script.
 3. **Collaboration**: Make your intentions clear when working on code with others.
 
 ---
@@ -81,8 +75,9 @@ print($area) ## Output: 50
    - Before a block of code:
      ```bell
      #(
-     Generate a sequence of numbers and
-     calculate their squares for later use
+     Generates a series of hexachords
+     to be used as harmonic fields
+     for fast arpeggios
      )#
      ```
 
@@ -90,40 +85,55 @@ print($area) ## Output: 50
 
 ## Common Mistakes to Avoid
 
-1. **Forgetting to close a multi-line comment**:
+1. **Forgetting the double-hash for single-line comments**:
 
    - Incorrect:
-     ```
+
+   ```py
+   # invalid comment
+   ```
+
+   - Correct:
+
+   ```py
+   ## valid comment
+   ```
+
+2. **Forgetting to close a multi-line comment**:
+
+   - Incorrect:
+     ```bell
      #(
      This is an open
      multi-line comment
      ```
    - Also incorrect (wrong closer):
-     ```
+     ```bell
      #(
      This is also an open
      multi-line comment
      #(
      ```
    - Correct:
-     ```
+     ```bell
      #(
      This is a properly closed
      multi-line comment
      )#
      ```
 
-2. **Commenting too much or too little**:
+3. **Commenting too much or too little**:
 
    - Comment the _why_, not the obvious _what_:
 
      ```py
      ## Bad: Adds two numbers
      print(2 + 3);
-
      ## Good: Calculate total
      print(2 + 3)
      ```
+
+Notice the semicolon (`;`) in this example. For the sake of simplicity, we'll simply think of semicolons as **separating** (not terminating) blocks of code — similar to how we commas in human language to separate statements. A more in-depth explanations of semicolons in _bell_ will be provided later on.
 
 ---
 

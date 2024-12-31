@@ -1,6 +1,6 @@
 # Hello, world!
 
-Welcome to the starting point of learning _bell_, a programming language specifically created for algorithmic music composition. As with many programming languages, we’ll begin with a simple _"Hello, world!"_ program. This exercise is designed to introduce you to the fundamentals of writing and executing your first piece of _bell_ code.
+Welcome to the starting point of learning _bell_, a programming language for computer-assisted algorithmic music composition. As with many programming languages, we’ll begin with a simple _"Hello, world!"_ program. This exercise is designed to introduce you to the fundamentals of writing and executing your first piece of _bell_ code.
 
 ---
 
@@ -17,13 +17,13 @@ print("hello world")
 ### Step-by-Step Explanation:
 
 - **The** `print` **function**:
-  - The `print` function displays data we want to see in the _Max_ console window. In this case, `print` is instructed to display `"hello world"`.
+  - The `print` function displays data we want to see in the _Max_ console window. In this case, `print` is instructed to display `"hello world"`. We'll discuss [functions](/#/functions) in more detail later on.
 - **Parentheses**:
-  - Parentheses `( )` are used to enclose the arguments (i.e., _inputs_ or _parameters_) that you pass to a function. In this case, the `print` function is being passed one argument: the symbol `"hello world"`.
-  - The parentheses indicate that you are calling (i.e., executing) the function and providing the data it needs to perform its task. If we omit the parentheses or leave a space after the function name (i.e., `print`), the function won’t execute.
+  - Parentheses `( )` are used, among other things, to enclose the arguments (i.e., _inputs_ or _parameters_) that you pass to a function. In this case, the `print` function is being passed one argument: the symbol `"hello world"`.
+  - In this particular case, the parentheses indicate that you are calling (i.e., executing) the function and providing the data it needs to perform its task. If we omit the parentheses or leave a space after the function name (i.e., `print`), the function won’t execute.
 - **The** `"hello world"` **symbol**:
-  - Text inside double quotes (`"`) is called a symbol.
-  - Symbols represent textual data. You’ll use them often in _bell_ for structuring and accessing data, labeling things, specifying file paths, and more.
+  - In _bell_, text inside double quotes (`"`) is called a **symbol**.
+  - Symbols represent textual data. You’ll use them often in _bell_ for structuring and accessing data, specifying file paths, and more.
     > If you have prior programming experience, a symbol would be, roughly speaking, the _bell_ equivalent of a _string_ datatype in languages like _C_, _Java_, _Python_, and others.
 - **Semicolons?**:
 
@@ -37,15 +37,15 @@ print("hello world")
 
 To execute your code:
 
-1. In your text-editor (e.g., _VSCode_), save your code as a `.bell` file — for example, `hello.bell`.
-2. Open [_bellplay~_](https://github.com/felipetovarhenao/bellplay/releases/latest).
+1. In your text-editor (e.g., _VSCode_), save your code as a `.bell` file — for example, `hello.bell` or `myscript.bell`.
+2. Open the [_bellplay~_](https://github.com/felipetovarhenao/bellplay/releases/latest) application.
 3. In _bellplay~_, click on _load script_ to load and run your code. In the _Max_ console, you should see:
 
 ```
 bach.eval • hello world
 ```
 
-> Everything we print will be preceded by `bach.eval •` since, under the hood, this is the name of the _Max_ object that runs our _bell_ code.
+> Everything we print in _bell_ will be preceded by `bach.eval •` since, under the hood, this is the name of the _Max_ object that runs our _bell_ code.
 
 ---
 
@@ -71,9 +71,13 @@ bach.eval • hello world
 
 ## FAQ
 
+### Q: Why use the `print` function?
+
+**A**: The `print` function is essential in programming, as it allows us to display output in the _Max_ console, to debug code and understand the flow of execution in our scripts. It serves as a simple and effective tool for troubleshooting and verifying that our code is behaving as expected.
+
 ### Q: Do I have to use double quotes for text?
 
-**A**: No, you can also use single quotes (`'`) for symbols (more on this later). For example:
+**A**: No, you can also use single quotes (`'`) for symbols—more on this later. For example:
 
 ```py
 print('hello world')
@@ -86,14 +90,20 @@ print('hello world')
 - Wrong:
 
   ```py
-  print('hello world");
+  print('hello world")
+  ```
+
+  ```py
   print("hello world')
   ```
 
 - Correct:
 
   ```py
-  print('hello world');
+  print('hello world')
+  ```
+
+  ```py
   print("hello world")
   ```
 
