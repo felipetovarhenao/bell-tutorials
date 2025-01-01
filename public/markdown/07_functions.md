@@ -224,9 +224,8 @@ This style of syntax, while completely optional, does provide some degree of rea
 
 ### Exercise 1: Generating Random Chords
 
-1. Use the `random` function to generate random MIDI cents values between `4800` (`C4`) and `7200` (`C6`).
-2. Assign this numbers as a list, to a variable.
-3. Print the result.
+1. Use the `random` function to generate random MIDI cents values between `4800` (`C4`) and `7200` (`C6`) and store them in a variable.
+2. Print the result.
 
 ### Exercise 2: Create a random arpeggio
 
