@@ -50,7 +50,7 @@ print("hello world") ## Outputs: hello world
    print(pow(2, 0 1 2 3)) ## Outputs: 1 2 4 8
    ```
 
-   > This is equivalent to using the `**` operator: `2 ** 3`.
+   > This is equivalent to using the `**` operator: `2 ** (0 1 2 3)`.
 
 4. `abs`: Returns the absolute value of a number (of list thereof).
 
