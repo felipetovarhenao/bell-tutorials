@@ -8,12 +8,12 @@ Numbers are central to programming, and _bell_ provides a variety of numeric typ
 
 In _bell_, there are four types of numeric data.
 
-| Numeric Types     | Abbreviation | Description                 | Examples           |
-| ----------------- | ------------ | --------------------------- | ------------------ |
-| integer           | `int`        | Whole numbers               | `60`, `4`, `100`   |
-| float (or _real_) | `float`      | Numbers with decimal points | `3.14159`, `440.0` |
-| rational          | `rat`        | Fractional values           | `1/4`, `3/2`       |
-| pitch             | `pitch`      | Musical pitch specification | `C4`, `A4`, `G#3`  |
+| Numeric Types     | Abbreviation | Description                 | Examples                       |
+| ----------------- | ------------ | --------------------------- | ------------------------------ |
+| integer           | `int`        | Whole numbers               | `60`, `4`, `100`               |
+| float (or _real_) | `float`      | Numbers with decimal points | `3.14159`, `440.0`, `.5`, `2.` |
+| rational          | `rat`        | Fractional values           | `1/4`, `3/2`                   |
+| pitch             | `pitch`      | Musical pitch specification | `C4`, `A4`, `G#3`              |
 
 We can use the `is` function to verify the data type of any value in _bell_, including numeric data types. Given a value, `is` returns the data type of the value as a symbol.
 
@@ -41,7 +41,7 @@ Floats, also referred to as _real_ numbers, are numbers with decimal points, all
 
 ```py
 $freq = 440.0;
-$pi = 3.14169;
+$tau = 6.28338;
 print(is($freq) is($pi)) ## real real
 ```
 
@@ -51,11 +51,11 @@ print(is($freq) is($pi)) ## real real
 
 ## 3. Rational
 
-Rationals represent fractional values, which are particularly useful for representing relative rhythmic units and frequency ratios in a more readable way.
+Rationals represent fractional values, which are particularly useful for representing relative rhythmic units and frequency ratios (e.g., just intonation) in a more readable way.
 
 ### Syntax:
 
-`<num>/<den>`
+`<numerator>/<denominator>`
 
 ### Example
 
@@ -69,13 +69,13 @@ print(is($third) is($fifth)) ## Outputs: rational rational
 
 ## 4. Pitch
 
-In _bell_, the `pitch` data type is a specialized numeric type that uses scientific pitch notation as a placeholder for the equivalent value in MIDI cents. This allows for more a intuitive way to specify pitch data over raw numbers.
+In _bell_, the `pitch` data type is a specialized numeric type that bases its syntax on [scientific pitch notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation) as a placeholder for the equivalent value in MIDI cents. This allows for more a intuitive way to specify pitch data over raw numbers.
 
-> MIDI cents is a pitch specification unit, combining MIDI values and cents (_1 semitone = 100 cents_) to allow for fine microtonal precision. For instance, 6000 is C5, 6100 is C sharp, 6200 is D, 6250 is D quarter flat, and so on. In _bell_, MIDI cents are the most common way of representing pitch information.
+> MIDI cents is a pitch specification unit, combining MIDI values and cents (_1 semitone = 100 cents_) to allow for fine microtonal precision. For instance, 6000 is C5, 6100 is C#5, 6200 is D5, 6250 is D+5 (quarter flat), and so on. In _bell_, MIDI cents are the most common way of representing pitch information.
 
 ### Basic Syntax
 
-The syntax for pitch specification is fairly straightforward:
+In most cases, the syntax for pitch specification is fairly straightforward:
 
 `<whitekey><optional:accidentals><octave>`
 
@@ -108,11 +108,11 @@ Where the available accidentals are:
 | `Dv5`  | D eighth-flat        | `6175`           |
 | `D#q5` | D 3/4 sharp          | `6350`           |
 
-> The careful reader will notice something particular here. In _bell_ (and _bach_ for that matter), middle C is not `C4` as it typically is, but rather `C5`. When using pitch syntax, always make sure to double check the octave you assign to each pitch.
+> The careful reader will notice something particular here. In _bell_ (and _bach_ for that matter), middle C is not `C4` as one would typically expect, but rather `C5`. When using pitch syntax, always make sure to double check the octave you assign to each pitch.
 
 ### Advanced Syntax
 
-While the syntax above can be sufficient for most cases, it's still limited to eighth-tones as the smallest tone division. For more fine-tuned pitch specifications, the following syntax can be used:
+While the syntax above can be sufficient in most cases, it's still limited to eighth-tones as the smallest tone division. For more fine-tuned pitch specifications, the following syntax can be used:
 
 `<whitekey><optional:accidental><octave><+|-><accidental_as_rational>t`
 
@@ -193,9 +193,9 @@ print($eighth) ## Outputs: 1/8
 ### Applying Frequency Ratios
 
 ```py
-$freq = 440.0; ## A4
+$freq = 440.0; ## A5
 $ratio = 3/2;
-print($freq * $ratio) ## Outputs: 660.0 (E5)
+print($freq * $ratio) ## Outputs: 660.0 (E6)
 ```
 
 ---
