@@ -109,7 +109,7 @@ Since _nullify_ is a binary operator — meaning it requires two operands —, _
 
 ### Exercise 1: Checking your intuition
 
-1. What is the _length_ (i.e., number of elements) of the following list:
+1. Without running the code, what is the _length_ (i.e., number of elements) of the following list:
 
 ```py
 $x = 1 "two" null "four" null 5 null;
