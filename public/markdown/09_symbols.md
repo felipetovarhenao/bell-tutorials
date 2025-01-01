@@ -92,7 +92,7 @@ $notesequence = (
 
 ## Advantages of Using Symbols
 
-1. **Human Readability**: Symbols make your code more intuitive, as they allow for assigning meaningful labels to data. Later on, we'll learn how to use symbols for [accessing data](12_keys.md).
+1. **Data Readability**: Symbols make your code more intuitive, as they allow for assigning meaningful labels to data. Later on, we'll learn how to use symbols for [accessing data](12_keys.md).
 
 2. **Debugging**: As we've seen in previous tutorials, using symbols helps you annotate data when debugging or inspecting complex code with the `print` function.
 
@@ -192,4 +192,4 @@ $data = [ C4 1/4 'mezzo-piano' [ 0.2 3.4 "hi" ] ]
 
 ---
 
-Symbols are a simple yet powerful tool for organizing and annotating your musical data. Next, you’ll learn about the `null` keyword, which we'll run into quite often when writing _bell_ code.
+Symbols are a simple yet powerful tool for organizing and annotating your data. Next, you’ll learn about the `null` keyword, which we'll run into quite often when writing _bell_ code.

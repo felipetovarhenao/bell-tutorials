@@ -9,7 +9,7 @@ In _bell_, the `null` keyword represents the _absence_ of a value. It’s an exp
 `null` in _bell_ signifies:
 
 - **No value**: It’s not a number, symbol, or list — it’s simply _absence_ of a value.
-- **Discarded results**: Statements or expressions can result in `null` if explicitly nullified, or there’s no return value, or an operation didn't evaluate as expected. This wil shortly be explained in more detail.
+- **Discarded results**: Statements or expressions can result in `null` if explicitly nullified, or there’s no return value, or an operation didn't evaluate as expected. This will shortly be explained in more detail.
 
 ## Printing `null`
 
@@ -47,9 +47,19 @@ Similarly, this shows how `null` is just a placeholder to represent the absence 
 
 ---
 
-## Using the Nullify Operator (`;`)
+## The Nullify Operator (`;`)
 
 So far we've used and thought of semicolons (`;`) simply as a way to separate statements — this is still accurate, but doesn't paint the full picture. In _bell_, we refer to the semicolon as the **nullify** operator: a **binary** operator where the expressions _before_ and _after_ it are evaluated, but the one preceding it is discarded (i.e., becomes `null`).
+
+### Syntax
+
+The syntax of the nullify operator is as follows:
+
+```
+<expr1> ; <expr2>
+```
+
+Where the result of `<expr1>` is nullified and the result of `expr2` is kept.
 
 #### Example:
 
@@ -59,7 +69,7 @@ $y = 2; ## Prints and outputs "hello world", but also returns null
 print($x + $y) ## Output: 3 (not discarded)
 ```
 
-> Note that the nullify operator doesn't invalidate the expressions it nullifies. That is, `$x = 1` and `$y = 1` are nullified, but the variable assignments still takes place and thus `$x` and `$y` still holds the assigned values, which is why `$x + $y` in the third line evaluates to `3`
+> Note that the nullify operator doesn't invalidate the expressions it nullifies. That is, `$x = 1` and `$y = 1` are nullified, but the variable assignments still take place: `$x` and `$y` still hold their assigned values, which is why `$x + $y` in the third line evaluates to `3`.
 
 ### Last line rule
 
@@ -140,14 +150,6 @@ $z = $x * $y;
 ```py
 $notes = C4 null E4;
 print($notes) ## Outputs: C4 E4
-```
-
-### Q: Can I compare `null` to other values?
-
-**A**: Yes, you can compare `null` to check for the absence of a value. Here's a preview of [conditionals](16_conditionals.md), which we'll cover later.
-
-```py
-if $x == null then print("No value assigned")
 ```
 
 ### Q: Is `null` the same as zero?
