@@ -219,17 +219,22 @@ $pitch = 6000 ## C5
 
 ```py
 $tempo = 60; ## beats per minute
-$value = 3/8 ## dotted quarter note
+$unit = 3/8 ## dotted quarter note
 ```
 
-2. Calculate the duration of `$value` in milliseconds using division (`/`) and multiplication (`*`).
-3. Cast the result as `float` and print the result. You should get `375.` as a result.
+2. Use the following formula to calculate the duration of `$unit` in milliseconds using the division (`/`) and multiplication (`*`) operators:
+
+$$
+\text{duration}= 240000 \div \text{BPM} \times \text{unit}
+$$
+
+3. Cast the result as `float` and print it. You should get `750.` as a result.
 
 ### Exercise 3: Scale Specification
 
-1. Using `pitch` syntax, specify the pitch values for a Db major triad, using a different variable for each pitch (e.g., `$root`, `$third`, `$fifth`):
+1. Using _bell_'s pitch syntax, specify the pitch values for a Db major triad, using a different variable for each pitch (e.g., `$root`, `$third`, `$fifth`):
 
-2. For each of the variables, cast the value as `int` and print it.
+2. For each of the variables, cast their value as an integer and print it.
 
 ---
 

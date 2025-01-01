@@ -96,7 +96,7 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ### Exercise 1: Chord Progressions
 
-1. Create a _llll_ representing a chord progression of your choice, using MIDI cents as the pitch unit. Each chord should include three pitches.
+1. Create a _llll_ representing a chord progression of your choice, using MIDI cents as the pitch unit. Each chord should include at least three pitches.
 2. Print the progression.
 
 ### Exercise 2: Melody with Rhythms
@@ -111,7 +111,7 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ### Exercise 3: Complex Nested Structures
 
-1. Create a _llll_ to represent a `I-IV-V-I` progression in G major:
+1. Create a _llll_ to represent a `I-IV-V-I` progression in G major, using pitch syntax:
    ```
    [ <root1> <third1> <fifth1> ] ... [ <root4> <third4> <fifth4> ]
    ```

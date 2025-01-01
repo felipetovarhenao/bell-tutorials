@@ -185,25 +185,41 @@ For example, if you want to increase a variable by 5, instead of writing `$x = $
 
 ### Exercise 1: Basic Arithmetic
 
-1. Write a program that calculates the result of:
+1.  Write the following math expressions as _bell_ code:
 
-- `15 + 8`
-- `20 - 5`
-- `4 * 7`
-- `16 / 4`
-- `9 % 2`
-- `3 ** 4`
+    - **Pythagorean Theorem:**
 
-2. Print the results of each calculation.
+      $$
+      c = \sqrt{a^2 + b^2}
+      $$
 
-### Exercise 2: Pitch transposition
+    - **Geometric Mean:**
 
-1. Assign a pitch value in MIDI cents to a variable.
-2. Assign the interval (in cents) you want to transpose the pitch by to another variable.
-3. Use addition to calculate the transposed pitch and assign the result to a new variable.
-4. Print the original pitch, the interval, and the transposed pitch.
+      $$
+      \text{geometricMean} = \sqrt{a \cdot b}
+      $$
 
-### Exercise 3: Computing Intervals in a Triad
+    - **Difference of Squares:**
+
+      $$
+      d = a^2 - b^2
+      $$
+
+    - **Weighted Average (simple form):**
+
+      $$
+      \text{weightedAverage} = \frac{w_1 \cdot a + w_2 \cdot b}{w_1 + w_2}
+      $$
+
+    - **Sum of Cubes:**
+
+      $$
+      s = a^3 + b^3
+      $$
+
+1.  Print the results of each calculation.
+
+### Exercise 2: Computing Intervals in a Triad
 
 1. Assign the MIDI cents values of a C major triad to three separate variables:
 

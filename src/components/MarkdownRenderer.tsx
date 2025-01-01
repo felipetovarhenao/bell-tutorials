@@ -4,6 +4,9 @@ import { Link } from "react-router";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css"; // Import KaTeX styles
 import { MarkdownFileInfo } from "../utils/getMarkdownInfo";
 import Navbar from "./Navbar";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -59,9 +62,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownFile, nextR
       );
     },
     a({ href, children, ...props }: any) {
-      // Check if the href is a Markdown file
       if (href?.endsWith(".md")) {
-        // Replace .md with the appropriate React route
         const match = href.match(/(?<=\d{2}_)\w+(?=\.md)/);
         const reactRoute = match[0];
         return (
@@ -71,7 +72,6 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownFile, nextR
         );
       }
 
-      // Otherwise, render as a normal link
       return (
         <a href={href} {...props}>
           {children}
@@ -88,11 +88,17 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownFile, nextR
     ),
   };
 
-  // Render Markdown with syntax highlighting for code blocks
+  // Render Markdown with syntax highlighting and math support
   return (
     <div className="markdown-container">
       <Navbar prev={previousRoute} next={nextRoute} />
-      <ReactMarkdown remarkPlugins={[remarkGfm]} className="chapter" children={content} components={components as any} />
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeKatex]}
+        className="chapter"
+        children={content}
+        components={components as any}
+      />
       <Navbar prev={previousRoute} next={nextRoute} />
     </div>
   );
