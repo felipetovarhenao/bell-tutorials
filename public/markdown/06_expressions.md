@@ -133,10 +133,10 @@ print($scale + 1200) ## Outputs: 7200 7400 7600 7700 7900 (transposed up an octa
 When two lists are used together in an operation, the operation is applied _element-wise_, meaning the first element of one list is combined with the first element of the other, the second with the second, and so on.
 
 ```py
-$notes = 60 64 67;
-$intervals = 12 -12 0; ## Transpose up an octave, down an octave, unchanged
+$notes = 6000 6400 6700;
+$intervals = 1200 -1200 0; ## Transpose up an octave, down an octave, unchanged
 $transposed = $notes + $intervals;
-print($transposed) ## Outputs: 72 52 67
+print($transposed) ## Outputs: 7200 5200 6700
 ```
 
 #### Caveat: Many-to-many Operations with Unequal Lengths or Structures
@@ -144,17 +144,17 @@ print($transposed) ## Outputs: 72 52 67
 If the two lists do not have the same length or structure, _bell_ tries to match each element in one list to elements in the other list, to the degree that it's possible — if not, extra elements are discarded. This can result in unexpected outputs if not accounted for.
 
 ```py
-$pitches = 60 62; ## Two notes
-$intervals = 2 4 5; ## Three intervals
-print($pitches + $intervals) ## Outputs: 62 66 (extra interval is discarded)
+$pitches = 6000 6200; ## Two notes
+$intervals = 200 400 500; ## Three intervals
+print($pitches + $intervals) ## Outputs: 6200 6600 (extra interval is discarded)
 ```
 
 The same principle applies to nested lists. If their structures do not align, you might get unexpected results.
 
 ```py
-$pitches = [60 64] [67]; ## Lengths of 2 and 1
-$intervals = [2 4] [5 7]; ## Lengths of 2 and 2
-print($pitches + $intervals) ## Outputs: [60+2 64+4] [67+5 67+7] (many-to-many and one-to-many matching)
+$pitches = [6000 6400] [6700]; ## Lengths of 2 and 1
+$intervals = [200 400] [500 700]; ## Lengths of 2 and 2
+print($pitches + $intervals) ## Outputs: [6000+200 6400+400] [6700+500 6700+700] (many-to-many and one-to-many matching)
 ```
 
 ---

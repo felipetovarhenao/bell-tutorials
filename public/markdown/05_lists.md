@@ -1,6 +1,6 @@
 # Lisp-like linked lists
 
-A _Lisp-like linked list_, or _llll_ for short, is one of the most unique and fundamental data structures in _bell_. A _lllls_ (pronounced _"ell-ell-ell-ells"_) is an advanced type of list that allows for nesting values, including lists, enabling you to structure and manipulate data hierarchically — as such, they are a very effective way of representing musical data, such as chords, progressions, melodies, scores, etc. In a way, everything in _bell_ is a list, as we'll see later.
+A _Lisp-like linked list_, or _llll_ for short, is one of the most unique and fundamental data structures in _bell_. The _llll_ (pronounced _"ell-ell-ell-ell"_) is an advanced type of list that allows for nesting values, including other _lllls_, enabling you to structure and manipulate data hierarchically — as such, they are a very effective way of representing musical data, such as chords, progressions, melodies, scores, etc. In a way, everything in _bell_ is a list, as we'll see later.
 
 In this section, you’ll learn the basics of _lllls_, their syntax, and how to use them to represent complex musical data.
 
@@ -14,6 +14,8 @@ A _llll_ is a list that can:
 - Be nested, meaning a list that can include other lists as elements.
 
 This makes _lllls_ ideal for representing hierarchical musical structures, such as chords, measures, rhythms, and more.
+
+> Note that throughout these tutorials we'll use the terms _list_ and _llll_ interchangeably.
 
 ---
 
@@ -61,9 +63,8 @@ $passage = [[C4] [E4 G4]] [[F4 A4] [C5]] ## Length: 2, Depth: 3
 
 ## Why Use _lllls_?
 
-1. **Simple Syntax**: Easily represent sequences or nested structures.
-2. **Hierarchical Organization**: Perfect for handling multi-level musical data.
-3. **Flexibility**: Perform operations on individual elements, entire lists, or nested structures — i.e., _one-to-one_, _one-to-many_, _many-to-many_.
+1. **Hierarchical Organization**: Perfect for handling multi-level (i.e., hierarchical) data.
+2. **Flexibility**: Perform operations on individual elements, entire lists, or nested structures — i.e., _one-to-one_, _one-to-many_, _many-to-many_. More on this in later tutorials.
 
 ---
 
@@ -100,7 +101,7 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ### Exercise 2: Melody with Rhythms
 
-1. Write a melody of your choosing as an _llll_, where each element is a sublist containing pitch (in MIDI cents) and duration (milliseconds) values:
+1. Write a melody of your choosing as a _llll_, where each element is a sublist containing pitch (in MIDI cents) and duration (milliseconds) values:
 
    ```
    $melody = [ <pitch1> <dur1> ] [ <pitch2> <dur2> ] ... [ <pitchN> <durN> ]
@@ -130,4 +131,4 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ---
 
-Now that we've covered _lllls_, you're ready to tackle basic expressions and learn how to perform calculations in _bell_
+Now that we've covered _lllls_, you're ready to cover basic expressions and learn how to perform calculations in _bell_
