@@ -47,7 +47,7 @@ print("hello world") ## Outputs: hello world
 3. `pow`: Raises a number to a power (or list thereof).
 
    ```py
-   print(pow(2, 0 1 2 8)) ## Outputs: 1 2 4 8
+   print(pow(2, 0 1 2 3)) ## Outputs: 1 2 4 8
    ```
 
    > This is equivalent to using the `**` operator: `2 ** 3`.
