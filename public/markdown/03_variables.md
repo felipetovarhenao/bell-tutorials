@@ -1,12 +1,12 @@
 # Variables
 
-Variables are the backbone of any programming language. In _bell_, variables are used to store reusable data such as numbers, text, lists, and even pitches. Think of variables as labeled containers that hold values you can use or modify later.
+Variables are the backbone of any programming language. In _bell_, and programming more broadly, variables are used to store reusable data such as numbers, symbols, and lists. Think of variables as labeled containers that hold values you can use or modify later.
 
 ---
 
 ## Declaring Variables
 
-In _bell_, a variable is declared simply by assigning it a value using the assignment operator (`=`).
+In _bell_, a variable is declared or initialized simply by assigning it a value using the assignment operator (`=`).
 
 **Example**:
 
@@ -14,13 +14,13 @@ In _bell_, a variable is declared simply by assigning it a value using the assig
 $x = 10
 ```
 
-Here, `$x` is the variable name, and `10` is the value stored in it.
+Here, `$x` is the variable name, and `10` is the value stored in it. Note that the variable name is largely arbitrary and up to you to choose.
 
 ---
 
 ## Variables and Default Values
 
-In _bell_, variables are assumed to have a value before they are used. However, unlike many other programming languages, _bell_ does not raise an error if a variable is used without having been assigned a value. Instead, the variable is automatically treated as having a default value of `null` (stay tuned to learn what `null` means).
+In _bell_, variables are assumed to have been declared before they are used. However, unlike many other programming languages, _bell_ does not raise an error if a variable is used without having been first assigned a value. Instead, the variable is automatically treated as having a default value of `null` (stay tuned to learn what `null` means).
 
 ### Example:
 
@@ -35,12 +35,6 @@ $note = 60; ## Assign a value
 print($note) ## Outputs: 60
 ```
 
-If you’re unsure whether a variable has been assigned, you can check for `null` using [conditional statements](16_conditionals.md), which will be covered much later. Here's a preview:
-
-```py
-if $note == null then print("$note variable is null")
-```
-
 ---
 
 ## Local vs Global Variables
@@ -50,11 +44,10 @@ _bell_ distinguishes between **local** and **global** variables:
 1. **Local Variables**:
 
    - Begin with a dollar sign (`$`), e.g., `$x`, `$note`, `$myvar`.
-   - Used within a specific scope — more on this later.
-   - Automatically discarded/forgotten when the scope ends.
+   - Can only be used/accessed within a specific scope — more on this later.
 
 2. **Global Variables**:
-   - Do not begin with a dollar sign, e.g., `X`, `Note`, `Myvar`.
+   - Do not begin with a dollar sign, e.g., `x`, `Note`, `Myvar`.
    - Available throughout the entire program, including other scripts.
 
 ### Example:
@@ -104,7 +97,7 @@ The scope of a variable refers to where it can be accessed or modified. In _bell
 
 ### 1. Be Descriptive:
 
-- Instead of `$a`, use `$score`, `$length`, or `$pitch`.
+- Generally speaking, using meaningful variables names such as `$score`, `$length`, or `$pitch` is preferable over non-descript ones, such as `$a`, `$t`, or `$l`.
 
 ### 2. Avoid Naming Collisions:
 
@@ -162,7 +155,7 @@ print($x) ## Output: 15
 
 ### Exercise 1: Storing Data
 
-1. Declare a variable `$name` and assign it your name.
+1. Declare a variable `$name` and assign it your name, as a symbol.
 2. Declare another variable `$age` and assign it your age.
 3. Print a message like: `Hello, my name is John and I am 25 years old.`
 
@@ -184,7 +177,7 @@ print($x) ## Output: 15
 
 ### Q: Can variable names start with a number?
 
-**A**: No, variable names must begin with a letter or a `$`. Numbers in variable names must be preceded by an alphabetic character. As mentioned earlier, also avoid naming local variables with digits preceded by two or less letters — e.g. `$<letter1><digit>` or `$<letter1><letter2><digit>`.
+**A**: No, variable names must begin with a letter, even when prefixed by a `$`. Numbers in variable names must be preceded by an alphabetic character. As mentioned earlier, also avoid naming local variables with digits preceded by two or less letters — e.g. `$<letter1><digit>` or `$<letter1><letter2><digit>`.
 
 ```py
 ## Incorrect

@@ -17,7 +17,7 @@ print("hello world")
 ### Step-by-Step Explanation:
 
 - **The** `print` **function**:
-  - The `print` function displays data we want to see in the _Max_ console window. In this case, `print` is instructed to display `"hello world"`. We'll discuss [functions](/#/functions) in more detail later on.
+  - The `print` function displays data we want to see in the _Max_ console window. In this case, `print` is instructed to display `"hello world"`. We'll discuss [functions](07_functions.md) in more detail later on.
 - **Parentheses**:
   - Parentheses `( )` are used, among other things, to enclose the arguments (i.e., _inputs_ or _parameters_) that you pass to a function. In this case, the `print` function is being passed one argument: the symbol `"hello world"`.
   - In this particular case, the parentheses indicate that you are calling (i.e., executing) the function and providing the data it needs to perform its task. If we omit the parentheses or leave a space after the function name (i.e., `print`), the function won’t execute.

@@ -133,7 +133,7 @@ print("the area of a 12 by 10 rectangle is 120")
      print(2 + 3)
      ```
 
-Notice the semicolon (`;`) in this example. For the sake of simplicity, we'll simply think of semicolons as **separating** (not terminating) blocks of code — similar to how we commas in human language to separate statements. A more in-depth explanations of semicolons in _bell_ will be provided later on.
+Notice the semicolon (`;`) in this example. For the sake of simplicity, we'll simply think of semicolons as **separating** (not terminating) blocks of code — similar to how we commas in human language to separate statements. A more in-depth explanation of semicolons in _bell_ will be provided later on.
 
 ---
 
