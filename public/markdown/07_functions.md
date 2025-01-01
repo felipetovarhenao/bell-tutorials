@@ -52,7 +52,7 @@ print("hello world") ## Outputs: hello world
 
    > This is equivalent to using the `**` operator: `2 ** (0 1 2 3)`.
 
-4. `abs`: Returns the absolute value of a number (of list thereof).
+4. `abs`: Returns the absolute value of a number (or list thereof).
 
    ```py
    $nums = -20 0 10 -3;
@@ -216,7 +216,7 @@ $exp = 3.5;
 $base.pow($exp).round().print() ## Output: 11.
 ```
 
-This style of syntax, while completely optional, does provide some degree of readability (or _flow_ )to your code, as it shows how the output of one function becomes the input of the next.
+This style of syntax, while completely optional, does provide some degree of readability (or _flow_) to your code, as it shows how the output of one function becomes the input of the next.
 
 ---
 

@@ -44,7 +44,7 @@ $name = `Wolfgang Amadeus Mozart;
 print($name) ## Outputs: Wolfgang, assumes Wolfgang and Mozart are global variables
 ```
 
-Similarly, make sure that you don't accidentally cause syntax errors:
+Similarly, make sure that you don't accidentally cause parsing errors:
 
 - Incorrect (results in parsing error):
   ```py
