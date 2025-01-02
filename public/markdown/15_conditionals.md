@@ -132,8 +132,8 @@ You can chain conditions using `else if` to create decision trees.
 
 ```py
 $note = 62; ## D4
-if $note < 60 then print("pp");
-else if $note <= 64 then print("mf");
+if $note < 60 then print("pp")
+else if $note <= 64 then print("mf")
 else print("ff")
 ```
 
