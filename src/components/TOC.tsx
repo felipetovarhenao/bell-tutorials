@@ -24,7 +24,10 @@ const TOC = ({ lessons }: TOCProps) => {
             <Link to={"/pseudovariables"}>Appendix II: Pseudo-Variables</Link>
           </li>
           <li>
-            <Link to={"/mistakes"}>Appendix III: Frequent Mistakes</Link>
+            <Link to={"/keywords"}>Appendix III: Reserved Keywords</Link>
+          </li>
+          <li>
+            <Link to={"/mistakes"}>Appendix IV: Frequent Mistakes</Link>
           </li>
         </ul>
       </nav>

@@ -59,6 +59,7 @@ const App: React.FC = () => {
         <Route path="/reference" element={<FunctionReference />} />
         <Route path="/pseudovariables" element={<MarkdownRenderer markdownFile={"markdown/pseudovariables.md"} />} />
         <Route path="/mistakes" element={<MarkdownRenderer markdownFile={"markdown/mistakes.md"} />} />
+        <Route path="/keywords" element={<MarkdownRenderer markdownFile={"markdown/keywords.md"} />} />
       </Routes>
       <hr style={{ marginTop: "25px", marginBottom: "25px" }} />
       <footer style={{ width: "100%", paddingBottom: "25px", textAlign: "center" }}>
