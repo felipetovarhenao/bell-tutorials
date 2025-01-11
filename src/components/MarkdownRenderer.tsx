@@ -71,7 +71,9 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownFile, nextR
           </Link>
         );
       }
-
+      if (!href?.startsWith("/#")) {
+        props.target = "_blank";
+      }
       return (
         <a href={href} {...props}>
           {children}
