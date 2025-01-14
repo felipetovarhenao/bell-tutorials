@@ -19,6 +19,8 @@ Below is a table of commonly used list-oriented functions in _bell_.
 | `f2mc`   | Converts frequencies to MIDI cents | `f2mc(440 523.25)`              | `A4 C5`                |
 | `trans`  | Transposes a matrix-style list     | `trans([1 2 3] [10 20 30])`     | `[1 10] [2 20] [3 30]` |
 
+As always, check the [bell reference documentation](/#/reference) for a more detailed break-down of each.
+
 ---
 
 ## Examples of Data Manipulation
