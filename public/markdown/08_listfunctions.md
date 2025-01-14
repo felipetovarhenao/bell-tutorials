@@ -1,6 +1,6 @@
 # List-oriented functions
 
-To manipulate these lists efficiently, _bell_ provides a wide range of functions to manipulate _lllls_. This section will teach you how to use some of these functions to transform your _lllls_.
+To manipulate these _lllls_ efficiently, _bell_ provides a wide range of functions. This section will teach you how to use some of these functions to transform your _lllls_.
 
 ---
 
