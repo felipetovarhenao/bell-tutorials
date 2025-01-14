@@ -228,7 +228,7 @@ $$
 \text{duration}= 240000 \div \text{BPM} \times \text{unit}
 $$
 
-3. Cast the result as `float` and print it. You should get `750.` as a result.
+3. Cast the result as `float` and print it. You should get `1500.` as a result.
 
 ### Exercise 3: Scale Specification
 
