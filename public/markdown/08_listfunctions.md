@@ -128,7 +128,7 @@ All those _bell_ functions also accept an attribute called `@depth`/`@level`, wh
 3. Infer the scale of the progression using the `thin` and `sort` functions.
 4. Print the scale.
 
-### Exercise 4: Frequency to Note Conversion
+### Exercise 3: Frequency to Note Conversion
 
 1. Create a list of pitches, using note names. For instance:
 

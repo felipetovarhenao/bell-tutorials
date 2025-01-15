@@ -123,7 +123,7 @@ $x = 10;
 print($x * $y) ## Output: ?
 ```
 
-### Exercise 1: Code debugging
+### Exercise 2: Code debugging
 
 1. What's wrong with the following code snippets? How would you fix them?
 

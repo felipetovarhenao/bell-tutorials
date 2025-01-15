@@ -171,15 +171,15 @@ $progression = [C4 E4 G4] [F4 A4 C5]
 
 ### Exercise 2
 
-1. Create a passage of diads with nested pitch and rhythmic value pairs:
+1. Create a passage of dyads with nested pitch and rhythmic value pairs:
 
 ```py
 $melody = [[C4 1/4] [D4 1/8]] [[E4 1/8] [F4 1/2]]
 ```
 
 2. Use the operator `:` to access and print:
-   - The first diad.
-   - The second note of the second diad.
+   - The first dyad.
+   - The second note of the second dyad.
 
 ### Exercise 3
 
