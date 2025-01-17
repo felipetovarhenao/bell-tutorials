@@ -238,11 +238,14 @@ The `with` clause allows fine-tuning the iteration behavior using attributes lik
 
 #### Attributes in `for` loops
 
-- `maxdepth` (defaults to 1): Sublists are accessed up to the level of depth defined by the `maxdepth` attribute. Default is `-1` = all levels.
-- `scalarmode` (defaults to 1): With `@scalarmode 1` in parallel iteration, a list composed by a single element is iterated against all the elements of the other lists.
-- `unwrap` (defaults to 0): If the `unwrap` attribute is set to `1`, the outermost level of parentheses is removed from each _llll_.
-- `recursionmode` (defaults to 0): With recursionmode 1, sublists are iterated against single elements, up to `maxdepth`.
-- `spikemode` (defaults to 0): We call a "spike" a sequence of parentheses, two of which are opposite with nothing between them: e.g. `[]` or `[[[]` or `]][[` .
+- `@iterationmode`: Specifies the behavior when performing parallel iteration. There are three iteration modes:
+  - `@iterationmode 0`: the lists are iterated until the end of the shortest one.
+  - `@iterationmode 1`: the lists are iterated until the end of the longest one.
+  - `@iterationmode 2`: the lists are iterated until the end of the longest one and `null` is used as a placeholder when a list has is finished.
+- `@maxdepth` (defaults to 1): Sublists are accessed up to the level of depth defined by the `maxdepth` attribute. Default is `-1` = all levels.
+- `@scalarmode` (defaults to 1): With `@scalarmode 1` in parallel iteration, a list composed by a single element is iterated against all the elements of the other lists.
+- `@unwrap` (defaults to 0): If the `unwrap` attribute is set to `1`, the outermost level of parentheses is removed from each _llll_.
+- `@recursionmode` (defaults to 0): With recursionmode 1, sublists are iterated against single elements, up to `maxdepth`.
 
 ```py
 $myvar = 1 2 [3 4 [5 6]];
