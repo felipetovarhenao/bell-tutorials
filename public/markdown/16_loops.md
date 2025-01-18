@@ -299,7 +299,7 @@ $melody = C4 D4 E4 F4 G4
 
 ### Exercise 2: Scale to Intervals
 
-1. Create a list of rhythmic values:
+1. Create a list of pitch values in MIDI cents:
 
 ```py
 $scale = 6000 6200 6400 6500 6700 6900 7100

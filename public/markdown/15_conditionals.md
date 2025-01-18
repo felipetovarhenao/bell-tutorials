@@ -210,7 +210,7 @@ $triad = C4 E4 G4
 
 2. Try other major and minor triads to check your code works properly.
 
-### Exercise 4: Conditional Seventh
+### Exercise 2: Conditional Seventh
 
 1. Given the following variable:
 
