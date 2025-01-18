@@ -166,12 +166,6 @@ $people = (
 2. Use `reduce` to calculate the sum of all numbers (i.e., `1 + 2 + 3 + 4 + 5`).
 3. Print the result.
 
-### Exercise 4: Creating Custom Operators
-
-1. Write a custom function equivalent to the functional form for the subtraction operator (`#-`).
-2. Use it in conjunction with `reduce` to compute the result of subtracting all numbers in a list (e.g., from `10 5 2` to `10 - 5 - 2`).
-3. Test your function with various input lists.
-
 ## FAQ Section
 
 ### Q: What is the difference between a regular function and a lambda function?
