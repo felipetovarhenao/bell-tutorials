@@ -131,7 +131,7 @@ This also applies to nested lists.
 
 ```py
 $x = [1 2 3] [4 5 [6]];
-$x:(2 3 1) = 0;
+$x:(2 3) = 0;
 print($x) ## Outputs: [1 2 3] [4 5 0]
 ```
 
