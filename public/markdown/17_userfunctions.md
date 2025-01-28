@@ -105,7 +105,7 @@ $scopefun = -> (
    $insidevar = "I'm inside the function!";
    print($insidevar);
    print($localvar);
-   print(Globalvar);
+   print(Globalvar)
 );
 $scopefun();
 ## Outputs:
