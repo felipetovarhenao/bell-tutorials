@@ -68,11 +68,11 @@ $x = 'a' 'b' 'c' 'd';
 print($x:[1 3]) ## Outputs: a c
 ```
 
-Similarly, for nested addresses, we use an additional set of brackets:
+Similarly, for acessing a range of elements we can use an additional level of brackets:
 
 ```py
-$x = ['a' 'b'] ['c' 'd'];
-print($x:[[1 1] [2 1]]) ## Outputs: a c
+$x = 'a' 'b' 'c' 'd' 'e' 'f';
+print($x:[1 [3 -1]]) ## Outputs: a c d e f
 ```
 
 ---
