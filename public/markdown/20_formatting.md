@@ -6,9 +6,9 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 
 ## Why indentation matters
 
-1. **Improved Readability**: Organized code is easier to follow, especially when using loops, conditionals, or nested structures.
-2. **Error Prevention**: Proper indentation helps visualize blocks of code, reducing the risk of misplaced logic.
-3. **Team Collaboration**: Clean, consistent formatting makes it easier for others to understand your work.
+1. **Improved readability**: Organized code is easier to follow, especially when using loops, conditionals, or nested structures.
+2. **Error prevention**: Proper indentation helps visualize blocks of code, reducing the risk of misplaced logic.
+3. **Team collaboration**: Clean, consistent formatting makes it easier for others to understand your work.
 
 ---
 
@@ -16,10 +16,10 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 
 ### General rules
 
-1. **Indent Nested Blocks**:
+1. **Indent nested blocks**:
    - Use 2 or 4 spaces (not tabs) for each level of nesting.
    - Consistency is key—choose one style and stick to it.
-2. **Align Parentheses and Blocks**:
+2. **Align parentheses and blocks**:
    - For multi-line parentheses or nested structures, align them for clarity.
 
 ### Example: indentation with conditionals

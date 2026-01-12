@@ -1,6 +1,6 @@
 # Parentheses
 
-### 1. **Parentheses for grouping and function calls**
+### 1. Parentheses for grouping and function calls
 
 In _bell_, parentheses serve two major purposes:
 
@@ -22,7 +22,7 @@ You can nest parentheses as deeply as needed:
 (1 + (2 * (3 + 4))) ## Output: 15
 ```
 
-### 2. **Semicolon as nullify operator, not statement separator**
+### 2. Semicolon as nullify operator, not statement separator
 
 Unlike many other languages, the semicolon (`;`) in _bell_ **does not** act as a statement terminator. Instead, it is a **binary nullify operator**: it discards its left-hand operand and evaluates to its right-hand one.
 
@@ -42,7 +42,7 @@ You can chain nullify operations:
 
 This pattern is common in blocks where intermediate steps are useful for side-effects (like `print()`) but not the final value.
 
-### 3. **Precedence rules**
+### 3. Precedence rules
 
 Semicolons have **very low precedence**, so use parentheses to control grouping:
 
@@ -62,7 +62,7 @@ If you omit parentheses:
 1 + 2 ; 3 * 2 ## Output: 6  ## Same as ((1 + 2) ; (3 * 2))
 ```
 
-### 4. **Common pitfalls**
+### 4. Common pitfalls
 
 - Forgetting parentheses around semicolon groups:
 
