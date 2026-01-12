@@ -4,7 +4,7 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 
 ---
 
-## Why Indentation Matters
+## Why indentation matters
 
 1. **Improved Readability**: Organized code is easier to follow, especially when using loops, conditionals, or nested structures.
 2. **Error Prevention**: Proper indentation helps visualize blocks of code, reducing the risk of misplaced logic.
@@ -12,9 +12,9 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 
 ---
 
-## Guidelines for Indentation in _bell_
+## Guidelines for indentation in _bell_
 
-### General Rules
+### General rules
 
 1. **Indent Nested Blocks**:
    - Use 2 or 4 spaces (not tabs) for each level of nesting.
@@ -22,15 +22,15 @@ In _bell_, proper indentation and code structure aren't strictly required by the
 2. **Align Parentheses and Blocks**:
    - For multi-line parentheses or nested structures, align them for clarity.
 
-### Example: Indentation with Conditionals
+### Example: indentation with conditionals
 
-#### Without Indentation (Hard to Read):
+#### Without indentation (hard to read):
 
 ```py
 if $note > 60 then ($note-=12;print($note)) else ($note += 12;print($note))
 ```
 
-#### With Indentation (Readable):
+#### With indentation (readable):
 
 ```py
 if $note > 60 then (
@@ -42,15 +42,15 @@ if $note > 60 then (
 )
 ```
 
-### Example: Indentation in Loops
+### Example: indentation in loops
 
-#### Without Indentation:
+#### Without indentation:
 
 ```py
 for $note in C4 D4 E4 collect ($note+12;print($note))
 ```
 
-#### With Indentation:
+#### With indentation:
 
 ```py
 for $note in C4 D4 E4 collect (
@@ -61,13 +61,13 @@ for $note in C4 D4 E4 collect (
 
 ---
 
-## Code Etiquette Tips
+## Code etiquette tips
 
-### 1. Use Descriptive Variable Names:
+### 1. Use descriptive variable names:
 
 - Avoid `$a`, `$b`, `$x` for meaningful variables. Instead, use more descriptive language, such as `$melody`, `$note`, or `$scale`.
 
-### 2. Break Long Lines:
+### 2. Break long lines:
 
 - Split long expressions or statements across multiple lines for readability.
 
@@ -77,7 +77,7 @@ $pattern = (
 )
 ```
 
-### 3. Avoid Excessive Nesting:
+### 3. Avoid excessive nesting:
 
 - Simplify deeply nested code by splitting it into smaller, independent parts.
 

@@ -44,7 +44,7 @@ print($pithc) ## Outputs: null
 
 Another simple but very common mistake is to misspell variable names, which results in `null`-related problems that like one described earlier.
 
-## Incorrect Arguments
+## Incorrect arguments
 
 ```py
 $start = 1;
@@ -55,7 +55,7 @@ print(arithmser($start, $end, $count)) ## Outputs: 1 6
 
 When using functions, it's always important to double-check the [reference documentation](/#/reference) and ensure that you're not passing either invalid or unexpected values to a function, or passing them in the wrong order. In the example above, the `$count` variable should be passed as either the fourth positional argument, or as a named argument.
 
-## Incorrect Depth Levels
+## Incorrect depth levels
 
 ```py
 $nums = [1 2 3 4 5];

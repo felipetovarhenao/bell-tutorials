@@ -4,7 +4,7 @@ Welcome to the starting point of learning _bell_, a programming language for com
 
 ---
 
-## Your First Script
+## Your first script
 
 The _"Hello, world!"_ script in _bell_ is as simple as this:
 
@@ -14,7 +14,7 @@ print("hello world")
 
 > All code snippets in these tutorials can be easily copied by clicking the _copy_ icon at the top right of each, making it easy for you to run and edit the examples in your text editor.
 
-### Step-by-Step Explanation:
+### Step-by-step explanation:
 
 - **The** `print` **function**:
   - The `print` function displays data we want to see in the _Max_ console window. In this case, `print` is instructed to display `"hello world"`. We'll discuss [functions](07_functions.md) in more detail later on.
@@ -33,7 +33,7 @@ print("hello world")
 
 ---
 
-## Running the Script
+## Running the script
 
 To execute your code:
 

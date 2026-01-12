@@ -27,6 +27,7 @@ const App: React.FC = () => {
       "variables.md",
       "numtypes.md",
       "lists.md",
+      "evaluation.md",
       "expressions.md",
       "functions.md",
       "listfunctions.md",

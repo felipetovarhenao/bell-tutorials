@@ -4,7 +4,7 @@ In _bell_, list operators allows us to modify and transform lists (or _lllls_) e
 
 ---
 
-## Range Operator (`...`)
+## Range operator (`...`)
 
 The range operator (`...`) is a quick way to create lists of incremental numbers, just like with `artihmser`. It generates a list of numbers from a starting value to an ending value, except the incremental number is always `1`.
 
@@ -38,7 +38,7 @@ $x = 1...4 ## Outputs: 1 2 3 4
 
 ---
 
-## Repeat Operator (`:*`)
+## Repeat operator (`:*`)
 
 The repeat operator (`:*`) repeats a list or sequence a specified number of times.
 
@@ -101,7 +101,7 @@ $x !_= 1 2 ## Output: 1 2 3 4 5 6
 
 ## Exercises
 
-### Exercise 1: Building a Progression
+### Exercise 1: building a progression
 
 1. Given the following variables, use the `_=` and `!_=` to update the `$progression` variable, such that it forms a `I IV V I` cadence:
 
@@ -116,7 +116,7 @@ $progression = $subdominant;
 
 2. Print the progression.
 
-### Exercise 2: Repeating a Pattern
+### Exercise 2: repeating a pattern
 
 1. Create a list of rhythmic values:
 
@@ -127,7 +127,7 @@ $rhythm = 1/4 1/8 1/8
 2. Use the `:*` operator to repeat the rhythm four times.
 3. Print the repeated rhythm.
 
-### Exercise 3: Combining Melody and Rhythm
+### Exercise 3: combining melody and rhythm
 
 1. Using the `...` operator, generate the first 16 harmonics, in Hertz, of the frequency `55`.
 2. Print the harmonic series.

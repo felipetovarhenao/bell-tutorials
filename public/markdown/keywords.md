@@ -24,7 +24,7 @@ In addition to the built-in functions in the [reference documentation](/#/refere
 - `then`: keyword for specifying code to execute when a conditional statement is true.
 - `else`: keyword for specifying code to execute when a conditional statement is false.
 
-## Variables Declaration
+## Variables declaration
 
 - `init`: initializes a local variable to be used with `keep` and `unkeep`.
 - `keep`: keeps current state of local variable.

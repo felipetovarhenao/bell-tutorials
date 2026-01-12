@@ -6,9 +6,9 @@ Functions are one of the most powerful tools in programming. In _bell_, function
 
 ---
 
-## Understanding Functions
+## Understanding functions
 
-### What Are Functions?
+### What are functions?
 
 A function in _bell_:
 
@@ -30,7 +30,7 @@ print("hello world") ## Outputs: hello world
 
 ---
 
-## Commonly Used Functions
+## Commonly used functions
 
 1. `print`: Displays data we want on the _Max_ console. Useful for debugging and inspecting our code.
 
@@ -68,11 +68,11 @@ print("hello world") ## Outputs: hello world
 
 ---
 
-## Arguments in Functions
+## Arguments in functions
 
 Arguments are values you pass to a function as inputs. They can be **positional** or **named**:
 
-### Positional Arguments
+### Positional arguments
 
 Arguments are provided in the order the function expects. This requires knowing the order of arguments of the function:
 
@@ -84,7 +84,7 @@ pow(2, 3); ## pow(x, y) -> <power>
 abs(-1) ## abs(x) -> <absolute value>
 ```
 
-### Named Arguments
+### Named arguments
 
 Arguments are specified by name, allowing flexibility in their order. This requires knowing the name of the function's arguments:
 
@@ -129,11 +129,11 @@ When we use an incorrect argument name, _bell_ simply ignores the value assigned
 random(@min 1 @max 10) ## Output: null
 ```
 
-### Required vs Optional Arguments in Functions
+### Required vs optional arguments in functions
 
 In _bell_, function arguments can also be generally categorized as either **required** or **optional**. However, unlike some programming languages, _bell_ does **not** enforce required arguments strictly. If a required argument is omitted, the function will still run, but the missing argument will default to `null`. This often results in `null` evaluations for the function's output but does not raise an error.
 
-#### Required Arguments
+#### Required arguments
 
 These are the arguments that the function expects to be provided to produce meaningful output. If you omit these arguments, the function assumes their value to be `null`.
 
@@ -145,7 +145,7 @@ pow(2) ## Output: null (missing the second argument)
 
 In this example, `pow` expects two arguments: a base and an exponent. Without the second argument, the function evaluates to `null`.
 
-#### Optional Arguments
+#### Optional arguments
 
 Optional arguments have non-`null` default values, so you can omit them without affecting the function's ability to run. If not explicitly specified, the function will use its default behavior for these arguments.
 
@@ -163,7 +163,7 @@ Here, the `@step` and `@maxcount` arguments are optional. Since they are not pro
 
 > Also note that you can combine positional and named argument syntax, but positional arguments must always go before any named argument.
 
-#### Best Practices
+#### Best practices
 
 When using a function, always provide required arguments to avoid unexpected `null` evaluations.
 Familiarize yourself with the optional arguments and their default values to customize function behavior when needed.
@@ -171,9 +171,9 @@ By understanding the distinction between required and optional arguments, you ca
 
 ---
 
-## Example: Musical Scales
+## Example: musical scales
 
-### Using `arithmser` to Generate a Scale
+### Using `arithmser` to generate a scale
 
 Since the `arithmser` function creates an arithmetic series, it's useful for generating sequences of evenly spaced numbers, such as a chromatic or whole-tone scale.
 
@@ -186,7 +186,7 @@ print("chromatic:" $chromatic) ## Outputs: 6000 through 72
 
 ---
 
-## Dataflow-Style Function Calls
+## Dataflow-style function calls
 
 _bell_ supports a dataflow syntax, which provides an alternative way of calling functions. In other words, it's completely up to you to use this style of syntax, or instead stick to the one we've been using in previous examples.
 
@@ -222,12 +222,12 @@ This style of syntax, while completely optional, does provide some degree of rea
 
 ## Exercises
 
-### Exercise 1: Generating Random Chords
+### Exercise 1: generating random chords
 
 1. Use the `random` function to generate random MIDI cents values between `4800` (`C4`) and `7200` (`C6`) and store them in a variable.
 2. Print the result.
 
-### Exercise 2: Create a random arpeggio
+### Exercise 2: create a random arpeggio
 
 1. Use `arithmser` to create a diminished and augmented arpeggi starting at MIDI cents value `6000` (`C5`). Each arpeggio should be assigned to a different variable.
 2. Use the `scramble` function to shuffle both arpeggios.

@@ -4,11 +4,11 @@ Conditionals are central to decision-making in programming, allowing a programâ€
 
 ---
 
-## What Are Conditionals?
+## What are conditionals?
 
 A conditional checks whether a given statement is true (non-zero value) or false (`0`) and executes different blocks of code accordingly. To write conditional statements, we have the following keywords available:
 
-### Conditional Keywords
+### Conditional keywords
 
 | Keyword   | Purpose                                                                            | Example                           |
 | --------- | ---------------------------------------------------------------------------------- | --------------------------------- |
@@ -47,7 +47,7 @@ if $note < 6000 then (
 print($note)
 ```
 
-### Chained `if-else` Syntax
+### Chained `if-else` syntax
 
 For more complex decision trees, we can chain multiple conditional statements.
 
@@ -66,7 +66,7 @@ else print("ff")
 
 ---
 
-## Conditional Blocks with Multiple Statements
+## Conditional blocks with multiple statements
 
 As it's typical in _bell_, we can always create compound statements using parentheses and the `;` operator.
 
@@ -81,7 +81,7 @@ if $pitch > 6400 then (
 
 ---
 
-## Boolean Logic in Conditions
+## Boolean logic in conditions
 
 As evidenced by all previous examples, _bell_ does not have a separate boolean data type. Instead:
 
@@ -96,7 +96,7 @@ if $condition then print("This will not run") ## This gets printed
 else print("False detected") ## This doesn't
 ```
 
-## Logical Operators in Conditions
+## Logical operators in conditions
 
 You can combine conditions using logical operators:
 
@@ -108,27 +108,27 @@ You can combine conditions using logical operators:
 
 ---
 
-## Examples of Logical Conditions in Music
+## Examples of logical conditions in music
 
-### Checking a Range of Notes
+### Checking a range of notes
 
 ```py
 $note = 6500; ## MIDI cents for F4
 if $note > 6000 && $note < 7200 then print("Within range")
 ```
 
-### Detecting Out-of-Bounds Notes
+### Detecting out-of-bounds notes
 
 ```py
 $note = 75;
 if $note < 60 || $note > 72 then print("Out of range")
 ```
 
-## Combining `else if` for Multiple Conditions
+## Combining `else if` for multiple conditions
 
 You can chain conditions using `else if` to create decision trees.
 
-### Example: Assigning Dynamics Based on Pitch Range
+### Example: assigning dynamics based on pitch range
 
 ```py
 $note = 62; ## D4
@@ -139,7 +139,7 @@ else print("ff")
 
 ---
 
-## Conditional Boolean Operators: `&&&` and `|||`
+## Conditional boolean operators: `&&&` and `|||`
 
 The `&&&` and `|||` operators are conditional boolean operators, also binary, that extend the behavior of traditional logical operators `&&` and `||`. Unlike their standard counterparts, these operators operate with a focus on `null` values for conditional evaluation.
 
@@ -148,7 +148,7 @@ The `&&&` and `|||` operators are conditional boolean operators, also binary, th
 - `<leftval> &&& <rightval>`
 - `<leftval> ||| <rightval>`
 
-### The `&&&` Operator
+### The `&&&` operator
 
 The `&&&` operator evaluates its left (i.e., first) operand and checks if it is `null`. If the left operand is `null`, the operator immediately returns `null`, skipping the second argument entirely. If the left operand is non-`null`, the right operand is evaluated. The result depends on the right (i.e., second) operand:
 
@@ -167,7 +167,7 @@ $result = $value1 &&& $value2
 - If `$value1` is non-`null` and `$value2` is `null`, result is `null`.
 - If both `$value1` and `$value2` are non-`null`, result is the value of `$value2`.
 
-### The `|||` Operator
+### The `|||` operator
 
 The `|||` operator evaluates its left operand and checks if it is non-`null`. If the left operand is non-`null`, the operator immediately returns it, skipping the right operand's evaluation entirely. If the left operand is `null`, the right-side operand is evaluated. The result depends on the second operand:
 
@@ -200,7 +200,7 @@ These operators are particularly useful for substituting `if` statements involvi
 
 ## Exercises
 
-### Exercise 1: Triad classifier
+### Exercise 1: triad classifier
 
 1. Given the following variable, make use of the `:` operator and conditionals to check if the triad is major or minor, and print the result. You may assume triads are spelled in root position and ascending order.
 
@@ -210,7 +210,7 @@ $triad = C4 E4 G4
 
 2. Try other major and minor triads to check your code works properly.
 
-### Exercise 2: Conditional Seventh
+### Exercise 2: conditional seventh
 
 1. Given the following variable:
 

@@ -4,9 +4,9 @@ Expressions are the building blocks of any program. In _bell_, expressions can i
 
 ---
 
-## Arithmetic Operations
+## Arithmetic operations
 
-### Common Operations
+### Common operations
 
 _bell_ provides several basic arithmetic operators, including but not limited to:
 
@@ -23,7 +23,7 @@ Later on, we will spend a bit more time exploring other _bell_ operators, but th
 
 ### Examples
 
-#### Addition and Subtraction
+#### Addition and subtraction
 
 ```py
 $x = 10;
@@ -32,7 +32,7 @@ print($x + $y); ## Output: 15
 print($x - $y) ## Output: 5
 ```
 
-#### Multiplication and Division
+#### Multiplication and division
 
 ```py
 $length = 8;
@@ -41,13 +41,13 @@ print($length * $width); ## Output: 32
 print($length / $width) ## Output: 2
 ```
 
-#### Modulo (Finding Remainders)
+#### Modulo (finding remainders)
 
 ```py
 print(10 % 3) ## Output: 1 (10 divided by 3 leaves a remainder of 1)
 ```
 
-#### Power (Exponents)
+#### Power (exponents)
 
 ```py
 print(2 ** 3) ## Output: 8 (2 raised to the power of 3)
@@ -55,7 +55,7 @@ print(2 ** 3) ## Output: 8 (2 raised to the power of 3)
 
 ---
 
-## Combining Expressions
+## Combining expressions
 
 You can combine multiple operations in a single expression. _bell_ follows standard operator precedence rules (e.g., multiplication and division are performed before addition and subtraction). Use parentheses to make the order explicit or override precedence.
 
@@ -75,7 +75,7 @@ print($x) ## Output: 11
 
 ---
 
-## Using Variables in Expressions
+## Using variables in expressions
 
 Variables can be used just like numbers or other values in expressions.
 
@@ -90,7 +90,7 @@ print($area) ## Output: 25
 
 ---
 
-## Expressions vs. Statements
+## Expressions vs. statements
 
 In these tutorials, the terms _expression_ and _statement_ are use interchangeably, usually to refer to segments of code separated by semicolons.
 
@@ -109,7 +109,7 @@ The proper use of semicolons will be touched upon later on.
 
 One of the most powerful aspects of _bell_ is the ability to operate on entire lists, including operations between single values, multiple values, or a combination of both. This makes it remarkably easy to manipulate complex data with simple _bell_ expressions. However, certain rules apply depending on the types involved in the operation.
 
-### 1. One-to-one
+### 1. one-to-one
 
 When performing operations between two individual values (e.g., two numbers), the result is straightforward: the operation is applied directly.
 
@@ -119,7 +119,7 @@ $y = 700;  ## Interval of a perfect fifth
 print($x + $y) ## Outputs: 6700 (G5)
 ```
 
-### 2. One-to-many
+### 2. one-to-many
 
 When one of the operands is a single value and the other one a list, the same operation is applied to each element of the list individually.
 
@@ -128,7 +128,7 @@ $scale = 6000 6200 6400 6500 6700; ## MIDI cents: C5, D5, E5, F5, G5
 print($scale + 1200) ## Outputs: 7200 7400 7600 7700 7900 (transposed up an octave)
 ```
 
-### 3. Many-to-many
+### 3. many-to-many
 
 When two lists are used together in an operation, the operation is applied _element-wise_, meaning the first element of one list is combined with the first element of the other, the second with the second, and so on.
 
@@ -139,7 +139,7 @@ $transposed = $notes + $intervals;
 print($transposed) ## Outputs: 7200 5200 6700
 ```
 
-#### Caveat: Many-to-many Operations with Unequal Lengths or Structures
+#### Caveat: many-to-many operations with unequal lengths or structures
 
 If the two lists do not have the same length or structure, _bell_ tries to match each element in one list to elements in the other list, to the degree that it's possible — if not, extra elements are discarded. This can result in unexpected outputs if not accounted for.
 
@@ -159,7 +159,7 @@ print($pitches + $intervals) ## Outputs: [6000+200 6400+400] [6700+500 6700+700]
 
 ---
 
-## Compound Assignments
+## Compound assignments
 
 In _bell_, as in many other programming languages, compound assignments are a concise way to update the value of a variable by applying an operation and reassigning the result to the same variable.
 
@@ -183,7 +183,7 @@ For example, if you want to increase a variable by 5, instead of writing `$x = $
 
 ## Exercises
 
-### Exercise 1: Basic Arithmetic
+### Exercise 1: basic arithmetic
 
 1.  Write the following math expressions as _bell_ code:
 
@@ -219,7 +219,7 @@ For example, if you want to increase a variable by 5, instead of writing `$x = $
 
 1.  Print the results of each calculation.
 
-### Exercise 2: Computing Intervals in a Triad
+### Exercise 2: computing intervals in a triad
 
 1. Assign the MIDI cents values of a C major triad to three separate variables:
 

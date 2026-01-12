@@ -19,9 +19,9 @@ This makes _lllls_ ideal for representing hierarchical musical structures, such 
 
 ---
 
-## _llll_ Syntax
+## _llll_ syntax
 
-### Implicit _llll_ Construction
+### Implicit _llll_ construction
 
 You can create a simple _llll_ by writing elements next to each other, separated by spaces:
 
@@ -29,7 +29,7 @@ You can create a simple _llll_ by writing elements next to each other, separated
 $tempi = 60 80 120
 ```
 
-### One-element Lists
+### One-element lists
 
 By the same token, the following can be thought of as a list with a single element:
 
@@ -45,7 +45,7 @@ Use square brackets `[ ]` to group elements into nested lists:
 $progression = [C4 E4 G4] [F4 A4 C5]
 ```
 
-### _llll_ Terminology
+### _llll_ terminology
 
 - **Length**: The number of elements in a list.
 - **Depth**: The number of levels of nesting in a list.
@@ -61,28 +61,28 @@ $passage = [[C4] [E4 G4]] [[F4 A4] [C5]] ## Length: 2, Depth: 3
 
 ---
 
-## Why Use _lllls_?
+## Why use _lllls_?
 
 1. **Hierarchical Organization**: Perfect for handling multi-level (i.e., hierarchical) data.
 2. **Flexibility**: Perform operations on individual elements, entire lists, or nested structures — i.e., _one-to-one_, _one-to-many_, _many-to-many_. More on this in later tutorials.
 
 ---
 
-## Examples: Representing Musical Data
+## Examples: representing musical data
 
-### Chords as Lists
+### Chords as lists
 
 ```py
 $chord = C4 E4 G4
 ```
 
-### Chord Progressions as Nested Lists
+### Chord progressions as nested lists
 
 ```py
 $progression = [C4 E4 G4] [F4 A4 C5] [G4 B4 D5]
 ```
 
-### A Melody with Rhythmic Values
+### A melody with rhythmic values
 
 ```py
 $melody = [C4 1/4] [D4 1/8] [E4 1/8] [F4 1/2]
@@ -94,12 +94,12 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 ## Exercises
 
-### Exercise 1: Chord Progressions
+### Exercise 1: chord progressions
 
 1. Create a _llll_ representing a chord progression of your choice, using MIDI cents as the pitch unit. Each chord should include at least three pitches.
 2. Print the progression.
 
-### Exercise 2: Melody with Rhythms
+### Exercise 2: melody with rhythms
 
 1. Write a melody of your choosing as a _llll_, where each element is a sublist containing pitch (in MIDI cents) and duration (milliseconds) values:
 
@@ -109,7 +109,7 @@ Here, each sublist represents a pitch and rhythmic value pair.
 
 2. Print the melody
 
-### Exercise 3: Complex Nested Structures
+### Exercise 3: complex nested structures
 
 1. Create a _llll_ to represent a `I-IV-V-I` progression in G major, using pitch syntax:
    ```

@@ -19,7 +19,7 @@ $cmajor = $scale + $root;
 print($cmajor) ## Outputs: 6000 6200 6400 6500 6700 6900 7100 (C major scale)
 ```
 
-### Transposing Frequencies
+### Transposing frequencies
 
 Using multiplication to transpose a frequencies up an octave:
 
@@ -40,7 +40,7 @@ print($pcs) ## Outputs: 0 4 7 (remainders when dividing 60, 64, and 67 by 12)
 
 ---
 
-## Comparison Operators
+## Comparison operators
 
 Comparison operators evaluate the relationship between two values and return either `1` if true, or `0` if false.
 
@@ -57,7 +57,7 @@ Comparison operators evaluate the relationship between two values and return eit
 
 ## Examples
 
-#### Comparing Pitch Heights
+#### Comparing pitch heights
 
 ```py
 $pitch1 = 60;
@@ -65,7 +65,7 @@ $pitch2 = 67;
 print($pitch1 < $pitch2) ## Outputs: 1 (true)
 ```
 
-#### Comparing Rhythm Durations
+#### Comparing rhythm durations
 
 ```py
 $eighth = 1/8;
@@ -77,7 +77,7 @@ print($eighth < $quarter) ## Outputs: 1 (true)
 
 ---
 
-## Logical Operators
+## Logical operators
 
 Logical operators are used to combine or negate conditions.
 
@@ -94,7 +94,7 @@ Logical operators are used to combine or negate conditions.
 
 ## Examples
 
-### Checking Multiple Conditions
+### Checking multiple conditions
 
 Determine if a pitch is in a specific range:
 
@@ -114,7 +114,7 @@ print($pitch > 6000 && $pitch < 7000) ## Outputs: 1 (true)
 - **Output**:
   - Since `$pitch` (`65`) is indeed greater than `60` and less than `70`, the combined condition evaluates to `1` (true), and `1` is printed.
 
-### Applying OR for Note-to-Chord Matching
+### Applying or for note-to-chord matching
 
 Check if a pitch is part of the C major triad:
 
@@ -138,11 +138,11 @@ print($pitch == C4 || $pitch == G4 || $pitch == E4) ## Outputs: 1 (true)
 
 ---
 
-## Combining Operators
+## Combining operators
 
 You can combine multiple operators to form complex expressions.
 
-### Example: Pitch class equivalence
+### Example: pitch class equivalence
 
 Checking if two pitches in MIDI cents are pitch class equivalent.
 
@@ -159,13 +159,13 @@ print($equivalence) ## Outputs: 1 (true)
 
 ## Exercises
 
-### Exercise 1: Calculating Intervals
+### Exercise 1: calculating intervals
 
 1. Create variables for the MIDI cents values of `6000` (C4) and `6400` (E4).
 2. Use subtraction to calculate the interval between them, in cents.
 3. Print the result.
 
-### Exercise 2: Logical Comparisons
+### Exercise 2: logical comparisons
 
 1. Create a variable `$note = 6200` (D5 in MIDI cents).
 2. Check if `$note` is in the range of `5500` (G4) to `6700` (G5).

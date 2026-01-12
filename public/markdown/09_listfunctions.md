@@ -4,7 +4,7 @@ To manipulate these _lllls_ efficiently, _bell_ provides a wide range of functio
 
 ---
 
-## Common List Functions
+## Common list functions
 
 Below is a table of commonly used list-oriented functions in _bell_.
 
@@ -23,9 +23,9 @@ As always, check the [bell reference documentation](/#/reference) for a more det
 
 ---
 
-## Examples of Data Manipulation
+## Examples of data manipulation
 
-### Reversing a Melody
+### Reversing a melody
 
 Use the `rev` function to reverse the order of pitches in a melody.
 
@@ -34,7 +34,7 @@ $melody = C4 D4 E4 F4;
 print(rev($melody)) ## Outputs: F4 E4 D4 C4
 ```
 
-### Finding the Length of a Chord
+### Finding the length of a chord
 
 Use the `length` function to count the number of pitches in a chord.
 
@@ -43,7 +43,7 @@ $chord = C4 E4 G4;
 print(length($chord)) ## Outputs: 3
 ```
 
-### Flattening a Nested Progression
+### Flattening a nested progression
 
 Use the `flat` function to reduce a nested chord progression into a single list of pitches.
 
@@ -54,11 +54,11 @@ print(flat($progression)) ## Outputs: C4 E4 G4 F4 A4 C5
 
 ---
 
-## Combining List Functions
+## Combining list functions
 
 You can chain multiple list functions together for more complex operations.
 
-### Example 1: Melody to Scale
+### Example 1: melody to scale
 
 Use the `thin` and `sort` functions to infer the scale from a given melody.
 
@@ -68,7 +68,7 @@ $scale = $melody.thin(); ## Outputs: G4 C4 F4 D4 E4
 $scale = $scale.sort().print() ## Outputs: C4 D4 E4 F4 G4
 ```
 
-### Example 2: Converting Frequencies to Notes
+### Example 2: converting frequencies to notes
 
 Use `f2mc` to convert a list of frequencies to MIDI cents.
 
@@ -79,11 +79,11 @@ print($spectrum.f2mc()) ## 3300. 4500. 5700. 6900. 8100.
 
 ---
 
-## Depth and Level Arguments
+## Depth and level arguments
 
 Several _bell_ functions accept the `@mindepth`/`@minlevel` and `@maxdepth`/`@minlevel` arguments, which are generally the two last ones in the function argument list and accept each an integer number.
 
-### Example 1: `rev` Depth
+### Example 1: `rev` depth
 
 ```py
 $x = [[1] [2]] [[3] [4]];
@@ -93,7 +93,7 @@ print($a); ## Outputs: [[3] [4]] [[1] [2]]
 print($b) ## Outputs: [[2] [1]] [[4] [3]]
 ```
 
-### Example 2: `flat` Level
+### Example 2: `flat` level
 
 ```py
 $x = [[1] [2]] [[3] [4]];
@@ -111,14 +111,14 @@ All those _bell_ functions also accept an attribute called `@depth`/`@level`, wh
 
 ## Exercises
 
-### Exercise 1: Analyze a Melody
+### Exercise 1: analyze a melody
 
 1. Create a melody as a _llll_, in MIDI cents:
 2. Print the `length` of the melody.
 3. Infer the scale that the melody is based on, using the `thin` and `sort` functions.
 4. Print the scale.
 
-### Exercise 2: Flatten a Progression
+### Exercise 2: flatten a progression
 
 1. Create a nested chord progression. For example:
    ```py
@@ -128,7 +128,7 @@ All those _bell_ functions also accept an attribute called `@depth`/`@level`, wh
 3. Infer the scale of the progression using the `thin` and `sort` functions.
 4. Print the scale.
 
-### Exercise 3: Frequency to Note Conversion
+### Exercise 3: frequency to note conversion
 
 1. Create a list of pitches, using note names. For instance:
 

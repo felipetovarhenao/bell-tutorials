@@ -8,7 +8,7 @@ In _bell_, symbols are a data type used to represent textual information. Symbol
 
 Symbols can be created in three ways:
 
-### 1. Double Quotes (")
+### 1. Double quotes (")
 
 This is the most common way to define symbols.
 
@@ -16,7 +16,7 @@ This is the most common way to define symbols.
 $name = "Iannis"
 ```
 
-### 2. Single Quotes (')
+### 2. Single quotes (')
 
 Single quotes work the same as double quotes.
 
@@ -61,17 +61,17 @@ Similarly, make sure that you don't accidentally cause parsing errors:
 
 ---
 
-## Using Symbols in Musical Contexts
+## Using symbols in musical contexts
 
 Symbols are often used to label or annotate musical data. Here are some basic scenarios:
 
-### Naming Chords
+### Naming chords
 
 ```py
 $chords = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5]
 ```
 
-### Labeling Rhythmic Patterns
+### Labeling rhythmic patterns
 
 ```py
 $rhythms = ['pattern1' 1/4 1/8 1/8 1/2] ['pattern2' 1/4 1/4 1/4 1/4]
@@ -90,7 +90,7 @@ $notesequence = (
 
 ---
 
-## Advantages of Using Symbols
+## Advantages of using symbols
 
 1. **Data Readability**: Symbols make your code more intuitive, as they allow for assigning meaningful labels to data. Later on, we'll learn how to use symbols for [accessing data](12_keys.md).
 
@@ -98,9 +98,9 @@ $notesequence = (
 
 ---
 
-## Operations with Symbols
+## Operations with symbols
 
-### Combining Symbols
+### Combining symbols
 
 You can concatenate symbols to build more complex strings.
 
@@ -123,7 +123,7 @@ However, you **cannot** concatenate symbols with other data types, such as numbe
   $name = "Cmaj" + "7" ## Outputs: Cmaj7
   ```
 
-### Symbols in Lists
+### Symbols in lists
 
 Symbols can be included in _lllls_, just like notes or numbers.
 
@@ -138,7 +138,7 @@ print($info) ## Outputs: C4 quarter mezzo-piano
 
 ## Exercises
 
-### Exercise 1: Labeling Chords
+### Exercise 1: labeling chords
 
 1. Create a _llll_ that contains all diatonic triads in F major, each labeled with a symbol. For instance:
 
@@ -152,7 +152,7 @@ print($info) ## Outputs: C4 quarter mezzo-piano
 
 2. Print all chords.
 
-### Exercise 2: Annotating Rhythms
+### Exercise 2: annotating rhythms
 
 1. Create a _llll_ of labeled rhythmic cells, each as a list of rational values (i.e., `1` is a whole note, `1/4` is a quarter note, `1/8` is an eighth note, etc.):
 

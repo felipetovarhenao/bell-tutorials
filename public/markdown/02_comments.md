@@ -6,7 +6,7 @@ In _bell_, comments come in two flavors: **single-line** and **multi-line**.
 
 ---
 
-## Single-Line Comments
+## Single-line comments
 
 Single-line comments begin with a double hash (`##`). Anything written after `##` on the same line is treated as a comment and ignored by the _bell_ interpreter.
 
@@ -20,7 +20,7 @@ print("hello world") ## This prints "hello world" to the screen
 
 ---
 
-## Multi-Line Comments
+## Multi-line comments
 
 For longer explanations, use multi-line comments. These are enclosed with `#(` and `)#`. Everything between `#(` and `)#` is treated as a comment.
 
@@ -35,7 +35,7 @@ print("the area of a 12 by 10 rectangle is 120")
 
 ---
 
-## Why Use Comments?
+## Why use comments?
 
 1. **Clarity**: Help others (and your future self) understand the purpose of your code.
 2. **Debugging**: Temporarily "disable" parts of your code by turning them into comments to isolate issues or skip parts of your script.
@@ -43,7 +43,7 @@ print("the area of a 12 by 10 rectangle is 120")
 
 ---
 
-## Best Practices for Writing Comments
+## Best practices for writing comments
 
 1. Be concise but descriptive:
 
@@ -83,7 +83,7 @@ print("the area of a 12 by 10 rectangle is 120")
 
 ---
 
-## Common Mistakes to Avoid
+## Common mistakes to avoid
 
 1. **Forgetting the double-hash for single-line comments**:
 

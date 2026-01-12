@@ -4,7 +4,7 @@ In _bell_, the `null` keyword represents the _absence_ of a value. It’s an exp
 
 ---
 
-## What Is `null`?
+## What is `null`?
 
 `null` in _bell_ signifies:
 
@@ -47,7 +47,7 @@ Similarly, this shows how `null` is just a placeholder to represent the absence 
 
 ---
 
-## The Nullify Operator (`;`)
+## The nullify operator (`;`)
 
 So far we've used and thought of semicolons (`;`) simply as a way to separate statements — this is still accurate, but doesn't paint the full picture. In _bell_, we refer to the semicolon as the **nullify** operator: a **binary** operator where the expressions _before_ and _after_ it are evaluated, but the one preceding it is discarded (i.e., becomes `null`).
 
@@ -96,7 +96,7 @@ Since _nullify_ is a binary operator — meaning it requires two operands —, _
   $x = 1 ; $y = 2
   ```
 
-### Why Use Nullify?
+### Why use nullify?
 
 1. To write code as a chain of multiple expressions instead of writing complex expressions as a single line of code.
 2. To explicitly indicate that an expression's result can be discarded.

@@ -1,16 +1,16 @@
-# Appendix II: Pseudo-Variables
+# Appendix ii: pseudo-variables
 
 Pseudo-variables in _bell_ serve as special, predefined variables primarily designed for integration with the _bach_ library within the _Max_ environment. Unlike standard variables, pseudo-variables are reserved keywords with specific behaviors and uses. Here, we delve into their syntax, types, and application.
 
 ---
 
-## Relevance to Tutorials
+## Relevance to tutorials
 
 Since pseudo-variables are specific to the _bach_ integration in _Max_, they are not crucial to understand when working with standalone applications like _bellplay~_. If you are working exclusively in _bellplay~_, you can safely ignore the topic of pseudo-variables. However, for users exploring _bach_ within _Max_, understanding pseudo-variables is beyond essential.
 
 ---
 
-## What Are Pseudo-Variables?
+## What are pseudo-variables?
 
 Pseudo-variables represent a subset of reserved keywords in _bell_. They are mainly _read-only_ (except for a few _write-only_ types) and are not used in standalone _bell_ applications like _bellplay~_, but rather in scenarios involving _bach_ programming.
 
@@ -36,9 +36,9 @@ $do2 = null ## Represents direct untyped outlet 2
 
 ---
 
-## Types of Pseudo-Variables
+## Types of pseudo-variables
 
-### Read-Only Pseudo-Variables
+### Read-only pseudo-variables
 
 These pseudo-variables cannot be assigned new values. They reflect the current state of the specified inlet.
 
@@ -52,7 +52,7 @@ These pseudo-variables cannot be assigned new values. They reflect the current s
 | `x`  | Untyped inlet        | `$x2`   |
 | `dx` | Direct untyped inlet | `$dx3`  |
 
-### Write-Only Pseudo-Variables
+### Write-only pseudo-variables
 
 These pseudo-variables allow the assignment of values that are then sent to specified outlets.
 
@@ -63,12 +63,12 @@ These pseudo-variables allow the assignment of values that are then sent to spec
 
 ---
 
-## Behavior of Pseudo-Variables
+## Behavior of pseudo-variables
 
 - **Read-Only Behavior**: A read-only pseudo-variable retrieves the current value at the specified inlet. For example, `$f2` represents the incoming `float` value at inlet 2.
 - **Write-Only Behavior**: Write-only pseudo-variables accept assigned values, which are routed to the specified outlet. For instance, `$o1 = 42` sends the value `42` to outlet 1.
 
-### Example: Inlets and Outlets
+### Example: inlets and outlets
 
 ```py
 print($f2); ## Print the float value from inlet 2

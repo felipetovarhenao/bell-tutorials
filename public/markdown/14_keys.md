@@ -4,7 +4,7 @@ In _bell_, **keys** are a way to associate labels (_keys_) with values, creating
 
 ---
 
-## What Are Keys?
+## What are keys?
 
 A key-value pair in _bell_ is a data structure that associates a key with a value. This is similar to dictionaries or associative arrays in other programming languages.
 
@@ -38,11 +38,11 @@ In other words, the first value within any bracketed list can serve or be though
 
 ---
 
-## Accessing Keys
+## Accessing keys
 
 You can retrieve a value associated with a key using the dot operator (`.`).
 
-### Example: Accessing Chords by Key
+### Example: accessing chords by key
 
 ```py
 $chords = ['tonic' C4 E4 G4] ['dominant' G4 B4 D5];
@@ -52,11 +52,11 @@ print($chords.'dominant') ## Outputs: G4 B4 D5
 
 ---
 
-## Adding and Modifying Key-Value Pairs
+## Adding and modifying key-value pairs
 
 You can update key-value pairs through variable assignments.
 
-### Example: Updating Values Via Keys
+### Example: updating values via keys
 
 ```py
 $chords = ['chord1' C4 E4 G4] ['chord2' D4 F4 A4];
@@ -76,7 +76,7 @@ print($chords."chord2") ## Outputs: D4 F4 Ab4
 
 ## Exercises
 
-### Exercise 1: Access Chord Progression
+### Exercise 1: access chord progression
 
 1. Create a _llll_ of _key-value_ pairs for a chord progression:
 
@@ -89,7 +89,7 @@ $progression = ['tonic' C4 E4 G4] ['subdominant' F4 A4 C5] ['dominant' G4 B4 D5]
    - The second note of the subdominant chord.
    - The first note of the dominant chord.
 
-### Exercise 2: Update Chord Progression
+### Exercise 2: update chord progression
 
 1. Create a _llll_ of _key-value_ pairs for a chord progression:
 

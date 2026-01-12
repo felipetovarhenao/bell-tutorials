@@ -1,8 +1,8 @@
-# Functions As Values
+# Functions as values
 
 In _bell_, functions are treated as values, just like any other data types, which affords fairly elegant ways of writing algorithms.
 
-## First Class Citizenship
+## First class citizenship
 
 In _bell_, functions are treated as **first-class citizens**, which means we can:
 
@@ -21,7 +21,7 @@ Here, `print` is being used twice, each time in a different way. The first time,
 
 To further explore this concept, we need to discuss the concept of _anonymous functions_.
 
-## Anonymous Functions
+## Anonymous functions
 
 Anonymous functions, also known as _lambda_ functions, are functions that simply aren't assigned to an variable. For instance:
 
@@ -33,7 +33,7 @@ Here, we are creating a user-defined function that squares a value, but instead 
 
 While this might seem unnecessarily complicated or confusing, anonymous functions can come in handy when we need to pass custom functions as arguments to other functions. In fact, some of _bell_'s built-in functions, like `map` and `reduce`, expect functions as part of their arguments. Here are some examples:
 
-### Example 1: The `map` Function
+### Example 1: the `map` function
 
 According to the [reference documentation](/#/reference):
 
@@ -51,7 +51,7 @@ In this case, we multiply each value in `$nums` with either `-1` or `1`, randoml
 
 > Remember to always make use of the [reference documentation](/#/reference) to learn about functions you're not familiar with.
 
-### Example 2: The `sort` function
+### Example 2: the `sort` function
 
 A very common scenario is wanting to sort sublists within a _llll_. To do this, we can make use of the optional `@function` argument in the `sort` function. The default function in `sort` looks something like this:
 
@@ -93,7 +93,7 @@ $notes.map($x -> print($x::1))
 [ pitch 6500 ] [ duration 1000 ]
 ```
 
-## Functional Form of Operators
+## Functional form of operators
 
 In _bell_, operators can also be passed as functions using the following syntax:
 
@@ -116,7 +116,7 @@ $add = $a, $b -> $a + $b;
 print($add(1, 2)) ## Output: 3
 ```
 
-### Example 3: The `reduce` function
+### Example 3: the `reduce` function
 
 Here's an example of the `reduce` function, which cumulatively applies a given function to elements in a _llll_. This is useful, for instance, for computing [factorials](https://en.wikipedia.org/wiki/Factorial).
 
@@ -139,13 +139,13 @@ print($factorial) ## Outputs: 24
 
 ## Exercises
 
-### Exercise 1: Using map for Element-Wise Transformation
+### Exercise 1: using map for element-wise transformation
 
 1. Create a list of numbers from `1` to `10`.
 2. Use `map` to check whether each element is a multiple of `3`, using the `%` operator. The value should be `1` if true and `0` if false.
 3. Print the transformed list.
 
-### Exercise 2: Sorting Complex Data
+### Exercise 2: sorting complex data
 
 1. Define a list of sublists, where each sublist contains a person's name and age:
 
@@ -160,13 +160,13 @@ $people = (
 2. Use the sort function to sort the list by age (ascending).
 3. Print the sorted list.
 
-### Exercise 3: Cumulative Operations with reduce
+### Exercise 3: cumulative operations with reduce
 
 1. Create a list of numbers from `1` to `5`.
 2. Use `reduce` to calculate the sum of all numbers (i.e., `1 + 2 + 3 + 4 + 5`).
 3. Print the result.
 
-## FAQ Section
+## FAQ
 
 ### Q: What is the difference between a regular function and a lambda function?
 

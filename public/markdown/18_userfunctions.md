@@ -1,10 +1,10 @@
-# User-Defined Functions
+# User-defined functions
 
 Until now, we've only worked with built-in functions in _bell_. In this tutorial, we’ll learn how to define our own functions, allowing us to avoid redundancy and increase readability and efficiency.
 
 ---
 
-## What Are User-Defined Functions?
+## What are user-defined functions?
 
 A user-defined function is a custom block of code that you define and can reuse in your program. Just like any other function, it can take arguments, perform an operation, and return a result.
 
@@ -55,7 +55,7 @@ $printmessages()
 ## Message 2
 ```
 
-### 2. Single Argument
+### 2. Single argument
 
 A function that takes one argument:
 
@@ -64,7 +64,7 @@ $square = $x -> $x ** 2;
 print($square(4)) ## Outputs: 16
 ```
 
-### 3. Multiple Arguments
+### 3. Multiple arguments
 
 Functions can take multiple arguments:
 
@@ -77,7 +77,7 @@ $sumofsquares = $x, $y -> (
 print($sumofsquares(3, 4)) ## Outputs: 25
 ```
 
-### 4. Default Values
+### 4. Default values
 
 Arguments can have default values:
 
@@ -118,7 +118,7 @@ print($localvar) ## Outputs: I'm a local variable!
 
 ---
 
-## Lifted Variables
+## Lifted variables
 
 When we need a function to access local variables defined outside the function's body, we can use the lifting operator (`-^`).
 
@@ -141,7 +141,7 @@ print($multiply(4, 5)) ## Outputs: 23
 
 ## Exercises
 
-### Exercise 1: A Function with Multiple Arguments
+### Exercise 1: a function with multiple arguments
 
 1. Write a function that calculates the area of a rectangle:
 
@@ -151,7 +151,7 @@ $area = $length, $width -> $length * $width
 
 2. Test it with `$area(5, 10)`.
 
-### Exercise 2: Default Argument Values
+### Exercise 2: default argument values
 
 1. Create a function that adds two numbers, with a default value of `5` for the second argument:
 
@@ -161,7 +161,7 @@ $add = $x, $y = 5 -> $x + $y;
 
 2. Test it with `$add(10)` and `$add(10, 20)`.
 
-### Exercise 3: Using Lifted Variables
+### Exercise 3: using lifted variables
 
 1. Define two variables:
 

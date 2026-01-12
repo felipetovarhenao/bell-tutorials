@@ -18,7 +18,7 @@ Now let's delve into each type of loop to see what these clauses look like in pr
 
 ---
 
-## The `while` Loop
+## The `while` loop
 
 A `while` loop repeats a given expression or statement as long as a condition remains true. We use this type of loop for dynamic operations where the number of repetitions isn't known or predetermined.
 
@@ -83,7 +83,7 @@ print($randscale)
 `while` loops, while simple in syntax, require more care since you must ensure the condition will eventually be false. Otherwise, it results in an infinite loop.
 
 ```py
-## CAUTION! Running this code will freeze you computer
+## Caution! running this code will freeze you computer
 $i = 0;
 while $i < 10 do (
     print($i)
@@ -94,7 +94,7 @@ Since the `$i` variable never changes, `$i < 10` will always be true and the loo
 
 ---
 
-## The `for` Loop
+## The `for` loop
 
 `for` loops allow to iterate through elements of an existing list. Relative to `while` loops, `for` loops are more flexible and versatile in their behavior. This, however, comes at the expense of more elaborate syntax.
 
@@ -115,7 +115,7 @@ do|collect <body>
 
 As overwhelming as this may look, `for` loops are only as elaborate as we need them to be. Here are different use-cases showcasing the different ways in which we can customize our `for` loops.
 
-### Index Variables
+### Index variables
 
 The simplest kind of `for` loop is one in which we iterate through the top level of a list, each element stored in what will refer to as the _index variable_, which stores the data of each element in the list.
 
@@ -138,7 +138,7 @@ for $x in 1...10 do print($x)
 10
 ```
 
-### Index and Address Variables
+### Index and address variables
 
 Providing two variable names for a single list lets the first variable hold the data and the second hold its address within the list.
 
@@ -161,7 +161,7 @@ for $x $address in 1...10 do print($x $address)
 10 10
 ```
 
-### Parallel Iterations
+### Parallel iterations
 
 Multiple lists can be iterated in parallel. The loop stops at the end of the shortest list.
 
@@ -187,7 +187,7 @@ for $x in $listx, $y in $listy do print($x $y)
 
 > In this example, the loop stops before the last element of `$listx`, since `$listy` has only 9 elements while `$listx` has 10.
 
-### Address Variables in Parallel Iterations
+### Address variables in parallel iterations
 
 We can also use index and address variables in parallel iteration:
 
@@ -287,7 +287,7 @@ address 3
 
 ## Exercises
 
-### Exercise 1: Melody to Chords
+### Exercise 1: melody to chords
 
 1. Create a melody:
 
@@ -297,7 +297,7 @@ $melody = C4 D4 E4 F4 G4
 
 2. Use a `for` loop to print a major triad for each pitch as the root.
 
-### Exercise 2: Scale to Intervals
+### Exercise 2: scale to intervals
 
 1. Create a list of pitch values in MIDI cents:
 
@@ -307,7 +307,7 @@ $scale = 6000 6200 6400 6500 6700 6900 7100
 
 2. Use a `for` loop to calculate and print the intervals (in cents) between adjacent pitches.
 
-### Exercise 3: Intervals to Scale
+### Exercise 3: intervals to scale
 
 1. Start with intervals:
 

@@ -4,7 +4,7 @@ Numbers are central to programming, and _bell_ provides a variety of numeric typ
 
 ---
 
-## Numeric Types in _bell_
+## Numeric types in _bell_
 
 In _bell_, there are four types of numeric data.
 
@@ -73,7 +73,7 @@ In _bell_, the `pitch` data type is a specialized numeric type that bases its sy
 
 > MIDI cents is a pitch specification unit, combining MIDI values and cents (_1 semitone = 100 cents_) to allow for fine microtonal precision. For instance, 6000 is C5, 6100 is C#5, 6200 is D5, 6250 is D+5 (quarter flat), and so on. In _bell_, MIDI cents are the most common way of representing pitch information.
 
-### Basic Syntax
+### Basic syntax
 
 In most cases, the syntax for pitch specification is fairly straightforward:
 
@@ -110,7 +110,7 @@ Where the available accidentals are:
 
 > The careful reader will notice something particular here. In _bell_ (and _bach_ for that matter), middle C is not `C4` as one would typically expect, but rather `C5`. When using pitch syntax, always make sure to double check the octave you assign to each pitch.
 
-### Advanced Syntax
+### Advanced syntax
 
 While the syntax above can be sufficient in most cases, it's still limited to eighth-tones as the smallest tone division. For more fine-tuned pitch specifications, the following syntax can be used:
 
@@ -129,7 +129,7 @@ For these more highly specific cases, however, it can sometimes be easier to use
 
 ---
 
-## Conversions Between Numeric Types (Casting)
+## Conversions between numeric types (casting)
 
 We can convert between numeric types using the `int`, `float`, `rat`, and `pitch` functions to convert any number to integer, float, rational, or pitch, respectively.
 
@@ -169,11 +169,11 @@ print($x is($x)) ## Outputs: 9/4 rational
 
 ---
 
-## Numeric Operations
+## Numeric operations
 
 As the following examples illustrate, it's possible to mix numeric data types in expressions.
 
-### Pitch Transposition
+### Pitch transposition
 
 ```py
 $pitch = C5; ## Middle C
@@ -182,7 +182,7 @@ $transposed = $melody + $shift; ## Transpose up an octave
 print($transposed) ## Outputs: C5 D5 E5 F5
 ```
 
-### Scaling Rhythms
+### Scaling rhythms
 
 ```py
 $quarter = 1/4;
@@ -190,7 +190,7 @@ $eighth = $quarter / 2; ## Double the speed
 print($eighth) ## Outputs: 1/8
 ```
 
-### Applying Frequency Ratios
+### Applying frequency ratios
 
 ```py
 $freq = 440.0; ## A5
@@ -202,7 +202,7 @@ print($freq * $ratio) ## Outputs: 660.0 (E6)
 
 ## Exercises
 
-### Exercise 1: Pitch Arithmetic
+### Exercise 1: pitch arithmetic
 
 1. Create a variable for a note in MIDI cents:
 
@@ -213,7 +213,7 @@ $pitch = 6000 ## C5
 2. Transpose the note up by a major third using simple addition (`+`). Remember that MIDI cents work the same as MIDI values, except they're scaled by 100.
 3. Cast the resulting MIDI cents value as `pitch` and print it. You should get `E5` as a result.
 
-### Exercise 2: Duration Value
+### Exercise 2: duration value
 
 1. Given the following variables:
 
@@ -230,7 +230,7 @@ $$
 
 3. Cast the result as `float` and print it. You should get `1500.` as a result.
 
-### Exercise 3: Scale Specification
+### Exercise 3: scale specification
 
 1. Using _bell_'s pitch syntax, specify the pitch values for a Db major triad, using a different variable for each pitch (e.g., `$root`, `$third`, `$fifth`):
 
